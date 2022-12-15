@@ -167,6 +167,9 @@
     "@language" : "en",
     "@value" : "An entity primarily responsible for making the resource."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/"
   } ],

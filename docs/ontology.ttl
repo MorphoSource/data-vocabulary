@@ -155,6 +155,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain :Device ;
                                           <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
                                           rdfs:comment "An entity primarily responsible for making the resource."@en ;

@@ -263,6 +263,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
