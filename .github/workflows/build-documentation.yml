@@ -1,6 +1,9 @@
 name: Build Documentation
 run-name: Use WIDOCO to generate HTML documentation from OWL vocabulary
-on: [push]
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
 jobs:
   build-documentation:
     runs-on: ubuntu-latest
@@ -32,4 +35,4 @@ jobs:
           default_author: github_actor
           fetch: false
           message: 'Build documentation'
-          tag: 'build'
+          new_branch: docs
