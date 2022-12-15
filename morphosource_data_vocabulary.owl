@@ -335,9 +335,7 @@
         <rdfs:comment xml:lang="en">The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Collection Code</rdfs:label>
-        <skos:definition xml:lang="en">The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived.</skos:definition>
         <skos:example xml:lang="en">`Mammals`, `Hildebrandt`, `EBIRD`, `VP`</skos:example>
-        <skos:prefLabel xml:lang="en">Collection Code</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -360,9 +358,7 @@
         <rdfs:comment xml:lang="en">The name of the country or major administrative unit in which the Location occurs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Country</rdfs:label>
-        <skos:definition xml:lang="en">The name of the country or major administrative unit in which the Location occurs.</skos:definition>
         <skos:example xml:lang="en">`Denmark`, `Colombia`, `España`</skos:example>
-        <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -385,9 +381,7 @@
         <rdfs:comment xml:lang="en">The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Institution Code</rdfs:label>
-        <skos:definition xml:lang="en">The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record.</skos:definition>
         <skos:example xml:lang="en">`MVZ`, `FMNH`, `CLO`, `UCMP`</skos:example>
-        <skos:prefLabel xml:lang="en">Institution Code</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -410,9 +404,7 @@
         <rdfs:comment xml:lang="en">The specific description of the place.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Locality</rdfs:label>
-        <skos:definition xml:lang="en">The specific description of the place.</skos:definition>
         <skos:example xml:lang="en">`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`</skos:example>
-        <skos:prefLabel xml:lang="en">Locality</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -433,9 +425,7 @@
         <rdfs:comment xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Municipality</rdfs:label>
-        <skos:definition xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</skos:definition>
         <skos:example xml:lang="en">`Holzminden`, `Araçatuba`, `Ga-Segonyana`</skos:example>
-        <skos:prefLabel xml:lang="en">Municipality</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -457,9 +447,7 @@
         <rdfs:comment xml:lang="en">The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">State Province</rdfs:label>
-        <skos:definition xml:lang="en">The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.</skos:definition>
         <skos:example xml:lang="en">`Montana`, `Minas Gerais`, `Córdoba`</skos:example>
-        <skos:prefLabel xml:lang="en">State Province</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -490,9 +478,7 @@
         <attributes:usageScope>simple</attributes:usageScope>
         <rdfs:comment xml:lang="en">The specific description of the place.</rdfs:comment>
         <rdfs:label xml:lang="en">Address</rdfs:label>
-        <skos:definition xml:lang="en">The specific description of the place.</skos:definition>
         <skos:example xml:lang="en">`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`</skos:example>
-        <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -520,9 +506,7 @@
         <attributes:usageScope>simple</attributes:usageScope>
         <rdfs:comment xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</rdfs:comment>
         <rdfs:label xml:lang="en">City</rdfs:label>
-        <skos:definition xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</skos:definition>
         <skos:example xml:lang="en">`Holzminden`, `Araçatuba`, `Ga-Segonyana`</skos:example>
-        <skos:prefLabel xml:lang="en">City</skos:prefLabel>
     </owl:ObjectProperty>
     
 
