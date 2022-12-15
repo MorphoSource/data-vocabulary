@@ -16,9 +16,6 @@
 # http://purl.org/dc/dcam/rangeIncludes
 <http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -33,9 +30,6 @@
 # 
 # http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/replaces
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -235,6 +229,11 @@
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of creation of the resource."@en .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "Date Created"@en .
 # 
 # http://purl.org/dc/terms/dateSubmitted
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -266,6 +265,11 @@
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+<http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the resource was changed."@en .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#label> "Date Modified"@en .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -282,11 +286,9 @@
 # http://rs.tdwg.org/dwc/terms/catalogNumber
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
-<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/catalogNumber-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/catalogNumber-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/CatalogNumber> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/UnitID" .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> .
@@ -299,13 +301,11 @@
 # http://rs.tdwg.org/dwc/terms/collectionCode
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/CollectionCode> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SourceID" .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> .
@@ -318,13 +318,11 @@
 # http://rs.tdwg.org/dwc/terms/country
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both."@en .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2021-07-15> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/modified> "2021-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/Country> .
 <http://rs.tdwg.org/dwc/terms/country> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/Country/Name" .
 <http://rs.tdwg.org/dwc/terms/country> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
@@ -337,13 +335,11 @@
 # http://rs.tdwg.org/dwc/terms/institutionCode
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/InstitutionCode> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SourceInstitutionID" .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> .
@@ -356,13 +352,11 @@
 # http://rs.tdwg.org/dwc/terms/locality
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2021-07-15> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/modified> "2021-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/Locality> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
 <http://rs.tdwg.org/dwc/terms/locality> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
@@ -375,12 +369,10 @@
 # http://rs.tdwg.org/dwc/terms/municipality
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/created> "2009-08-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
@@ -392,12 +384,10 @@
 # http://rs.tdwg.org/dwc/terms/stateProvince
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
-<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/StateProvince> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName with NamedAreas/NamedArea/AreaClass= State or = Province (etc.)" .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
@@ -648,25 +638,5 @@
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media)."@en .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Event"@en .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
-<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of creation of the resource."@en .
-<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
-<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "Date Created"@en .
-# 
-<http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the resource was changed."@en .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#label> "Date Modified"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

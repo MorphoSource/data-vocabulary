@@ -44,13 +44,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/created -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
-
-
     <!-- http://purl.org/dc/terms/description -->
 
 
@@ -83,13 +76,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
@@ -438,6 +424,11 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/created">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Created</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -484,6 +475,11 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -510,11 +506,9 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/catalogNumber">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/catalogNumber-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/catalogNumber-2017-10-06"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
         <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/CatalogNumber"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/UnitID</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
@@ -532,13 +526,11 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/collectionCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2017-10-06"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
         <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/CollectionCode"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SourceID</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
@@ -556,13 +548,11 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/country">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2017-10-06"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2021-07-15"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-15</terms:modified>
         <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Country"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/Country/Name</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
@@ -580,13 +570,11 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/institutionCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2017-10-06"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
         <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/InstitutionCode"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SourceInstitutionID</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
@@ -604,13 +592,11 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/locality">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
         <terms:description xml:lang="en">Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2021-07-15"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-15</terms:modified>
         <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Locality"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
@@ -628,12 +614,10 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/municipality">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-24</terms:created>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
         <attributes:usageScope>simple</attributes:usageScope>
@@ -650,12 +634,10 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/stateProvince">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06"/>
         <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
         <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/StateProvince"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName with NamedAreas/NamedArea/AreaClass= State or = Province (etc.)</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
@@ -1113,31 +1095,6 @@
         <rdfs:comment xml:lang="en">An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media).</rdfs:comment>
         <rdfs:label xml:lang="en">Processing Event</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date Created</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
-        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 
