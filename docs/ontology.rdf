@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
+     xml:base="https://www.morphosource.org/terms/morphosource"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/">
+    <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
+        <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
+        <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/dcam/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/rangeIncludes"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/replaces -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/replaces"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/organizedInClass -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/organizedInClass"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/usageScope -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/usageScope"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ns.adobe.com/xap/1.0/rights/Owner -->
+
+
+    <owl:ObjectProperty rdf:about="http://ns.adobe.com/xap/1.0/rights/Owner">
+        <rdfs:comment xml:lang="en">A list of legal owners of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Owner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.adobe.com/xap/1.0/rights/UsageTerms -->
+
+
+    <owl:ObjectProperty rdf:about="http://ns.adobe.com/xap/1.0/rights/UsageTerms">
+        <rdfs:comment xml:lang="en">A collection of text instructions on how a resource can be legally used, given in a variety of languages.</rdfs:comment>
+        <rdfs:label xml:lang="en">Usage Rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pcdm.org/models#fileOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://pcdm.org/models#fileOf">
+        <owl:inverseOf rdf:resource="http://pcdm.org/models#hasFile"/>
+        <rdfs:domain rdf:resource="http://pcdm.org/models#File"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:comment xml:lang="en">Links from a File to its containing Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/models#"/>
+        <rdfs:label xml:lang="en">is file of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pcdm.org/models#hasFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://pcdm.org/models#hasFile">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:range rdf:resource="http://pcdm.org/models#File"/>
+        <rdfs:comment xml:lang="en">Links to a File contained by this Object.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/models#"/>
+        <rdfs:label xml:lang="en">has file</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pcdm.org/models#hasMember -->
+
+
+    <owl:ObjectProperty rdf:about="http://pcdm.org/models#hasMember">
+        <owl:inverseOf rdf:resource="http://pcdm.org/models#memberOf"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:comment xml:lang="en">Links to a subsidiary Object or Collection. Typically used to link
+          to component parts, such as a book linking to a page.  Note on transitivity: hasMember is
+          not defined as transitive, but applications may treat it as transitive as local needs
+          dictate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/models#"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://pcdm.org/models#memberOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://pcdm.org/models#memberOf">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:comment xml:lang="en">Links from an Object or Collection to a containing Object or Collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/models#"/>
+        <rdfs:label xml:lang="en">is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateSubmitted -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a &apos;Date Submitted&apos; may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal).</terms:description>
+        <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Submitted</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <terms:description xml:lang="en">Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.</terms:description>
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/catalogNumber -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/catalogNumber">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/catalogNumber-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/catalogNumber-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/CatalogNumber"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/UnitID</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">An identifier (preferably unique) for the record within the data set or collection.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Catalog Number</rdfs:label>
+        <skos:example xml:lang="en">`145732`, `145732a`, `2008.1334`, `R-4313`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/collectionCode -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/collectionCode">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/CollectionCode"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SourceID</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Collection Code</rdfs:label>
+        <skos:definition xml:lang="en">The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived.</skos:definition>
+        <skos:example xml:lang="en">`Mammals`, `Hildebrandt`, `EBIRD`, `VP`</skos:example>
+        <skos:prefLabel xml:lang="en">Collection Code</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/country -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/country">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2017-10-06"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2021-07-15"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-15</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Country"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/Country/Name</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The name of the country or major administrative unit in which the Location occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <skos:definition xml:lang="en">The name of the country or major administrative unit in which the Location occurs.</skos:definition>
+        <skos:example xml:lang="en">`Denmark`, `Colombia`, `España`</skos:example>
+        <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/institutionCode -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/institutionCode">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/InstitutionCode"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SourceInstitutionID</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Institution Code</rdfs:label>
+        <skos:definition xml:lang="en">The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record.</skos:definition>
+        <skos:example xml:lang="en">`MVZ`, `FMNH`, `CLO`, `UCMP`</skos:example>
+        <skos:prefLabel xml:lang="en">Institution Code</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/locality -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/locality">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:description xml:lang="en">Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2021-07-15"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-15</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Locality"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The specific description of the place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Locality</rdfs:label>
+        <skos:definition xml:lang="en">The specific description of the place.</skos:definition>
+        <skos:example xml:lang="en">`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`</skos:example>
+        <skos:prefLabel xml:lang="en">Locality</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/municipality -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/municipality">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-24</terms:created>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Municipality</rdfs:label>
+        <skos:definition xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</skos:definition>
+        <skos:example xml:lang="en">`Holzminden`, `Araçatuba`, `Ga-Segonyana`</skos:example>
+        <skos:prefLabel xml:lang="en">Municipality</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/stateProvince -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/stateProvince">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/StateProvince"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName with NamedAreas/NamedArea/AreaClass= State or = Province (etc.)</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">State Province</rdfs:label>
+        <skos:definition xml:lang="en">The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.</skos:definition>
+        <skos:example xml:lang="en">`Montana`, `Minas Gerais`, `Córdoba`</skos:example>
+        <skos:prefLabel xml:lang="en">State Province</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.europeana.eu/schemas/edm/rights -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.europeana.eu/schemas/edm/rights">
+        <rdfs:comment xml:lang="en">Information about copyright of the digital object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Europeana Rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#address -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#address">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
+        <terms:description xml:lang="en">Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</terms:description>
+        <terms:isVersionOf>http://rs.tdwg.org/dwc/terms/locality</terms:isVersionOf>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The specific description of the place.</rdfs:comment>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+        <skos:definition xml:lang="en">The specific description of the place.</skos:definition>
+        <skos:example xml:lang="en">`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`</skos:example>
+        <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#agreementURI -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#agreementURI">
+        <rdfs:subPropertyOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/UsageTerms"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/UsageTerms"/>
+        <rdfs:comment xml:lang="en">A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agreement URI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#city -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#city">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <skos:definition xml:lang="en">The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.</skos:definition>
+        <skos:example xml:lang="en">`Holzminden`, `Araçatuba`, `Ga-Segonyana`</skos:example>
+        <skos:prefLabel xml:lang="en">City</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#contactUser -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#contactUser">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Contact User</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#dataManager -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dataManager">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Data Manager</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#downloadPermission -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#downloadPermission">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Download Permission</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#downloadReviewer -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#downloadReviewer">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Download Reviewer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#institutionName -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#institutionName">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Institution Name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#licenseBlank -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#licenseBlank">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">License Intentionally Left Blank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">MorphoSource Use Agreement Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#organizationType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#organizationType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Organization Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Permissions Enforcement Mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#permits3DUse -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permits3DUse">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Permits 3D Use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#permitsCommercialUse -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permitsCommercialUse">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Permits Commercial Use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#postalCode -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#postalCode">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Postal Code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#previewMode -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#previewMode">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Preview Mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#recordsetID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#recordsetID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Recordset ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#relatedURL -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#relatedURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:isVersionOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <rdfs:label xml:lang="en">Related URL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Required Archival Of Published Derivatives</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#rightsHolder -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsHolder">
+        <rdfs:subPropertyOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/Owner"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/Owner"/>
+        <rdfs:comment xml:lang="en">A list of legal owners of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rights Holder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#rightsHolderBlank -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsHolderBlank">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Rights Holder Intentionally Left Blank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#rightsStatement -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsStatement">
+        <rdfs:subPropertyOf rdf:resource="http://www.europeana.eu/schemas/edm/rights"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <terms:isVersionOf rdf:resource="http://www.europeana.eu/schemas/edm/rights"/>
+        <rdfs:label xml:lang="en">Rights Statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#rightsStatementBlank -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsStatementBlank">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Rights Statement Intentionally Left Blank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#teamID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#teamID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://pcdm.org/models#File -->
+
+
+    <owl:Class rdf:about="http://pcdm.org/models#File"/>
+    
+
+
+    <!-- http://pcdm.org/models#Object -->
+
+
+    <owl:Class rdf:about="http://pcdm.org/models#Object"/>
+    
+
+
+    <!-- http://pcdm.org/works#Work -->
+
+
+    <owl:Class rdf:about="http://pcdm.org/works#Work">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/models#Object"/>
+        <rdfs:comment xml:lang="en">
+      A work or intellectual entity, such as a book, film, dissertation, etc.
+      Works have member Objects representing their physical structure (e.g., pages in a book),
+      FileSets to maintain representations of the entire resource (e.g. a PDF of all the pages),
+      and TopRanges representing their logical structure or structures (e.g., sections
+      and chapters in a book).
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/works#"/>
+        <rdfs:label xml:lang="en">Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">A physical object that is a biological specimen, such as a skeleton, a whole body, or a fossil.</rdfs:comment>
+        <rdfs:label xml:lang="en">Biological Specimen Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#CulturalHeritageObject -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">A physical object that is usually non-biological and is of some human cultural significance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cultural Heritage Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Device -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#Device">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">A device used to image a physical object to create media.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ImagingEvent -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#ImagingEvent">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">An active event in which a physical object is imaging to produce media.</rdfs:comment>
+        <rdfs:label xml:lang="en">Imaging Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Media -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#Media">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">3D, 2D, or AV media representing a physical object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Media</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Organization -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#Organization">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">A relatively autonomous bureaucratic unit responsible for controlling physical objects or devices. Often a museum collection, an entire museum institution, or a faculty lab department.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#PhysicalObject -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">A physical object, usually of scholarly interest, that is imaged to create media.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ProcessingEvent -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#ProcessingEvent">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media).</rdfs:comment>
+        <rdfs:label xml:lang="en">Processing Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

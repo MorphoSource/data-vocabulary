@@ -1,0 +1,553 @@
+<https://www.morphosource.org/terms/morphosource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://www.morphosource.org/terms/morphosource> <http://www.w3.org/2000/01/rdf-schema#comment> "Test description for MorphoSource Terms Vocabulary"@en .
+<https://www.morphosource.org/terms/morphosource> <http://www.w3.org/2000/01/rdf-schema#label> "MorphoSource Terms Vocabulary"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/dcam/rangeIncludes
+<http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/replaces
+<http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence
+<http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rs.tdwg.org/dwc/terms/attributes/organizedInClass
+<http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rs.tdwg.org/dwc/terms/attributes/usageScope
+<http://rs.tdwg.org/dwc/terms/attributes/usageScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ns.adobe.com/xap/1.0/rights/Owner
+<http://ns.adobe.com/xap/1.0/rights/Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.adobe.com/xap/1.0/rights/Owner> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of legal owners of the resource."@en .
+<http://ns.adobe.com/xap/1.0/rights/Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner"@en .
+# 
+# http://ns.adobe.com/xap/1.0/rights/UsageTerms
+<http://ns.adobe.com/xap/1.0/rights/UsageTerms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.adobe.com/xap/1.0/rights/UsageTerms> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of text instructions on how a resource can be legally used, given in a variety of languages."@en .
+<http://ns.adobe.com/xap/1.0/rights/UsageTerms> <http://www.w3.org/2000/01/rdf-schema#label> "Usage Rights"@en .
+# 
+# http://pcdm.org/models#fileOf
+<http://pcdm.org/models#fileOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://pcdm.org/models#hasFile> .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pcdm.org/models#File> .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links from a File to its containing Object."@en .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/models#> .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#label> "is file of"@en .
+# 
+# http://pcdm.org/models#hasFile
+<http://pcdm.org/models#hasFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://pcdm.org/models#File> .
+<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to a File contained by this Object."@en .
+<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/models#> .
+<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#label> "has file"@en .
+# 
+# http://pcdm.org/models#hasMember
+<http://pcdm.org/models#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2002/07/owl#inverseOf> <http://pcdm.org/models#memberOf> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to a subsidiary Object or Collection. Typically used to link\n          to component parts, such as a book linking to a page.  Note on transitivity: hasMember is\n          not defined as transitive, but applications may treat it as transitive as local needs\n          dictate."@en .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/models#> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has member"@en .
+# 
+# http://pcdm.org/models#memberOf
+<http://pcdm.org/models#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links from an Object or Collection to a containing Object or Collection."@en .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/models#> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of"@en .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en .
+<http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/terms/issued> "1999-07-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#comment> "An account of the resource."@en .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+# 
+# http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://purl.org/dc/terms/dateSubmitted> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)."@en .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of submission of the resource."@en .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#label> "Date Submitted"@en .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://purl.org/dc/terms/license> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/LicenseDocument> .
+<http://purl.org/dc/terms/license> <http://purl.org/dc/terms/description> "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal document giving official permission to do something with the resource."@en .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to the resource."@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/catalogNumber
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/catalogNumber-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/catalogNumber-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/CatalogNumber> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/UnitID" .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier (preferably unique) for the record within the data set or collection."@en .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Catalog Number"@en .
+<http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2004/02/skos/core#example> "`145732`, `145732a`, `2008.1334`, `R-4313`"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/collectionCode
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/CollectionCode> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SourceID" .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."@en .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Code"@en .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2004/02/skos/core#definition> "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."@en .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2004/02/skos/core#example> "`Mammals`, `Hildebrandt`, `EBIRD`, `VP`"@en .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection Code"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/country
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both."@en .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2021-07-15> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/modified> "2021-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/Country> .
+<http://rs.tdwg.org/dwc/terms/country> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/Country/Name" .
+<http://rs.tdwg.org/dwc/terms/country> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
+<http://rs.tdwg.org/dwc/terms/country> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the country or major administrative unit in which the Location occurs."@en .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#definition> "The name of the country or major administrative unit in which the Location occurs."@en .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#prefLabel> "Country"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/institutionCode
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/InstitutionCode> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SourceInstitutionID" .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."@en .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#label> "Institution Code"@en .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2004/02/skos/core#definition> "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."@en .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2004/02/skos/core#example> "`MVZ`, `FMNH`, `CLO`, `UCMP`"@en .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Institution Code"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/locality
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2021-07-15> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/modified> "2021-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/Locality> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
+<http://rs.tdwg.org/dwc/terms/locality> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific description of the place."@en .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#label> "Locality"@en .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2004/02/skos/core#definition> "The specific description of the place."@en .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
+<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2004/02/skos/core#prefLabel> "Locality"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/municipality
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/created> "2009-08-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#comment> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality"@en .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2004/02/skos/core#definition> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
+<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2004/02/skos/core#prefLabel> "Municipality"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/stateProvince
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/created> "2009-04-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/modified> "2017-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/StateProvince> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName with NamedAreas/NamedArea/AreaClass= State or = Province (etc.)" .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."@en .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#label> "State Province"@en .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#definition> "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."@en .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#prefLabel> "State Province"@en .
+# 
+# http://www.europeana.eu/schemas/edm/rights
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about copyright of the digital object."@en .
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Rights"@en .
+# 
+# http://www.w3.org/2000/01/rdf-schema#seeAlso
+<http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.morphosource.org/terms/morphosource#address
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/locality> .
+<https://www.morphosource.org/terms/morphosource#address> <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en .
+<https://www.morphosource.org/terms/morphosource#address> <http://purl.org/dc/terms/isVersionOf> "http://rs.tdwg.org/dwc/terms/locality" .
+<https://www.morphosource.org/terms/morphosource#address> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
+<https://www.morphosource.org/terms/morphosource#address> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
+<https://www.morphosource.org/terms/morphosource#address> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific description of the place."@en .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2004/02/skos/core#definition> "The specific description of the place."@en .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2004/02/skos/core#prefLabel> "Address"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#agreementURI
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.adobe.com/xap/1.0/rights/UsageTerms> .
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/UsageTerms> .
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#comment> "A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly."@en .
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement URI"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#city
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/municipality> .
+<https://www.morphosource.org/terms/morphosource#city> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
+<https://www.morphosource.org/terms/morphosource#city> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/municipality> .
+<https://www.morphosource.org/terms/morphosource#city> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
+<https://www.morphosource.org/terms/morphosource#city> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> .
+<https://www.morphosource.org/terms/morphosource#city> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#comment> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#definition> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#prefLabel> "City"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#contactUser
+<https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/2000/01/rdf-schema#label> "Contact User"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#dataManager
+<https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/2000/01/rdf-schema#label> "Data Manager"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#downloadPermission
+<https://www.morphosource.org/terms/morphosource#downloadPermission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#downloadPermission> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#downloadPermission> <http://www.w3.org/2000/01/rdf-schema#label> "Download Permission"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#downloadReviewer
+<https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#label> "Download Reviewer"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#institutionName
+<https://www.morphosource.org/terms/morphosource#institutionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#institutionName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#institutionName> <http://www.w3.org/2000/01/rdf-schema#label> "Institution Name"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#licenseBlank
+<https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/2000/01/rdf-schema#label> "License Intentionally Left Blank"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType
+<https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#label> "MorphoSource Use Agreement Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#organizationType
+<https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#label> "Organization Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode
+<https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode> <http://www.w3.org/2000/01/rdf-schema#label> "Permissions Enforcement Mode"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#permits3DUse
+<https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/2000/01/rdf-schema#label> "Permits 3D Use"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#permitsCommercialUse
+<https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#label> "Permits Commercial Use"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#postalCode
+<https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Code"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#previewMode
+<https://www.morphosource.org/terms/morphosource#previewMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#previewMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#previewMode> <http://www.w3.org/2000/01/rdf-schema#label> "Preview Mode"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#recordsetID
+<https://www.morphosource.org/terms/morphosource#recordsetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#recordsetID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#recordsetID> <http://www.w3.org/2000/01/rdf-schema#label> "Recordset ID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#relatedURL
+<https://www.morphosource.org/terms/morphosource#relatedURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#relatedURL> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+<https://www.morphosource.org/terms/morphosource#relatedURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#relatedURL> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+<https://www.morphosource.org/terms/morphosource#relatedURL> <http://www.w3.org/2000/01/rdf-schema#label> "Related URL"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives
+<https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/2000/01/rdf-schema#label> "Required Archival Of Published Derivatives"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#rightsHolder
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.adobe.com/xap/1.0/rights/Owner> .
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/Owner> .
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of legal owners of the resource."@en .
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Holder"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#rightsHolderBlank
+<https://www.morphosource.org/terms/morphosource#rightsHolderBlank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#rightsHolderBlank> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#rightsHolderBlank> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Holder Intentionally Left Blank"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#rightsStatement
+<https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/rights> .
+<https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#rightsStatement> <http://purl.org/dc/terms/isVersionOf> <http://www.europeana.eu/schemas/edm/rights> .
+<https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Statement"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#rightsStatementBlank
+<https://www.morphosource.org/terms/morphosource#rightsStatementBlank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#rightsStatementBlank> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#rightsStatementBlank> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Statement Intentionally Left Blank"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#teamID
+<https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://pcdm.org/models#File
+<http://pcdm.org/models#File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pcdm.org/models#Object
+<http://pcdm.org/models#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://pcdm.org/works#Work
+<http://pcdm.org/works#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/models#Object> .
+<http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      A work or intellectual entity, such as a book, film, dissertation, etc.\n      Works have member Objects representing their physical structure (e.g., pages in a book),\n      FileSets to maintain representations of the entire resource (e.g. a PDF of all the pages),\n      and TopRanges representing their logical structure or structures (e.g., sections\n      and chapters in a book).\n    "@en .
+<http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/works#> .
+<http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#label> "Work"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject
+<https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical object that is a biological specimen, such as a skeleton, a whole body, or a fossil."@en .
+<https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/2000/01/rdf-schema#label> "Biological Specimen Object"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#CulturalHeritageObject
+<https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical object that is usually non-biological and is of some human cultural significance."@en .
+<https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Heritage Object"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Device
+<https://www.morphosource.org/terms/morphosource#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
+<https://www.morphosource.org/terms/morphosource#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used to image a physical object to create media."@en .
+<https://www.morphosource.org/terms/morphosource#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ImagingEvent
+<https://www.morphosource.org/terms/morphosource#ImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#ImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
+<https://www.morphosource.org/terms/morphosource#ImagingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An active event in which a physical object is imaging to produce media."@en .
+<https://www.morphosource.org/terms/morphosource#ImagingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Imaging Event"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Media
+<https://www.morphosource.org/terms/morphosource#Media> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#Media> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
+<https://www.morphosource.org/terms/morphosource#Media> <http://www.w3.org/2000/01/rdf-schema#comment> "3D, 2D, or AV media representing a physical object."@en .
+<https://www.morphosource.org/terms/morphosource#Media> <http://www.w3.org/2000/01/rdf-schema#label> "Media"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Organization
+<https://www.morphosource.org/terms/morphosource#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
+<https://www.morphosource.org/terms/morphosource#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "A relatively autonomous bureaucratic unit responsible for controlling physical objects or devices. Often a museum collection, an entire museum institution, or a faculty lab department."@en .
+<https://www.morphosource.org/terms/morphosource#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#PhysicalObject
+<https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
+<https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical object, usually of scholarly interest, that is imaged to create media."@en .
+<https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Object"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ProcessingEvent
+<https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
+<https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media)."@en .
+<https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Event"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the resource was changed."@en .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#label> "Date Modified"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
