@@ -379,11 +379,6 @@
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#label> "Organization Type"@en .
 # 
-# https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode
-<https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode> <http://www.w3.org/2000/01/rdf-schema#label> "Permissions Enforcement Mode"@en .
-# 
 # https://www.morphosource.org/terms/morphosource#permits3DUse
 <https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
@@ -398,11 +393,6 @@
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Code"@en .
-# 
-# https://www.morphosource.org/terms/morphosource#previewMode
-<https://www.morphosource.org/terms/morphosource#previewMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://www.morphosource.org/terms/morphosource#previewMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<https://www.morphosource.org/terms/morphosource#previewMode> <http://www.w3.org/2000/01/rdf-schema#label> "Preview Mode"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#recordsetID
 <https://www.morphosource.org/terms/morphosource#recordsetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -449,6 +439,7 @@
 # https://www.morphosource.org/terms/morphosource#teamID
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#label> "Team ID"@en .
 # 
 # 
 # 

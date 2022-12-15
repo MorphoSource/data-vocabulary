@@ -983,16 +983,6 @@
     "@value" : "Organization Type"
   } ]
 }, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Permissions Enforcement Mode"
-  } ]
-}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#permits3DUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1021,16 +1011,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Postal Code"
-  } ]
-}, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#previewMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Preview Mode"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#recordsetID",
@@ -1129,5 +1109,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Team ID"
   } ]
 } ]
