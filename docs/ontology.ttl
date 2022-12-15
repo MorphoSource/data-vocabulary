@@ -424,12 +424,6 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                   rdfs:label "Organization Type"@en .
 
 
-###  https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode
-:permissionsEnforcementMode rdf:type owl:ObjectProperty ;
-                            rdfs:domain :Organization ;
-                            rdfs:label "Permissions Enforcement Mode"@en .
-
-
 ###  https://www.morphosource.org/terms/morphosource#permits3DUse
 :permits3DUse rdf:type owl:ObjectProperty ;
               rdfs:domain :Organization ;
@@ -446,12 +440,6 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :postalCode rdf:type owl:ObjectProperty ;
             rdfs:domain :Organization ;
             rdfs:label "Postal Code"@en .
-
-
-###  https://www.morphosource.org/terms/morphosource#previewMode
-:previewMode rdf:type owl:ObjectProperty ;
-             rdfs:domain :Organization ;
-             rdfs:label "Preview Mode"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#recordsetID
@@ -505,7 +493,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#teamID
 :teamID rdf:type owl:ObjectProperty ;
-        rdfs:domain :Organization .
+        rdfs:domain :Organization ;
+        rdfs:label "Team ID"@en .
 
 
 #################################################################
