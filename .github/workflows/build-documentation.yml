@@ -19,11 +19,14 @@ jobs:
       - name: List core files
         run: |
           ls $HOME
+      - name: Check Java version
+        run: |
+          java -version
       - name: Run WIDOCO to create documentation
         run: |
-          java -jar $HOME/widoco.jar |
-          -ontFile ${{ github.workspace }}/morphosource_data_vocabulary.owl |
-          -outFolder ${{ github.workspace }}/docs/ |
+          java -jar $HOME/widoco.jar \
+          -ontFile ${{ github.workspace }}/morphosource_data_vocabulary.owl \
+          -outFolder ${{ github.workspace }}/docs/ \
           -uniteSections -noPlaceHolderText
       - name: List files in the repository again
         run: |
