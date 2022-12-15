@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
      xml:base="https://www.morphosource.org/terms/morphosource"
+     xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/"
      xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
      xmlns:edm="http://www.europeana.eu/schemas/edm/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -12,9 +13,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
-     xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/"
-     xmlns:morphosource="https://www.morphosource.org/terms/morphosource#">
+     xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/">
     <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
@@ -238,9 +237,23 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
@@ -288,7 +301,12 @@
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Title</rdfs:label>
@@ -561,6 +579,16 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#licenseBlank">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">License Intentionally Left Blank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#modality3D -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#modality3D">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:comment xml:lang="en">Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography.</rdfs:comment>
+        <rdfs:label xml:lang="en">Modality</rdfs:label>
     </owl:ObjectProperty>
     
 
