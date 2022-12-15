@@ -47,6 +47,7 @@ jobs:
 
       
   commit:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -72,6 +73,7 @@ jobs:
           message: 'Build documentation'
 
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
