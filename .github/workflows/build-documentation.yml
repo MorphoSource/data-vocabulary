@@ -9,19 +9,19 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Download WIDOCO tool
-        uses: suisei-cn/actions-download-file@v1.3.0
-        id: downloadfile  # Remember to give an ID if you need the output filename
-        with:
-          url: "https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar"
-          target: public/
+          run: |
+            curl https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar -o widoco.jar
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: List core files
+        run: |
+          ls
       - name: Run WIDOCO to create documentation
         run: |
-          java -jar public/java-11-widoco-1.4.17-jar-with-dependencies.jar |
+          java -jar widoco.jar |
           -ontFile ${{ github.workspace }}/morphosource_data_vocabulary.owl |
           -outFolder ${{ github.workspace }}/docs/ |
           -uniteSections -noPlaceHolderText
