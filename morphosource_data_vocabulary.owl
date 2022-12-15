@@ -583,15 +583,6 @@
     
 
 
-    <!-- https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode -->
-
-    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permissionsEnforcementMode">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <rdfs:label xml:lang="en">Permissions Enforcement Mode</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://www.morphosource.org/terms/morphosource#permits3DUse -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permits3DUse">
@@ -615,15 +606,6 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#postalCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Postal Code</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.morphosource.org/terms/morphosource#previewMode -->
-
-    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#previewMode">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <rdfs:label xml:lang="en">Preview Mode</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -702,6 +684,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#teamID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:label xml:lang="en">Team ID</rdfs:label>
     </owl:ObjectProperty>
     
 
