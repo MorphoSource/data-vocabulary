@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Thu Dec 15 20:14:54 UTC 2022"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Thu Dec 15 20:56:46 UTC 2022"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -139,6 +139,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://rs.tdwg.org/dwc/terms/country" title="http://rs.tdwg.org/dwc/terms/country">Country</a>
    </li>
    <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
+   </li>
+   <li>
       <a href="#dataManager"
          title="https://www.morphosource.org/terms/morphosource#dataManager">Data Manager</a>
    </li>
@@ -192,6 +195,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://rs.tdwg.org/dwc/terms/locality" title="http://rs.tdwg.org/dwc/terms/locality">Locality</a>
+   </li>
+   <li>
+      <a href="#modality3D"
+         title="https://www.morphosource.org/terms/morphosource#modality3D">Modality</a>
    </li>
    <li>
       <a href="#morphosourceUseAgreementType"
@@ -362,7 +369,11 @@ This section provides details for each class and property defined by MorphoSourc
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
+            <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#modality3D"
+               title="https://www.morphosource.org/terms/morphosource#modality3D">Modality</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -390,7 +401,8 @@ This section provides details for each class and property defined by MorphoSourc
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
+            <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -418,7 +430,8 @@ This section provides details for each class and property defined by MorphoSourc
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://pcdm.org/models#hasFile" title="http://pcdm.org/models#hasFile">has file</a>
+            <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasFile" title="http://pcdm.org/models#hasFile">has file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
@@ -538,6 +551,7 @@ This section provides details for each class and property defined by MorphoSourc
          <dt>is in domain of</dt>
          <dd>
             <a href="#http://rs.tdwg.org/dwc/terms/catalogNumber" title="http://rs.tdwg.org/dwc/terms/catalogNumber">Catalog Number</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -560,7 +574,8 @@ This section provides details for each class and property defined by MorphoSourc
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
+            <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -649,6 +664,9 @@ This section provides details for each class and property defined by MorphoSourc
          <a href="#http://rs.tdwg.org/dwc/terms/country" title="http://rs.tdwg.org/dwc/terms/country">Country</a>
       </li>
       <li>
+         <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
+      </li>
+      <li>
          <a href="#dataManager"
             title="https://www.morphosource.org/terms/morphosource#dataManager">Data Manager</a>
       </li>
@@ -702,6 +720,10 @@ This section provides details for each class and property defined by MorphoSourc
       </li>
       <li>
          <a href="#http://rs.tdwg.org/dwc/terms/locality" title="http://rs.tdwg.org/dwc/terms/locality">Locality</a>
+      </li>
+      <li>
+         <a href="#modality3D"
+            title="https://www.morphosource.org/terms/morphosource#modality3D">Modality</a>
       </li>
       <li>
          <a href="#morphosourceUseAgreementType"
@@ -966,6 +988,23 @@ This section provides details for each class and property defined by MorphoSourc
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+      <h3>Creator<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+      <div class="comment">
+         <span class="markdown">An entity primarily responsible for making the resource.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="dataManager">
       <h3>Data Manager<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1050,6 +1089,11 @@ This section provides details for each class and property defined by MorphoSourc
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#Device"
+                  title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#Organization"
                   title="https://www.morphosource.org/terms/morphosource#Organization">Organization</a>
@@ -1457,6 +1501,27 @@ This section provides details for each class and property defined by MorphoSourc
          </dl>
       </div>
    </div>
+   <div class="entity" id="modality3D">
+      <h3>Modality<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#modality3D</p>
+      <div class="comment">
+         <span class="markdown">Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Device"
+                  title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="morphosourceUseAgreementType">
       <h3>MorphoSource Use Agreement Type<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1824,8 +1889,33 @@ This section provides details for each class and property defined by MorphoSourc
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#Device"
+                  title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#ImagingEvent"
+                  title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Media"
+                  title="https://www.morphosource.org/terms/morphosource#Media">Media</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
                <a href="#Organization"
                   title="https://www.morphosource.org/terms/morphosource#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#PhysicalObject"
+                  title="https://www.morphosource.org/terms/morphosource#PhysicalObject">Physical Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#ProcessingEvent"
+                  title="https://www.morphosource.org/terms/morphosource#ProcessingEvent">Processing Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

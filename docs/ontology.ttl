@@ -153,9 +153,20 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:label "is member of"@en .
 
 
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:ObjectProperty ;
+                                          <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                          rdfs:comment "An entity primarily responsible for making the resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                          rdfs:label "Creator"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+
+
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain :Organization ;
+                                              rdfs:domain :Device ,
+                                                          :Organization ;
                                               <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                                               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
                                               rdfs:comment "An account of the resource."@en ;
@@ -190,7 +201,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:ObjectProperty ;
-                                 rdfs:domain :Organization ;
+                                 rdfs:domain :Device ,
+                                             :ImagingEvent ,
+                                             :Media ,
+                                             :Organization ,
+                                             :PhysicalObject ,
+                                             :ProcessingEvent ;
                                  rdfs:comment "A name given to the resource."@en ;
                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                  rdfs:label "Title"@en .
@@ -410,6 +426,13 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :licenseBlank rdf:type owl:ObjectProperty ;
               rdfs:domain :Organization ;
               rdfs:label "License Intentionally Left Blank"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#modality3D
+:modality3D rdf:type owl:ObjectProperty ;
+            rdfs:domain :Device ;
+            rdfs:comment "Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography."@en ;
+            rdfs:label "Modality"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType
