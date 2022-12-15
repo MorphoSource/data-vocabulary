@@ -205,9 +205,7 @@
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."@en .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Code"@en .
-<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2004/02/skos/core#definition> "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."@en .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2004/02/skos/core#example> "`Mammals`, `Hildebrandt`, `EBIRD`, `VP`"@en .
-<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection Code"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/country
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -226,9 +224,7 @@
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the country or major administrative unit in which the Location occurs."@en .
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
-<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#definition> "The name of the country or major administrative unit in which the Location occurs."@en .
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en .
-<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#prefLabel> "Country"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/institutionCode
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -247,9 +243,7 @@
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."@en .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#label> "Institution Code"@en .
-<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2004/02/skos/core#definition> "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."@en .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2004/02/skos/core#example> "`MVZ`, `FMNH`, `CLO`, `UCMP`"@en .
-<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Institution Code"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/locality
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -268,9 +262,7 @@
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific description of the place."@en .
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#label> "Locality"@en .
-<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2004/02/skos/core#definition> "The specific description of the place."@en .
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
-<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2004/02/skos/core#prefLabel> "Locality"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/municipality
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -287,9 +279,7 @@
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#comment> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality"@en .
-<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2004/02/skos/core#definition> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
-<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2004/02/skos/core#prefLabel> "Municipality"@en .
 # 
 # http://rs.tdwg.org/dwc/terms/stateProvince
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -307,9 +297,7 @@
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."@en .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#label> "State Province"@en .
-<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#definition> "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."@en .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en .
-<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#prefLabel> "State Province"@en .
 # 
 # http://www.europeana.eu/schemas/edm/rights
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -329,9 +317,7 @@
 <https://www.morphosource.org/terms/morphosource#address> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
 <https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific description of the place."@en .
 <https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
-<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2004/02/skos/core#definition> "The specific description of the place."@en .
 <https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
-<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2004/02/skos/core#prefLabel> "Address"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#agreementURI
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -351,9 +337,7 @@
 <https://www.morphosource.org/terms/morphosource#city> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#comment> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
-<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#definition> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en .
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
-<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#prefLabel> "City"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#contactUser
 <https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

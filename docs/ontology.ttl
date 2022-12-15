@@ -231,9 +231,7 @@ xsd:date rdf:type rdfs:Datatype .
                                               rdfs:comment "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."@en ;
                                               rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                               rdfs:label "Collection Code"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."@en ;
-                                              <http://www.w3.org/2004/02/skos/core#example> "`Mammals`, `Hildebrandt`, `EBIRD`, `VP`"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection Code"@en .
+                                              <http://www.w3.org/2004/02/skos/core#example> "`Mammals`, `Hildebrandt`, `EBIRD`, `VP`"@en .
 
 
 ###  http://rs.tdwg.org/dwc/terms/country
@@ -253,9 +251,7 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:comment "The name of the country or major administrative unit in which the Location occurs."@en ;
                                        rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                        rdfs:label "Country"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "The name of the country or major administrative unit in which the Location occurs."@en ;
-                                       <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Country"@en .
+                                       <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en .
 
 
 ###  http://rs.tdwg.org/dwc/terms/institutionCode
@@ -275,9 +271,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                rdfs:comment "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."@en ;
                                                rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                                rdfs:label "Institution Code"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#example> "`MVZ`, `FMNH`, `CLO`, `UCMP`"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Institution Code"@en .
+                                               <http://www.w3.org/2004/02/skos/core#example> "`MVZ`, `FMNH`, `CLO`, `UCMP`"@en .
 
 
 ###  http://rs.tdwg.org/dwc/terms/locality
@@ -297,9 +291,7 @@ xsd:date rdf:type rdfs:Datatype .
                                         rdfs:comment "The specific description of the place."@en ;
                                         rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                         rdfs:label "Locality"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#definition> "The specific description of the place."@en ;
-                                        <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Locality"@en .
+                                        <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
 
 
 ###  http://rs.tdwg.org/dwc/terms/municipality
@@ -317,9 +309,7 @@ xsd:date rdf:type rdfs:Datatype .
                                             rdfs:comment "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en ;
                                             rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                             rdfs:label "Municipality"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#definition> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en ;
-                                            <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Municipality"@en .
+                                            <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
 
 
 ###  http://rs.tdwg.org/dwc/terms/stateProvince
@@ -338,9 +328,7 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:comment "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."@en ;
                                              rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                              rdfs:label "State Province"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."@en ;
-                                             <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "State Province"@en .
+                                             <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en .
 
 
 ###  http://www.europeana.eu/schemas/edm/rights
@@ -363,9 +351,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
          <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
          rdfs:comment "The specific description of the place."@en ;
          rdfs:label "Address"@en ;
-         <http://www.w3.org/2004/02/skos/core#definition> "The specific description of the place."@en ;
-         <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en ;
-         <http://www.w3.org/2004/02/skos/core#prefLabel> "Address"@en .
+         <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#agreementURI
@@ -387,9 +373,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
       <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
       rdfs:comment "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en ;
       rdfs:label "City"@en ;
-      <http://www.w3.org/2004/02/skos/core#definition> "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."@en ;
-      <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en ;
-      <http://www.w3.org/2004/02/skos/core#prefLabel> "City"@en .
+      <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#contactUser

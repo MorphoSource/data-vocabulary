@@ -392,17 +392,9 @@
     "@language" : "en",
     "@value" : "Collection Code"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Mammals`, `Hildebrandt`, `EBIRD`, `VP`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Collection Code"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/country",
@@ -455,17 +447,9 @@
     "@language" : "en",
     "@value" : "Country"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The name of the country or major administrative unit in which the Location occurs."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Denmark`, `Colombia`, `España`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Country"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/institutionCode",
@@ -516,17 +500,9 @@
     "@language" : "en",
     "@value" : "Institution Code"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`MVZ`, `FMNH`, `CLO`, `UCMP`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Institution Code"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/locality",
@@ -579,17 +555,9 @@
     "@language" : "en",
     "@value" : "Locality"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The specific description of the place."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Locality"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/municipality",
@@ -637,17 +605,9 @@
     "@language" : "en",
     "@value" : "Municipality"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Municipality"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/stateProvince",
@@ -698,17 +658,9 @@
     "@language" : "en",
     "@value" : "State Province"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Montana`, `Minas Gerais`, `Córdoba`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "State Province"
   } ]
 }, {
   "@id" : "http://www.europeana.eu/schemas/edm/rights",
@@ -892,17 +844,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/locality"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The specific description of the place."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Address"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#agreementURI",
@@ -954,17 +898,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/municipality"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."
-  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "City"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contactUser",
