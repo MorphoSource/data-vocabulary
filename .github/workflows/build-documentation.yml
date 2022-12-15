@@ -9,8 +9,8 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Download WIDOCO tool
-          run: |
-            curl https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar -o widoco.jar
+        run: |
+          curl https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar -o widoco.jar
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: List files in the repository
