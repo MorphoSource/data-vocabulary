@@ -584,6 +584,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#processingActivityDescription
 :processingActivityDescription rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ;
                                rdfs:domain :ProcessingEvent ;
                                rdfs:label "Processing Activity Description"@en .
 

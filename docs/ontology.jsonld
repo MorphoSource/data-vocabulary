@@ -1275,6 +1275,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Processing Activity Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/description"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivitySoftware",
