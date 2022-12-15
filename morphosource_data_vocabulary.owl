@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
      xml:base="https://www.morphosource.org/terms/morphosource"
-     xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/"
      xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
      xmlns:edm="http://www.europeana.eu/schemas/edm/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,7 +12,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/">
+     xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
+     xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/"
+     xmlns:morphosource="https://www.morphosource.org/terms/morphosource#">
     <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
@@ -240,6 +241,7 @@
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
