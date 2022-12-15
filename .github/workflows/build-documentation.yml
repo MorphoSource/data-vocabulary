@@ -10,7 +10,8 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Download WIDOCO tool
         run: |
-          curl https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar -o $HOME/widoco.jar
+          wget https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar \
+            -O $HOME/java-11-widoco-1.4.17-jar-with-dependencies.jar
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: List files in the repository
@@ -18,13 +19,13 @@ jobs:
           ls ${{ github.workspace }}
       - name: List core files
         run: |
-          ls $HOME
+          ls -lh $HOME
       - name: Check Java version
         run: |
           java -version
       - name: Run WIDOCO to create documentation
         run: |
-          java -jar $HOME/widoco.jar \
+          java -jar $HOME/java-11-widoco-1.4.17-jar-with-dependencies.jar \
           -ontFile ${{ github.workspace }}/morphosource_data_vocabulary.owl \
           -outFolder ${{ github.workspace }}/docs/ \
           -uniteSections -noPlaceHolderText
