@@ -1,4 +1,74 @@
 [ {
+  "@id" : "http://id.loc.gov/vocabulary/relators/dpt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.loc.gov/mads/rdf/v1#authoritativeLabel" : [ {
+    "@value" : "Depositor"
+  } ],
+  "http://www.loc.gov/mads/rdf/v1#code" : [ {
+    "@value" : "dpt"
+  } ],
+  "http://www.loc.gov/mads/rdf/v1#definitionNote" : [ {
+    "@language" : "en",
+    "@value" : "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"
+  } ],
+  "http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/own"
+  } ],
+  "http://www.loc.gov/mads/rdf/v1#historyNote" : [ {
+    "@language" : "en",
+    "@value" : "MARC bib: 1XX/7XX/8XX $4"
+  } ],
+  "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/collection_BIBFRAME"
+  }, {
+    "@id" : "http://id.loc.gov/vocabulary/relators/collection_PastPresentRelatorsEntries"
+  }, {
+    "@id" : "http://id.loc.gov/vocabulary/relators/collection_RDA"
+  }, {
+    "@id" : "http://id.loc.gov/vocabulary/relators/collection_RDAItem"
+  }, {
+    "@id" : "http://id.loc.gov/vocabulary/relators/collection_RDAOwner"
+  } ],
+  "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/own"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
+    "@language" : "en",
+    "@value" : "MARC bib: 1XX/7XX/8XX $4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "dpt"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "Depositor"
+  } ]
+}, {
   "@id" : "http://ns.adobe.com/xap/1.0/rights/Owner",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -150,8 +220,39 @@
     "@id" : "http://pcdm.org/models#Object"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/dcam/memberOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/dcam/rangeIncludes",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/dcmitype/Software",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/dcam/memberOf" : [ {
+    "@id" : "http://purl.org/dc/terms/DCMIType"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Examples include a C source file, MS-Windows .exe executable, or Perl script."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2000-07-11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A computer program in source or compiled form."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/dcmitype/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Software"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -169,6 +270,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/"
@@ -200,6 +303,8 @@
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/"
@@ -214,7 +319,29 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2000-07-11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date of creation of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date Created"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/dateSubmitted",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -227,7 +354,17 @@
     "@value" : "Date of submission of the resource."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/terms/"
@@ -287,7 +424,17 @@
     "@value" : "Date on which the resource was changed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/terms/"
@@ -715,16 +862,52 @@
     "@value" : "Europeana Rights"
   } ]
 }, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#authoritativeLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#definitionNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#changeNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#definition",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#historyNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#note",
@@ -910,6 +1093,22 @@
     "@id" : "http://ns.adobe.com/xap/1.0/rights/UsageTerms"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Attachment File"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#city",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
@@ -1066,6 +1265,39 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Postal Code"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#processingActivityDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Processing Activity Description"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#processingActivitySoftware",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Processing Activity Software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/dcmitype/Software"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#processingActivityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Processing Activity Type"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#recordsetID",

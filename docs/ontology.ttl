@@ -14,6 +14,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/dcam/memberOf
+<http://purl.org/dc/dcam/memberOf> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/dcam/rangeIncludes
 <http://purl.org/dc/dcam/rangeIncludes> rdf:type owl:AnnotationProperty .
 
@@ -62,12 +66,60 @@
 <http://rs.tdwg.org/dwc/terms/attributes/usageScope> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.loc.gov/mads/rdf/v1#authoritativeLabel
+<http://www.loc.gov/mads/rdf/v1#authoritativeLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#code
+<http://www.loc.gov/mads/rdf/v1#code> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#definitionNote
+<http://www.loc.gov/mads/rdf/v1#definitionNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority
+<http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#historyNote
+<http://www.loc.gov/mads/rdf/v1#historyNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection
+<http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme
+<http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#note
@@ -89,6 +141,34 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://id.loc.gov/vocabulary/relators/dpt
+<http://id.loc.gov/vocabulary/relators/dpt> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain :Device ,
+                                                        :ImagingEvent ,
+                                                        :Media ,
+                                                        :Organization ,
+                                                        :PhysicalObject ,
+                                                        :ProcessingEvent ;
+                                            <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Depositor" ;
+                                            <http://www.loc.gov/mads/rdf/v1#code> "dpt" ;
+                                            <http://www.loc.gov/mads/rdf/v1#definitionNote> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
+                                            <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/vocabulary/relators/own> ;
+                                            <http://www.loc.gov/mads/rdf/v1#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
+                                            <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/vocabulary/relators/collection_BIBFRAME> ,
+                                                                                                      <http://id.loc.gov/vocabulary/relators/collection_PastPresentRelatorsEntries> ,
+                                                                                                      <http://id.loc.gov/vocabulary/relators/collection_RDA> ,
+                                                                                                      <http://id.loc.gov/vocabulary/relators/collection_RDAItem> ,
+                                                                                                      <http://id.loc.gov/vocabulary/relators/collection_RDAOwner> ;
+                                            <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/vocabulary/relators> ;
+                                            <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/own> ;
+                                            <http://www.w3.org/2004/02/skos/core#changeNote> [ ] ;
+<http://www.w3.org/2004/02/skos/core#definition> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
+<http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> ;
+<http://www.w3.org/2004/02/skos/core#notation> "dpt" ;
+<http://www.w3.org/2004/02/skos/core#prefLabel> "Depositor" .
+
 
 ###  http://ns.adobe.com/xap/1.0/rights/Owner
 <http://ns.adobe.com/xap/1.0/rights/Owner> rdf:type owl:ObjectProperty ;
@@ -153,9 +233,21 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:label "is member of"@en .
 
 
+###  http://purl.org/dc/dcmitype/Software
+<http://purl.org/dc/dcmitype/Software> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain :ProcessingEvent ;
+                                       <http://purl.org/dc/dcam/memberOf> <http://purl.org/dc/terms/DCMIType> ;
+                                       <http://purl.org/dc/terms/description> "Examples include a C source file, MS-Windows .exe executable, or Perl script."@en ;
+                                       <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                       rdfs:comment "A computer program in source or compiled form."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/dcmitype/> ;
+                                       rdfs:label "Software"@en .
+
+
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain :Device ;
+                                          rdfs:domain :Device ,
+                                                      :ProcessingEvent ;
                                           <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
                                           <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
                                           rdfs:comment "An entity primarily responsible for making the resource."@en ;
@@ -167,7 +259,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:ObjectProperty ;
                                               rdfs:domain :Device ,
-                                                          :Organization ;
+                                                          :Organization ,
+                                                          :ProcessingEvent ;
                                               <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                                               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
                                               rdfs:comment "An account of the resource."@en ;
@@ -176,9 +269,19 @@ xsd:date rdf:type rdfs:Datatype .
                                               <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 
 
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :ProcessingEvent .
+
+
 ###  http://purl.org/dc/terms/dateSubmitted
 <http://purl.org/dc/terms/dateSubmitted> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain :Organization ;
+                                         rdfs:domain :Device ,
+                                                     :ImagingEvent ,
+                                                     :Media ,
+                                                     :Organization ,
+                                                     :PhysicalObject ,
+                                                     :ProcessingEvent ;
                                          <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)."@en ;
                                          rdfs:comment "Date of submission of the resource."@en ;
                                          rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
@@ -197,7 +300,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain :Organization .
+                                    rdfs:domain :Device ,
+                                                :ImagingEvent ,
+                                                :Media ,
+                                                :Organization ,
+                                                :PhysicalObject ,
+                                                :ProcessingEvent .
 
 
 ###  http://purl.org/dc/terms/title
@@ -380,6 +488,14 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
               rdfs:label "Agreement URI"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#attachmentFile
+:attachmentFile rdf:type owl:ObjectProperty ;
+                rdfs:domain :ImagingEvent ,
+                            :ProcessingEvent ;
+                rdfs:comment "A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties."@en ;
+                rdfs:label "Attachment File"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#city
 :city rdf:type owl:ObjectProperty ;
       rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/municipality> ;
@@ -464,6 +580,25 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :postalCode rdf:type owl:ObjectProperty ;
             rdfs:domain :Organization ;
             rdfs:label "Postal Code"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#processingActivityDescription
+:processingActivityDescription rdf:type owl:ObjectProperty ;
+                               rdfs:domain :ProcessingEvent ;
+                               rdfs:label "Processing Activity Description"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#processingActivitySoftware
+:processingActivitySoftware rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://purl.org/dc/dcmitype/Software> ;
+                            rdfs:domain :ProcessingEvent ;
+                            rdfs:label "Processing Activity Software"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#processingActivityType
+:processingActivityType rdf:type owl:ObjectProperty ;
+                        rdfs:domain :ProcessingEvent ;
+                        rdfs:label "Processing Activity Type"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#recordsetID
@@ -606,6 +741,13 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 #################################################################
 #    Annotations
 #################################################################
+
+<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+                                   <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                   rdfs:comment "Date of creation of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Date Created"@en .
+
 
 <http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
                                     rdfs:comment "Date on which the resource was changed."@en ;

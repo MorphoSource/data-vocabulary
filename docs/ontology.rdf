@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
      xml:base="https://www.morphosource.org/terms/morphosource"
+     xmlns:v1="http://www.loc.gov/mads/rdf/v1#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -26,6 +27,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/dcam/memberOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/memberOf"/>
     
 
 
@@ -113,6 +121,69 @@
     
 
 
+    <!-- http://www.loc.gov/mads/rdf/v1#authoritativeLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#authoritativeLabel"/>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#code -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#code"/>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#definitionNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#definitionNote"/>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority"/>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#historyNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#historyNote"/>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection"/>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
 
@@ -124,6 +195,27 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
     
 
 
@@ -169,6 +261,40 @@
      -->
 
 
+    
+
+
+    <!-- http://id.loc.gov/vocabulary/relators/dpt -->
+
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/vocabulary/relators/dpt">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <v1:authoritativeLabel>Depositor</v1:authoritativeLabel>
+        <v1:code>dpt</v1:code>
+        <v1:definitionNote xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</v1:definitionNote>
+        <v1:hasBroaderAuthority rdf:resource="http://id.loc.gov/vocabulary/relators/own"/>
+        <v1:historyNote xml:lang="en">MARC bib: 1XX/7XX/8XX $4</v1:historyNote>
+        <v1:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/relators/collection_BIBFRAME"/>
+        <v1:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/relators/collection_PastPresentRelatorsEntries"/>
+        <v1:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/relators/collection_RDA"/>
+        <v1:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/relators/collection_RDAItem"/>
+        <v1:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/relators/collection_RDAOwner"/>
+        <v1:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/relators"/>
+        <skos:broader rdf:resource="http://id.loc.gov/vocabulary/relators/own"/>
+        <skos:changeNote>
+            <rdf:Description/>
+        </skos:changeNote>
+        <skos:definition xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</skos:definition>
+        <skos:historyNote xml:lang="en">MARC bib: 1XX/7XX/8XX $4</skos:historyNote>
+        <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/relators"/>
+        <skos:notation>dpt</skos:notation>
+        <skos:prefLabel>Depositor</skos:prefLabel>
+    </owl:ObjectProperty>
     
 
 
@@ -259,11 +385,27 @@
     
 
 
+    <!-- http://purl.org/dc/dcmitype/Software -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/dcmitype/Software">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <terms:description xml:lang="en">Examples include a C source file, MS-Windows .exe executable, or Perl script.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">A computer program in source or compiled form.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
@@ -280,6 +422,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/description">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
@@ -290,11 +433,25 @@
     
 
 
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/dateSubmitted -->
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a &apos;Date Submitted&apos; may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal).</terms:description>
         <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -321,7 +478,12 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
     </owl:ObjectProperty>
     
 
@@ -553,6 +715,18 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#attachmentFile -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#attachmentFile">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:comment xml:lang="en">A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Attachment File</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#city -->
 
 
@@ -687,6 +861,37 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#postalCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Postal Code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#processingActivityDescription -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#processingActivityDescription">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:label xml:lang="en">Processing Activity Description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#processingActivitySoftware -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#processingActivitySoftware">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:label xml:lang="en">Processing Activity Software</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#processingActivityType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#processingActivityType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:label xml:lang="en">Processing Activity Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -919,6 +1124,13 @@
      -->
 
 
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Created</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
         <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
         <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
