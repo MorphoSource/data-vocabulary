@@ -802,6 +802,7 @@
     <!-- https://www.morphosource.org/terms/morphosource#processingActivityDescription -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#processingActivityDescription">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <rdfs:label xml:lang="en">Processing Activity Description</rdfs:label>
     </owl:ObjectProperty>
