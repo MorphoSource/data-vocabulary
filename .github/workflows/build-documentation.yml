@@ -21,7 +21,7 @@ jobs:
           ls $HOME
       - name: Run WIDOCO to create documentation
         run: |
-          java -jar widoco.jar |
+          java -jar $HOME/widoco.jar |
           -ontFile ${{ github.workspace }}/morphosource_data_vocabulary.owl |
           -outFolder ${{ github.workspace }}/docs/ |
           -uniteSections -noPlaceHolderText
