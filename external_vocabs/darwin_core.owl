@@ -233,6 +233,28 @@
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/datasetID -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/datasetID">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2009-04-24"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2009-09-11"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2017-10-06"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
+        <tdwgutility:abcdEquivalence>DataSets/DataSet/DataSetGUID</tdwgutility:abcdEquivalence>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Dataset ID</rdfs:label>
+        <skos:definition xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</skos:definition>
+        <skos:example xml:lang="en">`b15d4952-7d20-46f1-8a3e-556a512b04c5`</skos:example>
+        <skos:prefLabel xml:lang="en">Dataset ID</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/disposition -->
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/disposition">
@@ -391,6 +413,52 @@
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/occurrenceID -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/occurrenceID">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
+        <dcterms:description xml:lang="en">Recommended best practice is to use a persistent, globally unique identifier.</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/occurrenceID-2009-04-24"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/occurrenceID-2017-10-06"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
+        <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier"/>
+        <tdwgutility:abcdEquivalence>DataSets/DataSet/Units/Unit/UnitGUID</tdwgutility:abcdEquivalence>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Occurrence ID</rdfs:label>
+        <skos:definition xml:lang="en">An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</skos:definition>
+        <skos:example xml:lang="en">`http://arctos.database.museum/guid/MSB:Mamm:233627`, `000866d2-c177-4648-a200-ead4007051b9`, `urn:catalog:UWBM:Bird:89776`</skos:example>
+        <skos:prefLabel xml:lang="en">Occurrence ID</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sex -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/sex">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
+        <dcterms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary.</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/sex-2009-04-24"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/sex-2017-10-06"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
+        <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Sex"/>
+        <tdwgutility:abcdEquivalence>DataSets/DataSet/Units/Unit/Sex</tdwgutility:abcdEquivalence>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
+        <rdfs:comment xml:lang="en">The sex of the biological individual(s) represented in the Occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+        <skos:definition xml:lang="en">The sex of the biological individual(s) represented in the Occurrence.</skos:definition>
+        <skos:example xml:lang="en">`female`, `male`, `hermaphrodite`</skos:example>
+        <skos:prefLabel xml:lang="en">Sex</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/stateProvince -->
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/stateProvince">
@@ -410,6 +478,31 @@
         <skos:definition xml:lang="en">The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.</skos:definition>
         <skos:example xml:lang="en">`Montana`, `Minas Gerais`, `Córdoba`</skos:example>
         <skos:prefLabel xml:lang="en">State Province</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/typeStatus -->
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/typeStatus">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
+        <dcterms:description xml:lang="en">Recommended best practice is to separate the values in a list with space vertical bar space (` | `).</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2009-04-24"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2014-10-23"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2017-10-06"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
+        <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/curatorial/TypeStatus"/>
+        <tdwgutility:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText</tdwgutility:abcdEquivalence>
+        <tdwgutility:decision rdf:resource="http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16"/>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
+        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
+        <rdfs:comment xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Type Status</rdfs:label>
+        <skos:definition xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</skos:definition>
+        <skos:example xml:lang="en">`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`</skos:example>
+        <skos:prefLabel xml:lang="en">Type Status</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -5541,23 +5634,6 @@
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/dataGeneralizations-2017-10-06"/>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
     </rdf:Description>
-    <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/datasetID">
-        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2009-09-11"/>
-        <tdwgutility:abcdEquivalence>DataSets/DataSet/DataSetGUID</tdwgutility:abcdEquivalence>
-        <skos:example xml:lang="en">`b15d4952-7d20-46f1-8a3e-556a512b04c5`</skos:example>
-        <rdfs:label xml:lang="en">Dataset ID</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2017-10-06"/>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
-        <skos:prefLabel xml:lang="en">Dataset ID</skos:prefLabel>
-        <rdfs:comment xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</rdfs:comment>
-        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <skos:definition xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</skos:definition>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
-        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2009-04-24"/>
-    </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/datasetName">
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-09-11</dcterms:created>
         <skos:prefLabel xml:lang="en">Dataset Name</skos:prefLabel>
@@ -7433,24 +7509,6 @@
         <dcterms:description xml:lang="en">Example: &quot;http://mvzarctos.berkeley.edu/guid/MVZ:Mamm:165861&quot;</dcterms:description>
         <rdfs:comment xml:lang="en">A reference (publication, URI) to the most detailed information available about the Occurrence.</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/occurrenceID">
-        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <skos:definition xml:lang="en">An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</skos:definition>
-        <skos:prefLabel xml:lang="en">Occurrence ID</skos:prefLabel>
-        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/occurrenceID-2017-10-06"/>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
-        <dcterms:description xml:lang="en">Recommended best practice is to use a persistent, globally unique identifier.</dcterms:description>
-        <rdfs:comment xml:lang="en">An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</rdfs:comment>
-        <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier"/>
-        <skos:example xml:lang="en">`http://arctos.database.museum/guid/MSB:Mamm:233627`, `000866d2-c177-4648-a200-ead4007051b9`, `urn:catalog:UWBM:Bird:89776`</skos:example>
-        <rdfs:label xml:lang="en">Occurrence ID</rdfs:label>
-        <tdwgutility:abcdEquivalence>DataSets/DataSet/Units/Unit/UnitGUID</tdwgutility:abcdEquivalence>
-        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/occurrenceID-2009-04-24"/>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
-        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
-    </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/occurrenceMeasurementAccuracy">
         <rdfs:comment xml:lang="en">The description of the error associated with the occurrenceAttributeValue.</rdfs:comment>
         <skos:prefLabel xml:lang="en">Occurrence Measurement Accuracy</skos:prefLabel>
@@ -8332,24 +8390,6 @@
         <dcterms:isReplacedBy rdf:resource="http://rs.tdwg.org/dwc/terms/taxonRank"/>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-09-21</dcterms:modified>
     </rdf:Description>
-    <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/sex">
-        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
-        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
-        <dcterms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary.</dcterms:description>
-        <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Sex"/>
-        <tdwgutility:abcdEquivalence>DataSets/DataSet/Units/Unit/Sex</tdwgutility:abcdEquivalence>
-        <skos:definition xml:lang="en">The sex of the biological individual(s) represented in the Occurrence.</skos:definition>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
-        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/sex-2009-04-24"/>
-        <skos:prefLabel xml:lang="en">Sex</skos:prefLabel>
-        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <rdfs:label xml:lang="en">Sex</rdfs:label>
-        <skos:example xml:lang="en">`female`, `male`, `hermaphrodite`</skos:example>
-        <rdfs:comment xml:lang="en">The sex of the biological individual(s) represented in the Occurrence.</rdfs:comment>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/sex-2017-10-06"/>
-    </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/specificEpithet">
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
         <skos:example xml:lang="en">`concolor`, `gottschei`</skos:example>
@@ -8550,26 +8590,6 @@
         <tdwgutility:usageScope>simple</tdwgutility:usageScope>
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/taxonomicStatus-2017-10-06"/>
         <skos:example xml:lang="en">`invalid`, `misapplied`, `homotypic synonym`, `accepted`</skos:example>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/typeStatus">
-        <rdfs:label xml:lang="en">Type Status</rdfs:label>
-        <rdfs:comment xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</rdfs:comment>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</dcterms:created>
-        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2009-04-24"/>
-        <tdwgutility:usageScope>simple</tdwgutility:usageScope>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</dcterms:modified>
-        <skos:example xml:lang="en">`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`</skos:example>
-        <dcterms:replaces rdf:resource="http://rs.tdwg.org/dwc/curatorial/TypeStatus"/>
-        <tdwgutility:decision rdf:resource="http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16"/>
-        <skos:definition xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</skos:definition>
-        <skos:prefLabel xml:lang="en">Type Status</skos:prefLabel>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2014-10-23"/>
-        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
-        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
-        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2017-10-06"/>
-        <tdwgutility:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText</tdwgutility:abcdEquivalence>
-        <dcterms:description xml:lang="en">Recommended best practice is to separate the values in a list with space vertical bar space (` | `).</dcterms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem">
         <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/verbatimCoordinateSystem-2020-08-20"/>
