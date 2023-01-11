@@ -1310,6 +1310,7 @@
 # https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent
 <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "CT Image Series Imaging Event"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#CulturalHeritageObject
 <https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1344,10 +1345,12 @@
 # https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent
 <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Photogrammetry Imaging Event"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent
 <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Photography Imaging Event"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#PhysicalObject
 <https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1364,6 +1367,7 @@
 # https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent
 <https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Sequential Section Imaging Event"@en .
 # 
 # 
 # 

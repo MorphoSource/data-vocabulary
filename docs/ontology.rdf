@@ -2249,6 +2249,7 @@
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">
         <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">CT Image Series Imaging Event</rdfs:label>
     </owl:Class>
     
 
@@ -2313,6 +2314,7 @@
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent">
         <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">Photogrammetry Imaging Event</rdfs:label>
     </owl:Class>
     
 
@@ -2322,6 +2324,7 @@
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent">
         <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">Photography Imaging Event</rdfs:label>
     </owl:Class>
     
 
@@ -2353,6 +2356,7 @@
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent">
         <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">Sequential Section Imaging Event</rdfs:label>
     </owl:Class>
     
 

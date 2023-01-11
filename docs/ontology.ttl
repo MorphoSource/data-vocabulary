@@ -1493,7 +1493,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent
 :CTImageSeriesImagingEvent rdf:type owl:Class ;
-                           rdfs:subClassOf :ImagingEvent .
+                           rdfs:subClassOf :ImagingEvent ;
+                           rdfs:label "CT Image Series Imaging Event"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#CulturalHeritageObject
@@ -1533,12 +1534,14 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent
 :PhotogrammetryImagingEvent rdf:type owl:Class ;
-                            rdfs:subClassOf :ImagingEvent .
+                            rdfs:subClassOf :ImagingEvent ;
+                            rdfs:label "Photogrammetry Imaging Event"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent
 :PhotographyImagingEvent rdf:type owl:Class ;
-                         rdfs:subClassOf :ImagingEvent .
+                         rdfs:subClassOf :ImagingEvent ;
+                         rdfs:label "Photography Imaging Event"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#PhysicalObject
@@ -1557,7 +1560,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent
 :SequentialSectionImagingEvent rdf:type owl:Class ;
-                               rdfs:subClassOf :ImagingEvent .
+                               rdfs:subClassOf :ImagingEvent ;
+                               rdfs:label "Sequential Section Imaging Event"@en .
 
 
 #################################################################

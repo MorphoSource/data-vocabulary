@@ -1668,6 +1668,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CT Image Series Imaging Event"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
@@ -1744,12 +1748,20 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photogrammetry Imaging Event"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photography Imaging Event"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
@@ -1784,6 +1796,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequential Section Imaging Event"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
