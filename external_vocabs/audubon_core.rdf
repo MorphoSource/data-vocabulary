@@ -1,0 +1,644 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
+xmlns:vann="http://purl.org/vocab/vann/"
+>
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dc:publisher xml:lang="en">Biodiversity Information Standards (TDWG)</dc:publisher>
+     <dcterms:publisher rdf:resource="https://www.grid.ac/institutes/grid.480498.9"/>
+     <rdfs:label xml:lang="en">Core terms defined by Audubon Core</rdfs:label>
+     <dcterms:title xml:lang="en">Core terms defined by Audubon Core</dcterms:title>
+     <rdfs:comment xml:lang="en">This term list includes all currently valid terms that have been defined in the core Audubon Core namespace ac:.</rdfs:comment>
+     <dcterms:description xml:lang="en">This term list includes all currently valid terms that have been defined in the core Audubon Core namespace ac:.</dcterms:description>
+     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+     <vann:preferredNamespacePrefix>ac</vann:preferredNamespacePrefix>
+     <vann:preferredNamespaceUri>http://rs.tdwg.org/ac/terms/</vann:preferredNamespaceUri>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/TermList"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/version/terms/2013-10-28">
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/version/terms/2013-10-28"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/version/terms/2020-01-27">
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/version/terms/2020-01-27"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/version/terms/2020-10-13">
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/version/terms/2020-10-13"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/version/terms/2021-02-01">
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/version/terms/2021-02-01"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/version/terms/2021-10-05">
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/version/terms/2021-10-05"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/version/terms/2022-02-23">
+     <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/version/terms/2022-02-23"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/accessURI">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/accessURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/associatedObservationReference">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/associatedObservationReference"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/associatedSpecimenReference">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/associatedSpecimenReference"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/attributionLinkURL">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/attributionLinkURL"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/attributionLogoURL">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/attributionLogoURL"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/caption">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/caption"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/captureDevice">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/commenter">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/commenter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/commenterLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/commenterLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/comments">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/comments"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/derivedFrom">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/derivedFrom"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/digitizationDate">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/digitizationDate"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/fundingAttribution">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/fundingAttribution"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/furtherInformationURL">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/furtherInformationURL"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/hashFunction">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/hashFunction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/hashValue">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/hashValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/hasServiceAccessPoint">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/hasServiceAccessPoint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/IDofContainingCollection">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/IDofContainingCollection"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/licenseLogoURL">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/licenseLogoURL"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/licensingException">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/licensingException"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/metadataCreator">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/metadataCreator"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/metadataCreatorLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/metadataCreatorLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/metadataLanguage">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/metadataLanguage"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/metadataLanguageLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/metadataLanguageLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/metadataProvider">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/metadataProvider"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/metadataProviderLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/metadataProviderLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/otherScientificName">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/otherScientificName"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/physicalSetting">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/physicalSetting"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/provider">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/provider"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/providerID">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/providerID"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/providerLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/providerLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/providerManagedID">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/providerManagedID"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/relatedResourceID">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/relatedResourceID"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/resourceCreationTechnique">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/resourceCreationTechnique"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/reviewer">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/reviewer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/reviewerComments">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/reviewerComments"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/reviewerLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/reviewerLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/serviceExpectation">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/serviceExpectation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subjectCategoryVocabulary">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subjectCategoryVocabulary"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subjectOrientation">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subjectOrientation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subjectPart">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subjectPart"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subtype">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subtype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subtypeLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subtypeLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/tag">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/tag"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/taxonCount">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/taxonCount"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/taxonCoverage">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/taxonCoverage"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/timeOfDay">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/timeOfDay"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/variant">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/variant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/variantDescription">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/variantDescription"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/variantLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/variantLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/ServiceAccessPoint">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/ServiceAccessPoint"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/freqLow">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/freqLow"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/freqHigh">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/freqHigh"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/RegionOfInterest">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/RegionOfInterest"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/hasROI">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/hasROI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/isROIOf">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/isROIOf"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/xFrac">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/xFrac"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/yFrac">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/yFrac"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/widthFrac">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/widthFrac"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/heightFrac">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/heightFrac"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/radius">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/radius"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/startTimestamp">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/startTimestamp"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/endTimestamp">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/endTimestamp"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/mediaDuration">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/mediaDuration"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/mediaSpeed">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/mediaSpeed"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/frameRate">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/frameRate"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/startTime">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/startTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/endTime">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/endTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subjectOrientationLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subjectOrientationLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/subjectPartLiteral">
+     <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/">
+     <dcterms:hasPart rdf:resource="http://rs.tdwg.org/ac/terms/subjectPartLiteral"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rs.tdwg.org/ac/terms.rdf">
+     <dc:format>application/rdf+xml</dc:format>
+     <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+     <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-27T14:43:39-05:00</dcterms:modified>
+     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+</rdf:Description>
+
+</rdf:RDF>

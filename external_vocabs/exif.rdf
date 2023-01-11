@@ -117,10 +117,6 @@
     <!-- http://www.w3.org/2003/12/exif/ns#apertureValue -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/12/exif/ns#apertureValue">
-        <rdfs:comment xml:lang="en">The lens aperture. The unit is the APEX value.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば&apos;5&apos;の場合だと√2^5=F5.6</rdfs:comment>
-        <rdfs:label xml:lang="en">ApertureValue</rdfs:label>
-        <tagNumber xml:lang="en">37378</tagNumber>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#pictTaking"/>
     </owl:AnnotationProperty>
     
@@ -1103,10 +1099,6 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
     <!-- http://www.w3.org/2003/12/exif/ns#isoSpeedRatings -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/12/exif/ns#isoSpeedRatings">
-        <rdfs:comment xml:lang="ja">CCD感度の銀塩フィルム換算値</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.</rdfs:comment>
-        <rdfs:label xml:lang="en">ISOSpeedRatings</rdfs:label>
-        <tagNumber xml:lang="en">34855</tagNumber>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#pictTaking"/>
     </owl:AnnotationProperty>
     
@@ -1148,10 +1140,6 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
     <!-- http://www.w3.org/2003/12/exif/ns#lightSource -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/12/exif/ns#lightSource">
-        <rdfs:comment xml:lang="en">Light source such as Daylight, Tungsten, Flash etc.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">光源。これはマニュアルでホワイトバランスを設定した場合のモード値となる</rdfs:comment>
-        <rdfs:label xml:lang="en">LightSource</rdfs:label>
-        <tagNumber xml:lang="en">37384</tagNumber>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#pictTaking"/>
     </owl:AnnotationProperty>
     
@@ -1600,10 +1588,6 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
     <!-- http://www.w3.org/2003/12/exif/ns#shutterSpeedValue -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/12/exif/ns#shutterSpeedValue">
-        <rdfs:comment xml:lang="en">Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting</rdfs:comment>
-        <rdfs:comment xml:lang="ja">シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば&apos;4&apos;の場合だと1/(2^4)=1/16秒</rdfs:comment>
-        <rdfs:label xml:lang="en">ShutterSpeedValue</rdfs:label>
-        <tagNumber xml:lang="en">37377</tagNumber>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#pictTaking"/>
     </owl:AnnotationProperty>
     
@@ -1943,6 +1927,12 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
     
 
 
+    <!-- http://www.w3.org/2003/12/exif/ns#apertureValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#apertureValue"/>
+    
+
+
     <!-- http://www.w3.org/2003/12/exif/ns#gpsLatitude -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#gpsLatitude"/>
@@ -1952,6 +1942,24 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
     <!-- http://www.w3.org/2003/12/exif/ns#gpsLongitude -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#gpsLongitude"/>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#isoSpeedRatings -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#isoSpeedRatings"/>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#lightSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#lightSource"/>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#shutterSpeedValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#shutterSpeedValue"/>
     
 
 
@@ -2062,6 +2070,12 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
         <rdfs:comment xml:lang="en">An Exif tag whose meaning is not known</rdfs:comment>
         <rdfs:label xml:lang="en">Unknown tag</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/12/exif/ns#apertureValue">
+        <rdfs:comment xml:lang="ja">レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば&apos;5&apos;の場合だと√2^5=F5.6</rdfs:comment>
+        <rdfs:label xml:lang="en">ApertureValue</rdfs:label>
+        <rdfs:comment xml:lang="en">The lens aperture. The unit is the APEX value.</rdfs:comment>
+        <tagNumber xml:lang="en">37378</tagNumber>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2003/12/exif/ns#exifdata">
         <rdfs:comment xml:lang="en">An Exif IFD data entry</rdfs:comment>
         <rdfs:label xml:lang="en">Exif data</rdfs:label>
@@ -2077,6 +2091,24 @@ Interoperability IFD may be defined dependently to each Interoperability rule.</
         <rdfs:comment xml:lang="en">The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
         <rdfs:label xml:lang="en">GPSLongitude</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/12/exif/ns#isoSpeedRatings">
+        <rdfs:comment xml:lang="en">Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.</rdfs:comment>
+        <tagNumber xml:lang="en">34855</tagNumber>
+        <rdfs:label xml:lang="en">ISOSpeedRatings</rdfs:label>
+        <rdfs:comment xml:lang="ja">CCD感度の銀塩フィルム換算値</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/12/exif/ns#lightSource">
+        <tagNumber xml:lang="en">37384</tagNumber>
+        <rdfs:label xml:lang="en">LightSource</rdfs:label>
+        <rdfs:comment xml:lang="en">Light source such as Daylight, Tungsten, Flash etc.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">光源。これはマニュアルでホワイトバランスを設定した場合のモード値となる</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2003/12/exif/ns#shutterSpeedValue">
+        <rdfs:comment xml:lang="ja">シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば&apos;4&apos;の場合だと1/(2^4)=1/16秒</rdfs:comment>
+        <tagNumber xml:lang="en">37377</tagNumber>
+        <rdfs:comment xml:lang="en">Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting</rdfs:comment>
+        <rdfs:label xml:lang="en">ShutterSpeedValue</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2003/12/exif/ns#subseconds">
         <rdfs:comment xml:lang="en">A tag used to record fractions of seconds for a date property</rdfs:comment>
