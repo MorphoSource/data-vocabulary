@@ -2050,6 +2050,9 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelSizeY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Pixel Size Y"

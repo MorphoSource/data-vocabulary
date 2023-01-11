@@ -917,6 +917,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#detectorPixelSizeY
 :detectorPixelSizeY rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CTImageSeriesImagingEvent ;
                     rdfs:label "Detector Pixel Size Y"@en .
 
 

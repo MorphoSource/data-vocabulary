@@ -1354,6 +1354,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelSizeY">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <rdfs:label xml:lang="en">Detector Pixel Size Y</rdfs:label>
     </owl:ObjectProperty>
     
