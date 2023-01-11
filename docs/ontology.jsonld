@@ -220,6 +220,9 @@
     "@id" : "http://pcdm.org/models#Object"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/dcam/domainIncludes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/dcam/memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -464,6 +467,30 @@
     "@value" : "License"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/medium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/dcam/domainIncludes" : [ {
+    "@id" : "http://purl.org/dc/terms/PhysicalResource"
+  } ],
+  "http://purl.org/dc/dcam/rangeIncludes" : [ {
+    "@id" : "http://purl.org/dc/terms/PhysicalMedium"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2000-07-11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The material or physical carrier of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/modified",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
@@ -555,6 +582,9 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/attributes/decision",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass",
@@ -698,6 +728,43 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Denmark`, `Colombia`, `España`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/datasetID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/datasetID-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/datasetID-2009-09-11"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/datasetID-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/DataSetGUID"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dataset ID"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`b15d4952-7d20-46f1-8a3e-556a512b04c5`"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/disposition",
@@ -986,6 +1053,96 @@
     "@value" : "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"
   } ]
 }, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/occurrenceID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended best practice is to use a persistent, globally unique identifier."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/occurrenceID-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/occurrenceID-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://purl.org/dc/terms/replaces" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/Units/Unit/UnitGUID"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/Occurrence"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Occurrence ID"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`http://arctos.database.museum/guid/MSB:Mamm:233627`, `000866d2-c177-4648-a200-ead4007051b9`, `urn:catalog:UWBM:Bird:89776`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/sex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended best practice is to use a controlled vocabulary."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/sex-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/sex-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://purl.org/dc/terms/replaces" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/dwcore/Sex"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/Units/Unit/Sex"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/Occurrence"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The sex of the biological individual(s) represented in the Occurrence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sex"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`female`, `male`, `hermaphrodite`"
+  } ]
+}, {
   "@id" : "http://rs.tdwg.org/dwc/terms/stateProvince",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
@@ -1031,6 +1188,69 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Montana`, `Minas Gerais`, `Córdoba`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2009-04-24"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/typeStatus-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/typeStatus-2014-10-23"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/typeStatus-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/replaces" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/curatorial/TypeStatus"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/decision" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/Identification"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type Status"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Type Status"
   } ]
 }, {
   "@id" : "http://www.europeana.eu/schemas/edm/currentLocation",
@@ -1277,6 +1497,46 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#aatAttribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Getty Arts and Architecture Thesaurus Attribute"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#aatMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Getty Arts and Architecture Thesaurus Material"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#aatPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Getty Arts and Architecture Thesaurus Time Period"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#aatType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Getty Arts and Architecture Thesaurus Type"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#address",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
@@ -1350,6 +1610,36 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Attachment File"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#canonicalTaxonomy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Canonical Taxonomy"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#choAttribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Heritage Object Attribute"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#choType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cultural Heritage Object Type"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#city",
@@ -1505,6 +1795,49 @@
     "@value" : "Download Reviewer"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#idigbioRecordsetID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/datasetID"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/DataSetGUID"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "iDigBio Recordset ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/datasetID"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`b15d4952-7d20-46f1-8a3e-556a512b04c5`"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#idigbioUUID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "iDigBio UUID"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#institutionName",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1513,6 +1846,43 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Institution Name"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#isTypeSpecimen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."
+  } ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/Identification"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is Type Specimen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#latitude",
@@ -1577,6 +1947,26 @@
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "4"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/dc/terms/medium"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The material or physical carrier of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/medium"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#modality3D",
@@ -1893,6 +2283,26 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rights Statement Intentionally Left Blank"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#shortTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Short Title"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#taxonomyID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Taxonomy ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#teamID",

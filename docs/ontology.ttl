@@ -14,6 +14,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/dcam/domainIncludes
+<http://purl.org/dc/dcam/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/dcam/memberOf
 <http://purl.org/dc/dcam/memberOf> rdf:type owl:AnnotationProperty .
 
@@ -48,6 +52,10 @@
 
 ###  http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence
 <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> rdf:type owl:AnnotationProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/attributes/decision
+<http://rs.tdwg.org/dwc/terms/attributes/decision> rdf:type owl:AnnotationProperty .
 
 
 ###  http://rs.tdwg.org/dwc/terms/attributes/organizedInClass
@@ -272,12 +280,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
-                                   rdfs:domain :ProcessingEvent ;
-                                   <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
-                                   <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
-                                   rdfs:comment "Date of creation of the resource."@en ;
-                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-                                   rdfs:label "Date Created"@en .
+                                   rdfs:domain :ProcessingEvent .
 
 
 ###  http://purl.org/dc/terms/dateSubmitted
@@ -315,6 +318,16 @@ xsd:date rdf:type rdfs:Datatype .
                                    rdfs:label "License"@en .
 
 
+###  http://purl.org/dc/terms/medium
+<http://purl.org/dc/terms/medium> rdf:type owl:ObjectProperty ;
+                                  <http://purl.org/dc/dcam/domainIncludes> <http://purl.org/dc/terms/PhysicalResource> ;
+                                  <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/PhysicalMedium> ;
+                                  <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                  rdfs:comment "The material or physical carrier of the resource."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Medium"@en .
+
+
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:ObjectProperty ;
                                     rdfs:domain :Device ,
@@ -322,12 +335,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                 :Media ,
                                                 :Organization ,
                                                 :PhysicalObject ,
-                                                :ProcessingEvent ;
-                                    <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
-                                    <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
-                                    rdfs:comment "Date on which the resource was changed."@en ;
-                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-                                    rdfs:label "Date Modified"@en .
+                                                :ProcessingEvent .
 
 
 ###  http://purl.org/dc/terms/provenance
@@ -405,6 +413,21 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                        rdfs:label "Country"@en ;
                                        <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en .
+
+
+###  http://rs.tdwg.org/dwc/terms/datasetID
+<http://rs.tdwg.org/dwc/terms/datasetID> rdf:type owl:ObjectProperty ;
+                                         <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/datasetID-2009-04-24> ,
+                                                                               <http://rs.tdwg.org/dwc/terms/version/datasetID-2009-09-11> ,
+                                                                               <http://rs.tdwg.org/dwc/terms/version/datasetID-2017-10-06> ;
+                                         <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                         <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/DataSetGUID" ;
+                                         <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> ;
+                                         <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                         rdfs:comment "An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution."@en ;
+                                         rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                         rdfs:label "Dataset ID"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#example> "`b15d4952-7d20-46f1-8a3e-556a512b04c5`"@en .
 
 
 ###  http://rs.tdwg.org/dwc/terms/disposition
@@ -519,6 +542,40 @@ xsd:date rdf:type rdfs:Datatype .
                                             <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
 
 
+###  http://rs.tdwg.org/dwc/terms/occurrenceID
+<http://rs.tdwg.org/dwc/terms/occurrenceID> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain :BiologicalSpecimenObject ;
+                                            <http://purl.org/dc/terms/description> "Recommended best practice is to use a persistent, globally unique identifier."@en ;
+                                            <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/occurrenceID-2009-04-24> ,
+                                                                                  <http://rs.tdwg.org/dwc/terms/version/occurrenceID-2017-10-06> ;
+                                            <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                            <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier> ;
+                                            <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/UnitGUID" ;
+                                            <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> ;
+                                            <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                            rdfs:comment "An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique."@en ;
+                                            rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                            rdfs:label "Occurrence ID"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#example> "`http://arctos.database.museum/guid/MSB:Mamm:233627`, `000866d2-c177-4648-a200-ead4007051b9`, `urn:catalog:UWBM:Bird:89776`"@en .
+
+
+###  http://rs.tdwg.org/dwc/terms/sex
+<http://rs.tdwg.org/dwc/terms/sex> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :BiologicalSpecimenObject ;
+                                   <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en ;
+                                   <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/sex-2009-04-24> ,
+                                                                         <http://rs.tdwg.org/dwc/terms/version/sex-2017-10-06> ;
+                                   <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                   <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/dwcore/Sex> ;
+                                   <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Sex" ;
+                                   <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> ;
+                                   <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                   rdfs:comment "The sex of the biological individual(s) represented in the Occurrence."@en ;
+                                   rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                   rdfs:label "Sex"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#example> "`female`, `male`, `hermaphrodite`"@en .
+
+
 ###  http://rs.tdwg.org/dwc/terms/stateProvince
 <http://rs.tdwg.org/dwc/terms/stateProvince> rdf:type owl:ObjectProperty ;
                                              rdfs:domain :Organization ,
@@ -535,6 +592,28 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
                                              rdfs:label "State Province"@en ;
                                              <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en .
+
+
+###  http://rs.tdwg.org/dwc/terms/typeStatus
+<http://rs.tdwg.org/dwc/terms/typeStatus> rdf:type owl:ObjectProperty ;
+                                          <http://purl.org/dc/terms/created> "2009-04-24"^^xsd:date ;
+                                          <http://purl.org/dc/terms/description> "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."@en ;
+                                          <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/typeStatus-2009-04-24> ,
+                                                                                <http://rs.tdwg.org/dwc/terms/version/typeStatus-2014-10-23> ,
+                                                                                <http://rs.tdwg.org/dwc/terms/version/typeStatus-2017-10-06> ;
+                                          <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                          <http://purl.org/dc/terms/modified> "2017-10-06"^^xsd:date ;
+                                          <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/curatorial/TypeStatus> ;
+                                          <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText" ;
+                                          <http://rs.tdwg.org/dwc/terms/attributes/decision> <http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16> ;
+                                          <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Identification> ;
+                                          <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                          rdfs:comment "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."@en ;
+                                          rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                          rdfs:label "Type Status"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."@en ;
+                                          <http://www.w3.org/2004/02/skos/core#example> "`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Type Status"@en .
 
 
 ###  http://www.europeana.eu/schemas/edm/currentLocation
@@ -570,6 +649,30 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                                                  <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#aatAttribute
+:aatAttribute rdf:type owl:ObjectProperty ;
+              rdfs:domain :CulturalHeritageObject ;
+              rdfs:label "Getty Arts and Architecture Thesaurus Attribute"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#aatMaterial
+:aatMaterial rdf:type owl:ObjectProperty ;
+             rdfs:domain :CulturalHeritageObject ;
+             rdfs:label "Getty Arts and Architecture Thesaurus Material"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#aatPeriod
+:aatPeriod rdf:type owl:ObjectProperty ;
+           rdfs:domain :CulturalHeritageObject ;
+           rdfs:label "Getty Arts and Architecture Thesaurus Time Period"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#aatType
+:aatType rdf:type owl:ObjectProperty ;
+         rdfs:domain :CulturalHeritageObject ;
+         rdfs:label "Getty Arts and Architecture Thesaurus Type"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#address
 :address rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/locality> ;
@@ -600,6 +703,24 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                             :ProcessingEvent ;
                 rdfs:comment "A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties."@en ;
                 rdfs:label "Attachment File"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#canonicalTaxonomy
+:canonicalTaxonomy rdf:type owl:ObjectProperty ;
+                   rdfs:domain :BiologicalSpecimenObject ;
+                   rdfs:label "Canonical Taxonomy"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#choAttribute
+:choAttribute rdf:type owl:ObjectProperty ;
+              rdfs:domain :CulturalHeritageObject ;
+              rdfs:label "Cultural Heritage Object Attribute"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#choType
+:choType rdf:type owl:ObjectProperty ;
+         rdfs:domain :CulturalHeritageObject ;
+         rdfs:label "Cultural Heritage Object Type"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#city
@@ -672,10 +793,43 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                   rdfs:label "Download Reviewer"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#idigbioRecordsetID
+:idigbioRecordsetID rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/datasetID> ;
+                    rdfs:domain :BiologicalSpecimenObject ;
+                    <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/datasetID> ;
+                    <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/DataSetGUID" ;
+                    <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> ;
+                    <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                    rdfs:comment "An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution."@en ;
+                    rdfs:label "iDigBio Recordset ID"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "`b15d4952-7d20-46f1-8a3e-556a512b04c5`"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#idigbioUUID
+:idigbioUUID rdf:type owl:ObjectProperty ;
+             rdfs:domain :BiologicalSpecimenObject ;
+             rdfs:label "iDigBio UUID"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#institutionName
 :institutionName rdf:type owl:ObjectProperty ;
                  rdfs:domain :Organization ;
                  rdfs:label "Institution Name"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#isTypeSpecimen
+:isTypeSpecimen rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/typeStatus> ;
+                rdfs:domain :BiologicalSpecimenObject ;
+                <http://purl.org/dc/terms/description> "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."@en ;
+                <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/typeStatus> ;
+                <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText" ;
+                <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Identification> ;
+                <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                rdfs:comment "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."@en ;
+                rdfs:label "Is Type Specimen"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#latitude
@@ -704,6 +858,15 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                         "経度"@ja ;
            rdfs:label "Longitude"@en ;
            <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#material
+:material rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://purl.org/dc/terms/medium> ;
+          rdfs:domain :CulturalHeritageObject ;
+          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/medium> ;
+          rdfs:comment "The material or physical carrier of the resource."@en ;
+          rdfs:label "Medium"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#modality3D
@@ -873,6 +1036,18 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                       rdfs:label "Rights Statement Intentionally Left Blank"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#shortTitle
+:shortTitle rdf:type owl:ObjectProperty ;
+            rdfs:domain :CulturalHeritageObject ;
+            rdfs:label "Short Title"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#taxonomyID
+:taxonomyID rdf:type owl:ObjectProperty ;
+            rdfs:domain :BiologicalSpecimenObject ;
+            rdfs:label "Taxonomy ID"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#teamID
 :teamID rdf:type owl:ObjectProperty ;
         rdfs:domain :Organization ;
@@ -996,6 +1171,20 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                                rdfs:comment "The set of places specified by the Getty Thesaurus of Geographic Names."@en ;
                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                rdfs:label "TGN"@en .
+
+
+<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+                                   <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                   rdfs:comment "Date of creation of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Date Created"@en .
+
+
+<http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+                                    <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                    rdfs:comment "Date on which the resource was changed."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Date Modified"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

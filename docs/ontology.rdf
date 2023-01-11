@@ -31,6 +31,13 @@
     
 
 
+    <!-- http://purl.org/dc/dcam/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/domainIncludes"/>
+    
+
+
     <!-- http://purl.org/dc/dcam/memberOf -->
 
 
@@ -91,6 +98,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/decision -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/decision"/>
     
 
 
@@ -441,11 +455,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/created">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date Created</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -497,6 +506,20 @@
     
 
 
+    <!-- http://purl.org/dc/terms/medium -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/medium">
+        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/PhysicalResource"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PhysicalMedium"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/modified -->
 
 
@@ -507,11 +530,6 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
-        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -609,6 +627,25 @@
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Country</rdfs:label>
         <skos:example xml:lang="en">`Denmark`, `Colombia`, `España`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/datasetID -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/datasetID">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2009-09-11"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/datasetID-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/DataSetGUID</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Dataset ID</rdfs:label>
+        <skos:example xml:lang="en">`b15d4952-7d20-46f1-8a3e-556a512b04c5`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -753,6 +790,48 @@
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/occurrenceID -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/occurrenceID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a persistent, globally unique identifier.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/occurrenceID-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/occurrenceID-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/GlobalUniqueIdentifier"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/UnitGUID</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Occurrence ID</rdfs:label>
+        <skos:example xml:lang="en">`http://arctos.database.museum/guid/MSB:Mamm:233627`, `000866d2-c177-4648-a200-ead4007051b9`, `urn:catalog:UWBM:Bird:89776`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/sex -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/sex">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/sex-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/sex-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Sex"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Sex</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The sex of the biological individual(s) represented in the Occurrence.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+        <skos:example xml:lang="en">`female`, `male`, `hermaphrodite`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/stateProvince -->
 
 
@@ -771,6 +850,32 @@
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">State Province</rdfs:label>
         <skos:example xml:lang="en">`Montana`, `Minas Gerais`, `Córdoba`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/typeStatus -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/typeStatus">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-24</terms:created>
+        <terms:description xml:lang="en">Recommended best practice is to separate the values in a list with space vertical bar space (` | `).</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2014-10-23"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/typeStatus-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-06</terms:modified>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/curatorial/TypeStatus"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText</attributes:abcdEquivalence>
+        <attributes:decision rdf:resource="http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Type Status</rdfs:label>
+        <skos:definition xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</skos:definition>
+        <skos:example xml:lang="en">`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`</skos:example>
+        <skos:prefLabel xml:lang="en">Type Status</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -827,6 +932,46 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#aatAttribute -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatAttribute">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#aatMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatMaterial">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#aatPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatPeriod">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Time Period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#aatType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#address -->
 
 
@@ -867,6 +1012,36 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <rdfs:comment xml:lang="en">A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties.</rdfs:comment>
         <rdfs:label xml:lang="en">Attachment File</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#canonicalTaxonomy -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#canonicalTaxonomy">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <rdfs:label xml:lang="en">Canonical Taxonomy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#choAttribute -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choAttribute">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Cultural Heritage Object Attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#choType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Cultural Heritage Object Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -973,12 +1148,57 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#idigbioRecordsetID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#idigbioRecordsetID">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/datasetID"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/datasetID"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/DataSetGUID</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</rdfs:comment>
+        <rdfs:label xml:lang="en">iDigBio Recordset ID</rdfs:label>
+        <skos:example xml:lang="en">`b15d4952-7d20-46f1-8a3e-556a512b04c5`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#idigbioUUID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#idigbioUUID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <rdfs:label xml:lang="en">iDigBio UUID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#institutionName -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#institutionName">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Institution Name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#isTypeSpecimen -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#isTypeSpecimen">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/typeStatus"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <terms:description xml:lang="en">Recommended best practice is to separate the values in a list with space vertical bar space (` | `).</terms:description>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/typeStatus"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</rdfs:comment>
+        <rdfs:label xml:lang="en">Is Type Specimen</rdfs:label>
+        <skos:example xml:lang="en">`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1019,6 +1239,19 @@
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
         <rdfs:label xml:lang="en">Longitude</rdfs:label>
         <ns:tagNumber xml:lang="en">4</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#material -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#material">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/medium"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/medium"/>
+        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1286,6 +1519,26 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#shortTitle -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shortTitle">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Short Title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#taxonomyID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#taxonomyID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <rdfs:label xml:lang="en">Taxonomy ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#teamID -->
 
 
@@ -1488,6 +1741,20 @@
         <rdfs:comment xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">TGN</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Created</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
