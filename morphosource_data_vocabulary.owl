@@ -755,7 +755,6 @@
     <!-- http://www.w3.org/2003/12/exif/ns#gpsLatitude -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#gpsLatitude">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:comment xml:lang="en">The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
         <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
         <rdfs:label xml:lang="en">GPSLatitude</rdfs:label>
@@ -767,7 +766,6 @@
     <!-- http://www.w3.org/2003/12/exif/ns#gpsLongitude -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#gpsLongitude">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:comment xml:lang="en">The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
         <rdfs:label xml:lang="en">GPSLongitude</rdfs:label>
@@ -924,6 +922,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#latitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLatitude"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:isVersionOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLatitude"/>
         <rdfs:comment xml:lang="en">The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
         <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
@@ -946,6 +945,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#longitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLongitude"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:isVersionOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLongitude"/>
         <rdfs:comment xml:lang="en">The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
