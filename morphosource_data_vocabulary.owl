@@ -1503,6 +1503,14 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#CulturalHeritageObject -->
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">
@@ -1553,6 +1561,22 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#PhysicalObject -->
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhysicalObject">
@@ -1569,6 +1593,14 @@
         <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
         <rdfs:comment xml:lang="en">An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media).</rdfs:comment>
         <rdfs:label xml:lang="en">Processing Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
     </owl:Class>
     
 
