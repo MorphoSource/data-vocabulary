@@ -715,6 +715,12 @@
     
 
 
+    <!-- http://purl.org/dc/terms/medium -->
+
+    <ObjectProperty rdf:about="http://purl.org/dc/terms/medium"/>
+    
+
+
     <!-- http://purl.org/dc/terms/modified -->
 
     <ObjectProperty rdf:about="http://purl.org/dc/terms/modified"/>

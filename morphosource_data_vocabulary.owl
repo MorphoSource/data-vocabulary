@@ -38,6 +38,12 @@
     
 
 
+    <!-- http://purl.org/dc/dcam/domainIncludes -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/domainIncludes"/>
+    
+
+
     <!-- http://purl.org/dc/dcam/memberOf -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/memberOf"/>
@@ -464,6 +470,19 @@
     
 
 
+    <!-- http://purl.org/dc/terms/medium -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/medium">
+        <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/PhysicalResource"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PhysicalMedium"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
@@ -853,6 +872,42 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#aatAttribute -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatAttribute">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#aatMaterial -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatMaterial">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#aatPeriod -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatPeriod">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Time Period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#aatType -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#address -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#address">
@@ -899,6 +954,24 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#canonicalTaxonomy">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
         <rdfs:label xml:lang="en">Canonical Taxonomy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#choAttribute -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choAttribute">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Cultural Heritage Object Attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#choType -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Cultural Heritage Object Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1081,6 +1154,18 @@
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
         <rdfs:label xml:lang="en">Longitude</rdfs:label>
         <ns:tagNumber xml:lang="en">4</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#material -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#material">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/medium"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/medium"/>
+        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medium</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1320,6 +1405,15 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsStatementBlank">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Rights Statement Intentionally Left Blank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#shortTitle -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shortTitle">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:label xml:lang="en">Short Title</rdfs:label>
     </owl:ObjectProperty>
     
 
