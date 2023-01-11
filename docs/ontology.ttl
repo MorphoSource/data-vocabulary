@@ -86,6 +86,10 @@
 <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2003/12/exif/ns#tagNumber
+<http://www.w3.org/2003/12/exif/ns#tagNumber> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#broader
 <http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
 
@@ -261,6 +265,11 @@ xsd:date rdf:type rdfs:Datatype .
                                               <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 
 
+###  http://purl.org/dc/terms/TGN
+<http://purl.org/dc/terms/TGN> rdf:type owl:ObjectProperty ;
+                               rdfs:domain :PhysicalObject .
+
+
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
                                    rdfs:domain :ProcessingEvent ;
@@ -283,6 +292,17 @@ xsd:date rdf:type rdfs:Datatype .
                                          rdfs:comment "Date of submission of the resource."@en ;
                                          rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                          rdfs:label "Date Submitted"@en .
+
+
+###  http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> rdf:type owl:ObjectProperty ;
+                                  <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Extent> ,
+                                                                          <http://purl.org/dc/terms/MediaType> ;
+                                  <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en ;
+                                  <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
+                                  rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Format"@en .
 
 
 ###  http://purl.org/dc/terms/license
@@ -308,6 +328,16 @@ xsd:date rdf:type rdfs:Datatype .
                                     rdfs:comment "Date on which the resource was changed."@en ;
                                     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                     rdfs:label "Date Modified"@en .
+
+
+###  http://purl.org/dc/terms/provenance
+<http://purl.org/dc/terms/provenance> rdf:type owl:ObjectProperty ;
+                                      <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/ProvenanceStatement> ;
+                                      <http://purl.org/dc/terms/description> "The statement may include a description of any changes successive custodians made to the resource."@en ;
+                                      <http://purl.org/dc/terms/issued> "2004-09-20"^^xsd:date ;
+                                      rdfs:comment "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Provenance"@en .
 
 
 ###  http://purl.org/dc/terms/title
@@ -341,7 +371,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://rs.tdwg.org/dwc/terms/collectionCode
 <http://rs.tdwg.org/dwc/terms/collectionCode> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain :Organization ;
+                                              rdfs:domain :Organization ,
+                                                          :PhysicalObject ;
                                               <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24> ,
                                                                                     <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24> ,
                                                                                     <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11> ,
@@ -359,7 +390,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://rs.tdwg.org/dwc/terms/country
 <http://rs.tdwg.org/dwc/terms/country> rdf:type owl:ObjectProperty ;
-                                       rdfs:domain :Organization ;
+                                       rdfs:domain :Organization ,
+                                                   :PhysicalObject ;
                                        <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both."@en ;
                                        <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2009-04-24> ,
                                                                              <http://rs.tdwg.org/dwc/terms/version/country-2017-10-06> ,
@@ -375,9 +407,71 @@ xsd:date rdf:type rdfs:Datatype .
                                        <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en .
 
 
+###  http://rs.tdwg.org/dwc/terms/disposition
+<http://rs.tdwg.org/dwc/terms/disposition> rdf:type owl:ObjectProperty ;
+                                           <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en ;
+                                           <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/disposition-2009-04-24> ,
+                                                                                 <http://rs.tdwg.org/dwc/terms/version/disposition-2017-10-06> ;
+                                           <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                           <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/curatorial/Disposition> ;
+                                           <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition" ;
+                                           <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> ;
+                                           <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                           rdfs:comment "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en ;
+                                           rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                           rdfs:label "Disposition"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
+
+
+###  http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> rdf:type owl:ObjectProperty ;
+                                                           <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2009-04-24> ,
+                                                                                                 <http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2017-10-06> ;
+                                                           <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                                           <http://purl.org/dc/terms/replaces> <http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/EarliestEonOrLowestEonothem> ;
+                                                           <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" ;
+                                                           <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> ;
+                                                           <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                                           rdfs:comment "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."@en ;
+                                                           rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                                           rdfs:label "Earliest Eon Or Lowest Eonothem"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#example> "`Phanerozoic`, `Proterozoic`"@en .
+
+
+###  http://rs.tdwg.org/dwc/terms/formation
+<http://rs.tdwg.org/dwc/terms/formation> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :PhysicalObject ;
+                                         <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/formation-2009-04-24> ,
+                                                                               <http://rs.tdwg.org/dwc/terms/version/formation-2017-10-06> ;
+                                         <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                         <http://purl.org/dc/terms/replaces> <http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/Formation> ;
+                                         <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" ;
+                                         <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> ;
+                                         <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                         rdfs:comment "The full name of the lithostratigraphic formation from which the cataloged item was collected."@en ;
+                                         rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                         rdfs:label "Formation"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#example> "`Notch Peak Formation`, `House Limestone`, `Fillmore Formation`"@en .
+
+
+###  http://rs.tdwg.org/dwc/terms/geologicalContextID
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> rdf:type owl:ObjectProperty ;
+                                                   <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2009-07-06> ,
+                                                                                         <http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2017-10-06> ;
+                                                   <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
+                                                   <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" ;
+                                                   <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> ;
+                                                   <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+                                                   rdfs:comment "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."@en ;
+                                                   rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/> ;
+                                                   rdfs:label "Geological Context ID"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"@en .
+
+
 ###  http://rs.tdwg.org/dwc/terms/institutionCode
 <http://rs.tdwg.org/dwc/terms/institutionCode> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain :Organization ;
+                                               rdfs:domain :Organization ,
+                                                           :PhysicalObject ;
                                                <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24> ,
                                                                                      <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24> ,
                                                                                      <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11> ,
@@ -395,7 +489,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://rs.tdwg.org/dwc/terms/locality
 <http://rs.tdwg.org/dwc/terms/locality> rdf:type owl:ObjectProperty ;
-                                        rdfs:domain :Organization ;
                                         <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en ;
                                         <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24> ,
                                                                               <http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06> ,
@@ -413,7 +506,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://rs.tdwg.org/dwc/terms/municipality
 <http://rs.tdwg.org/dwc/terms/municipality> rdf:type owl:ObjectProperty ;
-                                            rdfs:domain :Organization ;
                                             <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en ;
                                             <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24> ,
                                                                                   <http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06> ;
@@ -429,7 +521,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://rs.tdwg.org/dwc/terms/stateProvince
 <http://rs.tdwg.org/dwc/terms/stateProvince> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain :Organization ;
+                                             rdfs:domain :Organization ,
+                                                         :PhysicalObject ;
                                              <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en ;
                                              <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24> ,
                                                                                    <http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06> ;
@@ -444,6 +537,13 @@ xsd:date rdf:type rdfs:Datatype .
                                              <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en .
 
 
+###  http://www.europeana.eu/schemas/edm/currentLocation
+<http://www.europeana.eu/schemas/edm/currentLocation> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain :PhysicalObject ;
+                                                      rdfs:comment "The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource."@en ;
+                                                      rdfs:label "Current Location"@en .
+
+
 ###  http://www.europeana.eu/schemas/edm/rights
 <http://www.europeana.eu/schemas/edm/rights> rdf:type owl:ObjectProperty ;
                                              rdfs:comment "Information about copyright of the digital object."@en ;
@@ -454,9 +554,29 @@ xsd:date rdf:type rdfs:Datatype .
 rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/2003/12/exif/ns#gpsLatitude
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain :PhysicalObject ;
+                                                rdfs:comment "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
+                                                             "緯度"@ja ;
+                                                rdfs:label "GPSLatitude"@en ;
+                                                <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
+
+
+###  http://www.w3.org/2003/12/exif/ns#gpsLongitude
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain :PhysicalObject ;
+                                                 rdfs:comment "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
+                                                              "経度"@ja ;
+                                                 rdfs:label "GPSLongitude"@en ;
+                                                 <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#address
 :address rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/locality> ;
+         rdfs:domain :Organization ,
+                     :PhysicalObject ;
          <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en ;
          <http://purl.org/dc/terms/isVersionOf> "http://rs.tdwg.org/dwc/terms/locality" ;
          <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" ;
@@ -487,6 +607,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#city
 :city rdf:type owl:ObjectProperty ;
       rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/municipality> ;
+      rdfs:domain :Organization ,
+                  :PhysicalObject ;
       <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en ;
       <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/municipality> ;
       <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" ;
@@ -503,10 +625,41 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
              rdfs:label "Contact User"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#context
+:context rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/geologicalContextID> ;
+         rdfs:domain :PhysicalObject ;
+         <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/geologicalContextID> ;
+         <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" ;
+         <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> ;
+         <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+         rdfs:comment "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."@en ;
+         rdfs:label "Geological Context"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#dataManager
 :dataManager rdf:type owl:ObjectProperty ;
              rdfs:domain :Organization ;
              rdfs:label "Data Manager"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#datingMethod
+:datingMethod rdf:type owl:ObjectProperty ;
+              rdfs:domain :PhysicalObject ;
+              rdfs:label "Dating Method"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#dimensions
+:dimensions rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://purl.org/dc/terms/format> ;
+            rdfs:domain :PhysicalObject ;
+            <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Extent> ;
+            <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en ;
+            <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/format> ;
+            <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
+            rdfs:comment "The physical dimensions of the resource."@en ;
+            rdfs:label "Dimensions"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#downloadPermission
@@ -527,10 +680,30 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                  rdfs:label "Institution Name"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#latitude
+:latitude rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://www.w3.org/2003/12/exif/ns#gpsLatitude> ;
+          <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLatitude> ;
+          rdfs:comment "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
+                       "緯度"@ja ;
+          rdfs:label "Latitude"@en ;
+          <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#licenseBlank
 :licenseBlank rdf:type owl:ObjectProperty ;
               rdfs:domain :Organization ;
               rdfs:label "License Intentionally Left Blank"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#longitude
+:longitude rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://www.w3.org/2003/12/exif/ns#gpsLongitude> ;
+           <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLongitude> ;
+           rdfs:comment "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
+                        "経度"@ja ;
+           rdfs:label "Longitude"@en ;
+           <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#modality3D
@@ -546,10 +719,41 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                               rdfs:label "MorphoSource Use Agreement Type"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#numericTime
+:numericTime rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> ;
+             rdfs:domain :PhysicalObject ;
+             <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> ;
+             <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" ;
+             <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> ;
+             <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+             rdfs:comment "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."@en ;
+             rdfs:label "Numeric Time"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "`Phanerozoic`, `Proterozoic`"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#organizationID
+:organizationID rdf:type owl:ObjectProperty ;
+                rdfs:domain :PhysicalObject ;
+                rdfs:label "Organization ID"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#organizationType
 :organizationType rdf:type owl:ObjectProperty ;
                   rdfs:domain :Organization ;
                   rdfs:label "Organization Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#originalLocation
+:originalLocation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :PhysicalObject ;
+                  rdfs:label "Original Location"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#periodicTime
+:periodicTime rdf:type owl:ObjectProperty ;
+              rdfs:domain :PhysicalObject ;
+              rdfs:label "Periodic Time"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#permits3DUse
@@ -588,6 +792,36 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :processingActivityType rdf:type owl:ObjectProperty ;
                         rdfs:domain :ProcessingEvent ;
                         rdfs:label "Processing Activity Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#provenanceDate
+:provenanceDate rdf:type owl:ObjectProperty ;
+                rdfs:domain :PhysicalObject ;
+                rdfs:label "Provenance Date"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#provenanceDetails
+:provenanceDetails rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://purl.org/dc/terms/provenance> ;
+                   rdfs:domain :PhysicalObject ;
+                   <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/ProvenanceStatement> ;
+                   <http://purl.org/dc/terms/description> "The statement may include a description of any changes successive custodians made to the resource."@en ;
+                   <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/provenance> ;
+                   <http://purl.org/dc/terms/issued> "2004-09-20"^^xsd:date ;
+                   rdfs:comment "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+                   rdfs:label "Provenance Details"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#provenanceLocation
+:provenanceLocation rdf:type owl:ObjectProperty ;
+                    rdfs:domain :PhysicalObject ;
+                    rdfs:label "Provenance Location"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#provenanceName
+:provenanceName rdf:type owl:ObjectProperty ;
+                rdfs:domain :PhysicalObject ;
+                rdfs:label "Provenance Name"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#recordsetID
@@ -643,6 +877,20 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :teamID rdf:type owl:ObjectProperty ;
         rdfs:domain :Organization ;
         rdfs:label "Team ID"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#vouchered
+:vouchered rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/disposition> ;
+           rdfs:domain :PhysicalObject ;
+           <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en ;
+           <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/disposition> ;
+           <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition" ;
+           <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> ;
+           <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
+           rdfs:comment "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en ;
+           rdfs:label "Vouchered"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
 
 
 #################################################################
@@ -725,6 +973,29 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                  rdfs:subClassOf <http://pcdm.org/works#Work> ;
                  rdfs:comment "An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media)."@en ;
                  rdfs:label "Processing Event"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/dc/terms/TGN
+<http://purl.org/dc/terms/TGN> rdf:type owl:NamedIndividual ;
+                               rdfs:seeAlso <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> .
+
+
+###  http://www.getty.edu/research/tools/vocabulary/tgn/index.html
+<http://www.getty.edu/research/tools/vocabulary/tgn/index.html> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                               rdfs:comment "The set of places specified by the Getty Thesaurus of Geographic Names."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "TGN"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
      xml:base="https://www.morphosource.org/terms/morphosource"
+     xmlns:ns="http://www.w3.org/2003/12/exif/ns#"
      xmlns:v1="http://www.loc.gov/mads/rdf/v1#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -153,6 +154,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#tagNumber -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/12/exif/ns#tagNumber"/>
     
 
 
@@ -419,6 +427,15 @@
     
 
 
+    <!-- http://purl.org/dc/terms/TGN -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/TGN">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/created -->
 
 
@@ -447,6 +464,21 @@
         <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date Submitted</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format">
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Extent"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/MediaType"/>
+        <terms:description xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -480,6 +512,20 @@
         <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date Modified</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/provenance">
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/ProvenanceStatement"/>
+        <terms:description xml:lang="en">The statement may include a description of any changes successive custodians made to the resource.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-09-20</terms:issued>
+        <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Provenance</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -526,6 +572,7 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/collectionCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11"/>
@@ -548,6 +595,7 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/country">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/country-2017-10-06"/>
@@ -565,11 +613,89 @@
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/disposition -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/disposition">
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/disposition-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/disposition-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/curatorial/Disposition"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Disposition</rdfs:label>
+        <skos:example xml:lang="en">`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/EarliestEonOrLowestEonothem"/>
+        <attributes:abcdEquivalence>not in ABCD</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (&quot;Precambrian&quot;) attributable to the stratigraphic horizon from which the cataloged item was collected.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Earliest Eon Or Lowest Eonothem</rdfs:label>
+        <skos:example xml:lang="en">`Phanerozoic`, `Proterozoic`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/formation -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/formation">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/formation-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/formation-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/Formation"/>
+        <attributes:abcdEquivalence>not in ABCD</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full name of the lithostratigraphic formation from which the cataloged item was collected.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Formation</rdfs:label>
+        <skos:example xml:lang="en">`Notch Peak Formation`, `House Limestone`, `Fillmore Formation`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/geologicalContextID -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/geologicalContextID">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2009-07-06"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <attributes:abcdEquivalence>not in ABCD</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Geological Context ID</rdfs:label>
+        <skos:example xml:lang="en">`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/institutionCode -->
 
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/institutionCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11"/>
@@ -591,7 +717,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/locality">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:description xml:lang="en">Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06"/>
@@ -613,7 +738,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/municipality">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06"/>
@@ -634,6 +758,7 @@
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/dwc/terms/stateProvince">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24"/>
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06"/>
@@ -646,6 +771,17 @@
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">State Province</rdfs:label>
         <skos:example xml:lang="en">`Montana`, `Minas Gerais`, `Córdoba`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.europeana.eu/schemas/edm/currentLocation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.europeana.eu/schemas/edm/currentLocation">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current Location</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -667,11 +803,39 @@
     
 
 
+    <!-- http://www.w3.org/2003/12/exif/ns#gpsLatitude -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#gpsLatitude">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
+        <rdfs:label xml:lang="en">GPSLatitude</rdfs:label>
+        <ns:tagNumber xml:lang="en">2</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#gpsLongitude -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#gpsLongitude">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">経度</rdfs:comment>
+        <rdfs:label xml:lang="en">GPSLongitude</rdfs:label>
+        <ns:tagNumber xml:lang="en">4</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#address -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#address">
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:description xml:lang="en">Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</terms:description>
         <terms:isVersionOf>http://rs.tdwg.org/dwc/terms/locality</terms:isVersionOf>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
@@ -714,6 +878,8 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#city">
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.</terms:description>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/municipality"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
@@ -736,12 +902,55 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#context -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#context">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/geologicalContextID"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/geologicalContextID"/>
+        <attributes:abcdEquivalence>not in ABCD</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Geological Context</rdfs:label>
+        <skos:example xml:lang="en">`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#dataManager -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dataManager">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Data Manager</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#datingMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#datingMethod">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Dating Method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#dimensions -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dimensions">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Extent"/>
+        <terms:description xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.</terms:description>
+        <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:comment xml:lang="en">The physical dimensions of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dimensions</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -776,12 +985,40 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#latitude -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLatitude"/>
+        <terms:isVersionOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLatitude"/>
+        <rdfs:comment xml:lang="en">The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
+        <rdfs:label xml:lang="en">Latitude</rdfs:label>
+        <ns:tagNumber xml:lang="en">2</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#licenseBlank -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#licenseBlank">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">License Intentionally Left Blank</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#longitude -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLongitude"/>
+        <terms:isVersionOf rdf:resource="http://www.w3.org/2003/12/exif/ns#gpsLongitude"/>
+        <rdfs:comment xml:lang="en">The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">経度</rdfs:comment>
+        <rdfs:label xml:lang="en">Longitude</rdfs:label>
+        <ns:tagNumber xml:lang="en">4</ns:tagNumber>
     </owl:ObjectProperty>
     
 
@@ -807,12 +1044,59 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#numericTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#numericTime">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"/>
+        <attributes:abcdEquivalence>not in ABCD</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (&quot;Precambrian&quot;) attributable to the stratigraphic horizon from which the cataloged item was collected.</rdfs:comment>
+        <rdfs:label xml:lang="en">Numeric Time</rdfs:label>
+        <skos:example xml:lang="en">`Phanerozoic`, `Proterozoic`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#organizationID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#organizationID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Organization ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#organizationType -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#organizationType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Organization Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#originalLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#originalLocation">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Original Location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#periodicTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#periodicTime">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Periodic Time</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -875,6 +1159,52 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#processingActivityType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <rdfs:label xml:lang="en">Processing Activity Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#provenanceDate -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceDate">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Provenance Date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#provenanceDetails -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceDetails">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/provenance"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/ProvenanceStatement"/>
+        <terms:description xml:lang="en">The statement may include a description of any changes successive custodians made to the resource.</terms:description>
+        <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/provenance"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-09-20</terms:issued>
+        <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Provenance Details</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#provenanceLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceLocation">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Provenance Location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#provenanceName -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceName">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:label xml:lang="en">Provenance Name</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -962,6 +1292,24 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#teamID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Team ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#vouchered -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#vouchered">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vouchered</rdfs:label>
+        <skos:example xml:lang="en">`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1095,6 +1443,52 @@
         <rdfs:comment xml:lang="en">An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media).</rdfs:comment>
         <rdfs:label xml:lang="en">Processing Event</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/TGN -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/TGN">
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.getty.edu/research/tools/vocabulary/tgn/index.html -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/TGN">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">TGN</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

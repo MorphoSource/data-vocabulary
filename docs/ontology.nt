@@ -64,6 +64,9 @@
 # http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme
 <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2003/12/exif/ns#tagNumber
+<http://www.w3.org/2003/12/exif/ns#tagNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2004/02/skos/core#broader
 <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -226,6 +229,10 @@
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 # 
+# http://purl.org/dc/terms/TGN
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+# 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
@@ -247,6 +254,16 @@
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of submission of the resource."@en .
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#label> "Date Submitted"@en .
+# 
+# http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/format> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Extent> .
+<http://purl.org/dc/terms/format> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/MediaType> .
+<http://purl.org/dc/terms/format> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en .
+<http://purl.org/dc/terms/format> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#comment> "The file format, physical medium, or dimensions of the resource."@en .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#label> "Format"@en .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -270,6 +287,15 @@
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the resource was changed."@en .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#label> "Date Modified"@en .
+# 
+# http://purl.org/dc/terms/provenance
+<http://purl.org/dc/terms/provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/provenance> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/ProvenanceStatement> .
+<http://purl.org/dc/terms/provenance> <http://purl.org/dc/terms/description> "The statement may include a description of any changes successive custodians made to the resource."@en .
+<http://purl.org/dc/terms/provenance> <http://purl.org/dc/terms/issued> "2004-09-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en .
+<http://purl.org/dc/terms/provenance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/provenance> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance"@en .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -301,6 +327,7 @@
 # http://rs.tdwg.org/dwc/terms/collectionCode
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/collectionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-08-24> .
 <http://rs.tdwg.org/dwc/terms/collectionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-09-11> .
@@ -318,6 +345,7 @@
 # http://rs.tdwg.org/dwc/terms/country
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level or if the Location might be in one or another of multiple possible entities at this level. Multiplicity and uncertainty of the geographic entity can be captured either in the term higherGeography or in the term locality, or both."@en .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/country> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/country-2017-10-06> .
@@ -332,9 +360,67 @@
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
 <http://rs.tdwg.org/dwc/terms/country> <http://www.w3.org/2004/02/skos/core#example> "`Denmark`, `Colombia`, `España`"@en .
 # 
+# http://rs.tdwg.org/dwc/terms/disposition
+<http://rs.tdwg.org/dwc/terms/disposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/disposition-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/disposition-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/curatorial/Disposition> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition" .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://www.w3.org/2000/01/rdf-schema#comment> "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://www.w3.org/2000/01/rdf-schema#label> "Disposition"@en .
+<http://rs.tdwg.org/dwc/terms/disposition> <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://purl.org/dc/terms/replaces> <http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/EarliestEonOrLowestEonothem> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://www.w3.org/2000/01/rdf-schema#comment> "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."@en .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://www.w3.org/2000/01/rdf-schema#label> "Earliest Eon Or Lowest Eonothem"@en .
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> <http://www.w3.org/2004/02/skos/core#example> "`Phanerozoic`, `Proterozoic`"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/formation
+<http://rs.tdwg.org/dwc/terms/formation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/formation-2009-04-24> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/formation-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://purl.org/dc/terms/replaces> <http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/Formation> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/dwc/terms/formation> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/formation> <http://www.w3.org/2000/01/rdf-schema#comment> "The full name of the lithostratigraphic formation from which the cataloged item was collected."@en .
+<http://rs.tdwg.org/dwc/terms/formation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/formation> <http://www.w3.org/2000/01/rdf-schema#label> "Formation"@en .
+<http://rs.tdwg.org/dwc/terms/formation> <http://www.w3.org/2004/02/skos/core#example> "`Notch Peak Formation`, `House Limestone`, `Fillmore Formation`"@en .
+# 
+# http://rs.tdwg.org/dwc/terms/geologicalContextID
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2009-07-06> .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2017-10-06> .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."@en .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/dwc/terms/> .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://www.w3.org/2000/01/rdf-schema#label> "Geological Context ID"@en .
+<http://rs.tdwg.org/dwc/terms/geologicalContextID> <http://www.w3.org/2004/02/skos/core#example> "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"@en .
+# 
 # http://rs.tdwg.org/dwc/terms/institutionCode
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/institutionCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-08-24> .
 <http://rs.tdwg.org/dwc/terms/institutionCode> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-09-11> .
@@ -351,7 +437,6 @@
 # 
 # http://rs.tdwg.org/dwc/terms/locality
 <http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://rs.tdwg.org/dwc/terms/locality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/locality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/locality-2017-10-06> .
@@ -368,7 +453,6 @@
 # 
 # http://rs.tdwg.org/dwc/terms/municipality
 <http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://rs.tdwg.org/dwc/terms/municipality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2009-08-24> .
 <http://rs.tdwg.org/dwc/terms/municipality> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/municipality-2017-10-06> .
@@ -384,6 +468,7 @@
 # http://rs.tdwg.org/dwc/terms/stateProvince
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2009-04-24> .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/stateProvince-2017-10-06> .
@@ -397,6 +482,12 @@
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2000/01/rdf-schema#label> "State Province"@en .
 <http://rs.tdwg.org/dwc/terms/stateProvince> <http://www.w3.org/2004/02/skos/core#example> "`Montana`, `Minas Gerais`, `Córdoba`"@en .
 # 
+# http://www.europeana.eu/schemas/edm/currentLocation
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource."@en .
+<http://www.europeana.eu/schemas/edm/currentLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Current Location"@en .
+# 
 # http://www.europeana.eu/schemas/edm/rights
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about copyright of the digital object."@en .
@@ -405,9 +496,27 @@
 # http://www.w3.org/2000/01/rdf-schema#seeAlso
 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://www.w3.org/2003/12/exif/ns#gpsLatitude
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "緯度"@ja .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLatitude"@en .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
+# 
+# http://www.w3.org/2003/12/exif/ns#gpsLongitude
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "経度"@ja .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLongitude"@en .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#address
 <https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/locality> .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#address> <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en .
 <https://www.morphosource.org/terms/morphosource#address> <http://purl.org/dc/terms/isVersionOf> "http://rs.tdwg.org/dwc/terms/locality" .
 <https://www.morphosource.org/terms/morphosource#address> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
@@ -435,6 +544,8 @@
 # https://www.morphosource.org/terms/morphosource#city
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/municipality> .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#city> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."@en .
 <https://www.morphosource.org/terms/morphosource#city> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/municipality> .
 <https://www.morphosource.org/terms/morphosource#city> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" .
@@ -449,10 +560,38 @@
 <https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/2000/01/rdf-schema#label> "Contact User"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#context
+<https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/geologicalContextID> .
+<https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#context> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/geologicalContextID> .
+<https://www.morphosource.org/terms/morphosource#context> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<https://www.morphosource.org/terms/morphosource#context> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> .
+<https://www.morphosource.org/terms/morphosource#context> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."@en .
+<https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2000/01/rdf-schema#label> "Geological Context"@en .
+<https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2004/02/skos/core#example> "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#dataManager
 <https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/2000/01/rdf-schema#label> "Data Manager"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#datingMethod
+<https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Dating Method"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#dimensions
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/format> .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Extent> .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/format> .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical dimensions of the resource."@en .
+<https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensions"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#downloadPermission
 <https://www.morphosource.org/terms/morphosource#downloadPermission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -469,10 +608,28 @@
 <https://www.morphosource.org/terms/morphosource#institutionName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#institutionName> <http://www.w3.org/2000/01/rdf-schema#label> "Institution Name"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#latitude
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsLatitude> .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLatitude> .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "緯度"@ja .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#label> "Latitude"@en .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#licenseBlank
 <https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/2000/01/rdf-schema#label> "License Intentionally Left Blank"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#longitude
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsLongitude> .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLongitude> .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "経度"@ja .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#label> "Longitude"@en .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#modality3D
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -485,10 +642,37 @@
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#label> "MorphoSource Use Agreement Type"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#numericTime
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."@en .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2000/01/rdf-schema#label> "Numeric Time"@en .
+<https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2004/02/skos/core#example> "`Phanerozoic`, `Proterozoic`"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#organizationID
+<https://www.morphosource.org/terms/morphosource#organizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#organizationID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#organizationID> <http://www.w3.org/2000/01/rdf-schema#label> "Organization ID"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#organizationType
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#label> "Organization Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#originalLocation
+<https://www.morphosource.org/terms/morphosource#originalLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#originalLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#originalLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Original Location"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#periodicTime
+<https://www.morphosource.org/terms/morphosource#periodicTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#periodicTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#periodicTime> <http://www.w3.org/2000/01/rdf-schema#label> "Periodic Time"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#permits3DUse
 <https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -521,6 +705,32 @@
 <https://www.morphosource.org/terms/morphosource#processingActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#processingActivityType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 <https://www.morphosource.org/terms/morphosource#processingActivityType> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Activity Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#provenanceDate
+<https://www.morphosource.org/terms/morphosource#provenanceDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#provenanceDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#provenanceDate> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance Date"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#provenanceDetails
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/provenance> .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/ProvenanceStatement> .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://purl.org/dc/terms/description> "The statement may include a description of any changes successive custodians made to the resource."@en .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/provenance> .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://purl.org/dc/terms/issued> "2004-09-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en .
+<https://www.morphosource.org/terms/morphosource#provenanceDetails> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance Details"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#provenanceLocation
+<https://www.morphosource.org/terms/morphosource#provenanceLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#provenanceLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#provenanceLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance Location"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#provenanceName
+<https://www.morphosource.org/terms/morphosource#provenanceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#provenanceName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#provenanceName> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance Name"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#recordsetID
 <https://www.morphosource.org/terms/morphosource#recordsetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -568,6 +778,19 @@
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#label> "Team ID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#vouchered
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/disposition> .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/disposition> .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition" .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#comment> "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#label> "Vouchered"@en .
+<https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
 # 
 # 
 # 
@@ -638,5 +861,35 @@
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media)."@en .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Event"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/TGN
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> .
+<http://www.getty.edu/research/tools/vocabulary/tgn/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.getty.edu/research/tools/vocabulary/tgn/index.html
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of places specified by the Getty Thesaurus of Geographic Names."@en .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#label> "TGN"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

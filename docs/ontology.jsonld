@@ -318,6 +318,30 @@
     "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/TGN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2000-07-11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The set of places specified by the Getty Thesaurus of Geographic Names."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TGN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.getty.edu/research/tools/vocabulary/tgn/index.html"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
@@ -376,6 +400,33 @@
 }, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/dcam/rangeIncludes" : [ {
+    "@id" : "http://purl.org/dc/terms/Extent"
+  }, {
+    "@id" : "http://purl.org/dc/terms/MediaType"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2008-01-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The file format, physical medium, or dimensions of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Format"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/hasVersion",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -446,6 +497,31 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Date Modified"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/provenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/dcam/rangeIncludes" : [ {
+    "@id" : "http://purl.org/dc/terms/ProvenanceStatement"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The statement may include a description of any changes successive custodians made to the resource."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2004-09-20"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Provenance"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/replaces",
@@ -560,6 +636,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
@@ -607,6 +685,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
@@ -618,6 +698,162 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Denmark`, `Colombia`, `España`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/disposition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended best practice is to use a controlled vocabulary."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/disposition-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/disposition-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://purl.org/dc/terms/replaces" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/curatorial/Disposition"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/Occurrence"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Disposition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://purl.org/dc/terms/replaces" : [ {
+    "@id" : "http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/EarliestEonOrLowestEonothem"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "not in ABCD"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/GeologicalContext"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Earliest Eon Or Lowest Eonothem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Phanerozoic`, `Proterozoic`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/formation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/formation-2009-04-24"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/formation-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://purl.org/dc/terms/replaces" : [ {
+    "@id" : "http://digir.net/schema/conceptual/darwin/extension/paleontology/1.0/Formation"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "not in ABCD"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/GeologicalContext"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The full name of the lithostratigraphic formation from which the cataloged item was collected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Formation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Notch Peak Formation`, `House Limestone`, `Fillmore Formation`"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/geologicalContextID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2009-07-06"
+  }, {
+    "@id" : "http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2017-10-06"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "not in ABCD"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/GeologicalContext"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geological Context ID"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/institutionCode",
@@ -652,6 +888,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
@@ -697,9 +935,6 @@
     "@language" : "en",
     "@value" : "The specific description of the place."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
   } ],
@@ -738,9 +973,6 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
@@ -786,6 +1018,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
@@ -799,6 +1033,20 @@
     "@value" : "`Montana`, `Minas Gerais`, `Córdoba`"
   } ]
 }, {
+  "@id" : "http://www.europeana.eu/schemas/edm/currentLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Current Location"
+  } ]
+}, {
   "@id" : "http://www.europeana.eu/schemas/edm/rights",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -809,6 +1057,9 @@
     "@language" : "en",
     "@value" : "Europeana Rights"
   } ]
+}, {
+  "@id" : "http://www.getty.edu/research/tools/vocabulary/tgn/index.html",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://www.loc.gov/mads/rdf/v1#authoritativeLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -836,6 +1087,51 @@
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."
+  }, {
+    "@language" : "ja",
+    "@value" : "緯度"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "GPSLatitude"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLongitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."
+  }, {
+    "@language" : "ja",
+    "@value" : "経度"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "GPSLongitude"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#tagNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#broader",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -1009,6 +1305,11 @@
     "@language" : "en",
     "@value" : "The specific description of the place."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Address"
@@ -1079,6 +1380,11 @@
     "@language" : "en",
     "@value" : "The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "City"
@@ -1101,6 +1407,39 @@
     "@value" : "Contact User"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/geologicalContextID"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "not in ABCD"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/GeologicalContext"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geological Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/geologicalContextID"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dataManager",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1109,6 +1448,47 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Data Manager"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#datingMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dating Method"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dimensions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/dcam/rangeIncludes" : [ {
+    "@id" : "http://purl.org/dc/terms/Extent"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."
+  } ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/dc/terms/format"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2008-01-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The physical dimensions of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dimensions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/format"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#downloadPermission",
@@ -1141,6 +1521,30 @@
     "@value" : "Institution Name"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#latitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."
+  }, {
+    "@language" : "ja",
+    "@value" : "緯度"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Latitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "2"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#licenseBlank",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1149,6 +1553,30 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "License Intentionally Left Blank"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#longitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLongitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."
+  }, {
+    "@language" : "ja",
+    "@value" : "経度"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Longitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLongitude"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "4"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#modality3D",
@@ -1175,6 +1603,49 @@
     "@value" : "MorphoSource Use Agreement Type"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#numericTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "not in ABCD"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/GeologicalContext"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Numeric Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Phanerozoic`, `Proterozoic`"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#organizationID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Organization ID"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#organizationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1183,6 +1654,26 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Organization Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#originalLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Original Location"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#periodicTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Periodic Time"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#permits3DUse",
@@ -1249,6 +1740,67 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Processing Activity Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#provenanceDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Provenance Date"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#provenanceDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/dcam/rangeIncludes" : [ {
+    "@id" : "http://purl.org/dc/terms/ProvenanceStatement"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The statement may include a description of any changes successive custodians made to the resource."
+  } ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/dc/terms/provenance"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2004-09-20"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Provenance Details"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/provenance"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#provenanceLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Provenance Location"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#provenanceName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Provenance Name"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#recordsetID",
@@ -1351,5 +1903,42 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Team ID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#vouchered",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended best practice is to use a controlled vocabulary."
+  } ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/disposition"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence" : [ {
+    "@value" : "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/Occurrence"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/usageScope" : [ {
+    "@value" : "simple"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vouchered"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/disposition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"
   } ]
 } ]
