@@ -314,6 +314,91 @@
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
 # 
+# http://purl.org/healthcarevocab/v1#AcquisitionType
+<http://purl.org/healthcarevocab/v1#AcquisitionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#AcquisitionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#AcquisitionType> <http://www.w3.org/2000/01/rdf-schema#label> "Acquisition Type"@en .
+# 
+# http://purl.org/healthcarevocab/v1#AnodeTargetMaterial
+<http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Anode Target Material"@en .
+# 
+# http://purl.org/healthcarevocab/v1#ContainerDescription
+<http://purl.org/healthcarevocab/v1#ContainerDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#ContainerDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#ContainerDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Container Description"@en .
+# 
+# http://purl.org/healthcarevocab/v1#ContrastFrameAveraging
+<http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast Frame Averaging"@en .
+# 
+# http://purl.org/healthcarevocab/v1#DetectorDescription
+<http://purl.org/healthcarevocab/v1#DetectorDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#DetectorDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#DetectorDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Description"@en .
+# 
+# http://purl.org/healthcarevocab/v1#DistanceSourceToDetector
+<http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Detector"@en .
+# 
+# http://purl.org/healthcarevocab/v1#DistanceSourceToPatient
+<http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Patient"@en .
+# 
+# http://purl.org/healthcarevocab/v1#ExposureTime
+<http://purl.org/healthcarevocab/v1#ExposureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#ExposureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#ExposureTime> <http://www.w3.org/2000/01/rdf-schema#label> "Exposure Time"@en .
+# 
+# http://purl.org/healthcarevocab/v1#GeneratorID
+<http://purl.org/healthcarevocab/v1#GeneratorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#GeneratorID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#GeneratorID> <http://www.w3.org/2000/01/rdf-schema#label> "Generator ID"@en .
+# 
+# http://purl.org/healthcarevocab/v1#GeneratorPower
+<http://purl.org/healthcarevocab/v1#GeneratorPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#GeneratorPower> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#GeneratorPower> <http://www.w3.org/2000/01/rdf-schema#label> "Generator Power"@en .
+# 
+# http://purl.org/healthcarevocab/v1#ImagesInAcquisition
+<http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/2000/01/rdf-schema#label> "Images in Acquisition"@en .
+# 
+# http://purl.org/healthcarevocab/v1#KVP
+<http://purl.org/healthcarevocab/v1#KVP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#KVP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#KVP> <http://www.w3.org/2000/01/rdf-schema#label> "KVP"@en .
+# 
+# http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType
+<http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration Type"@en .
+# 
+# http://purl.org/healthcarevocab/v1#SpiralPitchFactor
+<http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Spiral Pitch Factor"@en .
+# 
+# http://purl.org/healthcarevocab/v1#XRayTubeCurrent
+<http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Tube Current"@en .
+# 
+# http://rs.tdwg.org/ac/terms/captureDevice
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/description> "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/isPartOf> "http://rs.tdwg.org/ac/terms/"@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> "http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Free form text describing the device or devices used to create the resource."@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://rs.tdwg.org/ac/terms/"@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Capture Device"@en .
+# 
 # http://rs.tdwg.org/dwc/terms/catalogNumber
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
@@ -568,6 +653,15 @@
 # http://www.w3.org/2000/01/rdf-schema#seeAlso
 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://www.w3.org/2003/12/exif/ns#apertureValue
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The lens aperture. The unit is the APEX value."@en .
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/2000/01/rdf-schema#comment> "レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば'5'の場合だと√2^5=F5.6"@ja .
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/2000/01/rdf-schema#label> "ApertureValue"@en .
+<http://www.w3.org/2003/12/exif/ns#apertureValue> <http://www.w3.org/2003/12/exif/ns#tagNumber> "37378"@en .
+# 
 # http://www.w3.org/2003/12/exif/ns#gpsLatitude
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
@@ -581,6 +675,31 @@
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "経度"@ja .
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLongitude"@en .
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
+# 
+# http://www.w3.org/2003/12/exif/ns#isoSpeedRatings
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/2000/01/rdf-schema#comment> "CCD感度の銀塩フィルム換算値"@ja .
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232."@en .
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/2000/01/rdf-schema#label> "ISOSpeedRatings"@en .
+<http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> <http://www.w3.org/2003/12/exif/ns#tagNumber> "34855"@en .
+# 
+# http://www.w3.org/2003/12/exif/ns#lightSource
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Light source such as Daylight, Tungsten, Flash etc."@en .
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/2000/01/rdf-schema#comment> "光源。これはマニュアルでホワイトバランスを設定した場合のモード値となる"@ja .
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/2000/01/rdf-schema#label> "LightSource"@en .
+<http://www.w3.org/2003/12/exif/ns#lightSource> <http://www.w3.org/2003/12/exif/ns#tagNumber> "37384"@en .
+# 
+# http://www.w3.org/2003/12/exif/ns#shutterSpeedValue
+<http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"@en .
+<http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"@ja .
+<http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> <http://www.w3.org/2000/01/rdf-schema#label> "ShutterSpeedValue"@en .
+<http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> <http://www.w3.org/2003/12/exif/ns#tagNumber> "37377"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#aatAttribute
 <https://www.morphosource.org/terms/morphosource#aatAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -623,6 +742,12 @@
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/UsageTerms> .
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#comment> "A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly."@en .
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement URI"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#amperage
+<https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> .
+<https://www.morphosource.org/terms/morphosource#amperage> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> .
+<https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#label> "Amperage"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#attachmentFile
 <https://www.morphosource.org/terms/morphosource#attachmentFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -687,6 +812,41 @@
 <https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Dating Method"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#detectorConfiguration
+<https://www.morphosource.org/terms/morphosource#detectorConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#detectorConfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#detectorConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Configuration"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#detectorPixelSizeX
+<https://www.morphosource.org/terms/morphosource#detectorPixelSizeX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelSizeX> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelSizeX> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Pixel Size X"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#detectorPixelSizeY
+<https://www.morphosource.org/terms/morphosource#detectorPixelSizeY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelSizeY> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Pixel Size Y"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#detectorPixelsX
+<https://www.morphosource.org/terms/morphosource#detectorPixelsX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelsX> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelsX> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Pixels X"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#detectorPixelsY
+<https://www.morphosource.org/terms/morphosource#detectorPixelsY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelsY> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#detectorPixelsY> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Pixels Y"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#detectorType
+<https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#DetectorDescription> .
+<https://www.morphosource.org/terms/morphosource#detectorType> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DetectorDescription> .
+<https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#deviceID
+<https://www.morphosource.org/terms/morphosource#deviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#deviceID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#deviceID> <http://www.w3.org/2000/01/rdf-schema#label> "Imaging Device ID"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#dimensions
 <https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/format> .
@@ -708,6 +868,40 @@
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#label> "Download Reviewer"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#exifLensMake
+<https://www.morphosource.org/terms/morphosource#exifLensMake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#exifLensMake> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Make"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#exifLensModel
+<https://www.morphosource.org/terms/morphosource#exifLensModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#exifLensModel> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Model"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#filter
+<https://www.morphosource.org/terms/morphosource#filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#filter> <http://www.w3.org/2000/01/rdf-schema#label> "Filter"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#fluxNormalization
+<https://www.morphosource.org/terms/morphosource#fluxNormalization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#fluxNormalization> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#fluxNormalization> <http://www.w3.org/2000/01/rdf-schema#label> "Flux Normalization"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#focalLength
+<https://www.morphosource.org/terms/morphosource#focalLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#focalLength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#focalLength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#focalLength> <http://www.w3.org/2000/01/rdf-schema#label> "Focal Length"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#focalLengthType
+<https://www.morphosource.org/terms/morphosource#focalLengthType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#focalLengthType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#focalLengthType> <http://www.w3.org/2000/01/rdf-schema#label> "Focal Length Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#frameAveraging
+<https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> .
+<https://www.morphosource.org/terms/morphosource#frameAveraging> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> .
+<https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#label> "Frame Averaging"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#idigbioRecordsetID
 <https://www.morphosource.org/terms/morphosource#idigbioRecordsetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#idigbioRecordsetID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/dwc/terms/datasetID> .
@@ -724,6 +918,20 @@
 <https://www.morphosource.org/terms/morphosource#idigbioUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#idigbioUUID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> .
 <https://www.morphosource.org/terms/morphosource#idigbioUUID> <http://www.w3.org/2000/01/rdf-schema#label> "iDigBio UUID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ieFilter
+<https://www.morphosource.org/terms/morphosource#ieFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#ieFilter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#filter> .
+<https://www.morphosource.org/terms/morphosource#ieFilter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#ieFilter> <http://www.w3.org/2000/01/rdf-schema#label> "Imaging Event Filter"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ieModality
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/captureDevice> .
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://purl.org/dc/terms/description> "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."@en .
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#comment> "Free form text describing the device or devices used to create the resource."@en .
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#label> "Imaging Event Modality"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#institutionName
 <https://www.morphosource.org/terms/morphosource#institutionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -752,6 +960,20 @@
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "緯度"@ja .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#label> "Latitude"@en .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#lensMake
+<https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#exifLensMake> .
+<https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Make"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#lensModel
+<https://www.morphosource.org/terms/morphosource#lensModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#lensModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#exifLensModel> .
+<https://www.morphosource.org/terms/morphosource#lensModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#lensModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#lensModel> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Model"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#licenseBlank
 <https://www.morphosource.org/terms/morphosource#licenseBlank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -799,6 +1021,16 @@
 <https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2000/01/rdf-schema#label> "Numeric Time"@en .
 <https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/2004/02/skos/core#example> "`Phanerozoic`, `Proterozoic`"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#objectID
+<https://www.morphosource.org/terms/morphosource#objectID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#objectID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#objectID> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Object ID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#opticalMagnification
+<https://www.morphosource.org/terms/morphosource#opticalMagnification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#opticalMagnification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#opticalMagnification> <http://www.w3.org/2000/01/rdf-schema#label> "Optical Magnification"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#organizationID
 <https://www.morphosource.org/terms/morphosource#organizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#organizationID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
@@ -829,10 +1061,32 @@
 <https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#label> "Permits Commercial Use"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#phaseContrast
+<https://www.morphosource.org/terms/morphosource#phaseContrast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#phaseContrast> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#phaseContrast> <http://www.w3.org/2000/01/rdf-schema#label> "Phase Contrast"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval
+<https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval> <http://www.w3.org/2000/01/rdf-schema#label> "Photogrammetry Background Removal"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration
+<https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> .
+<https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> .
+<https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#postalCode
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Code"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#power
+<https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#GeneratorPower> .
+<https://www.morphosource.org/terms/morphosource#power> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorPower> .
+<https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/2000/01/rdf-schema#label> "Power"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#processingActivityDescription
 <https://www.morphosource.org/terms/morphosource#processingActivityDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -850,6 +1104,12 @@
 <https://www.morphosource.org/terms/morphosource#processingActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#processingActivityType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 <https://www.morphosource.org/terms/morphosource#processingActivityType> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Activity Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#projections
+<https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> .
+<https://www.morphosource.org/terms/morphosource#projections> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> .
+<https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Projections"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#provenanceDate
 <https://www.morphosource.org/terms/morphosource#provenanceDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -919,10 +1179,70 @@
 <https://www.morphosource.org/terms/morphosource#rightsStatementBlank> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#rightsStatementBlank> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Statement Intentionally Left Blank"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#rotationNumber
+<https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> .
+<https://www.morphosource.org/terms/morphosource#rotationNumber> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> .
+<https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Rotations"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#shadingCorrection
+<https://www.morphosource.org/terms/morphosource#shadingCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#shadingCorrection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#shadingCorrection> <http://www.w3.org/2000/01/rdf-schema#label> "Shading Correction"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#shortTitle
 <https://www.morphosource.org/terms/morphosource#shortTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#shortTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> .
 <https://www.morphosource.org/terms/morphosource#shortTitle> <http://www.w3.org/2000/01/rdf-schema#label> "Short Title"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#shutterSpeed
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"@en .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"@ja .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Shutter Speed"@en .
+<https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2003/12/exif/ns#tagNumber> "37377"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#slideType
+<https://www.morphosource.org/terms/morphosource#slideType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#slideType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#slideType> <http://www.w3.org/2000/01/rdf-schema#label> "Slide Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#software
+<https://www.morphosource.org/terms/morphosource#software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#software> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#software> <http://www.w3.org/2000/01/rdf-schema#label> "Software"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#sourceDetectorDistance
+<https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> .
+<https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> .
+<https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Detector"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#sourceObjectDistance
+<https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> .
+<https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> .
+<https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Object"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#surroundingMaterial
+<https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> .
+<https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> .
+<https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Surrounding Material"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#targetMaterial
+<https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> .
+<https://www.morphosource.org/terms/morphosource#targetMaterial> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> .
+<https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Target Material"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#targetType
+<https://www.morphosource.org/terms/morphosource#targetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#targetType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#targetType> <http://www.w3.org/2000/01/rdf-schema#label> "Target Type"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#taxonomyID
 <https://www.morphosource.org/terms/morphosource#taxonomyID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -933,6 +1253,12 @@
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#label> "Team ID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#voltage
+<https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#KVP> .
+<https://www.morphosource.org/terms/morphosource#voltage> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#KVP> .
+<https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/2000/01/rdf-schema#label> "Voltage"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#vouchered
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -946,6 +1272,12 @@
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#comment> "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en .
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#label> "Vouchered"@en .
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#xrayTubeType
+<https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#GeneratorID> .
+<https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorID> .
+<https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Tube Type"@en .
 # 
 # 
 # 
@@ -974,6 +1306,10 @@
 <https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical object that is a biological specimen, such as a skeleton, a whole body, or a fossil."@en .
 <https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> <http://www.w3.org/2000/01/rdf-schema#label> "Biological Specimen Object"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent
+<https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 # 
 # https://www.morphosource.org/terms/morphosource#CulturalHeritageObject
 <https://www.morphosource.org/terms/morphosource#CulturalHeritageObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1005,6 +1341,14 @@
 <https://www.morphosource.org/terms/morphosource#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "A relatively autonomous bureaucratic unit responsible for controlling physical objects or devices. Often a museum collection, an entire museum institution, or a faculty lab department."@en .
 <https://www.morphosource.org/terms/morphosource#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent
+<https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+# 
+# https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent
+<https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+# 
 # https://www.morphosource.org/terms/morphosource#PhysicalObject
 <https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
@@ -1016,6 +1360,10 @@
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media)."@en .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Processing Event"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent
+<https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 # 
 # 
 # 
@@ -1029,9 +1377,9 @@
 # http://purl.org/dc/terms/TGN
 <http://purl.org/dc/terms/TGN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> .
-<http://www.getty.edu/research/tools/vocabulary/tgn/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # http://www.getty.edu/research/tools/vocabulary/tgn/index.html
+<http://www.getty.edu/research/tools/vocabulary/tgn/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # 
 # 

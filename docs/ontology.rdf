@@ -565,6 +565,171 @@
     
 
 
+    <!-- http://purl.org/healthcarevocab/v1#AcquisitionType -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#AcquisitionType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Acquisition Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#AnodeTargetMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#AnodeTargetMaterial">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Anode Target Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#ContainerDescription -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ContainerDescription">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Container Description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#ContrastFrameAveraging -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ContrastFrameAveraging">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Contrast Frame Averaging</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#DetectorDescription -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#DetectorDescription">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Detector Description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#DistanceSourceToDetector -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#DistanceSourceToDetector">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Distance From Source To Detector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#DistanceSourceToPatient -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#DistanceSourceToPatient">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Distance From Source To Patient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#ExposureTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ExposureTime">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Exposure Time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#GeneratorID -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#GeneratorID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Generator ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#GeneratorPower -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#GeneratorPower">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Generator Power</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#ImagesInAcquisition -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ImagesInAcquisition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Images in Acquisition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#KVP -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#KVP">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">KVP</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Pixel Spacing Calibration Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#SpiralPitchFactor -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#SpiralPitchFactor">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Spiral Pitch Factor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#XRayTubeCurrent -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#XRayTubeCurrent">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">X-Ray Tube Current</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/captureDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/captureDevice">
+        <terms:description xml:lang="en">It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: &quot;Canon Supershot 2000&quot;, &quot;Makroscan Scanner 2000&quot;, &quot;Zeiss Axioscope with Camera IIIu&quot;, &quot;SEM (Scanning Electron Microscope)&quot;.</terms:description>
+        <terms:isPartOf xml:lang="en">http://rs.tdwg.org/ac/terms/</terms:isPartOf>
+        <attributes:organizedInClass xml:lang="en">http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation</attributes:organizedInClass>
+        <rdfs:comment xml:lang="en">Free form text describing the device or devices used to create the resource.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://rs.tdwg.org/ac/terms/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Capture Device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/catalogNumber -->
 
 
@@ -908,6 +1073,20 @@
     
 
 
+    <!-- http://www.w3.org/2003/12/exif/ns#apertureValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#apertureValue">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:comment xml:lang="en">The lens aperture. The unit is the APEX value.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば&apos;5&apos;の場合だと√2^5=F5.6</rdfs:comment>
+        <rdfs:label xml:lang="en">ApertureValue</rdfs:label>
+        <ns:tagNumber xml:lang="en">37378</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2003/12/exif/ns#gpsLatitude -->
 
 
@@ -928,6 +1107,46 @@
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
         <rdfs:label xml:lang="en">GPSLongitude</rdfs:label>
         <ns:tagNumber xml:lang="en">4</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#isoSpeedRatings -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#isoSpeedRatings">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:comment xml:lang="ja">CCD感度の銀塩フィルム換算値</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.</rdfs:comment>
+        <rdfs:label xml:lang="en">ISOSpeedRatings</rdfs:label>
+        <ns:tagNumber xml:lang="en">34855</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#lightSource -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#lightSource">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:comment xml:lang="en">Light source such as Daylight, Tungsten, Flash etc.</rdfs:comment>
+        <rdfs:comment xml:lang="ja">光源。これはマニュアルでホワイトバランスを設定した場合のモード値となる</rdfs:comment>
+        <rdfs:label xml:lang="en">LightSource</rdfs:label>
+        <ns:tagNumber xml:lang="en">37384</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/12/exif/ns#shutterSpeedValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/12/exif/ns#shutterSpeedValue">
+        <rdfs:comment xml:lang="en">Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting</rdfs:comment>
+        <rdfs:comment xml:lang="ja">シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば&apos;4&apos;の場合だと1/(2^4)=1/16秒</rdfs:comment>
+        <rdfs:label xml:lang="en">ShutterSpeedValue</rdfs:label>
+        <ns:tagNumber xml:lang="en">37377</ns:tagNumber>
     </owl:ObjectProperty>
     
 
@@ -1000,6 +1219,17 @@
         <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/UsageTerms"/>
         <rdfs:comment xml:lang="en">A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</rdfs:comment>
         <rdfs:label xml:lang="en">Agreement URI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#amperage -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#amperage">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#XRayTubeCurrent"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#XRayTubeCurrent"/>
+        <rdfs:label xml:lang="en">Amperage</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1112,6 +1342,76 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#detectorConfiguration -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorConfiguration">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Detector Configuration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#detectorPixelSizeX -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelSizeX">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Detector Pixel Size X</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#detectorPixelSizeY -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelSizeY">
+        <rdfs:label xml:lang="en">Detector Pixel Size Y</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#detectorPixelsX -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelsX">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Detector Pixels X</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#detectorPixelsY -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelsY">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Detector Pixels Y</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#detectorType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#DetectorDescription"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#DetectorDescription"/>
+        <rdfs:label xml:lang="en">Detector Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#deviceID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#deviceID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">Imaging Device ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#dimensions -->
 
 
@@ -1148,6 +1448,75 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#exifLensMake -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#exifLensMake">
+        <rdfs:label xml:lang="en">Lens Make</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#exifLensModel -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#exifLensModel">
+        <rdfs:label xml:lang="en">Lens Model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#filter -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#filter">
+        <rdfs:label xml:lang="en">Filter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#fluxNormalization -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#fluxNormalization">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Flux Normalization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#focalLength -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#focalLength">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:label xml:lang="en">Focal Length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#focalLengthType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#focalLengthType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:label xml:lang="en">Focal Length Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#frameAveraging -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#frameAveraging">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"/>
+        <rdfs:label xml:lang="en">Frame Averaging</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#idigbioRecordsetID -->
 
 
@@ -1171,6 +1540,30 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#idigbioUUID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
         <rdfs:label xml:lang="en">iDigBio UUID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ieFilter -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ieFilter">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#filter"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Imaging Event Filter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ieModality -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ieModality">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <terms:description xml:lang="en">It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: &quot;Canon Supershot 2000&quot;, &quot;Makroscan Scanner 2000&quot;, &quot;Zeiss Axioscope with Camera IIIu&quot;, &quot;SEM (Scanning Electron Microscope)&quot;.</terms:description>
+        <rdfs:comment xml:lang="en">Free form text describing the device or devices used to create the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Imaging Event Modality</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1214,6 +1607,30 @@
         <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
         <rdfs:label xml:lang="en">Latitude</rdfs:label>
         <ns:tagNumber xml:lang="en">2</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#lensMake -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#lensMake">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#exifLensMake"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:label xml:lang="en">Lens Make</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#lensModel -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#lensModel">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#exifLensModel"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:label xml:lang="en">Lens Model</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1294,6 +1711,26 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#objectID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#objectID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">Physical Object ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#opticalMagnification -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#opticalMagnification">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Optical Magnification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#organizationID -->
 
 
@@ -1354,12 +1791,54 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#phaseContrast -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#phaseContrast">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Phase Contrast</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:label xml:lang="en">Photogrammetry Background Removal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"/>
+        <rdfs:label xml:lang="en">Pixel Spacing Calibration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#postalCode -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#postalCode">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Postal Code</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#power -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#power">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorPower"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorPower"/>
+        <rdfs:label xml:lang="en">Power</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1392,6 +1871,17 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#processingActivityType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <rdfs:label xml:lang="en">Processing Activity Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#projections -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#projections">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#ImagesInAcquisition"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ImagesInAcquisition"/>
+        <rdfs:label xml:lang="en">Number of Projections</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1519,12 +2009,122 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#rotationNumber -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rotationNumber">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#SpiralPitchFactor"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#SpiralPitchFactor"/>
+        <rdfs:label xml:lang="en">Number of Rotations</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#shadingCorrection -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shadingCorrection">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Shading Correction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#shortTitle -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shortTitle">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
         <rdfs:label xml:lang="en">Short Title</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#shutterSpeed -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shutterSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/12/exif/ns#shutterSpeedValue"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"/>
+        <rdfs:comment xml:lang="en">Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting</rdfs:comment>
+        <rdfs:comment xml:lang="ja">シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば&apos;4&apos;の場合だと1/(2^4)=1/16秒</rdfs:comment>
+        <rdfs:label xml:lang="en">Shutter Speed</rdfs:label>
+        <ns:tagNumber xml:lang="en">37377</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#slideType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#slideType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent"/>
+        <rdfs:label xml:lang="en">Slide Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#software -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#software">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#sourceDetectorDistance -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#sourceDetectorDistance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"/>
+        <rdfs:label xml:lang="en">Distance From Source To Detector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#sourceObjectDistance -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#sourceObjectDistance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"/>
+        <rdfs:label xml:lang="en">Distance From Source To Object</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#surroundingMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#surroundingMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#ContainerDescription"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ContainerDescription"/>
+        <rdfs:label xml:lang="en">Surrounding Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#targetMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#targetMaterial">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"/>
+        <rdfs:label xml:lang="en">Target Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#targetType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#targetType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:label xml:lang="en">Target Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1549,6 +2149,17 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#voltage -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#voltage">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#KVP"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#KVP"/>
+        <rdfs:label xml:lang="en">Voltage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#vouchered -->
 
 
@@ -1563,6 +2174,17 @@
         <rdfs:comment xml:lang="en">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</rdfs:comment>
         <rdfs:label xml:lang="en">Vouchered</rdfs:label>
         <skos:example xml:lang="en">`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#xrayTubeType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#xrayTubeType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorID"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorID"/>
+        <rdfs:label xml:lang="en">X-Ray Tube Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1622,6 +2244,15 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#CulturalHeritageObject -->
 
 
@@ -1677,6 +2308,24 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+    </owl:Class>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#PhysicalObject -->
 
 
@@ -1695,6 +2344,15 @@
         <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
         <rdfs:comment xml:lang="en">An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media).</rdfs:comment>
         <rdfs:label xml:lang="en">Processing Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent -->
+
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent">
+        <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
     </owl:Class>
     
 

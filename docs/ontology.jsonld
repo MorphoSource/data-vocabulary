@@ -581,6 +581,186 @@
     "@value" : "Title"
   } ]
 }, {
+  "@id" : "http://purl.org/healthcarevocab/v1#AcquisitionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acquisition Type"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anode Target Material"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Container Description"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contrast Frame Averaging"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#DetectorDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Description"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance From Source To Detector"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance From Source To Patient"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ExposureTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Exposure Time"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Generator ID"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Generator Power"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Images in Acquisition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#KVP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KVP"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Spacing Calibration Type"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spiral Pitch Factor"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Tube Current"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/captureDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@language" : "en",
+    "@value" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@language" : "en",
+    "@value" : "http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Free form text describing the device or devices used to create the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Capture Device"
+  } ]
+}, {
   "@id" : "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -1308,6 +1488,29 @@
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#apertureValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The lens aperture. The unit is the APEX value."
+  }, {
+    "@language" : "ja",
+    "@value" : "レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば'5'の場合だと√2^5=F5.6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ApertureValue"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "37378"
+  } ]
+}, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1342,6 +1545,70 @@
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "4"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#isoSpeedRatings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "ja",
+    "@value" : "CCD感度の銀塩フィルム換算値"
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ISOSpeedRatings"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "34855"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#lightSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Light source such as Daylight, Tungsten, Flash etc."
+  }, {
+    "@language" : "ja",
+    "@value" : "光源。これはマニュアルでホワイトバランスを設定した場合のモード値となる"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "LightSource"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "37384"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#shutterSpeedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"
+  }, {
+    "@language" : "ja",
+    "@value" : "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ShutterSpeedValue"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "37377"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#tagNumber",
@@ -1397,6 +1664,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject",
@@ -1469,6 +1742,18 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1495,6 +1780,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/works#Work"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#aatAttribute",
@@ -1594,6 +1885,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://ns.adobe.com/xap/1.0/rights/UsageTerms"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#amperage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Amperage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile",
@@ -1744,6 +2048,76 @@
     "@value" : "Dating Method"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#detectorConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Configuration"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelSizeX",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Pixel Size X"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelSizeY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Pixel Size Y"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelsX",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Pixels X"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelsY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Pixels Y"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#detectorType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#DetectorDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#DetectorDescription"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#deviceID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Imaging Device ID"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dimensions",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/dcam/rangeIncludes" : [ {
@@ -1795,6 +2169,72 @@
     "@value" : "Download Reviewer"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#exifLensMake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lens Make"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#exifLensModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lens Model"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#filter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Filter"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#fluxNormalization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flux Normalization"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#focalLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Focal Length"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#focalLengthType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Focal Length Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#frameAveraging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frame Averaging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#idigbioRecordsetID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
@@ -1836,6 +2276,40 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "iDigBio UUID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ieFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Imaging Event Filter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#filter"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ieModality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Free form text describing the device or devices used to create the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Imaging Event Modality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/captureDevice"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#institutionName",
@@ -1910,6 +2384,36 @@
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#lensMake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lens Make"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#exifLensMake"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#lensModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lens Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#exifLensModel"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#licenseBlank",
@@ -2026,6 +2530,26 @@
     "@value" : "`Phanerozoic`, `Proterozoic`"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#objectID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Physical Object ID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#opticalMagnification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Optical Magnification"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#organizationID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2086,6 +2610,39 @@
     "@value" : "Permits Commercial Use"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#phaseContrast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Phase Contrast"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photogrammetry Background Removal"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Spacing Calibration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#postalCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2094,6 +2651,19 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Postal Code"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#power",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivityDescription",
@@ -2130,6 +2700,19 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Processing Activity Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#projections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Number of Projections"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#provenanceDate",
@@ -2285,6 +2868,29 @@
     "@value" : "Rights Statement Intentionally Left Blank"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#rotationNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Number of Rotations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#shadingCorrection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shading Correction"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shortTitle",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2293,6 +2899,114 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Short Title"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#shutterSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"
+  }, {
+    "@language" : "ja",
+    "@value" : "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shutter Speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2003/12/exif/ns#shutterSpeedValue"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "37377"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#slideType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Slide Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#software",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Software"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#sourceDetectorDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance From Source To Detector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#sourceObjectDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance From Source To Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#surroundingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Surrounding Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#targetMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Target Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#targetType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Target Type"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#taxonomyID",
@@ -2313,6 +3027,19 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Team ID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#voltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#KVP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Voltage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#KVP"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#vouchered",
@@ -2350,5 +3077,18 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#xrayTubeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Tube Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID"
   } ]
 } ]
