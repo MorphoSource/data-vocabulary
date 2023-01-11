@@ -369,37 +369,31 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/healthcarevocab/v1#AnodeTargetMaterial
 <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> rdf:type owl:ObjectProperty ;
-                                                         rdfs:domain :CTImageSeriesImagingEvent ;
                                                          rdfs:label "Anode Target Material"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ContainerDescription
 <http://purl.org/healthcarevocab/v1#ContainerDescription> rdf:type owl:ObjectProperty ;
-                                                          rdfs:domain :CTImageSeriesImagingEvent ;
                                                           rdfs:label "Container Description"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ContrastFrameAveraging
 <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> rdf:type owl:ObjectProperty ;
-                                                            rdfs:domain :CTImageSeriesImagingEvent ;
                                                             rdfs:label "Contrast Frame Averaging"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DetectorDescription
 <http://purl.org/healthcarevocab/v1#DetectorDescription> rdf:type owl:ObjectProperty ;
-                                                         rdfs:domain :CTImageSeriesImagingEvent ;
                                                          rdfs:label "Detector Description"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DistanceSourceToDetector
 <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> rdf:type owl:ObjectProperty ;
-                                                              rdfs:domain :CTImageSeriesImagingEvent ;
                                                               rdfs:label "Distance From Source To Detector"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DistanceSourceToPatient
 <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> rdf:type owl:ObjectProperty ;
-                                                             rdfs:domain :CTImageSeriesImagingEvent ;
                                                              rdfs:label "Distance From Source To Patient"@en .
 
 
@@ -411,44 +405,37 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/healthcarevocab/v1#GeneratorID
 <http://purl.org/healthcarevocab/v1#GeneratorID> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain :CTImageSeriesImagingEvent ;
                                                  rdfs:label "Generator ID"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#GeneratorPower
 <http://purl.org/healthcarevocab/v1#GeneratorPower> rdf:type owl:ObjectProperty ;
-                                                    rdfs:domain :CTImageSeriesImagingEvent ;
                                                     rdfs:label "Generator Power"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ImagesInAcquisition
 <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> rdf:type owl:ObjectProperty ;
                                                          rdfs:subPropertyOf owl:topObjectProperty ;
-                                                         rdfs:domain :CTImageSeriesImagingEvent ;
                                                          rdfs:label "Images in Acquisition"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#KVP
 <http://purl.org/healthcarevocab/v1#KVP> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain :CTImageSeriesImagingEvent ;
                                          rdfs:label "KVP"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> rdf:type owl:ObjectProperty ;
-                                                                 rdfs:domain :CTImageSeriesImagingEvent ;
                                                                  rdfs:label "Pixel Spacing Calibration Type"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#SpiralPitchFactor
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain :CTImageSeriesImagingEvent ;
                                                        rdfs:label "Spiral Pitch Factor"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#XRayTubeCurrent
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> rdf:type owl:ObjectProperty ;
-                                                     rdfs:domain :CTImageSeriesImagingEvent ;
                                                      rdfs:label "X-Ray Tube Current"@en .
 
 
@@ -839,6 +826,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#amperage
 :amperage rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> ;
+          rdfs:domain :CTImageSeriesImagingEvent ;
           <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> ;
           rdfs:label "Amperage"@en .
 
@@ -947,6 +935,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#detectorType
 :detectorType rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#DetectorDescription> ;
+              rdfs:domain :CTImageSeriesImagingEvent ;
               <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DetectorDescription> ;
               rdfs:label "Detector Type"@en .
 
@@ -1018,6 +1007,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#frameAveraging
 :frameAveraging rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> ;
+                rdfs:domain :CTImageSeriesImagingEvent ;
                 <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> ;
                 rdfs:label "Frame Averaging"@en .
 
@@ -1219,6 +1209,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration
 :pixelSpacingCalibration rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> ;
+                         rdfs:domain :CTImageSeriesImagingEvent ;
                          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> ;
                          rdfs:label "Pixel Spacing Calibration"@en .
 
@@ -1232,6 +1223,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#power
 :power rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#GeneratorPower> ;
+       rdfs:domain :CTImageSeriesImagingEvent ;
        <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorPower> ;
        rdfs:label "Power"@en .
 
@@ -1259,6 +1251,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#projections
 :projections rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> ;
+             rdfs:domain :CTImageSeriesImagingEvent ;
              <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> ;
              rdfs:label "Number of Projections"@en .
 
@@ -1345,6 +1338,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#rotationNumber
 :rotationNumber rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> ;
+                rdfs:domain :CTImageSeriesImagingEvent ;
                 <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> ;
                 rdfs:label "Number of Rotations"@en .
 
@@ -1387,6 +1381,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#sourceDetectorDistance
 :sourceDetectorDistance rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> ;
+                        rdfs:domain :CTImageSeriesImagingEvent ;
                         <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> ;
                         rdfs:label "Distance From Source To Detector"@en .
 
@@ -1394,6 +1389,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#sourceObjectDistance
 :sourceObjectDistance rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> ;
+                      rdfs:domain :CTImageSeriesImagingEvent ;
                       <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> ;
                       rdfs:label "Distance From Source To Object"@en .
 
@@ -1401,6 +1397,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#surroundingMaterial
 :surroundingMaterial rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#ContainerDescription> ;
+                     rdfs:domain :CTImageSeriesImagingEvent ;
                      <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> ;
                      rdfs:label "Surrounding Material"@en .
 
@@ -1408,6 +1405,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#targetMaterial
 :targetMaterial rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> ;
+                rdfs:domain :CTImageSeriesImagingEvent ;
                 <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> ;
                 rdfs:label "Target Material"@en .
 
@@ -1433,6 +1431,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#voltage
 :voltage rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#KVP> ;
+         rdfs:domain :CTImageSeriesImagingEvent ;
          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#KVP> ;
          rdfs:label "Voltage"@en .
 
@@ -1454,6 +1453,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#xrayTubeType
 :xrayTubeType rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#GeneratorID> ;
+              rdfs:domain :CTImageSeriesImagingEvent ;
               <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorID> ;
               rdfs:label "X-Ray Tube Type"@en .
 

@@ -593,9 +593,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Anode Target Material"
@@ -603,9 +600,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Container Description"
@@ -613,9 +607,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contrast Frame Averaging"
@@ -623,9 +614,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#DetectorDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Description"
@@ -633,9 +621,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distance From Source To Detector"
@@ -643,9 +628,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distance From Source To Patient"
@@ -663,9 +645,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Generator ID"
@@ -673,9 +652,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Generator Power"
@@ -683,9 +659,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Images in Acquisition"
@@ -696,9 +669,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#KVP",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "KVP"
@@ -706,9 +676,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Spacing Calibration Type"
@@ -716,9 +683,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Spiral Pitch Factor"
@@ -726,9 +690,6 @@
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "X-Ray Tube Current"
@@ -1908,6 +1869,9 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Amperage"
@@ -2116,6 +2080,9 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DetectorDescription"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Type"
@@ -2242,6 +2209,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2651,6 +2621,9 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Spacing Calibration"
@@ -2673,6 +2646,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2722,6 +2698,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2889,6 +2868,9 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Number of Rotations"
@@ -2968,6 +2950,9 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distance From Source To Detector"
@@ -2980,6 +2965,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2994,6 +2982,9 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Surrounding Material"
@@ -3006,6 +2997,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3049,6 +3043,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#KVP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3099,6 +3096,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

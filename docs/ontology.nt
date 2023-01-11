@@ -321,32 +321,26 @@
 # 
 # http://purl.org/healthcarevocab/v1#AnodeTargetMaterial
 <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Anode Target Material"@en .
 # 
 # http://purl.org/healthcarevocab/v1#ContainerDescription
 <http://purl.org/healthcarevocab/v1#ContainerDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#ContainerDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#ContainerDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Container Description"@en .
 # 
 # http://purl.org/healthcarevocab/v1#ContrastFrameAveraging
 <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast Frame Averaging"@en .
 # 
 # http://purl.org/healthcarevocab/v1#DetectorDescription
 <http://purl.org/healthcarevocab/v1#DetectorDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#DetectorDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#DetectorDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Description"@en .
 # 
 # http://purl.org/healthcarevocab/v1#DistanceSourceToDetector
 <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Detector"@en .
 # 
 # http://purl.org/healthcarevocab/v1#DistanceSourceToPatient
 <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Patient"@en .
 # 
 # http://purl.org/healthcarevocab/v1#ExposureTime
@@ -356,38 +350,31 @@
 # 
 # http://purl.org/healthcarevocab/v1#GeneratorID
 <http://purl.org/healthcarevocab/v1#GeneratorID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#GeneratorID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#GeneratorID> <http://www.w3.org/2000/01/rdf-schema#label> "Generator ID"@en .
 # 
 # http://purl.org/healthcarevocab/v1#GeneratorPower
 <http://purl.org/healthcarevocab/v1#GeneratorPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#GeneratorPower> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#GeneratorPower> <http://www.w3.org/2000/01/rdf-schema#label> "Generator Power"@en .
 # 
 # http://purl.org/healthcarevocab/v1#ImagesInAcquisition
 <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> <http://www.w3.org/2000/01/rdf-schema#label> "Images in Acquisition"@en .
 # 
 # http://purl.org/healthcarevocab/v1#KVP
 <http://purl.org/healthcarevocab/v1#KVP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#KVP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#KVP> <http://www.w3.org/2000/01/rdf-schema#label> "KVP"@en .
 # 
 # http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration Type"@en .
 # 
 # http://purl.org/healthcarevocab/v1#SpiralPitchFactor
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Spiral Pitch Factor"@en .
 # 
 # http://purl.org/healthcarevocab/v1#XRayTubeCurrent
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Tube Current"@en .
 # 
 # http://rs.tdwg.org/ac/terms/captureDevice
@@ -746,6 +733,7 @@
 # https://www.morphosource.org/terms/morphosource#amperage
 <https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> .
+<https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#amperage> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> .
 <https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#label> "Amperage"@en .
 # 
@@ -839,6 +827,7 @@
 # https://www.morphosource.org/terms/morphosource#detectorType
 <https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#DetectorDescription> .
+<https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#detectorType> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DetectorDescription> .
 <https://www.morphosource.org/terms/morphosource#detectorType> <http://www.w3.org/2000/01/rdf-schema#label> "Detector Type"@en .
 # 
@@ -899,6 +888,7 @@
 # https://www.morphosource.org/terms/morphosource#frameAveraging
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> .
+<https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> .
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#label> "Frame Averaging"@en .
 # 
@@ -1074,6 +1064,7 @@
 # https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> .
+<https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> .
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration"@en .
 # 
@@ -1085,6 +1076,7 @@
 # https://www.morphosource.org/terms/morphosource#power
 <https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#GeneratorPower> .
+<https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#power> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorPower> .
 <https://www.morphosource.org/terms/morphosource#power> <http://www.w3.org/2000/01/rdf-schema#label> "Power"@en .
 # 
@@ -1108,6 +1100,7 @@
 # https://www.morphosource.org/terms/morphosource#projections
 <https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> .
+<https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#projections> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> .
 <https://www.morphosource.org/terms/morphosource#projections> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Projections"@en .
 # 
@@ -1182,6 +1175,7 @@
 # https://www.morphosource.org/terms/morphosource#rotationNumber
 <https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> .
+<https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#rotationNumber> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> .
 <https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Rotations"@en .
 # 
@@ -1218,24 +1212,28 @@
 # https://www.morphosource.org/terms/morphosource#sourceDetectorDistance
 <https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> .
+<https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> .
 <https://www.morphosource.org/terms/morphosource#sourceDetectorDistance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Detector"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#sourceObjectDistance
 <https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> .
+<https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> .
 <https://www.morphosource.org/terms/morphosource#sourceObjectDistance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance From Source To Object"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#surroundingMaterial
 <https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> .
+<https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> .
 <https://www.morphosource.org/terms/morphosource#surroundingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Surrounding Material"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#targetMaterial
 <https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> .
+<https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#targetMaterial> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> .
 <https://www.morphosource.org/terms/morphosource#targetMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Target Material"@en .
 # 
@@ -1257,6 +1255,7 @@
 # https://www.morphosource.org/terms/morphosource#voltage
 <https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#KVP> .
+<https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#voltage> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#KVP> .
 <https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/2000/01/rdf-schema#label> "Voltage"@en .
 # 
@@ -1276,6 +1275,7 @@
 # https://www.morphosource.org/terms/morphosource#xrayTubeType
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#GeneratorID> .
+<https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorID> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Tube Type"@en .
 # 
