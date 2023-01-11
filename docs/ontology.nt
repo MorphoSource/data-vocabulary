@@ -498,7 +498,6 @@
 # 
 # http://www.w3.org/2003/12/exif/ns#gpsLatitude
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "緯度"@ja .
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLatitude"@en .
@@ -506,7 +505,6 @@
 # 
 # http://www.w3.org/2003/12/exif/ns#gpsLongitude
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "経度"@ja .
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLongitude"@en .
@@ -611,6 +609,7 @@
 # https://www.morphosource.org/terms/morphosource#latitude
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsLatitude> .
+<https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLatitude> .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "緯度"@ja .
@@ -625,6 +624,7 @@
 # https://www.morphosource.org/terms/morphosource#longitude
 <https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsLongitude> .
+<https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#longitude> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLongitude> .
 <https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en .
 <https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "経度"@ja .

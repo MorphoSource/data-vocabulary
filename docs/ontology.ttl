@@ -556,7 +556,6 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  http://www.w3.org/2003/12/exif/ns#gpsLatitude
 <http://www.w3.org/2003/12/exif/ns#gpsLatitude> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain :PhysicalObject ;
                                                 rdfs:comment "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
                                                              "緯度"@ja ;
                                                 rdfs:label "GPSLatitude"@en ;
@@ -565,7 +564,6 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  http://www.w3.org/2003/12/exif/ns#gpsLongitude
 <http://www.w3.org/2003/12/exif/ns#gpsLongitude> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain :PhysicalObject ;
                                                  rdfs:comment "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
                                                               "経度"@ja ;
                                                  rdfs:label "GPSLongitude"@en ;
@@ -683,6 +681,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#latitude
 :latitude rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf <http://www.w3.org/2003/12/exif/ns#gpsLatitude> ;
+          rdfs:domain :PhysicalObject ;
           <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLatitude> ;
           rdfs:comment "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
                        "緯度"@ja ;
@@ -699,6 +698,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#longitude
 :longitude rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://www.w3.org/2003/12/exif/ns#gpsLongitude> ;
+           rdfs:domain :PhysicalObject ;
            <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/2003/12/exif/ns#gpsLongitude> ;
            rdfs:comment "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
                         "経度"@ja ;
