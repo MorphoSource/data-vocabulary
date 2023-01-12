@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
      xml:base="https://www.morphosource.org/terms/morphosource"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://www.w3.org/2003/12/exif/ns#"
      xmlns:v1="http://www.loc.gov/mads/rdf/v1#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -52,6 +53,13 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
     <!-- http://purl.org/dc/terms/description -->
 
 
@@ -87,6 +95,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/references -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references"/>
+    
+
+
     <!-- http://purl.org/dc/terms/replaces -->
 
 
@@ -112,6 +127,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/organizedInClass"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/repeatable -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/repeatable"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/required -->
+
+
+    <owl:AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/required"/>
     
 
 
@@ -241,6 +270,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -302,6 +338,16 @@
         <skos:inScheme rdf:resource="http://id.loc.gov/vocabulary/relators"/>
         <skos:notation>dpt</skos:notation>
         <skos:prefLabel>Depositor</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.adobe.com/photoshop/1.0/Credit -->
+
+
+    <owl:ObjectProperty rdf:about="http://ns.adobe.com/photoshop/1.0/Credit">
+        <rdfs:comment xml:lang="en">The credit to person(s) and/or organisation(s) required by the supplier of the item to be used when published. This is a free-text field.</rdfs:comment>
+        <rdfs:label xml:lang="en">Credit Line</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -414,13 +460,8 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
-        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en">Creator</rdfs:label>
-        <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
     </owl:ObjectProperty>
     
 
@@ -431,6 +472,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/description">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
@@ -443,11 +485,40 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/TGN -->
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/TGN">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/available -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/available">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <rdfs:comment xml:lang="en">Date that the resource became or will become available.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Available</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -499,6 +570,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
         <terms:description xml:lang="en">Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.</terms:description>
@@ -688,6 +760,16 @@
     
 
 
+    <!-- http://purl.org/healthcarevocab/v1#SliceThickness -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#SliceThickness">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Slice Thickness</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/healthcarevocab/v1#SpiralPitchFactor -->
 
 
@@ -706,16 +788,153 @@
     
 
 
+    <!-- http://rs.tdwg.org/ac/terms/IDofContainingCollection -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/IDofContainingCollection">
+        <terms:description xml:lang="en">Repeatable: A media resource may be member of multiple collections. The form of the identifier is left to implementers of specific implementations.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2020-01-27"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/RelatedResources"/>
+        <attributes:repeatable>Yes</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">If the resource is contained in a Collection, this field identifies that Collection uniquely.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">ID of Containing Collection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rs.tdwg.org/ac/terms/captureDevice -->
 
 
     <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/captureDevice">
         <terms:description xml:lang="en">It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: &quot;Canon Supershot 2000&quot;, &quot;Makroscan Scanner 2000&quot;, &quot;Zeiss Axioscope with Camera IIIu&quot;, &quot;SEM (Scanning Electron Microscope)&quot;.</terms:description>
-        <terms:isPartOf xml:lang="en">http://rs.tdwg.org/ac/terms/</terms:isPartOf>
-        <attributes:organizedInClass xml:lang="en">http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation</attributes:organizedInClass>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/captureDevice-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/captureDevice-2020-01-27"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"/>
+        <attributes:repeatable>No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
         <rdfs:comment xml:lang="en">Free form text describing the device or devices used to create the resource.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://rs.tdwg.org/ac/terms/</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
         <rdfs:label xml:lang="en">Capture Device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/comments -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/comments">
+        <terms:description xml:lang="en">Comments may refer to the resource itself (e. g., asserting a taxon name or location of a biological subject in an image), or to the relation between resource and associated metadata (e. g., asserting that the taxon name given in the metadata is wrong, without asserting a positive identification). There is a separate item for Reviewer Comments, which is defined more as an expert-level review. Implementers or communities of practice might establish conventions about the meaning of the absence of a commenter, but this specification is silent on that matter.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/comments-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/comments-2020-01-27"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Management"/>
+        <attributes:repeatable>Yes</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">Any comment provided on the media resource, as free-form text.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Comments</rdfs:label>
+        <skos:scopeNote xml:lang="en">Best practice would also identify the commenter.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/fundingAttribution -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/fundingAttribution">
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/fundingAttribution-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/fundingAttribution-2020-01-27"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <terms:references rdf:resource="http://rs.tdwg.org/ac/terms/fundingAttribution"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Attribution"/>
+        <attributes:repeatable>Yes</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">Text description of organizations or individuals who funded the creation of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Funding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/providerManagedID -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/providerManagedID">
+        <terms:description xml:lang="en">Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider&apos;s data repositories. It is the provider&apos;s decision whether to expose this value or not.</terms:description>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/providerManagedID-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/providerManagedID-2020-01-27"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Management"/>
+        <attributes:repeatable>No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Provider-managed ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subjectOrientation -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/subjectOrientation">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectOrientation-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectOrientation-2020-01-27"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectOrientation-2022-02-23"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage"/>
+        <attributes:repeatable>No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Subject Orientation</rdfs:label>
+        <skos:scopeNote xml:lang="en">Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectOrientation. In text-based systems such as tables, IRI values MUST be in unabbreviated form.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subjectPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/subjectPart">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectPart-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectPart-2020-01-27"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectPart-2022-02-23"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage"/>
+        <attributes:repeatable>No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Subject Part</rdfs:label>
+        <skos:scopeNote xml:lang="en">Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectPart. In text-based systems such as tables, IRI values MUST be in unabbreviated form.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subtypeLiteral -->
+
+
+    <owl:ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/subtypeLiteral">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2013-10-28"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-01-27"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-10-13"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2021-02-01"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Management"/>
+        <attributes:repeatable>Yes</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">A class, represented by a controlled value string, that provides for more specialization of the media item type than dc:type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Subtype (literal)</rdfs:label>
+        <skos:scopeNote xml:lang="en">The subtypeLiteral term MUST NOT be applied to Collection objects. However, the Description term in the Content Coverage Vocabulary might add further description to a Collection object. Controlled string values SHOULD be selected from the Controlled Vocabulary for Audubon Core subtype. Human-readable information about the Controlled Vocabulary for subtype is at http://rs.tdwg.org/ac/doc/subtype/ . It is best practice to use ac:subtype instead of ac:subytpeLiteral whenever practical.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -1050,6 +1269,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.europeana.eu/schemas/edm/rights">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:comment xml:lang="en">Information about copyright of the digital object.</rdfs:comment>
         <rdfs:label xml:lang="en">Europeana Rights</rdfs:label>
     </owl:ObjectProperty>
@@ -1205,6 +1425,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#agreementURI">
         <rdfs:subPropertyOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/UsageTerms"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/UsageTerms"/>
         <rdfs:comment xml:lang="en">A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</rdfs:comment>
@@ -1221,6 +1442,17 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#XRayTubeCurrent"/>
         <rdfs:label xml:lang="en">Amperage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ark -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ark">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#mediaARK"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">ARK (Archival Resource Key)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1405,6 +1637,42 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances">
+        <rdfs:label xml:lang="en">Number of Series Related Instances</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight">
+        <rdfs:label xml:lang="en">Pixel Spacing Height</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth">
+        <rdfs:label xml:lang="en">Pixel Spacing Width</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices">
+        <rdfs:label xml:lang="en">Spacing Between Slices</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#dimensions -->
 
 
@@ -1417,6 +1685,17 @@
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The physical dimensions of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">Dimensions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#doi -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#doi">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#mediaDOI"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">DOI (Digital Object Identifier)</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1435,6 +1714,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#downloadReviewer">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Download Reviewer</rdfs:label>
     </owl:ObjectProperty>
@@ -1455,6 +1735,15 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#exifLensModel">
         <rdfs:label xml:lang="en">Lens Model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#filesetAccessibility -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#filesetAccessibility">
+        <rdfs:label xml:lang="en">FileSet Accessibility</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1511,6 +1800,21 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#funding -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#funding">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/fundingAttribution"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/fundingAttribution"/>
+        <attributes:repeatable>Yes</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">Text description of organizations or individuals who funded the creation of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Funding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#idigbioRecordsetID -->
 
 
@@ -1556,6 +1860,7 @@
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <terms:description xml:lang="en">It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: &quot;Canon Supershot 2000&quot;, &quot;Makroscan Scanner 2000&quot;, &quot;Zeiss Axioscope with Camera IIIu&quot;, &quot;SEM (Scanning Electron Microscope)&quot;.</terms:description>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
         <rdfs:comment xml:lang="en">Free form text describing the device or devices used to create the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">Imaging Event Modality</rdfs:label>
     </owl:ObjectProperty>
@@ -1601,6 +1906,37 @@
         <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
         <rdfs:label xml:lang="en">Latitude</rdfs:label>
         <ns:tagNumber xml:lang="en">2</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#legacyMediaFileID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#legacyMediaFileID">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/providerManagedID"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:description xml:lang="en">Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider&apos;s data repositories. It is the provider&apos;s decision whether to expose this value or not.</terms:description>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/providerManagedID"/>
+        <attributes:repeatable>No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider.</rdfs:comment>
+        <rdfs:label xml:lang="en">Legacy Media File ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#legacyMediaGroupID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#legacyMediaGroupID">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/IDofContainingCollection"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/IDofContainingCollection"/>
+        <attributes:repeatable xml:lang="en">No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">If the resource is contained in a Collection, this field identifies that Collection uniquely.</rdfs:comment>
+        <rdfs:label xml:lang="en">Legacy Media Group ID</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1654,6 +1990,16 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#mapType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mapType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Map Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#material -->
 
 
@@ -1663,6 +2009,45 @@
         <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/medium"/>
         <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">Medium</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#mediaARK -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mediaARK">
+        <rdfs:label xml:lang="en">Media ARK</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#mediaDOI -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mediaDOI">
+        <rdfs:label xml:lang="en">Media DOI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#mediaType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mediaType">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/subtypeLiteral"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/subtypeLiteral"/>
+        <rdfs:label xml:lang="en">Media Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#mediaUUID -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mediaUUID">
+        <rdfs:label xml:lang="en">Media UUID</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1682,8 +2067,20 @@
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">MorphoSource Use Agreement Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#numberOfImagesInSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#numberOfImagesInSet">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Number of Images In Set</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1745,12 +2142,42 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#orientation -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#orientation">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/subjectOrientation"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/subjectOrientation"/>
+        <attributes:repeatable>No</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Orientation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#originalLocation -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#originalLocation">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:label xml:lang="en">Original Location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#part -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#part">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/subjectPart"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/subjectPart"/>
+        <attributes:repeatable xml:lang="en">Yes</attributes:repeatable>
+        <attributes:required>No</attributes:required>
+        <rdfs:comment xml:lang="en">The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI.</rdfs:comment>
+        <rdfs:label xml:lang="en">Part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1769,6 +2196,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permits3DUse">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Permits 3D Use</rdfs:label>
     </owl:ObjectProperty>
@@ -1779,6 +2207,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#permitsCommercialUse">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Permits Commercial Use</rdfs:label>
     </owl:ObjectProperty>
@@ -1967,6 +2396,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Required Archival Of Published Derivatives</rdfs:label>
     </owl:ObjectProperty>
@@ -1978,6 +2408,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsHolder">
         <rdfs:subPropertyOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/Owner"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/Owner"/>
         <rdfs:comment xml:lang="en">A list of legal owners of the resource.</rdfs:comment>
@@ -2030,12 +2461,42 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#scaleBar -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#scaleBar">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Scale Bar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#seriesType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#seriesType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Series Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#shadingCorrection -->
 
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shadingCorrection">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <rdfs:label xml:lang="en">Shading Correction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#shortDescription -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shortDescription">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Short Description</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2061,6 +2522,18 @@
         <rdfs:comment xml:lang="ja">シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば&apos;4&apos;の場合だと1/(2^4)=1/16秒</rdfs:comment>
         <rdfs:label xml:lang="en">Shutter Speed</rdfs:label>
         <ns:tagNumber xml:lang="en">37377</ns:tagNumber>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#side -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#side">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/comments"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/comments"/>
+        <rdfs:label xml:lang="en">Side</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2163,6 +2636,38 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#unit -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#unit">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#uuid -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#uuid">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#mediaUUID"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">UUID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#visibility -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#visibility">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#filesetAccessibility"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Visibility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#voltage -->
 
 
@@ -2193,6 +2698,17 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#xSpacing -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#xSpacing">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">X Pixel Spacing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#xrayTubeType -->
 
 
@@ -2201,6 +2717,28 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorID"/>
         <rdfs:label xml:lang="en">X-Ray Tube Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ySpacing -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ySpacing">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Y Pixel Spacing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#zSpacing -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#zSpacing">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Z Pixel Spacing</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2414,6 +2952,14 @@
      -->
 
 
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/TGN">
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</rdfs:comment>

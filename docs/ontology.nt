@@ -19,6 +19,9 @@
 # http://purl.org/dc/dcam/rangeIncludes
 <http://purl.org/dc/dcam/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/elements/1.1/format
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -34,6 +37,9 @@
 # http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/replaces
 <http://purl.org/dc/terms/replaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -45,6 +51,12 @@
 # 
 # http://rs.tdwg.org/dwc/terms/attributes/organizedInClass
 <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rs.tdwg.org/dwc/terms/attributes/repeatable
+<http://rs.tdwg.org/dwc/terms/attributes/repeatable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rs.tdwg.org/dwc/terms/attributes/required
+<http://rs.tdwg.org/dwc/terms/attributes/required> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://rs.tdwg.org/dwc/terms/attributes/usageScope
 <http://rs.tdwg.org/dwc/terms/attributes/usageScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -100,6 +112,9 @@
 # http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -147,6 +162,11 @@
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2004/02/skos/core#notation> "dpt" .
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2004/02/skos/core#prefLabel> "Depositor" .
+# 
+# http://ns.adobe.com/photoshop/1.0/Credit
+<http://ns.adobe.com/photoshop/1.0/Credit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ns.adobe.com/photoshop/1.0/Credit> <http://www.w3.org/2000/01/rdf-schema#comment> "The credit to person(s) and/or organisation(s) required by the supplier of the item to be used when published. This is a free-text field."@en .
+<http://ns.adobe.com/photoshop/1.0/Credit> <http://www.w3.org/2000/01/rdf-schema#label> "Credit Line"@en .
 # 
 # http://ns.adobe.com/xap/1.0/rights/Owner
 <http://ns.adobe.com/xap/1.0/rights/Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -216,18 +236,14 @@
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
-<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en .
-<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/issued> "1999-07-02"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity primarily responsible for making the resource."@en .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#label> "Creator"@en .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 <http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en .
@@ -237,9 +253,28 @@
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en .
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 # 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://purl.org/dc/elements/1.1/publisher> <http://purl.org/dc/terms/description> "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en .
+<http://purl.org/dc/elements/1.1/publisher> <http://purl.org/dc/terms/issued> "1999-07-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for making the resource available."@en .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "Publisher"@en .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
+# 
 # http://purl.org/dc/terms/TGN
 <http://purl.org/dc/terms/TGN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+# 
+# http://purl.org/dc/terms/available
+<http://purl.org/dc/terms/available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://purl.org/dc/terms/available> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+<http://purl.org/dc/terms/available> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#comment> "Date that the resource became or will become available."@en .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#label> "Date Available"@en .
 # 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -271,6 +306,7 @@
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <http://purl.org/dc/terms/license> <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/LicenseDocument> .
 <http://purl.org/dc/terms/license> <http://purl.org/dc/terms/description> "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en .
@@ -372,6 +408,11 @@
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration Type"@en .
 # 
+# http://purl.org/healthcarevocab/v1#SliceThickness
+<http://purl.org/healthcarevocab/v1#SliceThickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/healthcarevocab/v1#SliceThickness> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://purl.org/healthcarevocab/v1#SliceThickness> <http://www.w3.org/2000/01/rdf-schema#label> "Slice Thickness"@en .
+# 
 # http://purl.org/healthcarevocab/v1#SpiralPitchFactor
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Spiral Pitch Factor"@en .
@@ -380,14 +421,116 @@
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Tube Current"@en .
 # 
+# http://rs.tdwg.org/ac/terms/IDofContainingCollection
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://purl.org/dc/terms/description> "Repeatable: A media resource may be member of multiple collections. The form of the identifier is left to implementers of specific implementations."@en .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/RelatedResources> .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "Yes" .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "If the resource is contained in a Collection, this field identifies that Collection uniquely."@en .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/IDofContainingCollection> <http://www.w3.org/2000/01/rdf-schema#label> "ID of Containing Collection"@en .
+# 
 # http://rs.tdwg.org/ac/terms/captureDevice
 <http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/description> "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."@en .
-<http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/isPartOf> "http://rs.tdwg.org/ac/terms/"@en .
-<http://rs.tdwg.org/ac/terms/captureDevice> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> "http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/captureDevice-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/captureDevice-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation> .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
 <http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Free form text describing the device or devices used to create the resource."@en .
-<http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://rs.tdwg.org/ac/terms/"@en .
+<http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
 <http://rs.tdwg.org/ac/terms/captureDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Capture Device"@en .
+# 
+# http://rs.tdwg.org/ac/terms/comments
+<http://rs.tdwg.org/ac/terms/comments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/comments> <http://purl.org/dc/terms/description> "Comments may refer to the resource itself (e. g., asserting a taxon name or location of a biological subject in an image), or to the relation between resource and associated metadata (e. g., asserting that the taxon name given in the metadata is wrong, without asserting a positive identification). There is a separate item for Reviewer Comments, which is defined more as an expert-level review. Implementers or communities of practice might establish conventions about the meaning of the absence of a commenter, but this specification is silent on that matter."@en .
+<http://rs.tdwg.org/ac/terms/comments> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/comments-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/comments> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/comments-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/comments> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/comments> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/Management> .
+<http://rs.tdwg.org/ac/terms/comments> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "Yes" .
+<http://rs.tdwg.org/ac/terms/comments> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/comments> <http://www.w3.org/2000/01/rdf-schema#comment> "Any comment provided on the media resource, as free-form text."@en .
+<http://rs.tdwg.org/ac/terms/comments> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/comments> <http://www.w3.org/2000/01/rdf-schema#label> "Comments"@en .
+<http://rs.tdwg.org/ac/terms/comments> <http://www.w3.org/2004/02/skos/core#scopeNote> "Best practice would also identify the commenter."@en .
+# 
+# http://rs.tdwg.org/ac/terms/fundingAttribution
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/fundingAttribution-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/fundingAttribution-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://purl.org/dc/terms/references> <http://rs.tdwg.org/ac/terms/fundingAttribution> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/Attribution> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "Yes" .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Text description of organizations or individuals who funded the creation of the resource."@en .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/fundingAttribution> <http://www.w3.org/2000/01/rdf-schema#label> "Funding"@en .
+# 
+# http://rs.tdwg.org/ac/terms/providerManagedID
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://purl.org/dc/terms/description> "Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider's data repositories. It is the provider's decision whether to expose this value or not."@en .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/providerManagedID-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/providerManagedID-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/Management> .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://www.w3.org/2000/01/rdf-schema#comment> "A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider."@en .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/providerManagedID> <http://www.w3.org/2000/01/rdf-schema#label> "Provider-managed ID"@en .
+# 
+# http://rs.tdwg.org/ac/terms/subjectOrientation
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subjectOrientation-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subjectOrientation-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subjectOrientation-2022-02-23> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI."@en .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Subject Orientation"@en .
+<http://rs.tdwg.org/ac/terms/subjectOrientation> <http://www.w3.org/2004/02/skos/core#scopeNote> "Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectOrientation. In text-based systems such as tables, IRI values MUST be in unabbreviated form."@en .
+# 
+# http://rs.tdwg.org/ac/terms/subjectPart
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subjectPart-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subjectPart-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subjectPart-2022-02-23> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://www.w3.org/2000/01/rdf-schema#comment> "The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI."@en .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://www.w3.org/2000/01/rdf-schema#label> "Subject Part"@en .
+<http://rs.tdwg.org/ac/terms/subjectPart> <http://www.w3.org/2004/02/skos/core#scopeNote> "Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectPart. In text-based systems such as tables, IRI values MUST be in unabbreviated form."@en .
+# 
+# http://rs.tdwg.org/ac/terms/subtypeLiteral
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2013-10-28> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-01-27> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-10-13> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2021-02-01> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/attributes/Management> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "Yes" .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://www.w3.org/2000/01/rdf-schema#comment> "A class, represented by a controlled value string, that provides for more specialization of the media item type than dc:type."@en .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rs.tdwg.org/ac/terms/> .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://www.w3.org/2000/01/rdf-schema#label> "Subtype (literal)"@en .
+<http://rs.tdwg.org/ac/terms/subtypeLiteral> <http://www.w3.org/2004/02/skos/core#scopeNote> "The subtypeLiteral term MUST NOT be applied to Collection objects. However, the Description term in the Content Coverage Vocabulary might add further description to a Collection object. Controlled string values SHOULD be selected from the Controlled Vocabulary for Audubon Core subtype. Human-readable information about the Controlled Vocabulary for subtype is at http://rs.tdwg.org/ac/doc/subtype/ . It is best practice to use ac:subtype instead of ac:subytpeLiteral whenever practical."@en .
 # 
 # http://rs.tdwg.org/dwc/terms/catalogNumber
 <http://rs.tdwg.org/dwc/terms/catalogNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -637,6 +780,7 @@
 # 
 # http://www.europeana.eu/schemas/edm/rights
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about copyright of the digital object."@en .
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Rights"@en .
 # 
@@ -728,6 +872,7 @@
 # https://www.morphosource.org/terms/morphosource#agreementURI
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.adobe.com/xap/1.0/rights/UsageTerms> .
+<https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/UsageTerms> .
 <https://www.morphosource.org/terms/morphosource#agreementURI> <http://www.w3.org/2000/01/rdf-schema#comment> "A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly."@en .
@@ -739,6 +884,12 @@
 <https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#amperage> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> .
 <https://www.morphosource.org/terms/morphosource#amperage> <http://www.w3.org/2000/01/rdf-schema#label> "Amperage"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ark
+<https://www.morphosource.org/terms/morphosource#ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#ark> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#mediaARK> .
+<https://www.morphosource.org/terms/morphosource#ark> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#ark> <http://www.w3.org/2000/01/rdf-schema#label> "ARK (Archival Resource Key)"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#attachmentFile
 <https://www.morphosource.org/terms/morphosource#attachmentFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -840,6 +991,22 @@
 <https://www.morphosource.org/terms/morphosource#deviceID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#deviceID> <http://www.w3.org/2000/01/rdf-schema#label> "Imaging Device ID"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances
+<https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Series Related Instances"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight
+<https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Height"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth
+<https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Width"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices
+<https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices> <http://www.w3.org/2000/01/rdf-schema#label> "Spacing Between Slices"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#dimensions
 <https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/format> .
@@ -851,6 +1018,12 @@
 <https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical dimensions of the resource."@en .
 <https://www.morphosource.org/terms/morphosource#dimensions> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensions"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#doi
+<https://www.morphosource.org/terms/morphosource#doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#doi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#mediaDOI> .
+<https://www.morphosource.org/terms/morphosource#doi> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#doi> <http://www.w3.org/2000/01/rdf-schema#label> "DOI (Digital Object Identifier)"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#downloadPermission
 <https://www.morphosource.org/terms/morphosource#downloadPermission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#downloadPermission> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
@@ -858,6 +1031,7 @@
 # 
 # https://www.morphosource.org/terms/morphosource#downloadReviewer
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#label> "Download Reviewer"@en .
 # 
@@ -868,6 +1042,10 @@
 # https://www.morphosource.org/terms/morphosource#exifLensModel
 <https://www.morphosource.org/terms/morphosource#exifLensModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#exifLensModel> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Model"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#filesetAccessibility
+<https://www.morphosource.org/terms/morphosource#filesetAccessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#filesetAccessibility> <http://www.w3.org/2000/01/rdf-schema#label> "FileSet Accessibility"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#filter
 <https://www.morphosource.org/terms/morphosource#filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -895,6 +1073,16 @@
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> .
 <https://www.morphosource.org/terms/morphosource#frameAveraging> <http://www.w3.org/2000/01/rdf-schema#label> "Frame Averaging"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#funding
+<https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/fundingAttribution> .
+<https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#funding> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/fundingAttribution> .
+<https://www.morphosource.org/terms/morphosource#funding> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "Yes" .
+<https://www.morphosource.org/terms/morphosource#funding> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/2000/01/rdf-schema#comment> "Text description of organizations or individuals who funded the creation of the resource."@en .
+<https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/2000/01/rdf-schema#label> "Funding"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#idigbioRecordsetID
 <https://www.morphosource.org/terms/morphosource#idigbioRecordsetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -924,6 +1112,7 @@
 <https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/captureDevice> .
 <https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#ieModality> <http://purl.org/dc/terms/description> "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."@en .
+<https://www.morphosource.org/terms/morphosource#ieModality> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/captureDevice> .
 <https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#comment> "Free form text describing the device or devices used to create the resource."@en .
 <https://www.morphosource.org/terms/morphosource#ieModality> <http://www.w3.org/2000/01/rdf-schema#label> "Imaging Event Modality"@en .
 # 
@@ -955,6 +1144,27 @@
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2000/01/rdf-schema#label> "Latitude"@en .
 <https://www.morphosource.org/terms/morphosource#latitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#legacyMediaFileID
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/providerManagedID> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://purl.org/dc/terms/description> "Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider's data repositories. It is the provider's decision whether to expose this value or not."@en .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/providerManagedID> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://www.w3.org/2000/01/rdf-schema#comment> "A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider."@en .
+<https://www.morphosource.org/terms/morphosource#legacyMediaFileID> <http://www.w3.org/2000/01/rdf-schema#label> "Legacy Media File ID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#legacyMediaGroupID
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/IDofContainingCollection> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/IDofContainingCollection> .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No"@en .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://www.w3.org/2000/01/rdf-schema#comment> "If the resource is contained in a Collection, this field identifies that Collection uniquely."@en .
+<https://www.morphosource.org/terms/morphosource#legacyMediaGroupID> <http://www.w3.org/2000/01/rdf-schema#label> "Legacy Media Group ID"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#lensMake
 <https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#lensMake> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#exifLensMake> .
@@ -984,6 +1194,11 @@
 <https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2000/01/rdf-schema#label> "Longitude"@en .
 <https://www.morphosource.org/terms/morphosource#longitude> <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#mapType
+<https://www.morphosource.org/terms/morphosource#mapType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#mapType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#mapType> <http://www.w3.org/2000/01/rdf-schema#label> "Map Type"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#material
 <https://www.morphosource.org/terms/morphosource#material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#material> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/medium> .
@@ -991,6 +1206,25 @@
 <https://www.morphosource.org/terms/morphosource#material> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/medium> .
 <https://www.morphosource.org/terms/morphosource#material> <http://www.w3.org/2000/01/rdf-schema#comment> "The material or physical carrier of the resource."@en .
 <https://www.morphosource.org/terms/morphosource#material> <http://www.w3.org/2000/01/rdf-schema#label> "Medium"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#mediaARK
+<https://www.morphosource.org/terms/morphosource#mediaARK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#mediaARK> <http://www.w3.org/2000/01/rdf-schema#label> "Media ARK"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#mediaDOI
+<https://www.morphosource.org/terms/morphosource#mediaDOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#mediaDOI> <http://www.w3.org/2000/01/rdf-schema#label> "Media DOI"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#mediaType
+<https://www.morphosource.org/terms/morphosource#mediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#mediaType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/subtypeLiteral> .
+<https://www.morphosource.org/terms/morphosource#mediaType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#mediaType> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/subtypeLiteral> .
+<https://www.morphosource.org/terms/morphosource#mediaType> <http://www.w3.org/2000/01/rdf-schema#label> "Media Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#mediaUUID
+<https://www.morphosource.org/terms/morphosource#mediaUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#mediaUUID> <http://www.w3.org/2000/01/rdf-schema#label> "Media UUID"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#modality3D
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1000,8 +1234,15 @@
 # 
 # https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#label> "MorphoSource Use Agreement Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#numberOfImagesInSet
+<https://www.morphosource.org/terms/morphosource#numberOfImagesInSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#numberOfImagesInSet> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances> .
+<https://www.morphosource.org/terms/morphosource#numberOfImagesInSet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#numberOfImagesInSet> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Images In Set"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#numericTime
 <https://www.morphosource.org/terms/morphosource#numericTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1035,10 +1276,30 @@
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#organizationType> <http://www.w3.org/2000/01/rdf-schema#label> "Organization Type"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#orientation
+<https://www.morphosource.org/terms/morphosource#orientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/subjectOrientation> .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/subjectOrientation> .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI."@en .
+<https://www.morphosource.org/terms/morphosource#orientation> <http://www.w3.org/2000/01/rdf-schema#label> "Orientation"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#originalLocation
 <https://www.morphosource.org/terms/morphosource#originalLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#originalLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
 <https://www.morphosource.org/terms/morphosource#originalLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Original Location"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#part
+<https://www.morphosource.org/terms/morphosource#part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#part> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/subjectPart> .
+<https://www.morphosource.org/terms/morphosource#part> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#part> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/subjectPart> .
+<https://www.morphosource.org/terms/morphosource#part> <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "Yes"@en .
+<https://www.morphosource.org/terms/morphosource#part> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
+<https://www.morphosource.org/terms/morphosource#part> <http://www.w3.org/2000/01/rdf-schema#comment> "The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI."@en .
+<https://www.morphosource.org/terms/morphosource#part> <http://www.w3.org/2000/01/rdf-schema#label> "Part"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#periodicTime
 <https://www.morphosource.org/terms/morphosource#periodicTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1047,11 +1308,13 @@
 # 
 # https://www.morphosource.org/terms/morphosource#permits3DUse
 <https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#permits3DUse> <http://www.w3.org/2000/01/rdf-schema#label> "Permits 3D Use"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#permitsCommercialUse
 <https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#permitsCommercialUse> <http://www.w3.org/2000/01/rdf-schema#label> "Permits Commercial Use"@en .
 # 
@@ -1155,12 +1418,14 @@
 # 
 # https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives
 <https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives> <http://www.w3.org/2000/01/rdf-schema#label> "Required Archival Of Published Derivatives"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#rightsHolder
 <https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.adobe.com/xap/1.0/rights/Owner> .
+<https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#rightsHolder> <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/Owner> .
 <https://www.morphosource.org/terms/morphosource#rightsHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of legal owners of the resource."@en .
@@ -1190,10 +1455,25 @@
 <https://www.morphosource.org/terms/morphosource#rotationNumber> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> .
 <https://www.morphosource.org/terms/morphosource#rotationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Rotations"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#scaleBar
+<https://www.morphosource.org/terms/morphosource#scaleBar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#scaleBar> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#scaleBar> <http://www.w3.org/2000/01/rdf-schema#label> "Scale Bar"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#seriesType
+<https://www.morphosource.org/terms/morphosource#seriesType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#seriesType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#seriesType> <http://www.w3.org/2000/01/rdf-schema#label> "Series Type"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#shadingCorrection
 <https://www.morphosource.org/terms/morphosource#shadingCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#shadingCorrection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#shadingCorrection> <http://www.w3.org/2000/01/rdf-schema#label> "Shading Correction"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#shortDescription
+<https://www.morphosource.org/terms/morphosource#shortDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#shortDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#shortDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Short Description"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#shortTitle
 <https://www.morphosource.org/terms/morphosource#shortTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1209,6 +1489,13 @@
 <https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"@ja .
 <https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Shutter Speed"@en .
 <https://www.morphosource.org/terms/morphosource#shutterSpeed> <http://www.w3.org/2003/12/exif/ns#tagNumber> "37377"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#side
+<https://www.morphosource.org/terms/morphosource#side> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#side> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rs.tdwg.org/ac/terms/comments> .
+<https://www.morphosource.org/terms/morphosource#side> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#side> <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/comments> .
+<https://www.morphosource.org/terms/morphosource#side> <http://www.w3.org/2000/01/rdf-schema#label> "Side"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#slideType
 <https://www.morphosource.org/terms/morphosource#slideType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1263,6 +1550,23 @@
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#teamID> <http://www.w3.org/2000/01/rdf-schema#label> "Team ID"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#unit
+<https://www.morphosource.org/terms/morphosource#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#unit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#uuid
+<https://www.morphosource.org/terms/morphosource#uuid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#uuid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#mediaUUID> .
+<https://www.morphosource.org/terms/morphosource#uuid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#uuid> <http://www.w3.org/2000/01/rdf-schema#label> "UUID"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#visibility
+<https://www.morphosource.org/terms/morphosource#visibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#visibility> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#filesetAccessibility> .
+<https://www.morphosource.org/terms/morphosource#visibility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#visibility> <http://www.w3.org/2000/01/rdf-schema#label> "Visibility"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#voltage
 <https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#voltage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#KVP> .
@@ -1283,12 +1587,30 @@
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#label> "Vouchered"@en .
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#xSpacing
+<https://www.morphosource.org/terms/morphosource#xSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#xSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth> .
+<https://www.morphosource.org/terms/morphosource#xSpacing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#xSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "X Pixel Spacing"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#xrayTubeType
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/healthcarevocab/v1#GeneratorID> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorID> .
 <https://www.morphosource.org/terms/morphosource#xrayTubeType> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Tube Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ySpacing
+<https://www.morphosource.org/terms/morphosource#ySpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#ySpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight> .
+<https://www.morphosource.org/terms/morphosource#ySpacing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#ySpacing> <http://www.w3.org/2000/01/rdf-schema#label> "Y Pixel Spacing"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#zSpacing
+<https://www.morphosource.org/terms/morphosource#zSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#zSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices> .
+<https://www.morphosource.org/terms/morphosource#zSpacing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#zSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "Z Pixel Spacing"@en .
 # 
 # 
 # 
@@ -1404,6 +1726,13 @@
 # #
 # #################################################################
 # 
+# 
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en .
+<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/issued> "1999-07-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity primarily responsible for making the resource."@en .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/elements/1.1/> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#label> "Creator"@en .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 # 
 <http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of places specified by the Getty Thesaurus of Geographic Names."@en .

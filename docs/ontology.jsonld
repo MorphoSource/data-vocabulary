@@ -69,6 +69,17 @@
     "@value" : "Depositor"
   } ]
 }, {
+  "@id" : "http://ns.adobe.com/photoshop/1.0/Credit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The credit to person(s) and/or organisation(s) required by the supplier of the item to be used when published. This is a free-text field."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Credit Line"
+  } ]
+}, {
   "@id" : "http://ns.adobe.com/xap/1.0/rights/Owner",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -276,6 +287,8 @@
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -309,6 +322,8 @@
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
@@ -323,6 +338,38 @@
   "http://www.w3.org/2004/02/skos/core#note" : [ {
     "@language" : "en",
     "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "1999-07-02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity responsible for making the resource available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@language" : "en",
+    "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/TGN",
@@ -347,6 +394,31 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://www.getty.edu/research/tools/vocabulary/tgn/index.html"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/available",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2000-07-11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date that the resource became or will become available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date Available"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
@@ -463,6 +535,8 @@
     "@value" : "A legal document giving official permission to do something with the resource."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -556,6 +630,9 @@
     "@language" : "en",
     "@value" : "Provenance"
   } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/references",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/replaces",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -687,6 +764,16 @@
     "@value" : "Pixel Spacing Calibration Type"
   } ]
 }, {
+  "@id" : "http://purl.org/healthcarevocab/v1#SliceThickness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Slice Thickness"
+  } ]
+}, {
   "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -701,31 +788,301 @@
     "@value" : "X-Ray Tube Current"
   } ]
 }, {
+  "@id" : "http://rs.tdwg.org/ac/terms/IDofContainingCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Repeatable: A media resource may be member of multiple collections. The form of the identifier is left to implementers of specific implementations."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2020-01-27"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/RelatedResources"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If the resource is contained in a Collection, this field identifies that Collection uniquely."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ID of Containing Collection"
+  } ]
+}, {
   "@id" : "http://rs.tdwg.org/ac/terms/captureDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."
   } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/captureDevice-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/captureDevice-2020-01-27"
+  } ],
   "http://purl.org/dc/terms/isPartOf" : [ {
-    "@language" : "en",
-    "@value" : "http://rs.tdwg.org/ac/terms/"
+    "@id" : "http://rs.tdwg.org/ac/terms/"
   } ],
   "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
-    "@language" : "en",
-    "@value" : "http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free form text describing the device or devices used to create the resource."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
-    "@value" : "http://rs.tdwg.org/ac/terms/"
+    "@id" : "http://rs.tdwg.org/ac/terms/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Capture Device"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/comments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Comments may refer to the resource itself (e. g., asserting a taxon name or location of a biological subject in an image), or to the relation between resource and associated metadata (e. g., asserting that the taxon name given in the metadata is wrong, without asserting a positive identification). There is a separate item for Reviewer Comments, which is defined more as an expert-level review. Implementers or communities of practice might establish conventions about the meaning of the absence of a commenter, but this specification is silent on that matter."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/comments-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/comments-2020-01-27"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/Management"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Any comment provided on the media resource, as free-form text."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Comments"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Best practice would also identify the commenter."
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Biodiversity Information Standards (TDWG)"
+  } ],
+  "http://purl.org/dc/elements/1.1/format" : [ {
+    "@value" : "application/rdf+xml"
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/fundingAttribution-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/fundingAttribution-2020-01-27"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/Attribution"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Text description of organizations or individuals who funded the creation of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Funding"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/providerManagedID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider's data repositories. It is the provider's decision whether to expose this value or not."
+  } ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/providerManagedID-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/providerManagedID-2020-01-27"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/Management"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Provider-managed ID"
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/subjectOrientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subjectOrientation-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subjectOrientation-2020-01-27"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subjectOrientation-2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Subject Orientation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectOrientation. In text-based systems such as tables, IRI values MUST be in unabbreviated form."
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/subjectPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subjectPart-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subjectPart-2020-01-27"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subjectPart-2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Subject Part"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectPart. In text-based systems such as tables, IRI values MUST be in unabbreviated form."
+  } ]
+}, {
+  "@id" : "http://rs.tdwg.org/ac/terms/subtypeLiteral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/hasVersion" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2013-10-28"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-01-27"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-10-13"
+  }, {
+    "@id" : "http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2021-02-01"
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass" : [ {
+    "@id" : "http://rs.tdwg.org/dwc/terms/attributes/Management"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A class, represented by a controlled value string, that provides for more specialization of the media item type than dc:type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Subtype (literal)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The subtypeLiteral term MUST NOT be applied to Collection objects. However, the Description term in the Content Coverage Vocabulary might add further description to a Collection object. Controlled string values SHOULD be selected from the Controlled Vocabulary for Audubon Core subtype. Human-readable information about the Controlled Vocabulary for subtype is at http://rs.tdwg.org/ac/doc/subtype/ . It is best practice to use ac:subtype instead of ac:subytpeLiteral whenever practical."
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence",
@@ -735,6 +1092,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/attributes/organizedInClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/attributes/repeatable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rs.tdwg.org/dwc/terms/attributes/required",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/attributes/usageScope",
@@ -1420,6 +1783,9 @@
     "@language" : "en",
     "@value" : "Information about copyright of the digital object."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Europeana Rights"
@@ -1606,6 +1972,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource",
@@ -1860,6 +2229,8 @@
     "@value" : "A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1884,6 +2255,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ARK (Archival Resource Key)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#mediaARK"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile",
@@ -2110,6 +2494,34 @@
     "@value" : "Imaging Device ID"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Number of Series Related Instances"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Spacing Height"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Spacing Width"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spacing Between Slices"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dimensions",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/dcam/rangeIncludes" : [ {
@@ -2141,6 +2553,19 @@
     "@id" : "http://purl.org/dc/terms/format"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DOI (Digital Object Identifier)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#mediaDOI"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#downloadPermission",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2154,6 +2579,8 @@
   "@id" : "https://www.morphosource.org/terms/morphosource#downloadReviewer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2173,6 +2600,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Lens Model"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#filesetAccessibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FileSet Accessibility"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#filter",
@@ -2228,6 +2662,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#funding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Text description of organizations or individuals who funded the creation of the resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Funding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#idigbioRecordsetID",
@@ -2291,6 +2751,9 @@
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."
+  } ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/captureDevice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2381,6 +2844,63 @@
     "@value" : "2"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#legacyMediaFileID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider's data repositories. It is the provider's decision whether to expose this value or not."
+  } ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/providerManagedID"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Legacy Media File ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/providerManagedID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#legacyMediaGroupID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/IDofContainingCollection"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@language" : "en",
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If the resource is contained in a Collection, this field identifies that Collection uniquely."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Legacy Media Group ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/IDofContainingCollection"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#lensMake",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2448,6 +2968,16 @@
     "@value" : "4"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mapType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Map Type"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#material",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
@@ -2468,6 +2998,43 @@
     "@id" : "http://purl.org/dc/terms/medium"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mediaARK",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Media ARK"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mediaDOI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Media DOI"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mediaType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/subtypeLiteral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Media Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/subtypeLiteral"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mediaUUID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Media UUID"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#modality3D",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2485,11 +3052,26 @@
   "@id" : "https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "MorphoSource Use Agreement Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#numberOfImagesInSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Number of Images In Set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#numericTime",
@@ -2565,6 +3147,32 @@
     "@value" : "Organization Type"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#orientation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/subjectOrientation"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@value" : "No"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Orientation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/subjectOrientation"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#originalLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2573,6 +3181,33 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Original Location"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#part",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/subjectPart"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/repeatable" : [ {
+    "@language" : "en",
+    "@value" : "Yes"
+  } ],
+  "http://rs.tdwg.org/dwc/terms/attributes/required" : [ {
+    "@value" : "No"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/subjectPart"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#periodicTime",
@@ -2588,6 +3223,8 @@
   "@id" : "https://www.morphosource.org/terms/morphosource#permits3DUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2598,6 +3235,8 @@
   "@id" : "https://www.morphosource.org/terms/morphosource#permitsCommercialUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2826,6 +3465,8 @@
   "@id" : "https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2843,6 +3484,8 @@
     "@value" : "A list of legal owners of the resource."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2905,6 +3548,26 @@
     "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#scaleBar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scale Bar"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#seriesType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Series Type"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shadingCorrection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2913,6 +3576,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Shading Correction"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#shortDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Short Description"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shortTitle",
@@ -2949,6 +3622,22 @@
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "37377"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#side",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/comments"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Side"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rs.tdwg.org/ac/terms/comments"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#slideType",
@@ -3065,6 +3754,42 @@
     "@value" : "Team ID"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unit"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#uuid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "UUID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#mediaUUID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#visibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Visibility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#filesetAccessibility"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#voltage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
@@ -3118,6 +3843,19 @@
     "@value" : "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#xSpacing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X Pixel Spacing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#xrayTubeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
@@ -3132,5 +3870,31 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ySpacing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Y Pixel Spacing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#zSpacing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Z Pixel Spacing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices"
   } ]
 } ]
