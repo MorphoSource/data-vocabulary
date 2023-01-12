@@ -721,6 +721,12 @@
     
 
 
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <ObjectProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <ObjectProperty rdf:about="http://purl.org/dc/terms/license"/>
