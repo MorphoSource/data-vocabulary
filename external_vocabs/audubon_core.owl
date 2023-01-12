@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:ac="http://rs.tdwg.org/ac/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:tdwgutility="http://rs.tdwg.org/dwc/terms/attributes/">
+    <Ontology>
+        <rdfs:comment xml:lang="en">This is a limited list of terms from the Audubon Core vocabulary that are specifically relevant to the MorphoSource data vocabulary. This terms list was compiled by collating the official RDF exports of individual terms from the Audubon Core terms list website (https://ac.tdwg.org/termlist/index.html).</rdfs:comment>
+        <rdfs:label xml:lang="en">Audubon Core Selected Terms List</rdfs:label>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/references"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/organizedInClass -->
+
+    <AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/organizedInClass"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/repeatable -->
+
+    <AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/repeatable"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/attributes/required -->
+
+    <AnnotationProperty rdf:about="http://rs.tdwg.org/dwc/terms/attributes/required"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/IDofContainingCollection -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/IDofContainingCollection">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:description xml:lang="en">Repeatable: A media resource may be member of multiple collections. The form of the identifier is left to implementers of specific implementations.</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/IDofContainingCollection-2020-01-27"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-27</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/RelatedResources"/>
+        <tdwgutility:repeatable>Yes</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">If the resource is contained in a Collection, this field identifies that Collection uniquely.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">ID of Containing Collection</rdfs:label>
+        <skos:definition xml:lang="en">If the resource is contained in a Collection, this field identifies that Collection uniquely.</skos:definition>
+        <skos:prefLabel xml:lang="en">ID of Containing Collection</skos:prefLabel>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/captureDevice -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/captureDevice">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:description xml:lang="en">It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: &quot;Canon Supershot 2000&quot;, &quot;Makroscan Scanner 2000&quot;, &quot;Zeiss Axioscope with Camera IIIu&quot;, &quot;SEM (Scanning Electron Microscope)&quot;.</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/captureDevice-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/captureDevice-2020-01-27"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-27</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/ResourceCreation"/>
+        <tdwgutility:repeatable>No</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">Free form text describing the device or devices used to create the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Capture Device</rdfs:label>
+        <skos:definition xml:lang="en">Free form text describing the device or devices used to create the resource.</skos:definition>
+        <skos:prefLabel xml:lang="en">Capture Device</skos:prefLabel>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/comments -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/comments">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:description xml:lang="en">Comments may refer to the resource itself (e. g., asserting a taxon name or location of a biological subject in an image), or to the relation between resource and associated metadata (e. g., asserting that the taxon name given in the metadata is wrong, without asserting a positive identification). There is a separate item for Reviewer Comments, which is defined more as an expert-level review. Implementers or communities of practice might establish conventions about the meaning of the absence of a commenter, but this specification is silent on that matter.</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/comments-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/comments-2020-01-27"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-27</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Management"/>
+        <tdwgutility:repeatable>Yes</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">Any comment provided on the media resource, as free-form text.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Comments</rdfs:label>
+        <skos:definition xml:lang="en">Any comment provided on the media resource, as free-form text.</skos:definition>
+        <skos:prefLabel xml:lang="en">Comments</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Best practice would also identify the commenter.</skos:scopeNote>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/fundingAttribution -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/fundingAttribution">
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/fundingAttribution-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/fundingAttribution-2020-01-27"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-27</dcterms:modified>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-27T08:59:43-06:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/fundingAttribution"/>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Attribution"/>
+        <tdwgutility:repeatable>Yes</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">Text description of organizations or individuals who funded the creation of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Funding</rdfs:label>
+        <skos:definition xml:lang="en">Text description of organizations or individuals who funded the creation of the resource.</skos:definition>
+        <skos:prefLabel xml:lang="en">Funding</skos:prefLabel>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/providerManagedID -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/providerManagedID">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:description xml:lang="en">Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider&apos;s data repositories. It is the provider&apos;s decision whether to expose this value or not.</dcterms:description>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/providerManagedID-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/providerManagedID-2020-01-27"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-27</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Management"/>
+        <tdwgutility:repeatable>No</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Provider-managed ID</rdfs:label>
+        <skos:definition xml:lang="en">A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider.</skos:definition>
+        <skos:prefLabel xml:lang="en">Provider-managed ID</skos:prefLabel>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subjectOrientation -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/subjectOrientation">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectOrientation-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectOrientation-2020-01-27"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectOrientation-2022-02-23"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-02-23</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage"/>
+        <tdwgutility:repeatable>No</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Subject Orientation</rdfs:label>
+        <skos:definition xml:lang="en">Specific orientation (= direction, view angle) of the subject represented in the media resource with respect to the acquisition device, denoted by an IRI.</skos:definition>
+        <skos:prefLabel xml:lang="en">Subject Orientation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectOrientation. In text-based systems such as tables, IRI values MUST be in unabbreviated form.</skos:scopeNote>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subjectPart -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/subjectPart">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectPart-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectPart-2020-01-27"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subjectPart-2022-02-23"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-02-23</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/TaxonomicCoverage"/>
+        <tdwgutility:repeatable>No</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Subject Part</rdfs:label>
+        <skos:definition xml:lang="en">The portion or product of organism morphology, behaviour, environment, etc. that is either predominantly shown or particularly well exemplified by the media resource, denoted by an IRI.</skos:definition>
+        <skos:prefLabel xml:lang="en">Subject Part</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Values SHOULD be selected from the Controlled Vocabulary for Audubon Core subjectPart. In text-based systems such as tables, IRI values MUST be in unabbreviated form.</skos:scopeNote>
+    </ObjectProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subtypeLiteral -->
+
+    <ObjectProperty rdf:about="http://rs.tdwg.org/ac/terms/subtypeLiteral">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-28</dcterms:created>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2013-10-28"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-01-27"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2020-10-13"/>
+        <dcterms:hasVersion rdf:resource="http://rs.tdwg.org/ac/terms/version/subtypeLiteral-2021-02-01"/>
+        <dcterms:isPartOf rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-01</dcterms:modified>
+        <tdwgutility:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/attributes/Management"/>
+        <tdwgutility:repeatable>Yes</tdwgutility:repeatable>
+        <tdwgutility:required>No</tdwgutility:required>
+        <rdfs:comment xml:lang="en">A class, represented by a controlled value string, that provides for more specialization of the media item type than dc:type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/ac/terms/"/>
+        <rdfs:label xml:lang="en">Subtype (literal)</rdfs:label>
+        <skos:definition xml:lang="en">A class, represented by a controlled value string, that provides for more specialization of the media item type than dc:type.</skos:definition>
+        <skos:prefLabel xml:lang="en">Subtype (literal)</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The subtypeLiteral term MUST NOT be applied to Collection objects. However, the Description term in the Content Coverage Vocabulary might add further description to a Collection object. Controlled string values SHOULD be selected from the Controlled Vocabulary for Audubon Core subtype. Human-readable information about the Controlled Vocabulary for subtype is at http://rs.tdwg.org/ac/doc/subtype/ . It is best practice to use ac:subtype instead of ac:subytpeLiteral whenever practical.</skos:scopeNote>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/document -->
+
+    <Class rdf:about="http://xmlns.com/foaf/0.1/document"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/IDofContainingCollection.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/IDofContainingCollection.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-27T08:59:43-06:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/IDofContainingCollection"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/captureDevice.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/captureDevice.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-27T08:59:43-06:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/comments.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/comments.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-27T08:59:43-06:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/comments"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/fundingAttribution.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/fundingAttribution.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/providerManagedID.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/providerManagedID.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-27T08:59:43-06:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/providerManagedID"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subjectOrientation.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/subjectOrientation.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-27T14:43:39-05:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/subjectOrientation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subjectPart.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/subjectPart.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-27T14:43:39-05:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/subjectPart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://rs.tdwg.org/ac/terms/subtypeLiteral.rdf -->
+
+    <NamedIndividual rdf:about="http://rs.tdwg.org/ac/terms/subtypeLiteral.rdf">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/document"/>
+        <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
+        <dc:format>application/rdf+xml</dc:format>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-01T12:24:32-05:00</dcterms:modified>
+        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/subtypeLiteral"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/version/comments-2013-10-28">
+        <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/comments"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://rs.tdwg.org/ac/terms/version/comments-2020-01-27">
+        <dcterms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/comments"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
