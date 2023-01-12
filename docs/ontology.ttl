@@ -875,7 +875,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.europeana.eu/schemas/edm/rights
 <http://www.europeana.eu/schemas/edm/rights> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain :Media ;
                                              rdfs:comment "Information about copyright of the digital object."@en ;
                                              rdfs:label "Europeana Rights"@en .
 
@@ -1635,7 +1634,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#rightsStatement
 :rightsStatement rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.europeana.eu/schemas/edm/rights> ;
-                 rdfs:domain :Organization ;
+                 rdfs:domain :Media ,
+                             :Organization ;
                  <http://purl.org/dc/terms/isVersionOf> <http://www.europeana.eu/schemas/edm/rights> ;
                  rdfs:label "Rights Statement"@en .
 

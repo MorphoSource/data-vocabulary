@@ -780,7 +780,6 @@
 # 
 # http://www.europeana.eu/schemas/edm/rights
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about copyright of the digital object."@en .
 <http://www.europeana.eu/schemas/edm/rights> <http://www.w3.org/2000/01/rdf-schema#label> "Europeana Rights"@en .
 # 
@@ -1439,6 +1438,7 @@
 # https://www.morphosource.org/terms/morphosource#rightsStatement
 <https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.europeana.eu/schemas/edm/rights> .
+<https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#rightsStatement> <http://purl.org/dc/terms/isVersionOf> <http://www.europeana.eu/schemas/edm/rights> .
 <https://www.morphosource.org/terms/morphosource#rightsStatement> <http://www.w3.org/2000/01/rdf-schema#label> "Rights Statement"@en .

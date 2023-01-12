@@ -1783,9 +1783,6 @@
     "@language" : "en",
     "@value" : "Information about copyright of the digital object."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Europeana Rights"
@@ -3512,6 +3509,8 @@
     "@id" : "http://www.europeana.eu/schemas/edm/rights"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {

@@ -1269,7 +1269,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.europeana.eu/schemas/edm/rights">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:comment xml:lang="en">Information about copyright of the digital object.</rdfs:comment>
         <rdfs:label xml:lang="en">Europeana Rights</rdfs:label>
     </owl:ObjectProperty>
@@ -2432,6 +2431,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#rightsStatement">
         <rdfs:subPropertyOf rdf:resource="http://www.europeana.eu/schemas/edm/rights"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:isVersionOf rdf:resource="http://www.europeana.eu/schemas/edm/rights"/>
         <rdfs:label xml:lang="en">Rights Statement</rdfs:label>
