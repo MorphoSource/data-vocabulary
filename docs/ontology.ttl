@@ -216,9 +216,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://pcdm.org/models#fileOf
 <http://pcdm.org/models#fileOf> rdf:type owl:ObjectProperty ;
                                 owl:inverseOf <http://pcdm.org/models#hasFile> ;
-                                rdfs:domain <http://pcdm.org/models#File> ,
-                                            :FileSet ;
-                                rdfs:range :Media ;
+                                rdfs:domain <http://pcdm.org/models#File> ;
+                                rdfs:range :FileSet ;
                                 rdfs:comment "Links from a File to its containing Object."@en ;
                                 rdfs:isDefinedBy <http://pcdm.org/models#> ;
                                 rdfs:label "is file of"@en .
@@ -226,9 +225,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://pcdm.org/models#hasFile
 <http://pcdm.org/models#hasFile> rdf:type owl:ObjectProperty ;
-                                 rdfs:domain :Media ;
-                                 rdfs:range <http://pcdm.org/models#File> ,
-                                            :FileSet ;
+                                 rdfs:domain :FileSet ;
+                                 rdfs:range <http://pcdm.org/models#File> ;
                                  rdfs:comment "Links to a File contained by this Object."@en ;
                                  rdfs:isDefinedBy <http://pcdm.org/models#> ;
                                  rdfs:label "has file"@en .
@@ -242,6 +240,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                :Organization ,
                                                :ProcessingEvent ;
                                    rdfs:range :Device ,
+                                              :FileSet ,
                                               :Media ,
                                               :ProcessingEvent ;
                                    rdfs:comment """Links to a subsidiary Object or Collection. Typically used to link
@@ -255,6 +254,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://pcdm.org/models#memberOf
 <http://pcdm.org/models#memberOf> rdf:type owl:ObjectProperty ;
                                   rdfs:domain :Device ,
+                                              :FileSet ,
                                               :Media ,
                                               :ProcessingEvent ;
                                   rdfs:range :ImagingEvent ,
@@ -2086,7 +2086,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#FileSet
 :FileSet rdf:type owl:Class ;
-         rdfs:subClassOf <http://pcdm.org/models#File> ;
+         rdfs:subClassOf <http://pcdm.org/works#Work> ;
          rdfs:comment "A sequence of binary data accompanied by technical metadata."@en ;
          rdfs:label "FileSet"@en .
 

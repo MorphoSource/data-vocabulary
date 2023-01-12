@@ -118,8 +118,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://pcdm.org/models#File"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://pcdm.org/models#"
@@ -129,7 +127,7 @@
     "@value" : "is file of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://pcdm.org/models#hasFile"
@@ -142,7 +140,7 @@
     "@value" : "Links to a File contained by this Object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://pcdm.org/models#"
@@ -153,8 +151,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://pcdm.org/models#File"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ]
 }, {
   "@id" : "http://pcdm.org/models#hasMember",
@@ -182,6 +178,8 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
@@ -198,6 +196,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
@@ -2089,7 +2089,7 @@
     "@value" : "FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://pcdm.org/models#File"
+    "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ID",

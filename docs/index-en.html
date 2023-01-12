@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Thu Jan 12 22:36:38 UTC 2023"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Thu Jan 12 22:42:58 UTC 2023"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -1234,9 +1234,7 @@ This section provides details for each class and property defined by MorphoSourc
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://pcdm.org/models#File"
-               target="_blank"
-               title="http://pcdm.org/models#File">file</a>
+            <a href="#http://pcdm.org/works#Work" title="http://pcdm.org/works#Work">Work</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1299,12 +1297,14 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#vertexColor">Vertex Color</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#width"
                title="https://www.morphosource.org/terms/morphosource#width">Width in Pixels</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#fileOf" title="http://pcdm.org/models#fileOf">is file of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasFile" title="http://pcdm.org/models#hasFile">has file</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://pcdm.org/models#hasFile" title="http://pcdm.org/models#hasFile">has file</a>
+            <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#fileOf" title="http://pcdm.org/models#fileOf">is file of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1461,7 +1461,6 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#ySpacing">Y Pixel Spacing</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#zSpacing"
                title="https://www.morphosource.org/terms/morphosource#zSpacing">Z Pixel Spacing</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasFile" title="http://pcdm.org/models#hasFile">has file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
@@ -1469,7 +1468,6 @@ This section provides details for each class and property defined by MorphoSourc
          <dt>is in range of</dt>
          <dd>
             <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#fileOf" title="http://pcdm.org/models#fileOf">is file of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1811,6 +1809,8 @@ This section provides details for each class and property defined by MorphoSourc
          <dd>
             <a href="#Device"
                title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FileSet"
+               title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ImagingEvent"
                title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Media"
@@ -4825,8 +4825,8 @@ This section provides details for each class and property defined by MorphoSourc
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Media"
-                  title="https://www.morphosource.org/terms/morphosource#Media">Media</a>
+               <a href="#FileSet"
+                  title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -4834,11 +4834,6 @@ This section provides details for each class and property defined by MorphoSourc
                <a href="http://pcdm.org/models#File"
                   target="_blank"
                   title="http://pcdm.org/models#File">file</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#FileSet"
-                  title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -4895,6 +4890,11 @@ This section provides details for each class and property defined by MorphoSourc
             <dd>
                <a href="#Device"
                   title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#FileSet"
+                  title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
@@ -5276,15 +5276,10 @@ This section provides details for each class and property defined by MorphoSourc
                   title="http://pcdm.org/models#File">file</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
             <dd>
                <a href="#FileSet"
                   title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Media"
-                  title="https://www.morphosource.org/terms/morphosource#Media">Media</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -5317,6 +5312,11 @@ This section provides details for each class and property defined by MorphoSourc
             <dd>
                <a href="#Device"
                   title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#FileSet"
+                  title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>

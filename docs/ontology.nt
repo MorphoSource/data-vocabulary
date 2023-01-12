@@ -183,17 +183,15 @@
 <http://pcdm.org/models#fileOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://pcdm.org/models#fileOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://pcdm.org/models#hasFile> .
 <http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://pcdm.org/models#File> .
-<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
-<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links from a File to its containing Object."@en .
 <http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/models#> .
 <http://pcdm.org/models#fileOf> <http://www.w3.org/2000/01/rdf-schema#label> "is file of"@en .
 # 
 # http://pcdm.org/models#hasFile
 <http://pcdm.org/models#hasFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://pcdm.org/models#File> .
-<http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to a File contained by this Object."@en .
 <http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/models#> .
 <http://pcdm.org/models#hasFile> <http://www.w3.org/2000/01/rdf-schema#label> "has file"@en .
@@ -206,6 +204,7 @@
 <http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 <http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 <http://pcdm.org/models#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to a subsidiary Object or Collection. Typically used to link\n          to component parts, such as a book linking to a page.  Note on transitivity: hasMember is\n          not defined as transitive, but applications may treat it as transitive as local needs\n          dictate."@en .
@@ -215,6 +214,7 @@
 # http://pcdm.org/models#memberOf
 <http://pcdm.org/models#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 <http://pcdm.org/models#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
@@ -1825,7 +1825,7 @@
 # 
 # https://www.morphosource.org/terms/morphosource#FileSet
 <https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/models#File> .
+<https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
 <https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequence of binary data accompanied by technical metadata."@en .
 <https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/2000/01/rdf-schema#label> "FileSet"@en .
 # 
