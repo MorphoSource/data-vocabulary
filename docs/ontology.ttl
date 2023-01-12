@@ -169,6 +169,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://id.loc.gov/vocabulary/relators/dpt
 <http://id.loc.gov/vocabulary/relators/dpt> rdf:type owl:ObjectProperty ;
                                             rdfs:domain :Device ,
+                                                        :FileSet ,
                                                         :ImagingEvent ,
                                                         :Media ,
                                                         :Organization ,
@@ -335,6 +336,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/terms/dateSubmitted
 <http://purl.org/dc/terms/dateSubmitted> rdf:type owl:ObjectProperty ;
                                          rdfs:domain :Device ,
+                                                     :FileSet ,
                                                      :ImagingEvent ,
                                                      :Media ,
                                                      :Organization ,
@@ -392,6 +394,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:ObjectProperty ;
                                     rdfs:domain :Device ,
+                                                :FileSet ,
                                                 :ImagingEvent ,
                                                 :Media ,
                                                 :Organization ,
@@ -412,6 +415,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:ObjectProperty ;
                                  rdfs:domain :Device ,
+                                             :FileSet ,
                                              :ImagingEvent ,
                                              :Media ,
                                              :Organization ,
@@ -1034,10 +1038,58 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 rdfs:label "Attachment File"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#bitsAllocated
+:bitsAllocated rdf:type owl:ObjectProperty ;
+               rdfs:domain :FileSet ;
+               rdfs:label "Bits Allocated"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#bitsPerSample
+:bitsPerSample rdf:type owl:ObjectProperty ;
+               rdfs:domain :FileSet ;
+               rdfs:label "Bits Per Sample"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#boundingBoxX
+:boundingBoxX rdf:type owl:ObjectProperty ;
+              rdfs:domain :FileSet ;
+              rdfs:label "Bounding Box X"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#boundingBoxY
+:boundingBoxY rdf:type owl:ObjectProperty ;
+              rdfs:domain :FileSet ;
+              rdfs:label "Bounding Box Y"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#boundingBoxZ
+:boundingBoxZ rdf:type owl:ObjectProperty ;
+              rdfs:domain :FileSet ;
+              rdfs:label "Bounding Box Z"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#canonicalTaxonomy
 :canonicalTaxonomy rdf:type owl:ObjectProperty ;
                    rdfs:domain :BiologicalSpecimenObject ;
                    rdfs:label "Canonical Taxonomy"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#centroidX
+:centroidX rdf:type owl:ObjectProperty ;
+           rdfs:domain :FileSet ;
+           rdfs:label "Centroid X"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#centroidY
+:centroidY rdf:type owl:ObjectProperty ;
+           rdfs:domain :FileSet ;
+           rdfs:label "Centroid Y"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#centroidZ
+:centroidZ rdf:type owl:ObjectProperty ;
+           rdfs:domain :FileSet ;
+           rdfs:label "Centroid Z"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#choAttribute
@@ -1067,10 +1119,52 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
       <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#colorFormat
+:colorFormat rdf:type owl:ObjectProperty ;
+             rdfs:domain :FileSet ;
+             rdfs:label "Color Format"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#colorSpace
+:colorSpace rdf:type owl:ObjectProperty ;
+            rdfs:domain :FileSet ;
+            rdfs:label "Color Space"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#compression
+:compression rdf:type owl:ObjectProperty ;
+             rdfs:domain :FileSet ;
+             rdfs:label "Compression"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#contactUser
 :contactUser rdf:type owl:ObjectProperty ;
              rdfs:domain :Organization ;
              rdfs:label "Contact User"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount
+:contentsAcceptedFileCount rdf:type owl:ObjectProperty ;
+                           rdfs:domain :FileSet ;
+                           rdfs:label "Contents Accepted File Count"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#contentsFileName
+:contentsFileName rdf:type owl:ObjectProperty ;
+                  rdfs:domain :FileSet ;
+                  rdfs:label "Contents File Name"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#contentsFileSize
+:contentsFileSize rdf:type owl:ObjectProperty ;
+                  rdfs:domain :FileSet ;
+                  rdfs:label "Contents File Size"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#contentsMimeType
+:contentsMimeType rdf:type owl:ObjectProperty ;
+                  rdfs:domain :FileSet ;
+                  rdfs:label "Contents Mime Type"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#context
@@ -1084,6 +1178,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
          rdfs:comment "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."@en ;
          rdfs:label "Geological Context"@en ;
          <http://www.w3.org/2004/02/skos/core#example> "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#crc32
+:crc32 rdf:type owl:ObjectProperty ;
+       rdfs:domain :FileSet ;
+       rdfs:label "CRC32"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#dataManager
@@ -1194,6 +1294,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                   rdfs:label "Download Reviewer"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#edgesPerFace
+:edgesPerFace rdf:type owl:ObjectProperty ;
+              rdfs:domain :FileSet ;
+              rdfs:label "Edges Per Face"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#exifLensMake
 :exifLensMake rdf:type owl:ObjectProperty ;
               rdfs:label "Lens Make"@en .
@@ -1202,6 +1308,24 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#exifLensModel
 :exifLensModel rdf:type owl:ObjectProperty ;
                rdfs:label "Lens Model"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#faceCount
+:faceCount rdf:type owl:ObjectProperty ;
+           rdfs:domain :FileSet ;
+           rdfs:label "Face Count"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#fileName
+:fileName rdf:type owl:ObjectProperty ;
+          rdfs:domain :FileSet ;
+          rdfs:label "File Name"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#fileSize
+:fileSize rdf:type owl:ObjectProperty ;
+          rdfs:domain :FileSet ;
+          rdfs:label "File Size"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#filesetAccessibility
@@ -1250,6 +1374,18 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
          <http://rs.tdwg.org/dwc/terms/attributes/required> "No" ;
          rdfs:comment "Text description of organizations or individuals who funded the creation of the resource."@en ;
          rdfs:label "Funding"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#hasUVSpace
+:hasUVSpace rdf:type owl:ObjectProperty ;
+            rdfs:domain :FileSet ;
+            rdfs:label "Has UV Space"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#height
+:height rdf:type owl:ObjectProperty ;
+        rdfs:domain :FileSet ;
+        rdfs:label "Height in Pixels"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#idigbioRecordsetID
@@ -1413,6 +1549,14 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
            rdfs:label "Media UUID"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#mimeType
+:mimeType rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://purl.org/dc/terms/format> ;
+          rdfs:domain :FileSet ;
+          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/format> ;
+          rdfs:label "Mime Type"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#modality3D
 :modality3D rdf:type owl:ObjectProperty ;
             rdfs:domain :Device ;
@@ -1425,6 +1569,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                               rdfs:domain :Media ,
                                           :Organization ;
                               rdfs:label "MorphoSource Use Agreement Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#normalsFormat
+:normalsFormat rdf:type owl:ObjectProperty ;
+               rdfs:domain :FileSet ;
+               rdfs:label "Normals Format"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#numberOfImagesInSet
@@ -1545,6 +1695,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                          rdfs:domain :CTImageSeriesImagingEvent ;
                          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> ;
                          rdfs:label "Pixel Spacing Calibration"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#pointCount
+:pointCount rdf:type owl:ObjectProperty ;
+            rdfs:domain :FileSet ;
+            rdfs:label "Point Count"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#postalCode
@@ -1805,6 +1961,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
       rdfs:label "UUID"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#vertexColor
+:vertexColor rdf:type owl:ObjectProperty ;
+             rdfs:domain :FileSet ;
+             rdfs:label "Vertex Color"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#visibility
 :visibility rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :filesetAccessibility ;
@@ -1832,6 +1994,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
            rdfs:comment "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en ;
            rdfs:label "Vouchered"@en ;
            <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#width
+:width rdf:type owl:ObjectProperty ;
+       rdfs:domain :FileSet ;
+       rdfs:label "Width in Pixels"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#xSpacing

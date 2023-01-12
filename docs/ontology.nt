@@ -139,6 +139,7 @@
 # http://id.loc.gov/vocabulary/relators/dpt
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://id.loc.gov/vocabulary/relators/dpt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
@@ -287,6 +288,7 @@
 # http://purl.org/dc/terms/dateSubmitted
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://purl.org/dc/terms/dateSubmitted> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
@@ -339,6 +341,7 @@
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
@@ -357,6 +360,7 @@
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
@@ -920,10 +924,50 @@
 <https://www.morphosource.org/terms/morphosource#attachmentFile> <http://www.w3.org/2000/01/rdf-schema#comment> "A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties."@en .
 <https://www.morphosource.org/terms/morphosource#attachmentFile> <http://www.w3.org/2000/01/rdf-schema#label> "Attachment File"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#bitsAllocated
+<https://www.morphosource.org/terms/morphosource#bitsAllocated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#bitsAllocated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#bitsAllocated> <http://www.w3.org/2000/01/rdf-schema#label> "Bits Allocated"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#bitsPerSample
+<https://www.morphosource.org/terms/morphosource#bitsPerSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#bitsPerSample> <http://www.w3.org/2000/01/rdf-schema#label> "Bits Per Sample"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#boundingBoxX
+<https://www.morphosource.org/terms/morphosource#boundingBoxX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#boundingBoxX> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#boundingBoxX> <http://www.w3.org/2000/01/rdf-schema#label> "Bounding Box X"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#boundingBoxY
+<https://www.morphosource.org/terms/morphosource#boundingBoxY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#boundingBoxY> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#boundingBoxY> <http://www.w3.org/2000/01/rdf-schema#label> "Bounding Box Y"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#boundingBoxZ
+<https://www.morphosource.org/terms/morphosource#boundingBoxZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#boundingBoxZ> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#boundingBoxZ> <http://www.w3.org/2000/01/rdf-schema#label> "Bounding Box Z"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#canonicalTaxonomy
 <https://www.morphosource.org/terms/morphosource#canonicalTaxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#canonicalTaxonomy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject> .
 <https://www.morphosource.org/terms/morphosource#canonicalTaxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "Canonical Taxonomy"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#centroidX
+<https://www.morphosource.org/terms/morphosource#centroidX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#centroidX> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#centroidX> <http://www.w3.org/2000/01/rdf-schema#label> "Centroid X"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#centroidY
+<https://www.morphosource.org/terms/morphosource#centroidY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#centroidY> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#centroidY> <http://www.w3.org/2000/01/rdf-schema#label> "Centroid Y"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#centroidZ
+<https://www.morphosource.org/terms/morphosource#centroidZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#centroidZ> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#centroidZ> <http://www.w3.org/2000/01/rdf-schema#label> "Centroid Z"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#choAttribute
 <https://www.morphosource.org/terms/morphosource#choAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -949,10 +993,45 @@
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
 <https://www.morphosource.org/terms/morphosource#city> <http://www.w3.org/2004/02/skos/core#example> "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#colorFormat
+<https://www.morphosource.org/terms/morphosource#colorFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#colorFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#colorFormat> <http://www.w3.org/2000/01/rdf-schema#label> "Color Format"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#colorSpace
+<https://www.morphosource.org/terms/morphosource#colorSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#colorSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#colorSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Color Space"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#compression
+<https://www.morphosource.org/terms/morphosource#compression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#compression> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#compression> <http://www.w3.org/2000/01/rdf-schema#label> "Compression"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#contactUser
 <https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#contactUser> <http://www.w3.org/2000/01/rdf-schema#label> "Contact User"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount
+<https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount> <http://www.w3.org/2000/01/rdf-schema#label> "Contents Accepted File Count"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#contentsFileName
+<https://www.morphosource.org/terms/morphosource#contentsFileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#contentsFileName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#contentsFileName> <http://www.w3.org/2000/01/rdf-schema#label> "Contents File Name"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#contentsFileSize
+<https://www.morphosource.org/terms/morphosource#contentsFileSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#contentsFileSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#contentsFileSize> <http://www.w3.org/2000/01/rdf-schema#label> "Contents File Size"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#contentsMimeType
+<https://www.morphosource.org/terms/morphosource#contentsMimeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#contentsMimeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#contentsMimeType> <http://www.w3.org/2000/01/rdf-schema#label> "Contents Mime Type"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#context
 <https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -965,6 +1044,11 @@
 <https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set."@en .
 <https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2000/01/rdf-schema#label> "Geological Context"@en .
 <https://www.morphosource.org/terms/morphosource#context> <http://www.w3.org/2004/02/skos/core#example> "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#crc32
+<https://www.morphosource.org/terms/morphosource#crc32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#crc32> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#crc32> <http://www.w3.org/2000/01/rdf-schema#label> "CRC32"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#dataManager
 <https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1057,6 +1141,11 @@
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#downloadReviewer> <http://www.w3.org/2000/01/rdf-schema#label> "Download Reviewer"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#edgesPerFace
+<https://www.morphosource.org/terms/morphosource#edgesPerFace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#edgesPerFace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#edgesPerFace> <http://www.w3.org/2000/01/rdf-schema#label> "Edges Per Face"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#exifLensMake
 <https://www.morphosource.org/terms/morphosource#exifLensMake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#exifLensMake> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Make"@en .
@@ -1064,6 +1153,21 @@
 # https://www.morphosource.org/terms/morphosource#exifLensModel
 <https://www.morphosource.org/terms/morphosource#exifLensModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#exifLensModel> <http://www.w3.org/2000/01/rdf-schema#label> "Lens Model"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#faceCount
+<https://www.morphosource.org/terms/morphosource#faceCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#faceCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#faceCount> <http://www.w3.org/2000/01/rdf-schema#label> "Face Count"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#fileName
+<https://www.morphosource.org/terms/morphosource#fileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#fileName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#fileName> <http://www.w3.org/2000/01/rdf-schema#label> "File Name"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#fileSize
+<https://www.morphosource.org/terms/morphosource#fileSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#fileSize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#fileSize> <http://www.w3.org/2000/01/rdf-schema#label> "File Size"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#filesetAccessibility
 <https://www.morphosource.org/terms/morphosource#filesetAccessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1105,6 +1209,16 @@
 <https://www.morphosource.org/terms/morphosource#funding> <http://rs.tdwg.org/dwc/terms/attributes/required> "No" .
 <https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/2000/01/rdf-schema#comment> "Text description of organizations or individuals who funded the creation of the resource."@en .
 <https://www.morphosource.org/terms/morphosource#funding> <http://www.w3.org/2000/01/rdf-schema#label> "Funding"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#hasUVSpace
+<https://www.morphosource.org/terms/morphosource#hasUVSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#hasUVSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#hasUVSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Has UV Space"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#height
+<https://www.morphosource.org/terms/morphosource#height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#height> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#height> <http://www.w3.org/2000/01/rdf-schema#label> "Height in Pixels"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#idigbioRecordsetID
 <https://www.morphosource.org/terms/morphosource#idigbioRecordsetID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1248,6 +1362,13 @@
 <https://www.morphosource.org/terms/morphosource#mediaUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#mediaUUID> <http://www.w3.org/2000/01/rdf-schema#label> "Media UUID"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#mimeType
+<https://www.morphosource.org/terms/morphosource#mimeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#mimeType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/format> .
+<https://www.morphosource.org/terms/morphosource#mimeType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#mimeType> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/format> .
+<https://www.morphosource.org/terms/morphosource#mimeType> <http://www.w3.org/2000/01/rdf-schema#label> "Mime Type"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#modality3D
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
@@ -1259,6 +1380,11 @@
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType> <http://www.w3.org/2000/01/rdf-schema#label> "MorphoSource Use Agreement Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#normalsFormat
+<https://www.morphosource.org/terms/morphosource#normalsFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#normalsFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#normalsFormat> <http://www.w3.org/2000/01/rdf-schema#label> "Normals Format"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#numberOfImagesInSet
 <https://www.morphosource.org/terms/morphosource#numberOfImagesInSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1363,6 +1489,11 @@
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> .
 <https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#pointCount
+<https://www.morphosource.org/terms/morphosource#pointCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#pointCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#pointCount> <http://www.w3.org/2000/01/rdf-schema#label> "Point Count"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#postalCode
 <https://www.morphosource.org/terms/morphosource#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1586,6 +1717,11 @@
 <https://www.morphosource.org/terms/morphosource#uuid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
 <https://www.morphosource.org/terms/morphosource#uuid> <http://www.w3.org/2000/01/rdf-schema#label> "UUID"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#vertexColor
+<https://www.morphosource.org/terms/morphosource#vertexColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#vertexColor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#vertexColor> <http://www.w3.org/2000/01/rdf-schema#label> "Vertex Color"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#visibility
 <https://www.morphosource.org/terms/morphosource#visibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#visibility> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.morphosource.org/terms/morphosource#filesetAccessibility> .
@@ -1611,6 +1747,11 @@
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#comment> "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en .
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2000/01/rdf-schema#label> "Vouchered"@en .
 <https://www.morphosource.org/terms/morphosource#vouchered> <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#width
+<https://www.morphosource.org/terms/morphosource#width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#width> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#width> <http://www.w3.org/2000/01/rdf-schema#label> "Width in Pixels"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#xSpacing
 <https://www.morphosource.org/terms/morphosource#xSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

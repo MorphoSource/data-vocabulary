@@ -35,6 +35,8 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -467,6 +469,8 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -621,6 +625,8 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -678,6 +684,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
@@ -2350,6 +2358,56 @@
     "@value" : "Attachment File"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#bitsAllocated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bits Allocated"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#bitsPerSample",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bits Per Sample"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxX",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bounding Box X"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bounding Box Y"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxZ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bounding Box Z"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#canonicalTaxonomy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2358,6 +2416,36 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Canonical Taxonomy"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#centroidX",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Centroid X"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#centroidY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Centroid Y"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#centroidZ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Centroid Z"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#choAttribute",
@@ -2419,6 +2507,36 @@
     "@value" : "`Holzminden`, `Araçatuba`, `Ga-Segonyana`"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#colorFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Color Format"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#colorSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Color Space"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#compression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Compression"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contactUser",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2427,6 +2545,46 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contact User"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contents Accepted File Count"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#contentsFileName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contents File Name"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#contentsFileSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contents File Size"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#contentsMimeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contents Mime Type"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#context",
@@ -2460,6 +2618,16 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#crc32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CRC32"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dataManager",
@@ -2652,6 +2820,16 @@
     "@value" : "Download Reviewer"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#edgesPerFace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Edges Per Face"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#exifLensMake",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2664,6 +2842,36 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Lens Model"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#faceCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Face Count"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#fileName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "File Name"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#fileSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "File Size"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#filesetAccessibility",
@@ -2752,6 +2960,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#hasUVSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has UV Space"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#height",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Height in Pixels"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#idigbioRecordsetID",
@@ -3099,6 +3327,22 @@
     "@value" : "Media UUID"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mimeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://purl.org/dc/terms/format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mime Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/format"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#modality3D",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3123,6 +3367,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "MorphoSource Use Agreement Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#normalsFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Normals Format"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#numberOfImagesInSet",
@@ -3359,6 +3613,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#pointCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Point Count"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#postalCode",
@@ -3847,6 +4111,16 @@
     "@id" : "https://www.morphosource.org/terms/morphosource#mediaUUID"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#vertexColor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vertex Color"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#visibility",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3911,6 +4185,16 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#width",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Width in Pixels"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#xSpacing",
