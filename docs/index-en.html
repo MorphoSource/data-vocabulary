@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Wed Jan 11 21:57:33 UTC 2023"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Thu Jan 12 17:44:52 UTC 2023"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -529,6 +529,10 @@ This ontology has the following classes and properties.</span>
          title="https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval">Photogrammetry Background Removal</a>
    </li>
    <li>
+      <a href="#photographicReference"
+         title="https://www.morphosource.org/terms/morphosource#photographicReference">Photographic Reference</a>
+   </li>
+   <li>
       <a href="#objectID"
          title="https://www.morphosource.org/terms/morphosource#objectID">Physical Object ID</a>
    </li>
@@ -975,13 +979,18 @@ This section provides details for each class and property defined by MorphoSourc
          <dd>
             <a href="#attachmentFile"
                title="https://www.morphosource.org/terms/morphosource#attachmentFile">Attachment File</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">Date Modified</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#deviceID"
                title="https://www.morphosource.org/terms/morphosource#deviceID">Imaging Device ID</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#ieModality"
                title="https://www.morphosource.org/terms/morphosource#ieModality">Imaging Event Modality</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#photographicReference"
+               title="https://www.morphosource.org/terms/morphosource#photographicReference">Photographic Reference</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#objectID"
                title="https://www.morphosource.org/terms/morphosource#objectID">Physical Object ID</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#software"
@@ -1777,6 +1786,10 @@ This section provides details for each class and property defined by MorphoSourc
             title="https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval">Photogrammetry Background Removal</a>
       </li>
       <li>
+         <a href="#photographicReference"
+            title="https://www.morphosource.org/terms/morphosource#photographicReference">Photographic Reference</a>
+      </li>
+      <li>
          <a href="#objectID"
             title="https://www.morphosource.org/terms/morphosource#objectID">Physical Object ID</a>
       </li>
@@ -2104,6 +2117,12 @@ This section provides details for each class and property defined by MorphoSourc
       </div>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#photographicReference"
+                  title="https://www.morphosource.org/terms/morphosource#photographicReference">Photographic Reference</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ImagingEvent"
@@ -2386,6 +2405,11 @@ This section provides details for each class and property defined by MorphoSourc
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
+               <a href="#ImagingEvent"
+                  title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
                <a href="#ProcessingEvent"
                   title="https://www.morphosource.org/terms/morphosource#ProcessingEvent">Processing Event</a>
                <sup class="type-c" title="class">c</sup>
@@ -2511,6 +2535,11 @@ This section provides details for each class and property defined by MorphoSourc
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#ImagingEvent"
+                  title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#ProcessingEvent"
                   title="https://www.morphosource.org/terms/morphosource#ProcessingEvent">Processing Event</a>
@@ -2706,6 +2735,11 @@ This section provides details for each class and property defined by MorphoSourc
             <dd>
                <a href="#Device"
                   title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#ImagingEvent"
+                  title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
@@ -4629,6 +4663,33 @@ This section provides details for each class and property defined by MorphoSourc
             <dd>
                <a href="#PhotogrammetryImagingEvent"
                   title="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent">Photogrammetry Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="photographicReference">
+      <h3>Photographic Reference<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#photographicReference</p>
+      <div class="comment">
+         <span class="markdown">A reference photograph image, usually used to represent and record the object at the time of original scanning.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#attachmentFile"
+                  title="https://www.morphosource.org/terms/morphosource#attachmentFile">Attachment File</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ImagingEvent"
+                  title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

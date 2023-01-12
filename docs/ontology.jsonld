@@ -274,6 +274,8 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -304,6 +306,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   }, {
@@ -360,6 +364,8 @@
     "@value" : "Date of creation of the resource."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -2617,6 +2623,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Photogrammetry Background Removal"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#photographicReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A reference photograph image, usually used to represent and record the object at the time of original scanning."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photographic Reference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration",
