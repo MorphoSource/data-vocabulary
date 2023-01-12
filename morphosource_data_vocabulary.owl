@@ -283,6 +283,7 @@
 
     <owl:ObjectProperty rdf:about="http://id.loc.gov/vocabulary/relators/dpt">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
@@ -496,6 +497,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
@@ -568,6 +570,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
@@ -594,6 +597,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
@@ -1391,11 +1395,83 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#bitsAllocated -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#bitsAllocated">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Bits Allocated</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#bitsPerSample -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#bitsPerSample">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Bits Per Sample</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#boundingBoxX -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#boundingBoxX">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Bounding Box X</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#boundingBoxY -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#boundingBoxY">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Bounding Box Y</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#boundingBoxZ -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#boundingBoxZ">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Bounding Box Z</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#canonicalTaxonomy -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#canonicalTaxonomy">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
         <rdfs:label xml:lang="en">Canonical Taxonomy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#centroidX -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#centroidX">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Centroid X</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#centroidY -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#centroidY">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Centroid Y</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#centroidZ -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#centroidZ">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Centroid Z</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1436,11 +1512,74 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#colorFormat -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#colorFormat">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Color Format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#colorSpace -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#colorSpace">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Color Space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#compression -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#compression">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Compression</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#contactUser -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#contactUser">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">Contact User</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Contents Accepted File Count</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#contentsFileName -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#contentsFileName">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Contents File Name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#contentsFileSize -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#contentsFileSize">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Contents File Size</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#contentsMimeType -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#contentsMimeType">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Contents Mime Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1457,6 +1596,15 @@
         <rdfs:comment xml:lang="en">An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set.</rdfs:comment>
         <rdfs:label xml:lang="en">Geological Context</rdfs:label>
         <skos:example xml:lang="en">`https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#crc32 -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#crc32">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">CRC32</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1620,6 +1768,15 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#edgesPerFace -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#edgesPerFace">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Edges Per Face</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#exifLensMake -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#exifLensMake">
@@ -1632,6 +1789,33 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#exifLensModel">
         <rdfs:label xml:lang="en">Lens Model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#faceCount -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#faceCount">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Face Count</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#fileName -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#fileName">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">File Name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#fileSize -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#fileSize">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">File Size</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1701,6 +1885,24 @@
         <attributes:required>No</attributes:required>
         <rdfs:comment xml:lang="en">Text description of organizations or individuals who funded the creation of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">Funding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#hasUVSpace -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#hasUVSpace">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Has UV Space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#height -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#height">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Height in Pixels</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1923,6 +2125,17 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#mimeType -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mimeType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:label xml:lang="en">Mime Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#modality3D -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#modality3D">
@@ -1939,6 +2152,15 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:label xml:lang="en">MorphoSource Use Agreement Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#normalsFormat -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#normalsFormat">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Normals Format</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2107,6 +2329,15 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"/>
         <rdfs:label xml:lang="en">Pixel Spacing Calibration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#pointCount -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#pointCount">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Point Count</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2477,6 +2708,15 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#vertexColor -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#vertexColor">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Vertex Color</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#visibility -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#visibility">
@@ -2511,6 +2751,15 @@
         <rdfs:comment xml:lang="en">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</rdfs:comment>
         <rdfs:label xml:lang="en">Vouchered</rdfs:label>
         <skos:example xml:lang="en">`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#width -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#width">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:label xml:lang="en">Width in Pixels</rdfs:label>
     </owl:ObjectProperty>
     
 
