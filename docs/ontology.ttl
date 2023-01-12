@@ -215,7 +215,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://pcdm.org/models#fileOf
 <http://pcdm.org/models#fileOf> rdf:type owl:ObjectProperty ;
                                 owl:inverseOf <http://pcdm.org/models#hasFile> ;
-                                rdfs:domain <http://pcdm.org/models#File> ;
+                                rdfs:domain <http://pcdm.org/models#File> ,
+                                            :FileSet ;
                                 rdfs:range :Media ;
                                 rdfs:comment "Links from a File to its containing Object."@en ;
                                 rdfs:isDefinedBy <http://pcdm.org/models#> ;
@@ -225,7 +226,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://pcdm.org/models#hasFile
 <http://pcdm.org/models#hasFile> rdf:type owl:ObjectProperty ;
                                  rdfs:domain :Media ;
-                                 rdfs:range <http://pcdm.org/models#File> ;
+                                 rdfs:range <http://pcdm.org/models#File> ,
+                                            :FileSet ;
                                  rdfs:comment "Links to a File contained by this Object."@en ;
                                  rdfs:isDefinedBy <http://pcdm.org/models#> ;
                                  rdfs:label "has file"@en .
@@ -326,6 +328,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
                                    rdfs:domain :ImagingEvent ,
+                                               :Media ,
                                                :ProcessingEvent .
 
 
@@ -352,6 +355,17 @@ xsd:date rdf:type rdfs:Datatype .
                                   rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                   rdfs:label "Format"@en .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :Media ,
+                                                  :PhysicalObject ;
+                                      <http://purl.org/dc/terms/description> "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."@en ;
+                                      <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
+                                      rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Identifier"@en .
 
 
 ###  http://purl.org/dc/terms/license
@@ -935,6 +949,17 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                                                                    "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"@ja ;
                                                       rdfs:label "ShutterSpeedValue"@en ;
                                                       <http://www.w3.org/2003/12/exif/ns#tagNumber> "37377"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#ID
+:ID rdf:type owl:ObjectProperty ;
+    rdfs:domain :Device ,
+                :ImagingEvent ,
+                :Media ,
+                :Organization ,
+                :PhysicalObject ,
+                :ProcessingEvent ;
+    rdfs:label "ID"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#aatAttribute
@@ -1603,7 +1628,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#relatedURL
 :relatedURL rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf rdfs:seeAlso ;
-            rdfs:domain :Organization ;
+            rdfs:domain :Media ,
+                        :Organization ,
+                        :PhysicalObject ;
             <http://purl.org/dc/terms/isVersionOf> rdfs:seeAlso ;
             rdfs:label "Related URL"@en .
 
@@ -1887,6 +1914,13 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
         rdfs:subClassOf <http://pcdm.org/works#Work> ;
         rdfs:comment "A device used to image a physical object to create media."@en ;
         rdfs:label "Device"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#FileSet
+:FileSet rdf:type owl:Class ;
+         rdfs:subClassOf <http://pcdm.org/models#File> ;
+         rdfs:comment "A sequence of binary data accompanied by technical metadata."@en ;
+         rdfs:label "FileSet"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#ImagingEvent
