@@ -373,7 +373,6 @@
         <dc:creator>Biodiversity Information Standards (TDWG)</dc:creator>
         <dc:format>application/rdf+xml</dc:format>
         <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-27T08:59:43-06:00</dcterms:modified>
-        <dcterms:references rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
     </NamedIndividual>
     
 
