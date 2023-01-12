@@ -379,6 +379,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
@@ -394,6 +395,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/description">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
@@ -417,6 +419,7 @@
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
     </owl:ObjectProperty>
     
@@ -1656,6 +1659,17 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"/>
         <rdfs:label xml:lang="en">Photogrammetry Background Removal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#photographicReference -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#photographicReference">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#attachmentFile"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:comment xml:lang="en">A reference photograph image, usually used to represent and record the object at the time of original scanning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photographic Reference</rdfs:label>
     </owl:ObjectProperty>
     
 
