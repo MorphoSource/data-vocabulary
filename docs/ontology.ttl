@@ -958,6 +958,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#ID
 :ID rdf:type owl:ObjectProperty ;
     rdfs:domain :Device ,
+                :FileSet ,
                 :ImagingEvent ,
                 :Media ,
                 :Organization ,
@@ -1033,6 +1034,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#attachmentFile
 :attachmentFile rdf:type owl:ObjectProperty ;
                 rdfs:domain :ImagingEvent ,
+                            :Media ,
+                            :Organization ,
                             :ProcessingEvent ;
                 rdfs:comment "A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties."@en ;
                 rdfs:label "Attachment File"@en .
@@ -1102,6 +1105,14 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :choType rdf:type owl:ObjectProperty ;
          rdfs:domain :CulturalHeritageObject ;
          rdfs:label "Cultural Heritage Object Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#citeAs
+:citeAs rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf <http://ns.adobe.com/photoshop/1.0/Credit> ;
+        rdfs:domain :Media ;
+        <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/photoshop/1.0/Credit> ;
+        rdfs:label "Cite As"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#city
@@ -1424,6 +1435,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
             rdfs:label "Imaging Event Modality"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#imagingEventID
+:imagingEventID rdf:type owl:ObjectProperty ;
+                rdfs:domain :Media ;
+                rdfs:label "Imaging Event ID"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#institutionName
 :institutionName rdf:type owl:ObjectProperty ;
                  rdfs:domain :Organization ;
@@ -1536,6 +1553,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
           rdfs:label "Media DOI"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#mediaParentID
+:mediaParentID rdf:type owl:ObjectProperty ;
+               rdfs:domain :Media ;
+               rdfs:label "Media Parent ID"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#mediaType
 :mediaType rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://rs.tdwg.org/ac/terms/subtypeLiteral> ;
@@ -1599,7 +1622,6 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#objectID
 :objectID rdf:type owl:ObjectProperty ;
-          rdfs:domain :ImagingEvent ;
           rdfs:label "Physical Object ID"@en .
 
 
@@ -1636,6 +1658,14 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :originalLocation rdf:type owl:ObjectProperty ;
                   rdfs:domain :PhysicalObject ;
                   rdfs:label "Original Location"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#owner
+:owner rdf:type owl:ObjectProperty ;
+       rdfs:domain :FileSet ,
+                   :Media ;
+       rdfs:comment "The user that has the highest level of management control over a Media or another Work record. For Media, this user is also known as the Data Manager."@en ;
+       rdfs:label "Owner"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#part
@@ -1687,6 +1717,15 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                        rdfs:domain :ImagingEvent ;
                        rdfs:comment "A reference photograph image, usually used to represent and record the object at the time of original scanning."@en ;
                        rdfs:label "Photographic Reference"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#physicalObjectID
+:physicalObjectID rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :objectID ;
+                  rdfs:domain :ImagingEvent ,
+                              :Media ;
+                  <http://purl.org/dc/terms/isVersionOf> :objectID ;
+                  rdfs:label "Physical Object ID"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration
@@ -1920,6 +1959,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                      rdfs:domain :CTImageSeriesImagingEvent ;
                      <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> ;
                      rdfs:label "Surrounding Material"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#tag
+:tag rdf:type owl:ObjectProperty ;
+     rdfs:domain :Media ;
+     rdfs:label "Tag"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#targetMaterial

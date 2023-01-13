@@ -2133,6 +2133,8 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -2387,6 +2389,10 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2502,6 +2508,22 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Cultural Heritage Object Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#citeAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "http://ns.adobe.com/photoshop/1.0/Credit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cite As"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://ns.adobe.com/photoshop/1.0/Credit"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#city",
@@ -3098,6 +3120,16 @@
     "@id" : "http://rs.tdwg.org/ac/terms/captureDevice"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#imagingEventID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Imaging Event ID"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#institutionName",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3340,6 +3372,16 @@
     "@value" : "Media DOI"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#mediaParentID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Media Parent ID"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mediaType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
@@ -3463,9 +3505,6 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#objectID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Physical Object ID"
@@ -3535,6 +3574,22 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Original Location"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#owner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The user that has the highest level of management control over a Media or another Work record. For Media, this user is also known as the Data Manager."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Owner"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#part",
@@ -3633,6 +3688,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#physicalObjectID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/isVersionOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#objectID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Physical Object ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#objectID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration",
@@ -4076,6 +4149,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#tag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tag"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#targetMaterial",
