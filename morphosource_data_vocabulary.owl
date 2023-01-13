@@ -2818,13 +2818,23 @@
 
     <!-- http://pcdm.org/models#File -->
 
-    <owl:Class rdf:about="http://pcdm.org/models#File"/>
+    <owl:Class rdf:about="http://pcdm.org/models#File">
+        <terms:isPartOf xml:lang="en">http://pcdm.org/models</terms:isPartOf>
+        <rdfs:comment xml:lang="en">A File is a sequence of binary data and is described by some accompanying metadata. The metadata typically includes at least basic technical metadata (size, content type, modification date, etc.), but can also include properties related to preservation, digitization process, provenance, etc. Files MUST be contained by exactly one Object.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://pcdm.org/models</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">File</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://pcdm.org/models#Object -->
 
-    <owl:Class rdf:about="http://pcdm.org/models#Object"/>
+    <owl:Class rdf:about="http://pcdm.org/models#Object">
+        <terms:isPartOf xml:lang="en">http://pcdm.org/models</terms:isPartOf>
+        <rdfs:comment xml:lang="en">An Object is an intellectual entity, sometimes called a &quot;work&quot;, &quot;digital object&quot;, etc. Objects have descriptive metadata, access metadata, may contain files and other Objects as member &quot;components&quot;. Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects. Member Objects can be ordered using the ORE Proxy class.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://pcdm.org/models</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2832,6 +2842,7 @@
 
     <owl:Class rdf:about="http://pcdm.org/works#Work">
         <rdfs:subClassOf rdf:resource="http://pcdm.org/models#Object"/>
+        <terms:isPartOf xml:lang="en">http://pcdm.org/works</terms:isPartOf>
         <rdfs:comment xml:lang="en">
       A work or intellectual entity, such as a book, film, dissertation, etc.
       Works have member Objects representing their physical structure (e.g., pages in a book),
@@ -2839,7 +2850,7 @@
       and TopRanges representing their logical structure or structures (e.g., sections
       and chapters in a book).
     </rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/works#"/>
+        <rdfs:isDefinedBy rdf:resource="http://pcdm.org/works"/>
         <rdfs:label xml:lang="en">Work</rdfs:label>
     </owl:Class>
     
