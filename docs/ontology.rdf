@@ -3139,9 +3139,9 @@
 
 
     <owl:Class rdf:about="http://pcdm.org/models#File">
-        <terms:isPartOf xml:lang="en">http://pcdm.org/models</terms:isPartOf>
+        <terms:isPartOf xml:lang="en">http://pcdm.org/models#</terms:isPartOf>
         <rdfs:comment xml:lang="en">A File is a sequence of binary data and is described by some accompanying metadata. The metadata typically includes at least basic technical metadata (size, content type, modification date, etc.), but can also include properties related to preservation, digitization process, provenance, etc. Files MUST be contained by exactly one Object.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">http://pcdm.org/models</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://pcdm.org/models#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">File</rdfs:label>
     </owl:Class>
     

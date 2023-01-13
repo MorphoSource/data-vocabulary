@@ -1828,9 +1828,9 @@
 # 
 # http://pcdm.org/models#File
 <http://pcdm.org/models#File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://pcdm.org/models#File> <http://purl.org/dc/terms/isPartOf> "http://pcdm.org/models"@en .
+<http://pcdm.org/models#File> <http://purl.org/dc/terms/isPartOf> "http://pcdm.org/models#"@en .
 <http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#comment> "A File is a sequence of binary data and is described by some accompanying metadata. The metadata typically includes at least basic technical metadata (size, content type, modification date, etc.), but can also include properties related to preservation, digitization process, provenance, etc. Files MUST be contained by exactly one Object."@en .
-<http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://pcdm.org/models"@en .
+<http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://pcdm.org/models#"@en .
 <http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#label> "File"@en .
 # 
 # http://pcdm.org/models#Object
