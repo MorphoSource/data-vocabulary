@@ -1286,6 +1286,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
@@ -1388,6 +1389,8 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#attachmentFile">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <rdfs:comment xml:lang="en">A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties.</rdfs:comment>
         <rdfs:label xml:lang="en">Attachment File</rdfs:label>
@@ -1490,6 +1493,17 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
         <rdfs:label xml:lang="en">Cultural Heritage Object Type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#citeAs -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#citeAs">
+        <rdfs:subPropertyOf rdf:resource="http://ns.adobe.com/photoshop/1.0/Credit"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="http://ns.adobe.com/photoshop/1.0/Credit"/>
+        <rdfs:label xml:lang="en">Cite As</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1955,6 +1969,15 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#imagingEventID -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#imagingEventID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Imaging Event ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#institutionName -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#institutionName">
@@ -2106,6 +2129,15 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#mediaParentID -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mediaParentID">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Media Parent ID</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#mediaType -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#mediaType">
@@ -2194,7 +2226,6 @@
     <!-- https://www.morphosource.org/terms/morphosource#objectID -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#objectID">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:label xml:lang="en">Physical Object ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2246,6 +2277,17 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#originalLocation">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:label xml:lang="en">Original Location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#owner -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#owner">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:comment xml:lang="en">The user that has the highest level of management control over a Media or another Work record. For Media, this user is also known as the Data Manager.</rdfs:comment>
+        <rdfs:label xml:lang="en">Owner</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2318,6 +2360,18 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:comment xml:lang="en">A reference photograph image, usually used to represent and record the object at the time of original scanning.</rdfs:comment>
         <rdfs:label xml:lang="en">Photographic Reference</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#physicalObjectID -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#physicalObjectID">
+        <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#objectID"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <terms:isVersionOf rdf:resource="https://www.morphosource.org/terms/morphosource#objectID"/>
+        <rdfs:label xml:lang="en">Physical Object ID</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2647,6 +2701,15 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ContainerDescription"/>
         <rdfs:label xml:lang="en">Surrounding Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#tag -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#tag">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:label xml:lang="en">Tag</rdfs:label>
     </owl:ObjectProperty>
     
 
