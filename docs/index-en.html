@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Thu Jan 12 22:42:58 UTC 2023"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Fri Jan 13 15:48:44 UTC 2023"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -94,6 +94,9 @@ This ontology has the following classes and properties.</span>
          title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
    </li>
    <li>
+      <a href="#http://pcdm.org/models#File" title="http://pcdm.org/models#File">File</a>
+   </li>
+   <li>
       <a href="#FileSet"
          title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
    </li>
@@ -104,6 +107,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Media"
          title="https://www.morphosource.org/terms/morphosource#Media">Media</a>
+   </li>
+   <li>
+      <a href="#http://pcdm.org/models#Object" title="http://pcdm.org/models#Object">Object</a>
    </li>
    <li>
       <a href="#Organization"
@@ -999,6 +1005,9 @@ This section provides details for each class and property defined by MorphoSourc
             title="https://www.morphosource.org/terms/morphosource#Device">Device</a>
       </li>
       <li>
+         <a href="#http://pcdm.org/models#File" title="http://pcdm.org/models#File">File</a>
+      </li>
+      <li>
          <a href="#FileSet"
             title="https://www.morphosource.org/terms/morphosource#FileSet">FileSet</a>
       </li>
@@ -1009,6 +1018,9 @@ This section provides details for each class and property defined by MorphoSourc
       <li>
          <a href="#Media"
             title="https://www.morphosource.org/terms/morphosource#Media">Media</a>
+      </li>
+      <li>
+         <a href="#http://pcdm.org/models#Object" title="http://pcdm.org/models#Object">Object</a>
       </li>
       <li>
          <a href="#Organization"
@@ -1217,6 +1229,33 @@ This section provides details for each class and property defined by MorphoSourc
          <dt>is in range of</dt>
          <dd>
             <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://pcdm.org/models#File">
+      <h3>File<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://pcdm.org/models#File</p>
+      <div class="comment">
+         <span class="markdown">A File is a sequence of binary data and is described by some accompanying metadata. The metadata typically includes at least basic technical metadata (size, content type, modification date, etc.), but can also include properties related to preservation, digitization process, provenance, etc. Files MUST be contained by exactly one Object.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://www.morphosource.org/terms/morphosource</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://pcdm.org/models#fileOf" title="http://pcdm.org/models#fileOf">is file of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://pcdm.org/models#hasFile" title="http://pcdm.org/models#hasFile">has file</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1470,6 +1509,28 @@ This section provides details for each class and property defined by MorphoSourc
             <a href="#http://pcdm.org/models#hasMember" title="http://pcdm.org/models#hasMember">has member</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://pcdm.org/models#memberOf" title="http://pcdm.org/models#memberOf">is member of</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://pcdm.org/models#Object">
+      <h3>Object<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://pcdm.org/models#Object</p>
+      <div class="comment">
+         <span class="markdown">An Object is an intellectual entity, sometimes called a "work", "digital object", etc. Objects have descriptive metadata, access metadata, may contain files and other Objects as member "components". Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects. Member Objects can be ordered using the ORE Proxy class.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://www.morphosource.org/terms/morphosource</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://pcdm.org/works#Work" title="http://pcdm.org/works#Work">Work</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1794,15 +1855,13 @@ This section provides details for each class and property defined by MorphoSourc
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
-            <a href="http://pcdm.org/works#">http://pcdm.org/works#</a>
+            <a href="http://pcdm.org/works">http://pcdm.org/works</a>
          </dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://pcdm.org/models#Object"
-               target="_blank"
-               title="http://pcdm.org/models#Object">object</a>
+            <a href="#http://pcdm.org/models#Object" title="http://pcdm.org/models#Object">Object</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -4831,9 +4890,7 @@ This section provides details for each class and property defined by MorphoSourc
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://pcdm.org/models#File"
-                  target="_blank"
-                  title="http://pcdm.org/models#File">file</a>
+               <a href="#http://pcdm.org/models#File" title="http://pcdm.org/models#File">File</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -5271,9 +5328,7 @@ This section provides details for each class and property defined by MorphoSourc
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://pcdm.org/models#File"
-                  target="_blank"
-                  title="http://pcdm.org/models#File">file</a>
+               <a href="#http://pcdm.org/models#File" title="http://pcdm.org/models#File">File</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

@@ -1789,15 +1789,24 @@
 # 
 # http://pcdm.org/models#File
 <http://pcdm.org/models#File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pcdm.org/models#File> <http://purl.org/dc/terms/isPartOf> "http://pcdm.org/models"@en .
+<http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#comment> "A File is a sequence of binary data and is described by some accompanying metadata. The metadata typically includes at least basic technical metadata (size, content type, modification date, etc.), but can also include properties related to preservation, digitization process, provenance, etc. Files MUST be contained by exactly one Object."@en .
+<http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://pcdm.org/models"@en .
+<http://pcdm.org/models#File> <http://www.w3.org/2000/01/rdf-schema#label> "File"@en .
 # 
 # http://pcdm.org/models#Object
 <http://pcdm.org/models#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://pcdm.org/models#Object> <http://purl.org/dc/terms/isPartOf> "http://pcdm.org/models"@en .
+<http://pcdm.org/models#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "An Object is an intellectual entity, sometimes called a \"work\", \"digital object\", etc. Objects have descriptive metadata, access metadata, may contain files and other Objects as member \"components\". Each level of a work is therefore represented by an Object instance, and is capable of standing on its own, being linked to from Collections and other Objects. Member Objects can be ordered using the ORE Proxy class."@en .
+<http://pcdm.org/models#Object> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://pcdm.org/models"@en .
+<http://pcdm.org/models#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object"@en .
 # 
 # http://pcdm.org/works#Work
 <http://pcdm.org/works#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/models#Object> .
+<http://pcdm.org/works#Work> <http://purl.org/dc/terms/isPartOf> "http://pcdm.org/works"@en .
 <http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      A work or intellectual entity, such as a book, film, dissertation, etc.\n      Works have member Objects representing their physical structure (e.g., pages in a book),\n      FileSets to maintain representations of the entire resource (e.g. a PDF of all the pages),\n      and TopRanges representing their logical structure or structures (e.g., sections\n      and chapters in a book).\n    "@en .
-<http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/works#> .
+<http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://pcdm.org/works> .
 <http://pcdm.org/works#Work> <http://www.w3.org/2000/01/rdf-schema#label> "Work"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject
