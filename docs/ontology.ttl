@@ -8,7 +8,8 @@
 
 <https://www.morphosource.org/terms/morphosource> rdf:type owl:Ontology ;
                                                    rdfs:comment "Test description for MorphoSource Terms Vocabulary"@en ;
-                                                   rdfs:label "MorphoSource Terms Vocabulary"@en .
+                                                   rdfs:label "MorphoSource Terms Vocabulary"@en ;
+                                                   owl:versionInfo "0.2.0" .
 
 #################################################################
 #    Annotation properties
@@ -176,13 +177,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://id.loc.gov/vocabulary/relators/dpt
 <http://id.loc.gov/vocabulary/relators/dpt> rdf:type owl:ObjectProperty ;
-                                            rdfs:domain :Device ,
-                                                        :FileSet ,
-                                                        :ImagingEvent ,
-                                                        :Media ,
-                                                        :Organization ,
-                                                        :PhysicalObject ,
-                                                        :ProcessingEvent ;
+                                            owl:equivalentProperty :depositor ;
                                             <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Depositor" ;
                                             <http://www.loc.gov/mads/rdf/v1#code> "dpt" ;
                                             <http://www.loc.gov/mads/rdf/v1#definitionNote> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
@@ -195,12 +190,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                                       <http://id.loc.gov/vocabulary/relators/collection_RDAOwner> ;
                                             <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/vocabulary/relators> ;
                                             <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/own> ;
-                                            <http://www.w3.org/2004/02/skos/core#changeNote> [ ] ;
-<http://www.w3.org/2004/02/skos/core#definition> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
-<http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
-<http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> ;
-<http://www.w3.org/2004/02/skos/core#notation> "dpt" ;
-<http://www.w3.org/2004/02/skos/core#prefLabel> "Depositor" .
+                                            <http://www.w3.org/2004/02/skos/core#changeNote> _:genid1 ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> ;
+                                            <http://www.w3.org/2004/02/skos/core#notation> "dpt" ;
+                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Depositor" .
 
 
 ###  http://ns.adobe.com/photoshop/1.0/Credit
@@ -290,6 +285,7 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:domain :Device ,
                                                       :ImagingEvent ,
                                                       :Media ,
+                                                      :PhysicalObject ,
                                                       :ProcessingEvent .
 
 
@@ -299,6 +295,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                           :ImagingEvent ,
                                                           :Media ,
                                                           :Organization ,
+                                                          :PhysicalObject ,
                                                           :ProcessingEvent ;
                                               <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
                                               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
@@ -343,13 +340,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/dateSubmitted
 <http://purl.org/dc/terms/dateSubmitted> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain :Device ,
-                                                     :FileSet ,
-                                                     :ImagingEvent ,
-                                                     :Media ,
-                                                     :Organization ,
-                                                     :PhysicalObject ,
-                                                     :ProcessingEvent ;
                                          <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)."@en ;
                                          rdfs:comment "Date of submission of the resource."@en ;
                                          rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
@@ -401,7 +391,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:ObjectProperty ;
-                                    owl:equivalentProperty :date_modified .
+                                    owl:equivalentProperty :dateModified .
 
 
 ###  http://purl.org/dc/terms/provenance
@@ -431,84 +421,111 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/healthcarevocab/v1#AcquisitionType
 <http://purl.org/healthcarevocab/v1#AcquisitionType> rdf:type owl:ObjectProperty ;
                                                      rdfs:domain :CTImageSeriesImagingEvent ;
+                                                     rdfs:comment """Description of the method used during acquisition of this frame. See Section C.8.15.3.2.1 for Defined Terms.
+
+Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be present otherwise."""@en ;
                                                      rdfs:label "Acquisition Type"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#AnodeTargetMaterial
 <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> rdf:type owl:ObjectProperty ;
-                                                         rdfs:label "Anode Target Material"@en .
+                                                         rdfs:comment "The primary material in the anode of the X-Ray source."@en ;
+                                                         rdfs:label "Anode Target Material"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#example> "`tungsten`, `molybdenum`, `copper`"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ContainerDescription
 <http://purl.org/healthcarevocab/v1#ContainerDescription> rdf:type owl:ObjectProperty ;
+                                                          rdfs:comment "Description of the container."@en ;
                                                           rdfs:label "Container Description"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ContrastFrameAveraging
 <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> rdf:type owl:ObjectProperty ;
+                                                            rdfs:comment "Specifies the number of contrast frames to average together before performing the mask operation. If the Attribute is missing, no averaging is performed."@en ;
                                                             rdfs:label "Contrast Frame Averaging"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DetectorDescription
 <http://purl.org/healthcarevocab/v1#DetectorDescription> rdf:type owl:ObjectProperty ;
+                                                         rdfs:comment "Free text description of detector."@en ;
                                                          rdfs:label "Detector Description"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DistanceSourceToDetector
 <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> rdf:type owl:ObjectProperty ;
+                                                              rdfs:comment "Distance in mm from source to detector center."@en ;
                                                               rdfs:label "Distance From Source To Detector"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DistanceSourceToPatient
 <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> rdf:type owl:ObjectProperty ;
+                                                             rdfs:comment "Distance in mm from source to isocenter (center of field of view)."@en ;
                                                              rdfs:label "Distance From Source To Patient"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ExposureTime
 <http://purl.org/healthcarevocab/v1#ExposureTime> rdf:type owl:ObjectProperty ;
                                                   rdfs:domain :CTImageSeriesImagingEvent ;
+                                                  rdfs:comment """Time of X-Ray exposure in msec.
+
+If Acquisition Type (0018,9302) equals SPIRAL, the value of this Attribute shall be Revolution Time (0018,9305) divided by the Spiral Pitch Factor (0018,9311). See Section C.8.15.3.8.1 and Section C.8.15.3.2.1.
+
+Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362)."""@en ;
                                                   rdfs:label "Exposure Time"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#GeneratorID
 <http://purl.org/healthcarevocab/v1#GeneratorID> rdf:type owl:ObjectProperty ;
+                                                 rdfs:comment "Identifier of the generator."@en ;
                                                  rdfs:label "Generator ID"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#GeneratorPower
 <http://purl.org/healthcarevocab/v1#GeneratorPower> rdf:type owl:ObjectProperty ;
+                                                    rdfs:comment """Power in kW to the X-Ray generator.
+
+Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362)."""@en ;
                                                     rdfs:label "Generator Power"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ImagesInAcquisition
 <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> rdf:type owl:ObjectProperty ;
                                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:comment "Number of images that resulted from this acquisition of data."@en ;
                                                          rdfs:label "Images in Acquisition"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#KVP
 <http://purl.org/healthcarevocab/v1#KVP> rdf:type owl:ObjectProperty ;
+                                         rdfs:comment """Peak kilo voltage output of the X-Ray generator used.
+
+Shall be empty if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362)."""@en ;
                                          rdfs:label "KVP"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:comment "The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. See Section 10.7.1.2."@en ;
                                                                  rdfs:label "Pixel Spacing Calibration Type"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#SliceThickness
 <http://purl.org/healthcarevocab/v1#SliceThickness> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain :Media ;
+                                                    rdfs:comment "Nominal slice thickness, in mm."@en ;
                                                     rdfs:label "Slice Thickness"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#SpiralPitchFactor
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> rdf:type owl:ObjectProperty ;
+                                                       rdfs:comment "Ratio of the Table Feed per Rotation (0018,9310) to the Total Collimation Width (0018,9307)."@en ;
                                                        rdfs:label "Spiral Pitch Factor"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#XRayTubeCurrent
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> rdf:type owl:ObjectProperty ;
+                                                     rdfs:comment "X-Ray Tube Current in mA. Required if Exposure (0018,1152) is not present. May be present otherwise."@en ;
                                                      rdfs:label "X-Ray Tube Current"@en .
 
 
@@ -966,31 +983,44 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 :Organization ,
                 :PhysicalObject ,
                 :ProcessingEvent ;
+    rdfs:comment "Morphosource-specific unique ID identifier for a Work (Media, Organization, Device, etc.)."@en ;
     rdfs:label "ID"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#aatAttribute
 :aatAttribute rdf:type owl:ObjectProperty ;
               rdfs:domain :CulturalHeritageObject ;
-              rdfs:label "Getty Arts and Architecture Thesaurus Attribute"@en .
+              rdfs:range <http://vocab.getty.edu/aat/300264087> ;
+              rdfs:comment "Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Physical Attributes Facet (http://vocab.getty.edu/page/aat/300264087). Use of this property is preferred over the custom morphosource:choAttribute property."@en ;
+              rdfs:label "Getty Arts and Architecture Thesaurus Attribute"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "`round`, `waterlogged`, `brittleness`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#aatMaterial
 :aatMaterial rdf:type owl:ObjectProperty ;
              rdfs:domain :CulturalHeritageObject ;
-             rdfs:label "Getty Arts and Architecture Thesaurus Material"@en .
+             rdfs:range <http://vocab.getty.edu/aat/300264091> ;
+             rdfs:comment "Material(s) from which an object is made. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Materials Facet (http://vocab.getty.edu/page/aat/300264091). Use of this property is preferred over the custom morphosource:Material property."@en ;
+             rdfs:label "Getty Arts and Architecture Thesaurus Material"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "`iron`, `clay`, `millwork`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#aatPeriod
 :aatPeriod rdf:type owl:ObjectProperty ;
            rdfs:domain :CulturalHeritageObject ;
-           rdfs:label "Getty Arts and Architecture Thesaurus Time Period"@en .
+           rdfs:range <http://vocab.getty.edu/aat/300264088> ;
+           rdfs:comment "Time period associated with the production or creation of an object. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Styles and Periods Facet (http://vocab.getty.edu/page/aat/300264088)."@en ;
+           rdfs:label "Getty Arts and Architecture Thesaurus Time Period"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "`Neolithic`,`Pliocene`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#aatType
 :aatType rdf:type owl:ObjectProperty ;
          rdfs:domain :CulturalHeritageObject ;
-         rdfs:label "Getty Arts and Architecture Thesaurus Type"@en .
+         rdfs:range <http://vocab.getty.edu/aat/300264092> ;
+         rdfs:comment "Type, genre, category, or classification of an object. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Objects Facet (http://vocab.getty.edu/page/aat/300264092). Use of this property is preferred over the custom morphosource:choType property."@en ;
+         rdfs:label "Getty Arts and Architecture Thesaurus Type"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "`vases`, `paintings (visual works)`, `hammers (tools)`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#address
@@ -998,14 +1028,13 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
          rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/locality> ;
          rdfs:domain :Organization ,
                      :PhysicalObject ;
-         <http://purl.org/dc/terms/description> "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."@en ;
          <http://purl.org/dc/terms/isVersionOf> "http://rs.tdwg.org/dwc/terms/locality" ;
          <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName" ;
          <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://purl.org/dc/terms/Location> ;
          <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
-         rdfs:comment "The specific description of the place."@en ;
+         rdfs:comment "The street address or other specific description of the place or location."@en ;
          rdfs:label "Address"@en ;
-         <http://www.w3.org/2004/02/skos/core#example> "`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`"@en .
+         <http://www.w3.org/2004/02/skos/core#example> "`130 Science Dr`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#agreementURI
@@ -1014,7 +1043,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
               rdfs:domain :Media ,
                           :Organization ;
               <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/UsageTerms> ;
-              rdfs:comment "A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly."@en ;
+              rdfs:comment "A Web URI for a statement of the ownership and usage rights for Media. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly."@en ;
               rdfs:label "Agreement URI"@en .
 
 
@@ -1023,6 +1052,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
           rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> ;
           rdfs:domain :CTImageSeriesImagingEvent ;
           <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> ;
+          rdfs:comment "X-Ray Tube Current in mA."@en ;
           rdfs:label "Amperage"@en .
 
 
@@ -1076,6 +1106,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#canonicalTaxonomy
 :canonicalTaxonomy rdf:type owl:ObjectProperty ;
                    rdfs:domain :BiologicalSpecimenObject ;
+                   rdfs:comment "MorphoSource-specific ID of Taxonomy record for taxonomic name attributed to the specimen physical object by the provider organization (museum, institution, or laboratory) responsible for managing the specimen. May not be present if no provider-supplied taxonomy is present. This may differ from taxonomic names attributed to the specimen by researchers or other individuals. Values for this property should be a subset of values for property morphosource:taxonomyID values, but morphosource:taxonomyID may include additional values as well."@en ;
                    rdfs:label "Canonical Taxonomy"@en .
 
 
@@ -1100,12 +1131,14 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#choAttribute
 :choAttribute rdf:type owl:ObjectProperty ;
               rdfs:domain :CulturalHeritageObject ;
+              rdfs:comment "Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. It is preferred to use morphosource:aatAttribute when it is possible to express attributes using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom attribute values not listed in the Getty AAT controlled vocabulary."@en ;
               rdfs:label "Cultural Heritage Object Attribute"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#choType
 :choType rdf:type owl:ObjectProperty ;
          rdfs:domain :CulturalHeritageObject ;
+         rdfs:comment "Type, genre, category, or classification of an object. It is preferred to use morphosource:aatType when it is possible to express type using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom type values not listed in the Getty AAT controlled vocabulary."@en ;
          rdfs:label "Cultural Heritage Object Type"@en .
 
 
@@ -1205,53 +1238,98 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
              rdfs:label "Data Manager"@en .
 
 
-###  https://www.morphosource.org/terms/morphosource#date_modified
-:date_modified rdf:type owl:ObjectProperty ;
-               rdfs:domain :Device ,
-                           :FileSet ,
-                           :ImagingEvent ,
-                           :Media ,
-                           :Organization ,
-                           :PhysicalObject ,
-                           :ProcessingEvent ;
-               <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
-               rdfs:comment "Date on which the resource was changed."@en ;
-               rdfs:label "Date Modified"@en .
+###  https://www.morphosource.org/terms/morphosource#dateModified
+:dateModified rdf:type owl:ObjectProperty ;
+              rdfs:domain :Device ,
+                          :FileSet ,
+                          :ImagingEvent ,
+                          :Media ,
+                          :Organization ,
+                          :PhysicalObject ,
+                          :ProcessingEvent ;
+              <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+              rdfs:comment "Date on which the resource was changed."@en ;
+              rdfs:label "Date Modified"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#dateUploaded
+:dateUploaded rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://purl.org/dc/terms/dateSubmitted> ;
+              rdfs:domain :Device ,
+                          :FileSet ,
+                          :ImagingEvent ,
+                          :Media ,
+                          :Organization ,
+                          :PhysicalObject ,
+                          :ProcessingEvent ;
+              <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+              rdfs:comment "Date of upload of the resource."@en ;
+              rdfs:label "Date Uploaded"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#datingMethod
 :datingMethod rdf:type owl:ObjectProperty ;
               rdfs:domain :PhysicalObject ;
+              rdfs:comment "Method used to determine the date an object was created, produced, fossilized, or otherwise came into being."@en ;
               rdfs:label "Dating Method"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#depositor
+:depositor rdf:type owl:ObjectProperty ;
+           rdfs:domain :Device ,
+                       :FileSet ,
+                       :ImagingEvent ,
+                       :Media ,
+                       :Organization ,
+                       :PhysicalObject ,
+                       :ProcessingEvent ;
+           <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Depositor" ;
+           <http://www.loc.gov/mads/rdf/v1#code> "dpt" ;
+           <http://www.loc.gov/mads/rdf/v1#definitionNote> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
+           <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/vocabulary/relators/own> ;
+           <http://www.loc.gov/mads/rdf/v1#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
+           <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/own> ;
+           <http://www.w3.org/2004/02/skos/core#changeNote> _:genid1 ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
+           <http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
+           <http://www.w3.org/2004/02/skos/core#notation> "dpt" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Depositor" .
 
 
 ###  https://www.morphosource.org/terms/morphosource#detectorConfiguration
 :detectorConfiguration rdf:type owl:ObjectProperty ;
                        rdfs:domain :CTImageSeriesImagingEvent ;
-                       rdfs:label "Detector Configuration"@en .
+                       rdfs:range :XRayDetectorConfiguration ;
+                       rdfs:comment "The physical configuration of the X-Ray detector. Value must be from the X-Ray Detector Configuration controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration). This property should be a sub-property of dicom:DetectorConfiguration."@en ;
+                       rdfs:label "Detector Configuration"@en ;
+                       <http://www.w3.org/2004/02/skos/core#example> "`Area (single or tiled detector)`, `Slot (scanned slot, slit, or spot)`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#detectorPixelSizeX
 :detectorPixelSizeX rdf:type owl:ObjectProperty ;
                     rdfs:domain :CTImageSeriesImagingEvent ;
+                    rdfs:comment "Length in mm of each pixel in the X direction."@en ;
                     rdfs:label "Detector Pixel Size X"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#detectorPixelSizeY
 :detectorPixelSizeY rdf:type owl:ObjectProperty ;
                     rdfs:domain :CTImageSeriesImagingEvent ;
+                    rdfs:comment "Length in mm of each pixel in the Y direction."@en ;
                     rdfs:label "Detector Pixel Size Y"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#detectorPixelsX
 :detectorPixelsX rdf:type owl:ObjectProperty ;
                  rdfs:domain :CTImageSeriesImagingEvent ;
+                 rdfs:comment "The number of pixels in the X direction of the detector (number of columns)."@en ;
                  rdfs:label "Detector Pixels X"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#detectorPixelsY
 :detectorPixelsY rdf:type owl:ObjectProperty ;
                  rdfs:domain :CTImageSeriesImagingEvent ;
+                 rdfs:comment "The number of pixels in the X direction of the detector (number of rows)."@en ;
                  rdfs:label "Detector Pixels Y"@en .
 
 
@@ -1259,8 +1337,11 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :detectorType rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#DetectorDescription> ;
               rdfs:domain :CTImageSeriesImagingEvent ;
+              rdfs:range :XRayDetectorType ;
               <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DetectorDescription> ;
-              rdfs:label "Detector Type"@en .
+              rdfs:comment "Type of detector used to acquire this image. This property is more accurately a sub-property of dicom:DetectorType and should be changed accordingly. Value must be from X-Ray Detector Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayDetectorType)."@en ;
+              rdfs:label "Detector Type"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "`Direct (X-Ray photoconductor)`, `Scintillator (Phosphor used)`, `Storage (Storage Phosphor)`, `Film (Scanned film/screen)`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#deviceID
@@ -1294,10 +1375,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
             rdfs:subPropertyOf <http://purl.org/dc/terms/format> ;
             rdfs:domain :PhysicalObject ;
             <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Extent> ;
-            <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en ;
             <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/format> ;
             <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
-            rdfs:comment "The physical dimensions of the resource."@en ;
+            rdfs:comment "The physical dimensions or measurements of the object."@en ;
             rdfs:label "Dimensions"@en .
 
 
@@ -1368,7 +1448,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#fluxNormalization
 :fluxNormalization rdf:type owl:ObjectProperty ;
                    rdfs:domain :CTImageSeriesImagingEvent ;
-                   rdfs:label "Flux Normalization"@en .
+                   rdfs:comment "Whether flux normalization calibration is used or not. If present, value must be \"Yes\" or \"No\"."@en ;
+                   rdfs:label "Flux Normalization"@en ;
+                   <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#focalLength
@@ -1389,6 +1471,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> ;
                 rdfs:domain :CTImageSeriesImagingEvent ;
                 <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> ;
+                rdfs:comment "Number of images acquired at each projection angle and their average."@en ;
                 rdfs:label "Frame Averaging"@en .
 
 
@@ -1421,9 +1504,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                     rdfs:domain :BiologicalSpecimenObject ;
                     <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/datasetID> ;
                     <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/DataSetGUID" ;
-                    <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/> ;
                     <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
-                    rdfs:comment "An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution."@en ;
+                    rdfs:comment "An identifier for an entire museum, institution, or laboratory specimen collection which includes the Biological Specimen. May be a global unique identifier or an identifier specific to a collection or institution."@en ;
                     rdfs:label "iDigBio Recordset ID"@en ;
                     <http://www.w3.org/2004/02/skos/core#example> "`b15d4952-7d20-46f1-8a3e-556a512b04c5`"@en .
 
@@ -1431,6 +1513,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#idigbioUUID
 :idigbioUUID rdf:type owl:ObjectProperty ;
              rdfs:domain :BiologicalSpecimenObject ;
+             rdfs:comment "Global unique identifier for the Biological Specimen provided by iDigBio and used as the primary identifier of the Biological Specimen's record in the iDigBio aggregator if present. This is sometimes used in addition to more general identifiers or Darwin Core triplets (institution code : collection code : catalog number) to uniquely identify Biological Specimen."@en ;
              rdfs:label "iDigBio UUID"@en .
 
 
@@ -1438,6 +1521,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :ieFilter rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :filter ;
           rdfs:domain :CTImageSeriesImagingEvent ;
+          rdfs:comment "Type of filter(s) inserted into the X-Ray beam."@en ;
           rdfs:label "Imaging Event Filter"@en .
 
 
@@ -1445,10 +1529,11 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :ieModality rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://rs.tdwg.org/ac/terms/captureDevice> ;
             rdfs:domain :ImagingEvent ;
-            <http://purl.org/dc/terms/description> "It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: \"Canon Supershot 2000\", \"Makroscan Scanner 2000\", \"Zeiss Axioscope with Camera IIIu\", \"SEM (Scanning Electron Microscope)\"."@en ;
+            rdfs:range :ImageModality ;
             <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/captureDevice> ;
-            rdfs:comment "Free form text describing the device or devices used to create the resource."@en ;
-            rdfs:label "Imaging Event Modality"@en .
+            rdfs:comment "The imaging modality used in the imaging event. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality)."@en ;
+            rdfs:label "Imaging Event Modality"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#imagingEventID
@@ -1467,14 +1552,13 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :isTypeSpecimen rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/typeStatus> ;
                 rdfs:domain :BiologicalSpecimenObject ;
-                <http://purl.org/dc/terms/description> "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."@en ;
                 <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/typeStatus> ;
                 <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText" ;
                 <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Identification> ;
                 <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
-                rdfs:comment "A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject."@en ;
+                rdfs:comment "Whether the Biological Specimen is a holotype or not. If present, value must be \"Yes\" or \"No\"."@en ;
                 rdfs:label "Is Type Specimen"@en ;
-                <http://www.w3.org/2004/02/skos/core#example> "`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`"@en .
+                <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#latitude
@@ -1485,18 +1569,18 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
           rdfs:comment "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
                        "緯度"@ja ;
           rdfs:label "Latitude"@en ;
-          <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en .
+          <http://www.w3.org/2003/12/exif/ns#tagNumber> "2"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "`41d 05' 54.03\" S`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#legacyMediaFileID
 :legacyMediaFileID rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf <http://rs.tdwg.org/ac/terms/providerManagedID> ;
                    rdfs:domain :Media ;
-                   <http://purl.org/dc/terms/description> "Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider's data repositories. It is the provider's decision whether to expose this value or not."@en ;
                    <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/providerManagedID> ;
                    <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No" ;
                    <http://rs.tdwg.org/dwc/terms/attributes/required> "No" ;
-                   rdfs:comment "A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider."@en ;
+                   rdfs:comment "MorphoSource-specific unique ID identifier that was used to represent a Media in the now-defunct 1.0 version of the MorphoSource repository. Only present if Media was originally contributed to MorphoSource 1.0. Different from morphosource:ID identifier."@en ;
                    rdfs:label "Legacy Media File ID"@en .
 
 
@@ -1507,7 +1591,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                     <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/IDofContainingCollection> ;
                     <http://rs.tdwg.org/dwc/terms/attributes/repeatable> "No"@en ;
                     <http://rs.tdwg.org/dwc/terms/attributes/required> "No" ;
-                    rdfs:comment "If the resource is contained in a Collection, this field identifies that Collection uniquely."@en ;
+                    rdfs:comment "MorphoSource-specific unique ID identifier that was used to group Media together in the now-defunct 1.0 version of the MorphoSource repository. In MorphoSource 1.0, Media groups were used to collect all media derived from the same Imaging Event. Media groups are no longer used, with media-to-media imaging and processing event relationships now being used instead to track hierarchical relationships between Media. Only present if Media was originally contributed to MorphoSource 1.0. Different from morphosource:ID identifier."@en ;
                     rdfs:label "Legacy Media Group ID"@en .
 
 
@@ -1541,7 +1625,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
            rdfs:comment "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."@en ,
                         "経度"@ja ;
            rdfs:label "Longitude"@en ;
-           <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en .
+           <http://www.w3.org/2003/12/exif/ns#tagNumber> "4"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "`121d 10' 34\" W`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#mapType
@@ -1555,8 +1640,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
           rdfs:subPropertyOf <http://purl.org/dc/terms/medium> ;
           rdfs:domain :CulturalHeritageObject ;
           <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/medium> ;
-          rdfs:comment "The material or physical carrier of the resource."@en ;
-          rdfs:label "Medium"@en .
+          rdfs:comment "Material(s) from which an object is made. It is preferred to use morphosource:aatMaterial when it is possible to express materials using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom material values not listed in the Getty AAT controlled vocabulary."@en ;
+          rdfs:label "Material"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#mediaARK
@@ -1600,8 +1685,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :modality3D rdf:type owl:ObjectProperty ;
             rdfs:domain :Device ;
             rdfs:range :ImageModality ;
-            rdfs:comment "Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography."@en ;
-            rdfs:label "Modality"@en .
+            rdfs:comment "The list of imaging modalities that a device is capable of using when imaging objects. Despite the name, this can include non-3D imaging event modalities. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality)."@en ;
+            rdfs:label "Modality"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType
@@ -1630,11 +1716,10 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
              rdfs:domain :PhysicalObject ;
              <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem> ;
              <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "not in ABCD" ;
-             <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/GeologicalContext> ;
              <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
-             rdfs:comment "The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (\"Precambrian\") attributable to the stratigraphic horizon from which the cataloged item was collected."@en ;
+             rdfs:comment "Free text numeric description of the absolute or specific chronological age of the physical object."@en ;
              rdfs:label "Numeric Time"@en ;
-             <http://www.w3.org/2004/02/skos/core#example> "`Phanerozoic`, `Proterozoic`"@en .
+             <http://www.w3.org/2004/02/skos/core#example> "`20 MYA`,`4th Century`,`1142 C.E.`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#objectID
@@ -1645,12 +1730,15 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#opticalMagnification
 :opticalMagnification rdf:type owl:ObjectProperty ;
                       rdfs:domain :CTImageSeriesImagingEvent ;
-                      rdfs:label "Optical Magnification"@en .
+                      rdfs:comment "Whether optical magnification is used or not. This property is only for indicating optical magnification specifically, and is different from geometric magnification. If present, value must be \"Yes\" or \"No\"."@en ;
+                      rdfs:label "Optical Magnification"@en ;
+                      <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#organizationID
 :organizationID rdf:type owl:ObjectProperty ;
                 rdfs:domain :PhysicalObject ;
+                rdfs:comment "MorphoSource-specific unique ID identifier for the provider Organization (museum, institution, or laboratory) responsible for managing the physical object."@en ;
                 rdfs:label "Organization ID"@en .
 
 
@@ -1674,6 +1762,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#originalLocation
 :originalLocation rdf:type owl:ObjectProperty ;
                   rdfs:domain :PhysicalObject ;
+                  rdfs:comment "Free text description of the original location where the physical object was created, produced, fossilized, or otherwise came into being."@en ;
                   rdfs:label "Original Location"@en .
 
 
@@ -1699,6 +1788,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#periodicTime
 :periodicTime rdf:type owl:ObjectProperty ;
               rdfs:domain :PhysicalObject ;
+              rdfs:comment "Free text description of the time period associated with the production or creation of the physical object."@en ;
               rdfs:label "Periodic Time"@en .
 
 
@@ -1719,7 +1809,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#phaseContrast
 :phaseContrast rdf:type owl:ObjectProperty ;
                rdfs:domain :CTImageSeriesImagingEvent ;
-               rdfs:label "Phase Contrast"@en .
+               rdfs:comment "Whether phase contrast of X-Ray beam - in other words, modulating the beam between higher and lower energies to increase contrast between materials - is used or not. If present, value must be \"Yes\" or \"No\"."@en ;
+               rdfs:label "Phase Contrast"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval
@@ -1732,7 +1824,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :photographicReference rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :attachmentFile ;
                        rdfs:domain :ImagingEvent ;
-                       rdfs:comment "A reference photograph image, usually used to represent and record the object at the time of original scanning."@en ;
+                       rdfs:comment "A reference photograph image, often used to represent and record the object at the initial time of scanning."@en ;
                        rdfs:label "Photographic Reference"@en .
 
 
@@ -1749,8 +1841,11 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :pixelSpacingCalibration rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> ;
                          rdfs:domain :CTImageSeriesImagingEvent ;
+                         rdfs:range :PixelSpacingCalibrationType ;
                          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> ;
-                         rdfs:label "Pixel Spacing Calibration"@en .
+                         rdfs:comment "The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. Value must be from Pixel Spacing Calibration Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType)."@en ;
+                         rdfs:label "Pixel Spacing Calibration"@en ;
+                         <http://www.w3.org/2004/02/skos/core#example> "`Geometry`, `Fiducial`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#pointCount
@@ -1770,6 +1865,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
        rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#GeneratorPower> ;
        rdfs:domain :CTImageSeriesImagingEvent ;
        <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorPower> ;
+       rdfs:comment "Power in kW to the X-Ray generator."@en ;
        rdfs:label "Power"@en .
 
 
@@ -1798,36 +1894,39 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
              rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> ;
              rdfs:domain :CTImageSeriesImagingEvent ;
              <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> ;
+             rdfs:comment "Number of images at distinct angles used to create a 3D image."@en ;
              rdfs:label "Number of Projections"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#provenanceDate
 :provenanceDate rdf:type owl:ObjectProperty ;
                 rdfs:domain :PhysicalObject ;
-                rdfs:label "Provenance Date"@en .
+                rdfs:comment "Date the physical object was collected, excavated, or discovered. Values must be in MM/DD/YYYY date format."@en ;
+                rdfs:label "Provenance Date"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "`01/01/1985`, `12/30/2021`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#provenanceDetails
 :provenanceDetails rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf <http://purl.org/dc/terms/provenance> ;
                    rdfs:domain :PhysicalObject ;
-                   <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/ProvenanceStatement> ;
                    <http://purl.org/dc/terms/description> "The statement may include a description of any changes successive custodians made to the resource."@en ;
                    <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/provenance> ;
-                   <http://purl.org/dc/terms/issued> "2004-09-20"^^xsd:date ;
-                   rdfs:comment "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+                   rdfs:comment "A statement detailing production, discovery, and/or ownership, describing the initial production/discovery context and listing any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
                    rdfs:label "Provenance Details"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#provenanceLocation
 :provenanceLocation rdf:type owl:ObjectProperty ;
                     rdfs:domain :PhysicalObject ;
+                    rdfs:comment "Free text description of the location from which the physical object was collected, excavated, or discovered."@en ;
                     rdfs:label "Provenance Location"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#provenanceName
 :provenanceName rdf:type owl:ObjectProperty ;
                 rdfs:domain :PhysicalObject ;
+                rdfs:comment "Name of the collection or excavation event, if applicable and available."@en ;
                 rdfs:label "Provenance Name"@en .
 
 
@@ -1860,7 +1959,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
               rdfs:domain :Media ,
                           :Organization ;
               <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/xap/1.0/rights/Owner> ;
-              rdfs:comment "A list of legal owners of the resource."@en ;
+              rdfs:comment "List of holders of intellectual property rights (copyright or license-based) for the Media."@en ;
               rdfs:label "Rights Holder"@en .
 
 
@@ -1890,6 +1989,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> ;
                 rdfs:domain :CTImageSeriesImagingEvent ;
                 <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> ;
+                rdfs:comment "Ratio of the Table Feed per Rotation (DICOM 0018,9310) to the Total Collimation Width (DICOM 0018,9307)."@en ;
                 rdfs:label "Number of Rotations"@en .
 
 
@@ -1908,7 +2008,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#shadingCorrection
 :shadingCorrection rdf:type owl:ObjectProperty ;
                    rdfs:domain :CTImageSeriesImagingEvent ;
-                   rdfs:label "Shading Correction"@en .
+                   rdfs:comment "Whether shading correction calibration is used or not. If present, value must be \"Yes\" or \"No\"."@en ;
+                   rdfs:label "Shading Correction"@en ;
+                   <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#shortDescription
@@ -1920,6 +2022,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#shortTitle
 :shortTitle rdf:type owl:ObjectProperty ;
             rdfs:domain :CulturalHeritageObject ;
+            rdfs:comment "Title or short description of an object. For MorphoSource records, value is used as part of the full title for a Cultural Heritage Object record."@en ;
             rdfs:label "Short Title"@en .
 
 
@@ -1959,6 +2062,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                         rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> ;
                         rdfs:domain :CTImageSeriesImagingEvent ;
                         <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> ;
+                        rdfs:comment "Distance in mm from X-Ray source to detector center."@en ;
                         rdfs:label "Distance From Source To Detector"@en .
 
 
@@ -1967,6 +2071,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                       rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> ;
                       rdfs:domain :CTImageSeriesImagingEvent ;
                       <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> ;
+                      rdfs:comment "Distance in mm from X-Ray source to isocenter (center of field of view)."@en ;
                       rdfs:label "Distance From Source To Object"@en .
 
 
@@ -1975,6 +2080,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                      rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#ContainerDescription> ;
                      rdfs:domain :CTImageSeriesImagingEvent ;
                      <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#ContainerDescription> ;
+                     rdfs:comment "Wedge, or the material surrounding and/or enveloping the focal object."@en ;
                      rdfs:label "Surrounding Material"@en .
 
 
@@ -1989,18 +2095,24 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> ;
                 rdfs:domain :CTImageSeriesImagingEvent ;
                 <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> ;
-                rdfs:label "Target Material"@en .
+                rdfs:comment "The primary material in the anode of the X-Ray source."@en ;
+                rdfs:label "Target Material"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "`tungsten`, `molybdenum`, `copper`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#targetType
 :targetType rdf:type owl:ObjectProperty ;
             rdfs:domain :CTImageSeriesImagingEvent ;
-            rdfs:label "Target Type"@en .
+            rdfs:range :XRayTargetType ;
+            rdfs:comment "Type of the anode of the X-Ray source. Value must be from the X-Ray Target Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayTargetType)."@en ;
+            rdfs:label "Target Type"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`Reflection`,`Transmission`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#taxonomyID
 :taxonomyID rdf:type owl:ObjectProperty ;
             rdfs:domain :BiologicalSpecimenObject ;
+            rdfs:comment "Morphosource-specific ID of Taxonomy record for taxonomic name attributed to the Biological Specimen."@en ;
             rdfs:label "Taxonomy ID"@en .
 
 
@@ -2041,6 +2153,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
          rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#KVP> ;
          rdfs:domain :CTImageSeriesImagingEvent ;
          <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#KVP> ;
+         rdfs:comment "Peak kilo voltage output of the X-Ray generator used."@en ;
          rdfs:label "Voltage"@en .
 
 
@@ -2048,14 +2161,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :vouchered rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://rs.tdwg.org/dwc/terms/disposition> ;
            rdfs:domain :PhysicalObject ;
-           <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en ;
            <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/dwc/terms/disposition> ;
            <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition" ;
-           <http://rs.tdwg.org/dwc/terms/attributes/organizedInClass> <http://rs.tdwg.org/dwc/terms/Occurrence> ;
            <http://rs.tdwg.org/dwc/terms/attributes/usageScope> "simple" ;
-           rdfs:comment "The current state of a specimen with respect to the collection identified in collectionCode or collectionID."@en ;
+           rdfs:comment "Whether the specimen is vouchered or not, or in other words, whether the physical specimen object exists and is preserved and maintained in an accessible collection. Value must be \"Yes\" or \"No\"."@en ;
            rdfs:label "Vouchered"@en ;
-           <http://www.w3.org/2004/02/skos/core#example> "`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`"@en .
+           <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#width
@@ -2076,6 +2187,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
               rdfs:subPropertyOf <http://purl.org/healthcarevocab/v1#GeneratorID> ;
               rdfs:domain :CTImageSeriesImagingEvent ;
               <http://purl.org/dc/terms/isVersionOf> <http://purl.org/healthcarevocab/v1#GeneratorID> ;
+              rdfs:comment "Free text describing type of X-Ray tube, possibly including brand and/or model of tube."@en ;
               rdfs:label "X-Ray Tube Type"@en .
 
 
@@ -2126,6 +2238,22 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
     """@en ;
                              rdfs:isDefinedBy <http://pcdm.org/works> ;
                              rdfs:label "Work"@en .
+
+
+###  http://vocab.getty.edu/aat/300264087
+<http://vocab.getty.edu/aat/300264087> rdf:type owl:Class .
+
+
+###  http://vocab.getty.edu/aat/300264088
+<http://vocab.getty.edu/aat/300264088> rdf:type owl:Class .
+
+
+###  http://vocab.getty.edu/aat/300264091
+<http://vocab.getty.edu/aat/300264091> rdf:type owl:Class .
+
+
+###  http://vocab.getty.edu/aat/300264092
+<http://vocab.getty.edu/aat/300264092> rdf:type owl:Class .
 
 
 ###  https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject

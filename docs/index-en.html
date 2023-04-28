@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Fri Apr 28 15:18:03 UTC 2023"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Fri Apr 28 17:06:30 UTC 2023", "version":"0.2.0"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -57,8 +57,12 @@ $(function(){
 
 
 <dl>
+<dt>Revision:</dt>
+<dd>0.2.0</dd>
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
-</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd> Revision: 0.2.0.</dd>
+</dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
 </div>
@@ -338,11 +342,15 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#date_modified"
-         title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
+      <a href="#dateModified"
+         title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
+   </li>
+   <li>
+      <a href="#dateUploaded"
+         title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
    </li>
    <li>
       <a href="#datingMethod"
@@ -350,6 +358,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+   </li>
+   <li>
+      <a href="#depositor"
+         title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
@@ -644,6 +656,10 @@ This ontology has the following classes and properties.</span>
          title="https://www.morphosource.org/terms/morphosource#mapType">Map Type</a>
    </li>
    <li>
+      <a href="#material"
+         title="https://www.morphosource.org/terms/morphosource#material">Material</a>
+   </li>
+   <li>
       <a href="#mediaARK"
          title="https://www.morphosource.org/terms/morphosource#mediaARK">Media ARK</a>
    </li>
@@ -665,10 +681,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/medium" title="http://purl.org/dc/terms/medium">Medium</a>
-   </li>
-   <li>
-      <a href="#material"
-         title="https://www.morphosource.org/terms/morphosource#material">Medium</a>
    </li>
    <li>
       <a href="#mimeType"
@@ -1404,7 +1416,7 @@ This section provides details for each class and property defined by MorphoSourc
             <sup class="type-op" title="object property">op</sup>, <a href="#aatType"
                title="https://www.morphosource.org/terms/morphosource#aatType">Getty Arts and Architecture Thesaurus Type</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#material"
-               title="https://www.morphosource.org/terms/morphosource#material">Medium</a>
+               title="https://www.morphosource.org/terms/morphosource#material">Material</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#shortTitle"
                title="https://www.morphosource.org/terms/morphosource#shortTitle">Short Title</a>
             <sup class="type-op" title="object property">op</sup>
@@ -1430,10 +1442,12 @@ This section provides details for each class and property defined by MorphoSourc
          <dt>is in domain of</dt>
          <dd>
             <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#ID"
                title="https://www.morphosource.org/terms/morphosource#ID">ID</a>
@@ -1527,10 +1541,12 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#contentsFileSize">Contents File Size</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#contentsMimeType"
                title="https://www.morphosource.org/terms/morphosource#contentsMimeType">Contents Mime Type</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#edgesPerFace"
                title="https://www.morphosource.org/terms/morphosource#edgesPerFace">Edges Per Face</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#faceCount"
@@ -1583,7 +1599,9 @@ This section provides details for each class and property defined by MorphoSourc
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#modality3D"
+            <a href="#ieModality"
+               title="https://www.morphosource.org/terms/morphosource#ieModality">Imaging Event Modality</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#modality3D"
                title="https://www.morphosource.org/terms/morphosource#modality3D">Modality</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1623,10 +1641,12 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#attachmentFile">Attachment File</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#ID"
                title="https://www.morphosource.org/terms/morphosource#ID">ID</a>
@@ -1682,10 +1702,12 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#doi">DOI (Digital Object Identifier)</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/available" title="http://purl.org/dc/terms/available">Date Available</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#downloadReviewer"
                title="https://www.morphosource.org/terms/morphosource#downloadReviewer">Download Reviewer</a>
@@ -1823,10 +1845,12 @@ This section provides details for each class and property defined by MorphoSourc
             <sup class="type-op" title="object property">op</sup>, <a href="#http://rs.tdwg.org/dwc/terms/country" title="http://rs.tdwg.org/dwc/terms/country">Country</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#dataManager"
                title="https://www.morphosource.org/terms/morphosource#dataManager">Data Manager</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#downloadPermission"
                title="https://www.morphosource.org/terms/morphosource#downloadPermission">Download Permission</a>
@@ -1979,14 +2003,18 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#city">City</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://rs.tdwg.org/dwc/terms/collectionCode" title="http://rs.tdwg.org/dwc/terms/collectionCode">Collection Code</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://rs.tdwg.org/dwc/terms/country" title="http://rs.tdwg.org/dwc/terms/country">Country</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://www.europeana.eu/schemas/edm/currentLocation"
                title="http://www.europeana.eu/schemas/edm/currentLocation">Current Location</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#datingMethod"
                title="https://www.morphosource.org/terms/morphosource#datingMethod">Dating Method</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#dimensions"
                title="https://www.morphosource.org/terms/morphosource#dimensions">Dimensions</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://rs.tdwg.org/dwc/terms/formation" title="http://rs.tdwg.org/dwc/terms/formation">Formation</a>
@@ -2038,6 +2066,12 @@ This section provides details for each class and property defined by MorphoSourc
          <span class="markdown">A type of correction for the effect of geometric magnification or calibration against an object of known size, as described in the Enumerated Values of the DICOM Pixel Spacing Calibration Type attribute (0028,0A02). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe the pixel calibration type for relevant Image Events.</span>
       </div>
       <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#pixelSpacingCalibration"
+               title="https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration">Pixel Spacing Calibration</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#Fiducial"
@@ -2070,10 +2104,12 @@ This section provides details for each class and property defined by MorphoSourc
                title="https://www.morphosource.org/terms/morphosource#attachmentFile">Attachment File</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">Creator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">Date Created</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#date_modified"
-               title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateModified"
+               title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#dateUploaded"
+               title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#depositor"
+               title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#ID"
                title="https://www.morphosource.org/terms/morphosource#ID">ID</a>
@@ -2207,6 +2243,12 @@ This section provides details for each class and property defined by MorphoSourc
          <span class="markdown">Physical configuration of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Configuration attribute (0018,7005). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector configuration for relevant Image Events.</span>
       </div>
       <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#detectorConfiguration"
+               title="https://www.morphosource.org/terms/morphosource#detectorConfiguration">Detector Configuration</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#Area"
@@ -2228,6 +2270,12 @@ This section provides details for each class and property defined by MorphoSourc
          <span class="markdown">Type of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Type attribute (0018,7004). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector type for relevant Image Events.</span>
       </div>
       <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#detectorType"
+               title="https://www.morphosource.org/terms/morphosource#detectorType">Detector Type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#Direct"
@@ -2253,6 +2301,12 @@ This section provides details for each class and property defined by MorphoSourc
          <span class="markdown">Type of X-Ray target used to acquire an image for CT, MRI, and other related modalities. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe target type for relevant Image Events.</span>
       </div>
       <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#targetType"
+               title="https://www.morphosource.org/terms/morphosource#targetType">Target Type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
             <a href="#Reflection"
@@ -2441,11 +2495,15 @@ This section provides details for each class and property defined by MorphoSourc
          </a>
       </li>
       <li>
-         <a href="#date_modified"
-            title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
+         <a href="#dateModified"
+            title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
       </li>
       <li>
          <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
+      </li>
+      <li>
+         <a href="#dateUploaded"
+            title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
       </li>
       <li>
          <a href="#datingMethod"
@@ -2453,6 +2511,10 @@ This section provides details for each class and property defined by MorphoSourc
       </li>
       <li>
          <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+      </li>
+      <li>
+         <a href="#depositor"
+            title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
       </li>
       <li>
          <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">Description</a>
@@ -2747,6 +2809,10 @@ This section provides details for each class and property defined by MorphoSourc
             title="https://www.morphosource.org/terms/morphosource#mapType">Map Type</a>
       </li>
       <li>
+         <a href="#material"
+            title="https://www.morphosource.org/terms/morphosource#material">Material</a>
+      </li>
+      <li>
          <a href="#mediaARK"
             title="https://www.morphosource.org/terms/morphosource#mediaARK">Media ARK</a>
       </li>
@@ -2768,10 +2834,6 @@ This section provides details for each class and property defined by MorphoSourc
       </li>
       <li>
          <a href="#http://purl.org/dc/terms/medium" title="http://purl.org/dc/terms/medium">Medium</a>
-      </li>
-      <li>
-         <a href="#material"
-            title="https://www.morphosource.org/terms/morphosource#material">Medium</a>
       </li>
       <li>
          <a href="#mimeType"
@@ -3135,6 +3197,11 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#AcquisitionType</p>
+      <div class="comment">
+         <span class="markdown">Description of the method used during acquisition of this frame. See Section C.8.15.3.2.1 for Defined Terms.
+
+Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be present otherwise.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -3154,12 +3221,12 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#address</p>
       <div class="comment">
-         <span class="markdown">The specific description of the place.</span>
+         <span class="markdown">The street address or other specific description of the place or location.</span>
       </div>
       <dl>
          <dt>Example</dt>
          <dd>
-            <pre>`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`</pre>
+            <pre>`130 Science Dr`</pre>
          </dd>
       </dl>
       <div class="description">
@@ -3191,7 +3258,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#agreementURI</p>
       <div class="comment">
-         <span class="markdown">A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</span>
+         <span class="markdown">A Web URI for a statement of the ownership and usage rights for Media. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</span>
       </div>
       <div class="description">
          <dl>
@@ -3221,6 +3288,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#amperage</p>
+      <div class="comment">
+         <span class="markdown">X-Ray Tube Current in mA.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -3245,6 +3315,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#AnodeTargetMaterial</p>
+      <div class="comment">
+         <span class="markdown">The primary material in the anode of the X-Ray source.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`tungsten`, `molybdenum`, `copper`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -3445,6 +3524,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#canonicalTaxonomy</p>
+      <div class="comment">
+         <span class="markdown">MorphoSource-specific ID of Taxonomy record for taxonomic name attributed to the specimen physical object by the provider organization (museum, institution, or laboratory) responsible for managing the specimen. May not be present if no provider-supplied taxonomy is present. This may differ from taxonomic names attributed to the specimen by researchers or other individuals. Values for this property should be a subset of values for property morphosource:taxonomyID values, but morphosource:taxonomyID may include additional values as well.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -3774,6 +3856,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#ContainerDescription</p>
+      <div class="comment">
+         <span class="markdown">Description of the container.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -3864,6 +3949,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#ContrastFrameAveraging</p>
+      <div class="comment">
+         <span class="markdown">Specifies the number of contrast frames to average together before performing the mask operation. If the Attribute is missing, no averaging is performed.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -3957,6 +4045,11 @@ This section provides details for each class and property defined by MorphoSourc
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
+               <a href="#PhysicalObject"
+                  title="https://www.morphosource.org/terms/morphosource#PhysicalObject">Physical Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
                <a href="#ProcessingEvent"
                   title="https://www.morphosource.org/terms/morphosource#ProcessingEvent">Processing Event</a>
                <sup class="type-c" title="class">c</sup>
@@ -3992,6 +4085,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#choAttribute</p>
+      <div class="comment">
+         <span class="markdown">Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. It is preferred to use morphosource:aatAttribute when it is possible to express attributes using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom attribute values not listed in the Getty AAT controlled vocabulary.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4010,6 +4106,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#choType</p>
+      <div class="comment">
+         <span class="markdown">Type, genre, category, or classification of an object. It is preferred to use morphosource:aatType when it is possible to express type using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom type values not listed in the Getty AAT controlled vocabulary.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4159,20 +4258,20 @@ This section provides details for each class and property defined by MorphoSourc
          <dl>
             <dt>has equivalent properties</dt>
             <dd>
-               <a href="#date_modified"
-                  title="https://www.morphosource.org/terms/morphosource#date_modified">Date Modified</a>
+               <a href="#dateModified"
+                  title="https://www.morphosource.org/terms/morphosource#dateModified">Date Modified</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="date_modified">
+   <div class="entity" id="dateModified">
       <h3>Date Modified<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#date_modified</p>
+         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#dateModified</p>
       <div class="comment">
          <span class="markdown">Date on which the resource was changed.</span>
       </div>
@@ -4240,6 +4339,32 @@ This section provides details for each class and property defined by MorphoSourc
       </dl>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#dateUploaded"
+                  title="https://www.morphosource.org/terms/morphosource#dateUploaded">Date Uploaded</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="dateUploaded">
+      <h3>Date Uploaded<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#dateUploaded</p>
+      <div class="comment">
+         <span class="markdown">Date of upload of the resource.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.org/dc/terms/dateSubmitted" title="http://purl.org/dc/terms/dateSubmitted">Date Submitted</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Device"
@@ -4286,6 +4411,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#datingMethod</p>
+      <div class="comment">
+         <span class="markdown">Method used to determine the date an object was created, produced, fossilized, or otherwise came into being.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4309,6 +4437,32 @@ This section provides details for each class and property defined by MorphoSourc
       </div>
       <div class="description">
          <dl>
+            <dt>has equivalent properties</dt>
+            <dd>
+               <a href="#depositor"
+                  title="https://www.morphosource.org/terms/morphosource#depositor">Depositor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="depositor">
+      <h3>Depositor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#depositor</p>
+      <div class="comment">
+         <span class="markdown">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has equivalent properties</dt>
+            <dd>
+               <a href="#http://id.loc.gov/vocabulary/relators/dpt" title="http://id.loc.gov/vocabulary/relators/dpt">Depositor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Device"
@@ -4394,6 +4548,11 @@ This section provides details for each class and property defined by MorphoSourc
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
+               <a href="#PhysicalObject"
+                  title="https://www.morphosource.org/terms/morphosource#PhysicalObject">Physical Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
                <a href="#ProcessingEvent"
                   title="https://www.morphosource.org/terms/morphosource#ProcessingEvent">Processing Event</a>
                <sup class="type-c" title="class">c</sup>
@@ -4408,12 +4567,27 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#detectorConfiguration</p>
+      <div class="comment">
+         <span class="markdown">The physical configuration of the X-Ray detector. Value must be from the X-Ray Detector Configuration controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration). This property should be a sub-property of dicom:DetectorConfiguration.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Area (single or tiled detector)`, `Slot (scanned slot, slit, or spot)`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#CTImageSeriesImagingEvent"
                   title="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">CT Image Series Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#XRayDetectorConfiguration"
+                  title="https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration">X-Ray Detector Configuration</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4426,6 +4600,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#DetectorDescription</p>
+      <div class="comment">
+         <span class="markdown">Free text description of detector.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -4444,6 +4621,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#detectorPixelSizeX</p>
+      <div class="comment">
+         <span class="markdown">Length in mm of each pixel in the X direction.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4462,6 +4642,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#detectorPixelSizeY</p>
+      <div class="comment">
+         <span class="markdown">Length in mm of each pixel in the Y direction.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4480,6 +4663,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#detectorPixelsX</p>
+      <div class="comment">
+         <span class="markdown">The number of pixels in the X direction of the detector (number of columns).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4498,6 +4684,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#detectorPixelsY</p>
+      <div class="comment">
+         <span class="markdown">The number of pixels in the X direction of the detector (number of rows).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4516,6 +4705,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#detectorType</p>
+      <div class="comment">
+         <span class="markdown">Type of detector used to acquire this image. This property is more accurately a sub-property of dicom:DetectorType and should be changed accordingly. Value must be from X-Ray Detector Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayDetectorType).</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Direct (X-Ray photoconductor)`, `Scintillator (Phosphor used)`, `Storage (Storage Phosphor)`, `Film (Scanned film/screen)`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -4530,6 +4728,12 @@ This section provides details for each class and property defined by MorphoSourc
                   title="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">CT Image Series Imaging Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#XRayDetectorType"
+                  title="https://www.morphosource.org/terms/morphosource#XRayDetectorType">X-Ray Detector Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -4541,7 +4745,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#dimensions</p>
       <div class="comment">
-         <span class="markdown">The physical dimensions of the resource.</span>
+         <span class="markdown">The physical dimensions or measurements of the object.</span>
       </div>
       <div class="description">
          <dl>
@@ -4599,6 +4803,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#DistanceSourceToDetector</p>
+      <div class="comment">
+         <span class="markdown">Distance in mm from source to detector center.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -4617,6 +4824,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#sourceDetectorDistance</p>
+      <div class="comment">
+         <span class="markdown">Distance in mm from X-Ray source to detector center.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -4641,6 +4851,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#sourceObjectDistance</p>
+      <div class="comment">
+         <span class="markdown">Distance in mm from X-Ray source to isocenter (center of field of view).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -4665,6 +4878,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#DistanceSourceToPatient</p>
+      <div class="comment">
+         <span class="markdown">Distance in mm from source to isocenter (center of field of view).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -4820,6 +5036,13 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#ExposureTime</p>
+      <div class="comment">
+         <span class="markdown">Time of X-Ray exposure in msec.
+
+If Acquisition Type (0018,9302) equals SPIRAL, the value of this Attribute shall be Revolution Time (0018,9305) divided by the Spiral Pitch Factor (0018,9311). See Section C.8.15.3.8.1 and Section C.8.15.3.2.1.
+
+Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -4928,6 +5151,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#fluxNormalization</p>
+      <div class="comment">
+         <span class="markdown">Whether flux normalization calibration is used or not. If present, value must be "Yes" or "No".</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Yes`, `No`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -5049,6 +5281,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#frameAveraging</p>
+      <div class="comment">
+         <span class="markdown">Number of images acquired at each projection angle and their average.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5131,6 +5366,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#GeneratorID</p>
+      <div class="comment">
+         <span class="markdown">Identifier of the generator.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -5149,6 +5387,11 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#GeneratorPower</p>
+      <div class="comment">
+         <span class="markdown">Power in kW to the X-Ray generator.
+
+Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -5233,12 +5476,28 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#aatAttribute</p>
+      <div class="comment">
+         <span class="markdown">Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Physical Attributes Facet (http://vocab.getty.edu/page/aat/300264087). Use of this property is preferred over the custom morphosource:choAttribute property.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`round`, `waterlogged`, `brittleness`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#CulturalHeritageObject"
                   title="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">Cultural Heritage Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://vocab.getty.edu/aat/300264087"
+                  target="_blank"
+                  title="http://vocab.getty.edu/aat/300264087">300264087</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -5251,12 +5510,28 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#aatMaterial</p>
+      <div class="comment">
+         <span class="markdown">Material(s) from which an object is made. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Materials Facet (http://vocab.getty.edu/page/aat/300264091). Use of this property is preferred over the custom morphosource:Material property.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`iron`, `clay`, `millwork`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#CulturalHeritageObject"
                   title="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">Cultural Heritage Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://vocab.getty.edu/aat/300264091"
+                  target="_blank"
+                  title="http://vocab.getty.edu/aat/300264091">300264091</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -5269,12 +5544,28 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#aatPeriod</p>
+      <div class="comment">
+         <span class="markdown">Time period associated with the production or creation of an object. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Styles and Periods Facet (http://vocab.getty.edu/page/aat/300264088).</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Neolithic`,`Pliocene`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#CulturalHeritageObject"
                   title="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">Cultural Heritage Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://vocab.getty.edu/aat/300264088"
+                  target="_blank"
+                  title="http://vocab.getty.edu/aat/300264088">300264088</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -5287,12 +5578,28 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#aatType</p>
+      <div class="comment">
+         <span class="markdown">Type, genre, category, or classification of an object. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Objects Facet (http://vocab.getty.edu/page/aat/300264092). Use of this property is preferred over the custom morphosource:choType property.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`vases`, `paintings (visual works)`, `hammers (tools)`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#CulturalHeritageObject"
                   title="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">Cultural Heritage Object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://vocab.getty.edu/aat/300264092"
+                  target="_blank"
+                  title="http://vocab.getty.edu/aat/300264092">300264092</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -5491,6 +5798,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#ID</p>
+      <div class="comment">
+         <span class="markdown">Morphosource-specific unique ID identifier for a Work (Media, Organization, Device, etc.).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -5599,7 +5909,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#idigbioRecordsetID</p>
       <div class="comment">
-         <span class="markdown">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</span>
+         <span class="markdown">An identifier for an entire museum, institution, or laboratory specimen collection which includes the Biological Specimen. May be a global unique identifier or an identifier specific to a collection or institution.</span>
       </div>
       <dl>
          <dt>Example</dt>
@@ -5630,6 +5940,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#idigbioUUID</p>
+      <div class="comment">
+         <span class="markdown">Global unique identifier for the Biological Specimen provided by iDigBio and used as the primary identifier of the Biological Specimen's record in the iDigBio aggregator if present. This is sometimes used in addition to more general identifiers or Darwin Core triplets (institution code : collection code : catalog number) to uniquely identify Biological Specimen.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -5648,6 +5961,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#ImagesInAcquisition</p>
+      <div class="comment">
+         <span class="markdown">Number of images that resulted from this acquisition of data.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5690,6 +6006,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#ieFilter</p>
+      <div class="comment">
+         <span class="markdown">Type of filter(s) inserted into the X-Ray beam.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5733,8 +6052,14 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#ieModality</p>
       <div class="comment">
-         <span class="markdown">Free form text describing the device or devices used to create the resource.</span>
+         <span class="markdown">The imaging modality used in the imaging event. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality).</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -5746,6 +6071,12 @@ This section provides details for each class and property defined by MorphoSourc
             <dd>
                <a href="#ImagingEvent"
                   title="https://www.morphosource.org/terms/morphosource#ImagingEvent">Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ImageModality"
+                  title="https://www.morphosource.org/terms/morphosource#ImageModality">Image Modality</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -5920,12 +6251,12 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#isTypeSpecimen</p>
       <div class="comment">
-         <span class="markdown">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</span>
+         <span class="markdown">Whether the Biological Specimen is a holotype or not. If present, value must be "Yes" or "No".</span>
       </div>
       <dl>
          <dt>Example</dt>
          <dd>
-            <pre>`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`</pre>
+            <pre>`Yes`, `No`</pre>
          </dd>
       </dl>
       <div class="description">
@@ -5977,6 +6308,11 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#KVP</p>
+      <div class="comment">
+         <span class="markdown">Peak kilo voltage output of the X-Ray generator used.
+
+Shall be empty if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -5998,6 +6334,12 @@ This section provides details for each class and property defined by MorphoSourc
       <div class="comment">
          <span class="markdown">The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`41d 05' 54.03" S`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -6022,7 +6364,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#legacyMediaFileID</p>
       <div class="comment">
-         <span class="markdown">A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider.</span>
+         <span class="markdown">MorphoSource-specific unique ID identifier that was used to represent a Media in the now-defunct 1.0 version of the MorphoSource repository. Only present if Media was originally contributed to MorphoSource 1.0. Different from morphosource:ID identifier.</span>
       </div>
       <div class="description">
          <dl>
@@ -6048,7 +6390,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#legacyMediaGroupID</p>
       <div class="comment">
-         <span class="markdown">If the resource is contained in a Collection, this field identifies that Collection uniquely.</span>
+         <span class="markdown">MorphoSource-specific unique ID identifier that was used to group Media together in the now-defunct 1.0 version of the MorphoSource repository. In MorphoSource 1.0, Media groups were used to collect all media derived from the same Imaging Event. Media groups are no longer used, with media-to-media imaging and processing event relationships now being used instead to track hierarchical relationships between Media. Only present if Media was originally contributed to MorphoSource 1.0. Different from morphosource:ID identifier.</span>
       </div>
       <div class="description">
          <dl>
@@ -6280,6 +6622,12 @@ This section provides details for each class and property defined by MorphoSourc
       <div class="comment">
          <span class="markdown">The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`121d 10' 34" W`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -6309,6 +6657,32 @@ This section provides details for each class and property defined by MorphoSourc
             <dd>
                <a href="#Media"
                   title="https://www.morphosource.org/terms/morphosource#Media">Media</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="material">
+      <h3>Material<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#material</p>
+      <div class="comment">
+         <span class="markdown">Material(s) from which an object is made. It is preferred to use morphosource:aatMaterial when it is possible to express materials using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom material values not listed in the Getty AAT controlled vocabulary.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://purl.org/dc/terms/medium" title="http://purl.org/dc/terms/medium">Medium</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CulturalHeritageObject"
+                  title="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">Cultural Heritage Object</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -6430,34 +6804,8 @@ This section provides details for each class and property defined by MorphoSourc
             <dt>has sub-properties</dt>
             <dd>
                <a href="#material"
-                  title="https://www.morphosource.org/terms/morphosource#material">Medium</a>
+                  title="https://www.morphosource.org/terms/morphosource#material">Material</a>
                <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="material">
-      <h3>Medium<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#material</p>
-      <div class="comment">
-         <span class="markdown">The material or physical carrier of the resource.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#http://purl.org/dc/terms/medium" title="http://purl.org/dc/terms/medium">Medium</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CulturalHeritageObject"
-                  title="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject">Cultural Heritage Object</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -6493,8 +6841,14 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#modality3D</p>
       <div class="comment">
-         <span class="markdown">Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography.</span>
+         <span class="markdown">The list of imaging modalities that a device is capable of using when imaging objects. Despite the name, this can include non-3D imaging event modalities. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality).</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -6617,6 +6971,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#projections</p>
+      <div class="comment">
+         <span class="markdown">Number of images at distinct angles used to create a 3D image.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -6641,6 +6998,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#rotationNumber</p>
+      <div class="comment">
+         <span class="markdown">Ratio of the Table Feed per Rotation (DICOM 0018,9310) to the Total Collimation Width (DICOM 0018,9307).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -6684,12 +7044,12 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#numericTime</p>
       <div class="comment">
-         <span class="markdown">The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name ("Precambrian") attributable to the stratigraphic horizon from which the cataloged item was collected.</span>
+         <span class="markdown">Free text numeric description of the absolute or specific chronological age of the physical object.</span>
       </div>
       <dl>
          <dt>Example</dt>
          <dd>
-            <pre>`Phanerozoic`, `Proterozoic`</pre>
+            <pre>`20 MYA`,`4th Century`,`1142 C.E.`</pre>
          </dd>
       </dl>
       <div class="description">
@@ -6749,6 +7109,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#opticalMagnification</p>
+      <div class="comment">
+         <span class="markdown">Whether optical magnification is used or not. This property is only for indicating optical magnification specifically, and is different from geometric magnification. If present, value must be "Yes" or "No".</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Yes`, `No`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -6767,6 +7136,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#organizationID</p>
+      <div class="comment">
+         <span class="markdown">MorphoSource-specific unique ID identifier for the provider Organization (museum, institution, or laboratory) responsible for managing the physical object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -6829,6 +7201,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#originalLocation</p>
+      <div class="comment">
+         <span class="markdown">Free text description of the original location where the physical object was created, produced, fossilized, or otherwise came into being.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -6920,6 +7295,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#periodicTime</p>
+      <div class="comment">
+         <span class="markdown">Free text description of the time period associated with the production or creation of the physical object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -6984,6 +7362,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#phaseContrast</p>
+      <div class="comment">
+         <span class="markdown">Whether phase contrast of X-Ray beam - in other words, modulating the beam between higher and lower energies to increase contrast between materials - is used or not. If present, value must be "Yes" or "No".</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Yes`, `No`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7021,7 +7408,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#photographicReference</p>
       <div class="comment">
-         <span class="markdown">A reference photograph image, usually used to represent and record the object at the time of original scanning.</span>
+         <span class="markdown">A reference photograph image, often used to represent and record the object at the initial time of scanning.</span>
       </div>
       <div class="description">
          <dl>
@@ -7094,6 +7481,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration</p>
+      <div class="comment">
+         <span class="markdown">The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. Value must be from Pixel Spacing Calibration Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType).</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Geometry`, `Fiducial`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -7108,6 +7504,12 @@ This section provides details for each class and property defined by MorphoSourc
                   title="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">CT Image Series Imaging Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PixelSpacingCalibrationType"
+                  title="https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType">Pixel Spacing Calibration Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -7118,6 +7520,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType</p>
+      <div class="comment">
+         <span class="markdown">The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. See Section 10.7.1.2.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -7208,6 +7613,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#power</p>
+      <div class="comment">
+         <span class="markdown">Power in kW to the X-Ray generator.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -7323,6 +7731,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#provenanceDate</p>
+      <div class="comment">
+         <span class="markdown">Date the physical object was collected, excavated, or discovered. Values must be in MM/DD/YYYY date format.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`01/01/1985`, `12/30/2021`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7342,7 +7759,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#provenanceDetails</p>
       <div class="comment">
-         <span class="markdown">A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</span>
+         <span class="markdown">A statement detailing production, discovery, and/or ownership, describing the initial production/discovery context and listing any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</span>
       </div>
       <div class="description">
          <dl>
@@ -7367,6 +7784,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#provenanceLocation</p>
+      <div class="comment">
+         <span class="markdown">Free text description of the location from which the physical object was collected, excavated, or discovered.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7385,6 +7805,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#provenanceName</p>
+      <div class="comment">
+         <span class="markdown">Name of the collection or excavation event, if applicable and available.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7534,7 +7957,7 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#rightsHolder</p>
       <div class="comment">
-         <span class="markdown">A list of legal owners of the resource.</span>
+         <span class="markdown">List of holders of intellectual property rights (copyright or license-based) for the Media.</span>
       </div>
       <div class="description">
          <dl>
@@ -7697,6 +8120,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#shadingCorrection</p>
+      <div class="comment">
+         <span class="markdown">Whether shading correction calibration is used or not. If present, value must be "Yes" or "No".</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Yes`, `No`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7733,6 +8165,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#shortTitle</p>
+      <div class="comment">
+         <span class="markdown">Title or short description of an object. For MorphoSource records, value is used as part of the full title for a Cultural Heritage Object record.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7827,6 +8262,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#SliceThickness</p>
+      <div class="comment">
+         <span class="markdown">Nominal slice thickness, in mm.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -7932,6 +8370,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#SpiralPitchFactor</p>
+      <div class="comment">
+         <span class="markdown">Ratio of the Table Feed per Rotation (0018,9310) to the Total Collimation Width (0018,9307).</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -8069,6 +8510,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#surroundingMaterial</p>
+      <div class="comment">
+         <span class="markdown">Wedge, or the material surrounding and/or enveloping the focal object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -8111,6 +8555,15 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#targetMaterial</p>
+      <div class="comment">
+         <span class="markdown">The primary material in the anode of the X-Ray source.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`tungsten`, `molybdenum`, `copper`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -8135,12 +8588,27 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#targetType</p>
+      <div class="comment">
+         <span class="markdown">Type of the anode of the X-Ray source. Value must be from the X-Ray Target Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayTargetType).</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>`Reflection`,`Transmission`</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#CTImageSeriesImagingEvent"
                   title="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent">CT Image Series Imaging Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#XRayTargetType"
+                  title="https://www.morphosource.org/terms/morphosource#XRayTargetType">X-Ray Target Type</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -8153,6 +8621,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#taxonomyID</p>
+      <div class="comment">
+         <span class="markdown">Morphosource-specific ID of Taxonomy record for taxonomic name attributed to the Biological Specimen.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -8413,6 +8884,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#voltage</p>
+      <div class="comment">
+         <span class="markdown">Peak kilo voltage output of the X-Ray generator used.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
@@ -8437,12 +8911,12 @@ This section provides details for each class and property defined by MorphoSourc
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#vouchered</p>
       <div class="comment">
-         <span class="markdown">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</span>
+         <span class="markdown">Whether the specimen is vouchered or not, or in other words, whether the physical specimen object exists and is preserved and maintained in an accessible collection. Value must be "Yes" or "No".</span>
       </div>
       <dl>
          <dt>Example</dt>
          <dd>
-            <pre>`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`</pre>
+            <pre>`Yes`, `No`</pre>
          </dd>
       </dl>
       <div class="description">
@@ -8510,6 +8984,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/healthcarevocab/v1#XRayTubeCurrent</p>
+      <div class="comment">
+         <span class="markdown">X-Ray Tube Current in mA. Required if Exposure (0018,1152) is not present. May be present otherwise.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
@@ -8528,6 +9005,9 @@ This section provides details for each class and property defined by MorphoSourc
       </h3>
       <p>
          <strong>IRI:</strong> https://www.morphosource.org/terms/morphosource#xrayTubeType</p>
+      <div class="comment">
+         <span class="markdown">Free text describing type of X-Ray tube, possibly including brand and/or model of tube.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
