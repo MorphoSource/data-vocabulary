@@ -679,6 +679,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Date Modified"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#date_modified"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/provenance",
@@ -1889,6 +1892,9 @@
   "@id" : "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
@@ -2021,6 +2027,9 @@
   "@id" : "http://www.w3.org/2003/12/exif/ns#tagNumber",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#broader",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -2062,6 +2071,16 @@
     "@value" : "MorphoSource Terms Vocabulary"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Area",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Area (single or tiled detector)"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2076,6 +2095,24 @@
     "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#BornDigital",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Born Digital refers to digital content that is created and stored in digital format from the outset. Born-digital content includes digital photos, videos, documents, and other types of digital media."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Born Digital"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "BD"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2084,6 +2121,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ConfocalImageStacking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Confocal Image Stacking is an imaging technique that uses a series of images taken at different depths to create a 3D image of an object. By focusing a laser beam on a specific point in the object and measuring the reflected light, confocal microscopy can create high-resolution 3D images of cells and tissues."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Confocal Image Stacking"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Confocal"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject",
@@ -2114,6 +2169,36 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Direct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Direct (X-Ray photoconductor)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Female",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Female"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Fiducial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fiducial"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#FileSet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2126,6 +2211,46 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/works#Work"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Film",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Film (Scanned film/screen)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geometry"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Gynandromorph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gynandromorph"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Hermaphrodite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hermaphrodite"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ID",
@@ -2150,6 +2275,20 @@
     "@value" : "ID"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ImageModality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Modality used to create 3D, 2D, or AV images. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific image modalities used to describe imaging of media in MorphoSource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Image Modality"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2162,6 +2301,88 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/works#Work"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Infrared",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Infrared imaging is an imaging technique that uses infrared radiation to create images of objects. Infrared imaging can be used to detect and analyze heat signatures, as well as to create detailed images of objects and structures that are difficult to see with visible light."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Infrared"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Infrared"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#LaserAidedProfiling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Laser Aided Profiling (LAP) is an imaging technique that uses a laser beam to create a 3D image of an object's surface. LAP can be used to create high-resolution, accurate models of complex shapes and structures, making it useful in manufacturing and other industries."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Laser Aided Profiling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "LAP"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#LaserScan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Laser Scan is an imaging technique that uses laser beams to create a 3D image of an object's surface. Laser scans are commonly used in industrial design and manufacturing to create accurate models of parts and components."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Laser Scan"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Laser"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Magnetic Resonance Imaging (MRI) is a non-invasive imaging technique that uses a strong magnetic field and radio waves to produce detailed images of the body's internal structures. MRI is widely used in medical diagnosis and research, especially for imaging soft tissues like the brain, spinal cord, and organs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Magnetic Resonance Imaging (MRI)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "MRI"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Male",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Male"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Media",
@@ -2178,6 +2399,42 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Computed Tomography (CT/microCT) is a non-invasive imaging technique that uses X-rays to produce cross-sectional images of an object. It involves rotating an X-ray source and detector around the object, collecting data that is processed by a computer to create a 3D image. CT is widely used in medical imaging, as well as in materials science, engineering, and geology to visualize the internal structure of objects. MicroCT is a variation of CT that uses higher resolution X-rays to produce images of smaller objects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Computed Tomography (CT/microCT)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "CT"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#NeutronComputedTomography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Neutron Computed Tomography (NCT) is an imaging technique that uses neutrons instead of X-rays to create cross-sectional images of an object. NCT is particularly useful for imaging materials that are difficult to penetrate with X-rays, such as ceramics and rocks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Neutron Computed Tomography (NCT)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "NCT"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2192,6 +2449,24 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Photogrammetry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Photogrammetry is the use of photography to measure and map the physical properties of an object. Photogrammetry can be used to create 3D models of objects and structures from 2D photographs, allowing for accurate measurements and analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photogrammetry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Photogram"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2200,6 +2475,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Photography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Photography is the use of light to capture images of objects and scenes. Photography can be used for a wide range of purposes, from capturing memories to documenting scientific observations and creating works of art."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photography"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Photo"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent",
@@ -2226,6 +2519,35 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of correction for the effect of geometric magnification or calibration against an object of known size, as described in the Enumerated Values of the DICOM Pixel Spacing Calibration Type attribute (0028,0A02). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe the pixel calibration type for relevant Image Events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Spacing Calibration Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PositronEmissionTomography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Positron Emission Tomography (PET) is a non-invasive imaging technique that uses small amounts of radioactive tracers to visualize metabolic processes in the body. The tracer is injected into the body and collects in areas of high metabolic activity, emitting positrons that are detected by the PET scanner. PET is widely used in medical diagnosis and research, especially for imaging cancer, heart disease, and neurological disorders."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Positron Emission Tomography (PET)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "PET"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2240,6 +2562,62 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reflectance Transformation Imaging (RTI) is an imaging technique that uses a series of photographs taken under different lighting conditions to create a detailed 3D model of an object's surface. RTI is particularly useful for analyzing the surface texture and details of objects such as artwork and historical artifacts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reflectance Transformation Imaging"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "RTI"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Reflection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayTargetType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reflection"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Electron Microscopy (SEM) is an imaging technique that uses a beam of electrons to create high-resolution images of the surface of an object. SEM can produce images with extremely high magnification and resolution, making it useful for analyzing the microstructure of materials and biological specimens."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Electron Microscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "SEM"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Scintillator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scintillator (Phosphor used)"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2248,6 +2626,208 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionScan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sequential Section Scan is an imaging technique that involves cutting an object into thin sections, then imaging each section individually to create a 3D image. This technique is commonly used in medical imaging and histology to visualize the internal structure of tissues and organs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequential Section Scan"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Section"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Sex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A categorical description or identification pertaining an organism's sex. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific sex categorizations and identification statements used to describe Biological Specimens."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sex"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Single Photon Emission Computed Tomography (SPECT) is a non-invasive imaging technique that uses a small amount of radioactive tracer to produce 3D images of the body's internal structures. The tracer is injected into the body and emits gamma rays, which are detected by a SPECT scanner. SPECT is used in medical diagnosis and research, especially for imaging the brain, heart, and bones."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Single Photon Emission Computed Tomography (SPECT)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "SPECT"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Slot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Slot (scanned slot, slit, or spot)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Storage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Storage (Storage Phosphor)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#StructuredLight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Structured Light is an imaging technique that uses a pattern of light projected onto an object to create a 3D image. By analyzing how the pattern of light is distorted by the object, structured light can create high-resolution, accurate 3D models of complex shapes and structures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Structured Light"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "StrLight"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SynchrotronImaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Synchrotron Imaging is a type of X-ray imaging that uses synchrotron radiation, which is produced when high-energy particles are accelerated to near the speed of light. Synchrotron imaging can produce high-resolution, 3D images of a wide range of materials and structures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Synchrotron Imaging"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Synchro"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Transmission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#XRayTargetType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transmission"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Undetermined",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Undetermined"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Unknowable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unknowable"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Video",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Video is a digital recording of moving images and sound. It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Video"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Video"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#XRay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray imaging is an imaging technique that uses X-rays to create images of the internal structures of an object. X-ray imaging is widely used in medical diagnosis and research, as well as in materials science and other fields to visualize the internal structure of objects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "XRay"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical configuration of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Configuration attribute (0018,7005). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector configuration for relevant Image Events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Detector Configuration"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#XRayDetectorType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Type attribute (0018,7004). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector type for relevant Image Events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Detector Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#XRayTargetType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of X-Ray target used to acquire an image for CT, MRI, and other related modalities. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe target type for relevant Image Events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-Ray Target Type"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#aatAttribute",
@@ -2697,6 +3277,9 @@
     "@language" : "en",
     "@value" : "Data Manager"
   } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#date_modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#datingMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -3433,6 +4016,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Modality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModality"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType",

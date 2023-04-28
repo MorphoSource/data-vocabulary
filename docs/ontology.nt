@@ -82,8 +82,14 @@
 # http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme
 <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2003/12/exif/ns#tagNumber
 <http://www.w3.org/2003/12/exif/ns#tagNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2004/02/skos/core#broader
 <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -340,6 +346,7 @@
 # 
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.morphosource.org/terms/morphosource#date_modified> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
@@ -1065,6 +1072,9 @@
 <https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
 <https://www.morphosource.org/terms/morphosource#dataManager> <http://www.w3.org/2000/01/rdf-schema#label> "Data Manager"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#date_modified
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # https://www.morphosource.org/terms/morphosource#datingMethod
 <https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
@@ -1392,6 +1402,7 @@
 # https://www.morphosource.org/terms/morphosource#modality3D
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.morphosource.org/terms/morphosource#ImageModality> .
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/2000/01/rdf-schema#comment> "Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography."@en .
 <https://www.morphosource.org/terms/morphosource#modality3D> <http://www.w3.org/2000/01/rdf-schema#label> "Modality"@en .
 # 
@@ -1877,6 +1888,14 @@
 <https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequence of binary data accompanied by technical metadata."@en .
 <https://www.morphosource.org/terms/morphosource#FileSet> <http://www.w3.org/2000/01/rdf-schema#label> "FileSet"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#ImageModality
+<https://www.morphosource.org/terms/morphosource#ImageModality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#ImageModality> <http://www.w3.org/2000/01/rdf-schema#comment> "Modality used to create 3D, 2D, or AV images. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific image modalities used to describe imaging of media in MorphoSource."@en .
+<https://www.morphosource.org/terms/morphosource#ImageModality> <http://www.w3.org/2000/01/rdf-schema#label> "Image Modality"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ImageModalityType
+<https://www.morphosource.org/terms/morphosource#ImageModalityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://www.morphosource.org/terms/morphosource#ImagingEvent
 <https://www.morphosource.org/terms/morphosource#ImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#ImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
@@ -1911,6 +1930,11 @@
 <https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical object, usually of scholarly interest, that is imaged to create media."@en .
 <https://www.morphosource.org/terms/morphosource#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Object"@en .
 # 
+# https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType
+<https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of correction for the effect of geometric magnification or calibration against an object of known size, as described in the Enumerated Values of the DICOM Pixel Spacing Calibration Type attribute (0028,0A02). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe the pixel calibration type for relevant Image Events."@en .
+<https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Spacing Calibration Type"@en .
+# 
 # https://www.morphosource.org/terms/morphosource#ProcessingEvent
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#ProcessingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://pcdm.org/works#Work> .
@@ -1921,6 +1945,26 @@
 <https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
 <https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Sequential Section Imaging Event"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Sex
+<https://www.morphosource.org/terms/morphosource#Sex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#Sex> <http://www.w3.org/2000/01/rdf-schema#comment> "A categorical description or identification pertaining an organism's sex. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific sex categorizations and identification statements used to describe Biological Specimens."@en .
+<https://www.morphosource.org/terms/morphosource#Sex> <http://www.w3.org/2000/01/rdf-schema#label> "Sex"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration
+<https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical configuration of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Configuration attribute (0018,7005). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector configuration for relevant Image Events."@en .
+<https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Detector Configuration"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#XRayDetectorType
+<https://www.morphosource.org/terms/morphosource#XRayDetectorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#XRayDetectorType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Type attribute (0018,7004). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector type for relevant Image Events."@en .
+<https://www.morphosource.org/terms/morphosource#XRayDetectorType> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Detector Type"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#XRayTargetType
+<https://www.morphosource.org/terms/morphosource#XRayTargetType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.morphosource.org/terms/morphosource#XRayTargetType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of X-Ray target used to acquire an image for CT, MRI, and other related modalities. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe target type for relevant Image Events."@en .
+<https://www.morphosource.org/terms/morphosource#XRayTargetType> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Target Type"@en .
 # 
 # 
 # 
@@ -1937,6 +1981,219 @@
 # 
 # http://www.getty.edu/research/tools/vocabulary/tgn/index.html
 <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://www.morphosource.org/terms/morphosource#Area
+<https://www.morphosource.org/terms/morphosource#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration> .
+<https://www.morphosource.org/terms/morphosource#Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area (single or tiled detector)"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#BornDigital
+<https://www.morphosource.org/terms/morphosource#BornDigital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#BornDigital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#BornDigital> <http://www.w3.org/2000/01/rdf-schema#comment> "Born Digital refers to digital content that is created and stored in digital format from the outset. Born-digital content includes digital photos, videos, documents, and other types of digital media."@en .
+<https://www.morphosource.org/terms/morphosource#BornDigital> <http://www.w3.org/2000/01/rdf-schema#label> "Born Digital"@en .
+<https://www.morphosource.org/terms/morphosource#BornDigital> <http://www.w3.org/2004/02/skos/core#altLabel> "BD"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ConfocalImageStacking
+<https://www.morphosource.org/terms/morphosource#ConfocalImageStacking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#ConfocalImageStacking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#ConfocalImageStacking> <http://www.w3.org/2000/01/rdf-schema#comment> "Confocal Image Stacking is an imaging technique that uses a series of images taken at different depths to create a 3D image of an object. By focusing a laser beam on a specific point in the object and measuring the reflected light, confocal microscopy can create high-resolution 3D images of cells and tissues."@en .
+<https://www.morphosource.org/terms/morphosource#ConfocalImageStacking> <http://www.w3.org/2000/01/rdf-schema#label> "Confocal Image Stacking"@en .
+<https://www.morphosource.org/terms/morphosource#ConfocalImageStacking> <http://www.w3.org/2004/02/skos/core#altLabel> "Confocal"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Direct
+<https://www.morphosource.org/terms/morphosource#Direct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Direct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayDetectorType> .
+<https://www.morphosource.org/terms/morphosource#Direct> <http://www.w3.org/2000/01/rdf-schema#label> "Direct (X-Ray photoconductor)"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Female
+<https://www.morphosource.org/terms/morphosource#Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Female> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#Sex> .
+<https://www.morphosource.org/terms/morphosource#Female> <http://www.w3.org/2000/01/rdf-schema#label> "Female"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Fiducial
+<https://www.morphosource.org/terms/morphosource#Fiducial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Fiducial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType> .
+<https://www.morphosource.org/terms/morphosource#Fiducial> <http://www.w3.org/2000/01/rdf-schema#label> "Fiducial"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Film
+<https://www.morphosource.org/terms/morphosource#Film> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Film> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayDetectorType> .
+<https://www.morphosource.org/terms/morphosource#Film> <http://www.w3.org/2000/01/rdf-schema#label> "Film (Scanned film/screen)"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Geometry
+<https://www.morphosource.org/terms/morphosource#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType> .
+<https://www.morphosource.org/terms/morphosource#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Gynandromorph
+<https://www.morphosource.org/terms/morphosource#Gynandromorph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Gynandromorph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#Sex> .
+<https://www.morphosource.org/terms/morphosource#Gynandromorph> <http://www.w3.org/2000/01/rdf-schema#label> "Gynandromorph"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Hermaphrodite
+<https://www.morphosource.org/terms/morphosource#Hermaphrodite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Hermaphrodite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#Sex> .
+<https://www.morphosource.org/terms/morphosource#Hermaphrodite> <http://www.w3.org/2000/01/rdf-schema#label> "Hermaphrodite"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Infrared
+<https://www.morphosource.org/terms/morphosource#Infrared> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Infrared> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#Infrared> <http://www.w3.org/2000/01/rdf-schema#comment> "Infrared imaging is an imaging technique that uses infrared radiation to create images of objects. Infrared imaging can be used to detect and analyze heat signatures, as well as to create detailed images of objects and structures that are difficult to see with visible light."@en .
+<https://www.morphosource.org/terms/morphosource#Infrared> <http://www.w3.org/2000/01/rdf-schema#label> "Infrared"@en .
+<https://www.morphosource.org/terms/morphosource#Infrared> <http://www.w3.org/2004/02/skos/core#altLabel> "Infrared"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#LaserAidedProfiling
+<https://www.morphosource.org/terms/morphosource#LaserAidedProfiling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#LaserAidedProfiling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#LaserAidedProfiling> <http://www.w3.org/2000/01/rdf-schema#comment> "Laser Aided Profiling (LAP) is an imaging technique that uses a laser beam to create a 3D image of an object's surface. LAP can be used to create high-resolution, accurate models of complex shapes and structures, making it useful in manufacturing and other industries."@en .
+<https://www.morphosource.org/terms/morphosource#LaserAidedProfiling> <http://www.w3.org/2000/01/rdf-schema#label> "Laser Aided Profiling"@en .
+<https://www.morphosource.org/terms/morphosource#LaserAidedProfiling> <http://www.w3.org/2004/02/skos/core#altLabel> "LAP"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#LaserScan
+<https://www.morphosource.org/terms/morphosource#LaserScan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#LaserScan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#LaserScan> <http://www.w3.org/2000/01/rdf-schema#comment> "Laser Scan is an imaging technique that uses laser beams to create a 3D image of an object's surface. Laser scans are commonly used in industrial design and manufacturing to create accurate models of parts and components."@en .
+<https://www.morphosource.org/terms/morphosource#LaserScan> <http://www.w3.org/2000/01/rdf-schema#label> "Laser Scan"@en .
+<https://www.morphosource.org/terms/morphosource#LaserScan> <http://www.w3.org/2004/02/skos/core#altLabel> "Laser"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging
+<https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging> <http://www.w3.org/2000/01/rdf-schema#comment> "Magnetic Resonance Imaging (MRI) is a non-invasive imaging technique that uses a strong magnetic field and radio waves to produce detailed images of the body's internal structures. MRI is widely used in medical diagnosis and research, especially for imaging soft tissues like the brain, spinal cord, and organs."@en .
+<https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging> <http://www.w3.org/2000/01/rdf-schema#label> "Magnetic Resonance Imaging (MRI)"@en .
+<https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging> <http://www.w3.org/2004/02/skos/core#altLabel> "MRI"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Male
+<https://www.morphosource.org/terms/morphosource#Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Male> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#Sex> .
+<https://www.morphosource.org/terms/morphosource#Male> <http://www.w3.org/2000/01/rdf-schema#label> "Male"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography
+<https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography> <http://www.w3.org/2000/01/rdf-schema#comment> "X-Ray Computed Tomography (CT/microCT) is a non-invasive imaging technique that uses X-rays to produce cross-sectional images of an object. It involves rotating an X-ray source and detector around the object, collecting data that is processed by a computer to create a 3D image. CT is widely used in medical imaging, as well as in materials science, engineering, and geology to visualize the internal structure of objects. MicroCT is a variation of CT that uses higher resolution X-rays to produce images of smaller objects."@en .
+<https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray Computed Tomography (CT/microCT)"@en .
+<https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography> <http://www.w3.org/2004/02/skos/core#altLabel> "CT"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#NeutronComputedTomography
+<https://www.morphosource.org/terms/morphosource#NeutronComputedTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#NeutronComputedTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#NeutronComputedTomography> <http://www.w3.org/2000/01/rdf-schema#comment> "Neutron Computed Tomography (NCT) is an imaging technique that uses neutrons instead of X-rays to create cross-sectional images of an object. NCT is particularly useful for imaging materials that are difficult to penetrate with X-rays, such as ceramics and rocks."@en .
+<https://www.morphosource.org/terms/morphosource#NeutronComputedTomography> <http://www.w3.org/2000/01/rdf-schema#label> "Neutron Computed Tomography (NCT)"@en .
+<https://www.morphosource.org/terms/morphosource#NeutronComputedTomography> <http://www.w3.org/2004/02/skos/core#altLabel> "NCT"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Photogrammetry
+<https://www.morphosource.org/terms/morphosource#Photogrammetry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Photogrammetry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#Photogrammetry> <http://www.w3.org/2000/01/rdf-schema#comment> "Photogrammetry is the use of photography to measure and map the physical properties of an object. Photogrammetry can be used to create 3D models of objects and structures from 2D photographs, allowing for accurate measurements and analysis."@en .
+<https://www.morphosource.org/terms/morphosource#Photogrammetry> <http://www.w3.org/2000/01/rdf-schema#label> "Photogrammetry"@en .
+<https://www.morphosource.org/terms/morphosource#Photogrammetry> <http://www.w3.org/2004/02/skos/core#altLabel> "Photogram"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Photography
+<https://www.morphosource.org/terms/morphosource#Photography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Photography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#Photography> <http://www.w3.org/2000/01/rdf-schema#comment> "Photography is the use of light to capture images of objects and scenes. Photography can be used for a wide range of purposes, from capturing memories to documenting scientific observations and creating works of art."@en .
+<https://www.morphosource.org/terms/morphosource#Photography> <http://www.w3.org/2000/01/rdf-schema#label> "Photography"@en .
+<https://www.morphosource.org/terms/morphosource#Photography> <http://www.w3.org/2004/02/skos/core#altLabel> "Photo"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#PositronEmissionTomography
+<https://www.morphosource.org/terms/morphosource#PositronEmissionTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#PositronEmissionTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#PositronEmissionTomography> <http://www.w3.org/2000/01/rdf-schema#comment> "Positron Emission Tomography (PET) is a non-invasive imaging technique that uses small amounts of radioactive tracers to visualize metabolic processes in the body. The tracer is injected into the body and collects in areas of high metabolic activity, emitting positrons that are detected by the PET scanner. PET is widely used in medical diagnosis and research, especially for imaging cancer, heart disease, and neurological disorders."@en .
+<https://www.morphosource.org/terms/morphosource#PositronEmissionTomography> <http://www.w3.org/2000/01/rdf-schema#label> "Positron Emission Tomography (PET)"@en .
+<https://www.morphosource.org/terms/morphosource#PositronEmissionTomography> <http://www.w3.org/2004/02/skos/core#altLabel> "PET"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging
+<https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging> <http://www.w3.org/2000/01/rdf-schema#comment> "Reflectance Transformation Imaging (RTI) is an imaging technique that uses a series of photographs taken under different lighting conditions to create a detailed 3D model of an object's surface. RTI is particularly useful for analyzing the surface texture and details of objects such as artwork and historical artifacts."@en .
+<https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging> <http://www.w3.org/2000/01/rdf-schema#label> "Reflectance Transformation Imaging"@en .
+<https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging> <http://www.w3.org/2004/02/skos/core#altLabel> "RTI"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Reflection
+<https://www.morphosource.org/terms/morphosource#Reflection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Reflection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayTargetType> .
+<https://www.morphosource.org/terms/morphosource#Reflection> <http://www.w3.org/2000/01/rdf-schema#label> "Reflection"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy
+<https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy> <http://www.w3.org/2000/01/rdf-schema#comment> "Scanning Electron Microscopy (SEM) is an imaging technique that uses a beam of electrons to create high-resolution images of the surface of an object. SEM can produce images with extremely high magnification and resolution, making it useful for analyzing the microstructure of materials and biological specimens."@en .
+<https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy> <http://www.w3.org/2000/01/rdf-schema#label> "Scanning Electron Microscopy"@en .
+<https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy> <http://www.w3.org/2004/02/skos/core#altLabel> "SEM"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Scintillator
+<https://www.morphosource.org/terms/morphosource#Scintillator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Scintillator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayDetectorType> .
+<https://www.morphosource.org/terms/morphosource#Scintillator> <http://www.w3.org/2000/01/rdf-schema#label> "Scintillator (Phosphor used)"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#SequentialSectionScan
+<https://www.morphosource.org/terms/morphosource#SequentialSectionScan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#SequentialSectionScan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#SequentialSectionScan> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequential Section Scan is an imaging technique that involves cutting an object into thin sections, then imaging each section individually to create a 3D image. This technique is commonly used in medical imaging and histology to visualize the internal structure of tissues and organs."@en .
+<https://www.morphosource.org/terms/morphosource#SequentialSectionScan> <http://www.w3.org/2000/01/rdf-schema#label> "Sequential Section Scan"@en .
+<https://www.morphosource.org/terms/morphosource#SequentialSectionScan> <http://www.w3.org/2004/02/skos/core#altLabel> "Section"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography
+<https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography> <http://www.w3.org/2000/01/rdf-schema#comment> "Single Photon Emission Computed Tomography (SPECT) is a non-invasive imaging technique that uses a small amount of radioactive tracer to produce 3D images of the body's internal structures. The tracer is injected into the body and emits gamma rays, which are detected by a SPECT scanner. SPECT is used in medical diagnosis and research, especially for imaging the brain, heart, and bones."@en .
+<https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography> <http://www.w3.org/2000/01/rdf-schema#label> "Single Photon Emission Computed Tomography (SPECT)"@en .
+<https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography> <http://www.w3.org/2004/02/skos/core#altLabel> "SPECT"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Slot
+<https://www.morphosource.org/terms/morphosource#Slot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Slot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration> .
+<https://www.morphosource.org/terms/morphosource#Slot> <http://www.w3.org/2000/01/rdf-schema#label> "Slot (scanned slot, slit, or spot)"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Storage
+<https://www.morphosource.org/terms/morphosource#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayDetectorType> .
+<https://www.morphosource.org/terms/morphosource#Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage (Storage Phosphor)"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#StructuredLight
+<https://www.morphosource.org/terms/morphosource#StructuredLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#StructuredLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#StructuredLight> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured Light is an imaging technique that uses a pattern of light projected onto an object to create a 3D image. By analyzing how the pattern of light is distorted by the object, structured light can create high-resolution, accurate 3D models of complex shapes and structures."@en .
+<https://www.morphosource.org/terms/morphosource#StructuredLight> <http://www.w3.org/2000/01/rdf-schema#label> "Structured Light"@en .
+<https://www.morphosource.org/terms/morphosource#StructuredLight> <http://www.w3.org/2004/02/skos/core#altLabel> "StrLight"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#SynchrotronImaging
+<https://www.morphosource.org/terms/morphosource#SynchrotronImaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#SynchrotronImaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#SynchrotronImaging> <http://www.w3.org/2000/01/rdf-schema#comment> "Synchrotron Imaging is a type of X-ray imaging that uses synchrotron radiation, which is produced when high-energy particles are accelerated to near the speed of light. Synchrotron imaging can produce high-resolution, 3D images of a wide range of materials and structures."@en .
+<https://www.morphosource.org/terms/morphosource#SynchrotronImaging> <http://www.w3.org/2000/01/rdf-schema#label> "Synchrotron Imaging"@en .
+<https://www.morphosource.org/terms/morphosource#SynchrotronImaging> <http://www.w3.org/2004/02/skos/core#altLabel> "Synchro"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Transmission
+<https://www.morphosource.org/terms/morphosource#Transmission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Transmission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#XRayTargetType> .
+<https://www.morphosource.org/terms/morphosource#Transmission> <http://www.w3.org/2000/01/rdf-schema#label> "Transmission"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Undetermined
+<https://www.morphosource.org/terms/morphosource#Undetermined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Undetermined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#Sex> .
+<https://www.morphosource.org/terms/morphosource#Undetermined> <http://www.w3.org/2000/01/rdf-schema#label> "Undetermined"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Unknowable
+<https://www.morphosource.org/terms/morphosource#Unknowable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Unknowable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#Sex> .
+<https://www.morphosource.org/terms/morphosource#Unknowable> <http://www.w3.org/2000/01/rdf-schema#label> "Unknowable"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#Video
+<https://www.morphosource.org/terms/morphosource#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#Video> <http://www.w3.org/2000/01/rdf-schema#comment> "Video is a digital recording of moving images and sound. It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats."@en .
+<https://www.morphosource.org/terms/morphosource#Video> <http://www.w3.org/2000/01/rdf-schema#label> "Video"@en .
+<https://www.morphosource.org/terms/morphosource#Video> <http://www.w3.org/2004/02/skos/core#altLabel> "Video"@en .
+# 
+# https://www.morphosource.org/terms/morphosource#XRay
+<https://www.morphosource.org/terms/morphosource#XRay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.morphosource.org/terms/morphosource#XRay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.morphosource.org/terms/morphosource#ImageModalityType> .
+<https://www.morphosource.org/terms/morphosource#XRay> <http://www.w3.org/2000/01/rdf-schema#comment> "X-Ray imaging is an imaging technique that uses X-rays to create images of the internal structures of an object. X-ray imaging is widely used in medical diagnosis and research, as well as in materials science and other fields to visualize the internal structure of objects."@en .
+<https://www.morphosource.org/terms/morphosource#XRay> <http://www.w3.org/2000/01/rdf-schema#label> "X-Ray"@en .
+<https://www.morphosource.org/terms/morphosource#XRay> <http://www.w3.org/2004/02/skos/core#altLabel> "XRay"@en .
 # 
 # 
 # 
