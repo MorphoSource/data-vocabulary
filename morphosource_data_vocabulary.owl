@@ -582,13 +582,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
         <owl:equivalentProperty rdf:resource="https://www.morphosource.org/terms/morphosource#date_modified"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
     </owl:ObjectProperty>
     
 
@@ -1647,7 +1640,18 @@
 
     <!-- https://www.morphosource.org/terms/morphosource#date_modified -->
 
-    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#date_modified"/>
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#date_modified">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
