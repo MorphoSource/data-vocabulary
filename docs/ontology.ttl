@@ -401,14 +401,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:ObjectProperty ;
-                                    owl:equivalentProperty :date_modified ;
-                                    rdfs:domain :Device ,
-                                                :FileSet ,
-                                                :ImagingEvent ,
-                                                :Media ,
-                                                :Organization ,
-                                                :PhysicalObject ,
-                                                :ProcessingEvent .
+                                    owl:equivalentProperty :date_modified .
 
 
 ###  http://purl.org/dc/terms/provenance
@@ -1213,7 +1206,17 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 
 ###  https://www.morphosource.org/terms/morphosource#date_modified
-:date_modified rdf:type owl:ObjectProperty .
+:date_modified rdf:type owl:ObjectProperty ;
+               rdfs:domain :Device ,
+                           :FileSet ,
+                           :ImagingEvent ,
+                           :Media ,
+                           :Organization ,
+                           :PhysicalObject ,
+                           :ProcessingEvent ;
+               <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+               rdfs:comment "Date on which the resource was changed."@en ;
+               rdfs:label "Date Modified"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#datingMethod

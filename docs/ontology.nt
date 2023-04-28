@@ -347,13 +347,6 @@
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.morphosource.org/terms/morphosource#date_modified> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
 # 
 # http://purl.org/dc/terms/provenance
 <http://purl.org/dc/terms/provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1074,6 +1067,16 @@
 # 
 # https://www.morphosource.org/terms/morphosource#date_modified
 <https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Device> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#FileSet> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ImagingEvent> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Media> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#Organization> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#PhysicalObject> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.morphosource.org/terms/morphosource#ProcessingEvent> .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#comment> "Date on which the resource was changed."@en .
+<https://www.morphosource.org/terms/morphosource#date_modified> <http://www.w3.org/2000/01/rdf-schema#label> "Date Modified"@en .
 # 
 # https://www.morphosource.org/terms/morphosource#datingMethod
 <https://www.morphosource.org/terms/morphosource#datingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

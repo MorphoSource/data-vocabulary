@@ -658,21 +658,6 @@
     "@language" : "en",
     "@value" : "Date on which the resource was changed."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Device"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
-  }, {
-    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/dc/terms/"
   } ],
@@ -3279,7 +3264,34 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#date_modified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date on which the resource was changed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Device"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date Modified"
+  } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#datingMethod",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
