@@ -185,9 +185,21 @@
     
 
 
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
     <!-- http://www.w3.org/2003/12/exif/ns#tagNumber -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/12/exif/ns#tagNumber"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
     
 
 
@@ -569,6 +581,7 @@
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
+        <owl:equivalentProperty rdf:resource="https://www.morphosource.org/terms/morphosource#date_modified"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
@@ -1632,6 +1645,12 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#date_modified -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#date_modified"/>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#datingMethod -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#datingMethod">
@@ -2172,6 +2191,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#modality3D">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModality"/>
         <rdfs:comment xml:lang="en">Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography.</rdfs:comment>
         <rdfs:label xml:lang="en">Modality</rdfs:label>
     </owl:ObjectProperty>
@@ -2968,6 +2988,21 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#ImageModality -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#ImageModality">
+        <rdfs:comment xml:lang="en">Modality used to create 3D, 2D, or AV images. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific image modalities used to describe imaging of media in MorphoSource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image Modality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ImageModalityType -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#ImagingEvent -->
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#ImagingEvent">
@@ -3026,6 +3061,15 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType">
+        <rdfs:comment xml:lang="en">A type of correction for the effect of geometric magnification or calibration against an object of known size, as described in the Enumerated Values of the DICOM Pixel Spacing Calibration Type attribute (0028,0A02). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe the pixel calibration type for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pixel Spacing Calibration Type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#ProcessingEvent -->
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#ProcessingEvent">
@@ -3041,6 +3085,42 @@
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent">
         <rdfs:subClassOf rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:label xml:lang="en">Sequential Section Imaging Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Sex -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#Sex">
+        <rdfs:comment xml:lang="en">A categorical description or identification pertaining an organism&apos;s sex. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific sex categorizations and identification statements used to describe Biological Specimens.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration">
+        <rdfs:comment xml:lang="en">Physical configuration of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Configuration attribute (0018,7005). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector configuration for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Detector Configuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#XRayDetectorType -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#XRayDetectorType">
+        <rdfs:comment xml:lang="en">Type of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Type attribute (0018,7004). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector type for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Detector Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#XRayTargetType -->
+
+    <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#XRayTargetType">
+        <rdfs:comment xml:lang="en">Type of X-Ray target used to acquire an image for CT, MRI, and other related modalities. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe target type for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Target Type</rdfs:label>
     </owl:Class>
     
 
@@ -3067,6 +3147,359 @@
     <!-- http://www.getty.edu/research/tools/vocabulary/tgn/index.html -->
 
     <owl:NamedIndividual rdf:about="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Area -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Area">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration"/>
+        <rdfs:label xml:lang="en">Area (single or tiled detector)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#BornDigital -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#BornDigital">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Born Digital refers to digital content that is created and stored in digital format from the outset. Born-digital content includes digital photos, videos, documents, and other types of digital media.</rdfs:comment>
+        <rdfs:label xml:lang="en">Born Digital</rdfs:label>
+        <skos:altLabel xml:lang="en">BD</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ConfocalImageStacking -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#ConfocalImageStacking">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Confocal Image Stacking is an imaging technique that uses a series of images taken at different depths to create a 3D image of an object. By focusing a laser beam on a specific point in the object and measuring the reflected light, confocal microscopy can create high-resolution 3D images of cells and tissues.</rdfs:comment>
+        <rdfs:label xml:lang="en">Confocal Image Stacking</rdfs:label>
+        <skos:altLabel xml:lang="en">Confocal</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Direct -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Direct">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Direct (X-Ray photoconductor)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Female -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Female">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#Sex"/>
+        <rdfs:label xml:lang="en">Female</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Fiducial -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Fiducial">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType"/>
+        <rdfs:label xml:lang="en">Fiducial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Film -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Film">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Film (Scanned film/screen)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Geometry -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Geometry">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType"/>
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Gynandromorph -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Gynandromorph">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#Sex"/>
+        <rdfs:label xml:lang="en">Gynandromorph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Hermaphrodite -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Hermaphrodite">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#Sex"/>
+        <rdfs:label xml:lang="en">Hermaphrodite</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Infrared -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Infrared">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Infrared imaging is an imaging technique that uses infrared radiation to create images of objects. Infrared imaging can be used to detect and analyze heat signatures, as well as to create detailed images of objects and structures that are difficult to see with visible light.</rdfs:comment>
+        <rdfs:label xml:lang="en">Infrared</rdfs:label>
+        <skos:altLabel xml:lang="en">Infrared</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#LaserAidedProfiling -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#LaserAidedProfiling">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Laser Aided Profiling (LAP) is an imaging technique that uses a laser beam to create a 3D image of an object&apos;s surface. LAP can be used to create high-resolution, accurate models of complex shapes and structures, making it useful in manufacturing and other industries.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Aided Profiling</rdfs:label>
+        <skos:altLabel xml:lang="en">LAP</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#LaserScan -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#LaserScan">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Laser Scan is an imaging technique that uses laser beams to create a 3D image of an object&apos;s surface. Laser scans are commonly used in industrial design and manufacturing to create accurate models of parts and components.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Scan</rdfs:label>
+        <skos:altLabel xml:lang="en">Laser</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Magnetic Resonance Imaging (MRI) is a non-invasive imaging technique that uses a strong magnetic field and radio waves to produce detailed images of the body&apos;s internal structures. MRI is widely used in medical diagnosis and research, especially for imaging soft tissues like the brain, spinal cord, and organs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Magnetic Resonance Imaging (MRI)</rdfs:label>
+        <skos:altLabel xml:lang="en">MRI</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Male -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Male">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#Sex"/>
+        <rdfs:label xml:lang="en">Male</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">X-Ray Computed Tomography (CT/microCT) is a non-invasive imaging technique that uses X-rays to produce cross-sectional images of an object. It involves rotating an X-ray source and detector around the object, collecting data that is processed by a computer to create a 3D image. CT is widely used in medical imaging, as well as in materials science, engineering, and geology to visualize the internal structure of objects. MicroCT is a variation of CT that uses higher resolution X-rays to produce images of smaller objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Computed Tomography (CT/microCT)</rdfs:label>
+        <skos:altLabel xml:lang="en">CT</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#NeutronComputedTomography -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#NeutronComputedTomography">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Neutron Computed Tomography (NCT) is an imaging technique that uses neutrons instead of X-rays to create cross-sectional images of an object. NCT is particularly useful for imaging materials that are difficult to penetrate with X-rays, such as ceramics and rocks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Neutron Computed Tomography (NCT)</rdfs:label>
+        <skos:altLabel xml:lang="en">NCT</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Photogrammetry -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Photogrammetry">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Photogrammetry is the use of photography to measure and map the physical properties of an object. Photogrammetry can be used to create 3D models of objects and structures from 2D photographs, allowing for accurate measurements and analysis.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photogrammetry</rdfs:label>
+        <skos:altLabel xml:lang="en">Photogram</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Photography -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Photography">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Photography is the use of light to capture images of objects and scenes. Photography can be used for a wide range of purposes, from capturing memories to documenting scientific observations and creating works of art.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photography</rdfs:label>
+        <skos:altLabel xml:lang="en">Photo</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#PositronEmissionTomography -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#PositronEmissionTomography">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Positron Emission Tomography (PET) is a non-invasive imaging technique that uses small amounts of radioactive tracers to visualize metabolic processes in the body. The tracer is injected into the body and collects in areas of high metabolic activity, emitting positrons that are detected by the PET scanner. PET is widely used in medical diagnosis and research, especially for imaging cancer, heart disease, and neurological disorders.</rdfs:comment>
+        <rdfs:label xml:lang="en">Positron Emission Tomography (PET)</rdfs:label>
+        <skos:altLabel xml:lang="en">PET</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Reflectance Transformation Imaging (RTI) is an imaging technique that uses a series of photographs taken under different lighting conditions to create a detailed 3D model of an object&apos;s surface. RTI is particularly useful for analyzing the surface texture and details of objects such as artwork and historical artifacts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reflectance Transformation Imaging</rdfs:label>
+        <skos:altLabel xml:lang="en">RTI</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Reflection -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Reflection">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayTargetType"/>
+        <rdfs:label xml:lang="en">Reflection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Scanning Electron Microscopy (SEM) is an imaging technique that uses a beam of electrons to create high-resolution images of the surface of an object. SEM can produce images with extremely high magnification and resolution, making it useful for analyzing the microstructure of materials and biological specimens.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scanning Electron Microscopy</rdfs:label>
+        <skos:altLabel xml:lang="en">SEM</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Scintillator -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Scintillator">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Scintillator (Phosphor used)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#SequentialSectionScan -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#SequentialSectionScan">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Sequential Section Scan is an imaging technique that involves cutting an object into thin sections, then imaging each section individually to create a 3D image. This technique is commonly used in medical imaging and histology to visualize the internal structure of tissues and organs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sequential Section Scan</rdfs:label>
+        <skos:altLabel xml:lang="en">Section</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Single Photon Emission Computed Tomography (SPECT) is a non-invasive imaging technique that uses a small amount of radioactive tracer to produce 3D images of the body&apos;s internal structures. The tracer is injected into the body and emits gamma rays, which are detected by a SPECT scanner. SPECT is used in medical diagnosis and research, especially for imaging the brain, heart, and bones.</rdfs:comment>
+        <rdfs:label xml:lang="en">Single Photon Emission Computed Tomography (SPECT)</rdfs:label>
+        <skos:altLabel xml:lang="en">SPECT</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Slot -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Slot">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration"/>
+        <rdfs:label xml:lang="en">Slot (scanned slot, slit, or spot)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Storage -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Storage">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Storage (Storage Phosphor)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#StructuredLight -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#StructuredLight">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Structured Light is an imaging technique that uses a pattern of light projected onto an object to create a 3D image. By analyzing how the pattern of light is distorted by the object, structured light can create high-resolution, accurate 3D models of complex shapes and structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structured Light</rdfs:label>
+        <skos:altLabel xml:lang="en">StrLight</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#SynchrotronImaging -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#SynchrotronImaging">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Synchrotron Imaging is a type of X-ray imaging that uses synchrotron radiation, which is produced when high-energy particles are accelerated to near the speed of light. Synchrotron imaging can produce high-resolution, 3D images of a wide range of materials and structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Synchrotron Imaging</rdfs:label>
+        <skos:altLabel xml:lang="en">Synchro</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Transmission -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Transmission">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#XRayTargetType"/>
+        <rdfs:label xml:lang="en">Transmission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Undetermined -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Undetermined">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#Sex"/>
+        <rdfs:label xml:lang="en">Undetermined</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Unknowable -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Unknowable">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#Sex"/>
+        <rdfs:label xml:lang="en">Unknowable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#Video -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#Video">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Video is a digital recording of moving images and sound. It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">Video</rdfs:label>
+        <skos:altLabel xml:lang="en">Video</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#XRay -->
+
+    <owl:NamedIndividual rdf:about="https://www.morphosource.org/terms/morphosource#XRay">
+        <rdf:type rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModalityType"/>
+        <rdfs:comment xml:lang="en">X-Ray imaging is an imaging technique that uses X-rays to create images of the internal structures of an object. X-ray imaging is widely used in medical diagnosis and research, as well as in materials science and other fields to visualize the internal structure of objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray</rdfs:label>
+        <skos:altLabel xml:lang="en">XRay</skos:altLabel>
+    </owl:NamedIndividual>
     
 
 
@@ -3103,8 +3536,8 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date Modified</rdfs:label>
         <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
     </rdf:Description>
 </rdf:RDF>
 
