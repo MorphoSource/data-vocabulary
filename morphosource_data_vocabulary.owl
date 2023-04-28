@@ -26,6 +26,7 @@
     <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
+        <owl:versionInfo>0.2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -294,13 +295,7 @@
     <!-- http://id.loc.gov/vocabulary/relators/dpt -->
 
     <owl:ObjectProperty rdf:about="http://id.loc.gov/vocabulary/relators/dpt">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <owl:equivalentProperty rdf:resource="https://www.morphosource.org/terms/morphosource#depositor"/>
         <v1:authoritativeLabel>Depositor</v1:authoritativeLabel>
         <v1:code>dpt</v1:code>
         <v1:definitionNote xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</v1:definitionNote>
@@ -314,7 +309,7 @@
         <v1:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/relators"/>
         <skos:broader rdf:resource="http://id.loc.gov/vocabulary/relators/own"/>
         <skos:changeNote>
-            <rdf:Description/>
+            <rdf:Description rdf:nodeID="genid1"/>
         </skos:changeNote>
         <skos:definition xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</skos:definition>
         <skos:historyNote xml:lang="en">MARC bib: 1XX/7XX/8XX $4</skos:historyNote>
@@ -437,6 +432,7 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
     </owl:ObjectProperty>
     
@@ -449,6 +445,7 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
@@ -508,13 +505,6 @@
     <!-- http://purl.org/dc/terms/dateSubmitted -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
         <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a &apos;Date Submitted&apos; may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal).</terms:description>
         <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -581,7 +571,7 @@
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/modified">
-        <owl:equivalentProperty rdf:resource="https://www.morphosource.org/terms/morphosource#date_modified"/>
+        <owl:equivalentProperty rdf:resource="https://www.morphosource.org/terms/morphosource#dateModified"/>
     </owl:ObjectProperty>
     
 
@@ -620,6 +610,9 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#AcquisitionType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Description of the method used during acquisition of this frame. See Section C.8.15.3.2.1 for Defined Terms.
+
+Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be present otherwise.</rdfs:comment>
         <rdfs:label xml:lang="en">Acquisition Type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -628,7 +621,9 @@
     <!-- http://purl.org/healthcarevocab/v1#AnodeTargetMaterial -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#AnodeTargetMaterial">
+        <rdfs:comment xml:lang="en">The primary material in the anode of the X-Ray source.</rdfs:comment>
         <rdfs:label xml:lang="en">Anode Target Material</rdfs:label>
+        <skos:example xml:lang="en">`tungsten`, `molybdenum`, `copper`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -636,6 +631,7 @@
     <!-- http://purl.org/healthcarevocab/v1#ContainerDescription -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ContainerDescription">
+        <rdfs:comment xml:lang="en">Description of the container.</rdfs:comment>
         <rdfs:label xml:lang="en">Container Description</rdfs:label>
     </owl:ObjectProperty>
     
@@ -644,6 +640,7 @@
     <!-- http://purl.org/healthcarevocab/v1#ContrastFrameAveraging -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ContrastFrameAveraging">
+        <rdfs:comment xml:lang="en">Specifies the number of contrast frames to average together before performing the mask operation. If the Attribute is missing, no averaging is performed.</rdfs:comment>
         <rdfs:label xml:lang="en">Contrast Frame Averaging</rdfs:label>
     </owl:ObjectProperty>
     
@@ -652,6 +649,7 @@
     <!-- http://purl.org/healthcarevocab/v1#DetectorDescription -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#DetectorDescription">
+        <rdfs:comment xml:lang="en">Free text description of detector.</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Description</rdfs:label>
     </owl:ObjectProperty>
     
@@ -660,6 +658,7 @@
     <!-- http://purl.org/healthcarevocab/v1#DistanceSourceToDetector -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#DistanceSourceToDetector">
+        <rdfs:comment xml:lang="en">Distance in mm from source to detector center.</rdfs:comment>
         <rdfs:label xml:lang="en">Distance From Source To Detector</rdfs:label>
     </owl:ObjectProperty>
     
@@ -668,6 +667,7 @@
     <!-- http://purl.org/healthcarevocab/v1#DistanceSourceToPatient -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#DistanceSourceToPatient">
+        <rdfs:comment xml:lang="en">Distance in mm from source to isocenter (center of field of view).</rdfs:comment>
         <rdfs:label xml:lang="en">Distance From Source To Patient</rdfs:label>
     </owl:ObjectProperty>
     
@@ -677,6 +677,11 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ExposureTime">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Time of X-Ray exposure in msec.
+
+If Acquisition Type (0018,9302) equals SPIRAL, the value of this Attribute shall be Revolution Time (0018,9305) divided by the Spiral Pitch Factor (0018,9311). See Section C.8.15.3.8.1 and Section C.8.15.3.2.1.
+
+Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362).</rdfs:comment>
         <rdfs:label xml:lang="en">Exposure Time</rdfs:label>
     </owl:ObjectProperty>
     
@@ -685,6 +690,7 @@
     <!-- http://purl.org/healthcarevocab/v1#GeneratorID -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#GeneratorID">
+        <rdfs:comment xml:lang="en">Identifier of the generator.</rdfs:comment>
         <rdfs:label xml:lang="en">Generator ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -693,6 +699,9 @@
     <!-- http://purl.org/healthcarevocab/v1#GeneratorPower -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#GeneratorPower">
+        <rdfs:comment xml:lang="en">Power in kW to the X-Ray generator.
+
+Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362).</rdfs:comment>
         <rdfs:label xml:lang="en">Generator Power</rdfs:label>
     </owl:ObjectProperty>
     
@@ -702,6 +711,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#ImagesInAcquisition">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Number of images that resulted from this acquisition of data.</rdfs:comment>
         <rdfs:label xml:lang="en">Images in Acquisition</rdfs:label>
     </owl:ObjectProperty>
     
@@ -710,6 +720,9 @@
     <!-- http://purl.org/healthcarevocab/v1#KVP -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#KVP">
+        <rdfs:comment xml:lang="en">Peak kilo voltage output of the X-Ray generator used.
+
+Shall be empty if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362).</rdfs:comment>
         <rdfs:label xml:lang="en">KVP</rdfs:label>
     </owl:ObjectProperty>
     
@@ -718,6 +731,7 @@
     <!-- http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType">
+        <rdfs:comment xml:lang="en">The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. See Section 10.7.1.2.</rdfs:comment>
         <rdfs:label xml:lang="en">Pixel Spacing Calibration Type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -727,6 +741,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#SliceThickness">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:comment xml:lang="en">Nominal slice thickness, in mm.</rdfs:comment>
         <rdfs:label xml:lang="en">Slice Thickness</rdfs:label>
     </owl:ObjectProperty>
     
@@ -735,6 +750,7 @@
     <!-- http://purl.org/healthcarevocab/v1#SpiralPitchFactor -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#SpiralPitchFactor">
+        <rdfs:comment xml:lang="en">Ratio of the Table Feed per Rotation (0018,9310) to the Total Collimation Width (0018,9307).</rdfs:comment>
         <rdfs:label xml:lang="en">Spiral Pitch Factor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -743,6 +759,7 @@
     <!-- http://purl.org/healthcarevocab/v1#XRayTubeCurrent -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/healthcarevocab/v1#XRayTubeCurrent">
+        <rdfs:comment xml:lang="en">X-Ray Tube Current in mA. Required if Exposure (0018,1152) is not present. May be present otherwise.</rdfs:comment>
         <rdfs:label xml:lang="en">X-Ray Tube Current</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1298,6 +1315,7 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <rdfs:comment xml:lang="en">Morphosource-specific unique ID identifier for a Work (Media, Organization, Device, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1307,7 +1325,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatAttribute">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:range rdf:resource="http://vocab.getty.edu/aat/300264087"/>
+        <rdfs:comment xml:lang="en">Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Physical Attributes Facet (http://vocab.getty.edu/page/aat/300264087). Use of this property is preferred over the custom morphosource:choAttribute property.</rdfs:comment>
         <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Attribute</rdfs:label>
+        <skos:example xml:lang="en">`round`, `waterlogged`, `brittleness`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1316,7 +1337,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatMaterial">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:range rdf:resource="http://vocab.getty.edu/aat/300264091"/>
+        <rdfs:comment xml:lang="en">Material(s) from which an object is made. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Materials Facet (http://vocab.getty.edu/page/aat/300264091). Use of this property is preferred over the custom morphosource:Material property.</rdfs:comment>
         <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Material</rdfs:label>
+        <skos:example xml:lang="en">`iron`, `clay`, `millwork`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1325,7 +1349,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatPeriod">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:range rdf:resource="http://vocab.getty.edu/aat/300264088"/>
+        <rdfs:comment xml:lang="en">Time period associated with the production or creation of an object. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Styles and Periods Facet (http://vocab.getty.edu/page/aat/300264088).</rdfs:comment>
         <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Time Period</rdfs:label>
+        <skos:example xml:lang="en">`Neolithic`,`Pliocene`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1334,7 +1361,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#aatType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:range rdf:resource="http://vocab.getty.edu/aat/300264092"/>
+        <rdfs:comment xml:lang="en">Type, genre, category, or classification of an object. Values must be from the controlled vocabulary Getty Arts and Architecture Thesaurus Objects Facet (http://vocab.getty.edu/page/aat/300264092). Use of this property is preferred over the custom morphosource:choType property.</rdfs:comment>
         <rdfs:label xml:lang="en">Getty Arts and Architecture Thesaurus Type</rdfs:label>
+        <skos:example xml:lang="en">`vases`, `paintings (visual works)`, `hammers (tools)`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1345,14 +1375,13 @@
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <terms:description xml:lang="en">Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.</terms:description>
         <terms:isVersionOf>http://rs.tdwg.org/dwc/terms/locality</terms:isVersionOf>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://purl.org/dc/terms/Location"/>
         <attributes:usageScope>simple</attributes:usageScope>
-        <rdfs:comment xml:lang="en">The specific description of the place.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The street address or other specific description of the place or location.</rdfs:comment>
         <rdfs:label xml:lang="en">Address</rdfs:label>
-        <skos:example xml:lang="en">`Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)`, `Queets Rainforest, Olympic National Park`</skos:example>
+        <skos:example xml:lang="en">`130 Science Dr`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1364,7 +1393,7 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/UsageTerms"/>
-        <rdfs:comment xml:lang="en">A Web URL for a statement of the ownership and usage rights for this resource. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Web URI for a statement of the ownership and usage rights for Media. This more accurately maps to xmpRights:WebStatement than xmpRights:UsageTerms, and should be changed accordingly.</rdfs:comment>
         <rdfs:label xml:lang="en">Agreement URI</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1376,6 +1405,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#XRayTubeCurrent"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#XRayTubeCurrent"/>
+        <rdfs:comment xml:lang="en">X-Ray Tube Current in mA.</rdfs:comment>
         <rdfs:label xml:lang="en">Amperage</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1453,6 +1483,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#canonicalTaxonomy">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <rdfs:comment xml:lang="en">MorphoSource-specific ID of Taxonomy record for taxonomic name attributed to the specimen physical object by the provider organization (museum, institution, or laboratory) responsible for managing the specimen. May not be present if no provider-supplied taxonomy is present. This may differ from taxonomic names attributed to the specimen by researchers or other individuals. Values for this property should be a subset of values for property morphosource:taxonomyID values, but morphosource:taxonomyID may include additional values as well.</rdfs:comment>
         <rdfs:label xml:lang="en">Canonical Taxonomy</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1489,6 +1520,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choAttribute">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:comment xml:lang="en">Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. It is preferred to use morphosource:aatAttribute when it is possible to express attributes using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom attribute values not listed in the Getty AAT controlled vocabulary.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Heritage Object Attribute</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1498,6 +1530,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#choType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:comment xml:lang="en">Type, genre, category, or classification of an object. It is preferred to use morphosource:aatType when it is possible to express type using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom type values not listed in the Getty AAT controlled vocabulary.</rdfs:comment>
         <rdfs:label xml:lang="en">Cultural Heritage Object Type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1638,9 +1671,9 @@
     
 
 
-    <!-- https://www.morphosource.org/terms/morphosource#date_modified -->
+    <!-- https://www.morphosource.org/terms/morphosource#dateModified -->
 
-    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#date_modified">
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dateModified">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
@@ -1655,11 +1688,57 @@
     
 
 
+    <!-- https://www.morphosource.org/terms/morphosource#dateUploaded -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#dateUploaded">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/dateSubmitted"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <rdfs:comment xml:lang="en">Date of upload of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date Uploaded</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://www.morphosource.org/terms/morphosource#datingMethod -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#datingMethod">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">Method used to determine the date an object was created, produced, fossilized, or otherwise came into being.</rdfs:comment>
         <rdfs:label xml:lang="en">Dating Method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.morphosource.org/terms/morphosource#depositor -->
+
+    <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#depositor">
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#FileSet"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ProcessingEvent"/>
+        <v1:authoritativeLabel>Depositor</v1:authoritativeLabel>
+        <v1:code>dpt</v1:code>
+        <v1:definitionNote xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</v1:definitionNote>
+        <v1:hasBroaderAuthority rdf:resource="http://id.loc.gov/vocabulary/relators/own"/>
+        <v1:historyNote xml:lang="en">MARC bib: 1XX/7XX/8XX $4</v1:historyNote>
+        <skos:broader rdf:resource="http://id.loc.gov/vocabulary/relators/own"/>
+        <skos:changeNote>
+            <rdf:Description rdf:nodeID="genid1"/>
+        </skos:changeNote>
+        <skos:definition xml:lang="en">A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership</skos:definition>
+        <skos:historyNote xml:lang="en">MARC bib: 1XX/7XX/8XX $4</skos:historyNote>
+        <skos:notation>dpt</skos:notation>
+        <skos:prefLabel>Depositor</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1668,7 +1747,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorConfiguration">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration"/>
+        <rdfs:comment xml:lang="en">The physical configuration of the X-Ray detector. Value must be from the X-Ray Detector Configuration controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration). This property should be a sub-property of dicom:DetectorConfiguration.</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Configuration</rdfs:label>
+        <skos:example xml:lang="en">`Area (single or tiled detector)`, `Slot (scanned slot, slit, or spot)`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1677,6 +1759,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelSizeX">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Length in mm of each pixel in the X direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Pixel Size X</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1686,6 +1769,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelSizeY">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Length in mm of each pixel in the Y direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Pixel Size Y</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1695,6 +1779,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelsX">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">The number of pixels in the X direction of the detector (number of columns).</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Pixels X</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1704,6 +1789,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorPixelsY">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">The number of pixels in the X direction of the detector (number of rows).</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Pixels Y</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1714,8 +1800,11 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#detectorType">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#DetectorDescription"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#XRayDetectorType"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#DetectorDescription"/>
+        <rdfs:comment xml:lang="en">Type of detector used to acquire this image. This property is more accurately a sub-property of dicom:DetectorType and should be changed accordingly. Value must be from X-Ray Detector Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayDetectorType).</rdfs:comment>
         <rdfs:label xml:lang="en">Detector Type</rdfs:label>
+        <skos:example xml:lang="en">`Direct (X-Ray photoconductor)`, `Scintillator (Phosphor used)`, `Storage (Storage Phosphor)`, `Film (Scanned film/screen)`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1767,10 +1856,9 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Extent"/>
-        <terms:description xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.</terms:description>
         <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/format"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
-        <rdfs:comment xml:lang="en">The physical dimensions of the resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The physical dimensions or measurements of the object.</rdfs:comment>
         <rdfs:label xml:lang="en">Dimensions</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1877,7 +1965,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#fluxNormalization">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Whether flux normalization calibration is used or not. If present, value must be &quot;Yes&quot; or &quot;No&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Flux Normalization</rdfs:label>
+        <skos:example xml:lang="en">`Yes`, `No`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -1907,6 +1997,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"/>
+        <rdfs:comment xml:lang="en">Number of images acquired at each projection angle and their average.</rdfs:comment>
         <rdfs:label xml:lang="en">Frame Averaging</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1951,9 +2042,8 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/datasetID"/>
         <attributes:abcdEquivalence>DataSets/DataSet/DataSetGUID</attributes:abcdEquivalence>
-        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <attributes:usageScope>simple</attributes:usageScope>
-        <rdfs:comment xml:lang="en">An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An identifier for an entire museum, institution, or laboratory specimen collection which includes the Biological Specimen. May be a global unique identifier or an identifier specific to a collection or institution.</rdfs:comment>
         <rdfs:label xml:lang="en">iDigBio Recordset ID</rdfs:label>
         <skos:example xml:lang="en">`b15d4952-7d20-46f1-8a3e-556a512b04c5`</skos:example>
     </owl:ObjectProperty>
@@ -1964,6 +2054,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#idigbioUUID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <rdfs:comment xml:lang="en">Global unique identifier for the Biological Specimen provided by iDigBio and used as the primary identifier of the Biological Specimen&apos;s record in the iDigBio aggregator if present. This is sometimes used in addition to more general identifiers or Darwin Core triplets (institution code : collection code : catalog number) to uniquely identify Biological Specimen.</rdfs:comment>
         <rdfs:label xml:lang="en">iDigBio UUID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1974,6 +2065,7 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ieFilter">
         <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#filter"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Type of filter(s) inserted into the X-Ray beam.</rdfs:comment>
         <rdfs:label xml:lang="en">Imaging Event Filter</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1984,10 +2076,11 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#ieModality">
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
-        <terms:description xml:lang="en">It is best practice to record the device; this may include a combination such as camera plus lens, or camera plus microscope. Examples: &quot;Canon Supershot 2000&quot;, &quot;Makroscan Scanner 2000&quot;, &quot;Zeiss Axioscope with Camera IIIu&quot;, &quot;SEM (Scanning Electron Microscope)&quot;.</terms:description>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModality"/>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/captureDevice"/>
-        <rdfs:comment xml:lang="en">Free form text describing the device or devices used to create the resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The imaging modality used in the imaging event. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality).</rdfs:comment>
         <rdfs:label xml:lang="en">Imaging Event Modality</rdfs:label>
+        <skos:example xml:lang="en">`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2015,14 +2108,13 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#isTypeSpecimen">
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/typeStatus"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
-        <terms:description xml:lang="en">Recommended best practice is to separate the values in a list with space vertical bar space (` | `).</terms:description>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/typeStatus"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText</attributes:abcdEquivalence>
         <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
         <attributes:usageScope>simple</attributes:usageScope>
-        <rdfs:comment xml:lang="en">A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Whether the Biological Specimen is a holotype or not. If present, value must be &quot;Yes&quot; or &quot;No&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Is Type Specimen</rdfs:label>
-        <skos:example xml:lang="en">`holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388`, `holotype of Pinus abies | holotype of Picea abies`</skos:example>
+        <skos:example xml:lang="en">`Yes`, `No`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2037,6 +2129,7 @@
         <rdfs:comment xml:lang="ja">緯度</rdfs:comment>
         <rdfs:label xml:lang="en">Latitude</rdfs:label>
         <exif:tagNumber xml:lang="en">2</exif:tagNumber>
+        <skos:example xml:lang="en">`41d 05&apos; 54.03&quot; S`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2046,11 +2139,10 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#legacyMediaFileID">
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/ac/terms/providerManagedID"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
-        <terms:description xml:lang="en">Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider&apos;s data repositories. It is the provider&apos;s decision whether to expose this value or not.</terms:description>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/providerManagedID"/>
         <attributes:repeatable>No</attributes:repeatable>
         <attributes:required>No</attributes:required>
-        <rdfs:comment xml:lang="en">A free-form identifier (a simple number, an alphanumeric code, a URL, etc.) for the resource that is unique and meaningful primarily for the data provider.</rdfs:comment>
+        <rdfs:comment xml:lang="en">MorphoSource-specific unique ID identifier that was used to represent a Media in the now-defunct 1.0 version of the MorphoSource repository. Only present if Media was originally contributed to MorphoSource 1.0. Different from morphosource:ID identifier.</rdfs:comment>
         <rdfs:label xml:lang="en">Legacy Media File ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2064,7 +2156,7 @@
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/ac/terms/IDofContainingCollection"/>
         <attributes:repeatable xml:lang="en">No</attributes:repeatable>
         <attributes:required>No</attributes:required>
-        <rdfs:comment xml:lang="en">If the resource is contained in a Collection, this field identifies that Collection uniquely.</rdfs:comment>
+        <rdfs:comment xml:lang="en">MorphoSource-specific unique ID identifier that was used to group Media together in the now-defunct 1.0 version of the MorphoSource repository. In MorphoSource 1.0, Media groups were used to collect all media derived from the same Imaging Event. Media groups are no longer used, with media-to-media imaging and processing event relationships now being used instead to track hierarchical relationships between Media. Only present if Media was originally contributed to MorphoSource 1.0. Different from morphosource:ID identifier.</rdfs:comment>
         <rdfs:label xml:lang="en">Legacy Media Group ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2111,6 +2203,7 @@
         <rdfs:comment xml:lang="ja">経度</rdfs:comment>
         <rdfs:label xml:lang="en">Longitude</rdfs:label>
         <exif:tagNumber xml:lang="en">4</exif:tagNumber>
+        <skos:example xml:lang="en">`121d 10&apos; 34&quot; W`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2130,8 +2223,8 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/medium"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
         <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/medium"/>
-        <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
-        <rdfs:label xml:lang="en">Medium</rdfs:label>
+        <rdfs:comment xml:lang="en">Material(s) from which an object is made. It is preferred to use morphosource:aatMaterial when it is possible to express materials using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom material values not listed in the Getty AAT controlled vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2196,8 +2289,9 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#modality3D">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Device"/>
         <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#ImageModality"/>
-        <rdfs:comment xml:lang="en">Imaging modality of a device or an imaging event. Despite the name, this can include non-3D imaging event modalities like photography.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The list of imaging modalities that a device is capable of using when imaging objects. Despite the name, this can include non-3D imaging event modalities. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality).</rdfs:comment>
         <rdfs:label xml:lang="en">Modality</rdfs:label>
+        <skos:example xml:lang="en">`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2238,11 +2332,10 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"/>
         <attributes:abcdEquivalence>not in ABCD</attributes:abcdEquivalence>
-        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
         <attributes:usageScope>simple</attributes:usageScope>
-        <rdfs:comment xml:lang="en">The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name (&quot;Precambrian&quot;) attributable to the stratigraphic horizon from which the cataloged item was collected.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Free text numeric description of the absolute or specific chronological age of the physical object.</rdfs:comment>
         <rdfs:label xml:lang="en">Numeric Time</rdfs:label>
-        <skos:example xml:lang="en">`Phanerozoic`, `Proterozoic`</skos:example>
+        <skos:example xml:lang="en">`20 MYA`,`4th Century`,`1142 C.E.`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2259,7 +2352,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#opticalMagnification">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Whether optical magnification is used or not. This property is only for indicating optical magnification specifically, and is different from geometric magnification. If present, value must be &quot;Yes&quot; or &quot;No&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Optical Magnification</rdfs:label>
+        <skos:example xml:lang="en">`Yes`, `No`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2268,6 +2363,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#organizationID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">MorphoSource-specific unique ID identifier for the provider Organization (museum, institution, or laboratory) responsible for managing the physical object.</rdfs:comment>
         <rdfs:label xml:lang="en">Organization ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2300,6 +2396,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#originalLocation">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">Free text description of the original location where the physical object was created, produced, fossilized, or otherwise came into being.</rdfs:comment>
         <rdfs:label xml:lang="en">Original Location</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2334,6 +2431,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#periodicTime">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">Free text description of the time period associated with the production or creation of the physical object.</rdfs:comment>
         <rdfs:label xml:lang="en">Periodic Time</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2363,7 +2461,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#phaseContrast">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Whether phase contrast of X-Ray beam - in other words, modulating the beam between higher and lower energies to increase contrast between materials - is used or not. If present, value must be &quot;Yes&quot; or &quot;No&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Phase Contrast</rdfs:label>
+        <skos:example xml:lang="en">`Yes`, `No`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2382,7 +2482,7 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#photographicReference">
         <rdfs:subPropertyOf rdf:resource="https://www.morphosource.org/terms/morphosource#attachmentFile"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#ImagingEvent"/>
-        <rdfs:comment xml:lang="en">A reference photograph image, usually used to represent and record the object at the time of original scanning.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A reference photograph image, often used to represent and record the object at the initial time of scanning.</rdfs:comment>
         <rdfs:label xml:lang="en">Photographic Reference</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2405,8 +2505,11 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#pixelSpacingCalibration">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType"/>
+        <rdfs:comment xml:lang="en">The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. Value must be from Pixel Spacing Calibration Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#PixelSpacingCalibrationType).</rdfs:comment>
         <rdfs:label xml:lang="en">Pixel Spacing Calibration</rdfs:label>
+        <skos:example xml:lang="en">`Geometry`, `Fiducial`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2435,6 +2538,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorPower"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorPower"/>
+        <rdfs:comment xml:lang="en">Power in kW to the X-Ray generator.</rdfs:comment>
         <rdfs:label xml:lang="en">Power</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2475,6 +2579,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#ImagesInAcquisition"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ImagesInAcquisition"/>
+        <rdfs:comment xml:lang="en">Number of images at distinct angles used to create a 3D image.</rdfs:comment>
         <rdfs:label xml:lang="en">Number of Projections</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2484,7 +2589,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceDate">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">Date the physical object was collected, excavated, or discovered. Values must be in MM/DD/YYYY date format.</rdfs:comment>
         <rdfs:label xml:lang="en">Provenance Date</rdfs:label>
+        <skos:example xml:lang="en">`01/01/1985`, `12/30/2021`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2494,11 +2601,9 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceDetails">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/provenance"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/ProvenanceStatement"/>
         <terms:description xml:lang="en">The statement may include a description of any changes successive custodians made to the resource.</terms:description>
         <terms:isVersionOf rdf:resource="http://purl.org/dc/terms/provenance"/>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-09-20</terms:issued>
-        <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A statement detailing production, discovery, and/or ownership, describing the initial production/discovery context and listing any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
         <rdfs:label xml:lang="en">Provenance Details</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2508,6 +2613,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceLocation">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">Free text description of the location from which the physical object was collected, excavated, or discovered.</rdfs:comment>
         <rdfs:label xml:lang="en">Provenance Location</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2517,6 +2623,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#provenanceName">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
+        <rdfs:comment xml:lang="en">Name of the collection or excavation event, if applicable and available.</rdfs:comment>
         <rdfs:label xml:lang="en">Provenance Name</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2561,7 +2668,7 @@
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Organization"/>
         <terms:isVersionOf rdf:resource="http://ns.adobe.com/xap/1.0/rights/Owner"/>
-        <rdfs:comment xml:lang="en">A list of legal owners of the resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">List of holders of intellectual property rights (copyright or license-based) for the Media.</rdfs:comment>
         <rdfs:label xml:lang="en">Rights Holder</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2603,6 +2710,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#SpiralPitchFactor"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#SpiralPitchFactor"/>
+        <rdfs:comment xml:lang="en">Ratio of the Table Feed per Rotation (DICOM 0018,9310) to the Total Collimation Width (DICOM 0018,9307).</rdfs:comment>
         <rdfs:label xml:lang="en">Number of Rotations</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2630,7 +2738,9 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shadingCorrection">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:comment xml:lang="en">Whether shading correction calibration is used or not. If present, value must be &quot;Yes&quot; or &quot;No&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Shading Correction</rdfs:label>
+        <skos:example xml:lang="en">`Yes`, `No`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2648,6 +2758,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#shortTitle">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CulturalHeritageObject"/>
+        <rdfs:comment xml:lang="en">Title or short description of an object. For MorphoSource records, value is used as part of the full title for a Cultural Heritage Object record.</rdfs:comment>
         <rdfs:label xml:lang="en">Short Title</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2702,6 +2813,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"/>
+        <rdfs:comment xml:lang="en">Distance in mm from X-Ray source to detector center.</rdfs:comment>
         <rdfs:label xml:lang="en">Distance From Source To Detector</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2713,6 +2825,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"/>
+        <rdfs:comment xml:lang="en">Distance in mm from X-Ray source to isocenter (center of field of view).</rdfs:comment>
         <rdfs:label xml:lang="en">Distance From Source To Object</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2724,6 +2837,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#ContainerDescription"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#ContainerDescription"/>
+        <rdfs:comment xml:lang="en">Wedge, or the material surrounding and/or enveloping the focal object.</rdfs:comment>
         <rdfs:label xml:lang="en">Surrounding Material</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2744,7 +2858,9 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"/>
+        <rdfs:comment xml:lang="en">The primary material in the anode of the X-Ray source.</rdfs:comment>
         <rdfs:label xml:lang="en">Target Material</rdfs:label>
+        <skos:example xml:lang="en">`tungsten`, `molybdenum`, `copper`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2753,7 +2869,10 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#targetType">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
+        <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#XRayTargetType"/>
+        <rdfs:comment xml:lang="en">Type of the anode of the X-Ray source. Value must be from the X-Ray Target Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#XRayTargetType).</rdfs:comment>
         <rdfs:label xml:lang="en">Target Type</rdfs:label>
+        <skos:example xml:lang="en">`Reflection`,`Transmission`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2762,6 +2881,7 @@
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#taxonomyID">
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject"/>
+        <rdfs:comment xml:lang="en">Morphosource-specific ID of Taxonomy record for taxonomic name attributed to the Biological Specimen.</rdfs:comment>
         <rdfs:label xml:lang="en">Taxonomy ID</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2820,6 +2940,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#KVP"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#KVP"/>
+        <rdfs:comment xml:lang="en">Peak kilo voltage output of the X-Ray generator used.</rdfs:comment>
         <rdfs:label xml:lang="en">Voltage</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2830,14 +2951,12 @@
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#vouchered">
         <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#PhysicalObject"/>
-        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary.</terms:description>
         <terms:isVersionOf rdf:resource="http://rs.tdwg.org/dwc/terms/disposition"/>
         <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/SpecimenUnit/Disposition</attributes:abcdEquivalence>
-        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Occurrence"/>
         <attributes:usageScope>simple</attributes:usageScope>
-        <rdfs:comment xml:lang="en">The current state of a specimen with respect to the collection identified in collectionCode or collectionID.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Whether the specimen is vouchered or not, or in other words, whether the physical specimen object exists and is preserved and maintained in an accessible collection. Value must be &quot;Yes&quot; or &quot;No&quot;.</rdfs:comment>
         <rdfs:label xml:lang="en">Vouchered</rdfs:label>
-        <skos:example xml:lang="en">`in collection`, `missing`, `voucher elsewhere`, `duplicates elsewhere`</skos:example>
+        <skos:example xml:lang="en">`Yes`, `No`</skos:example>
     </owl:ObjectProperty>
     
 
@@ -2867,6 +2986,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorID"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"/>
         <terms:isVersionOf rdf:resource="http://purl.org/healthcarevocab/v1#GeneratorID"/>
+        <rdfs:comment xml:lang="en">Free text describing type of X-Ray tube, possibly including brand and/or model of tube.</rdfs:comment>
         <rdfs:label xml:lang="en">X-Ray Tube Type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2940,6 +3060,30 @@
         <rdfs:isDefinedBy rdf:resource="http://pcdm.org/works"/>
         <rdfs:label xml:lang="en">Work</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264087 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264087"/>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264088 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264088"/>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264091 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264091"/>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264092 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264092"/>
     
 
 
@@ -3518,8 +3662,8 @@
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:label xml:lang="en">Creator</rdfs:label>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
     </rdf:Description>
@@ -3540,8 +3684,8 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date Modified</rdfs:label>
         <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
-        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
     </rdf:Description>
 </rdf:RDF>
 
