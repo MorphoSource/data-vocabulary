@@ -1,4 +1,18 @@
 [ {
+  "@id" : "http://creativecommons.org/ns#License",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en-us",
+    "@value" : "a set of\n\t\t    requests/permissions to users of a Work, e.g. a\n\t\t    copyright license, the public domain, information\n\t\t    for distributors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en-us",
+    "@value" : "License"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/terms/LicenseDocument"
+  } ]
+}, {
   "@id" : "http://id.loc.gov/vocabulary/relators/dpt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.loc.gov/mads/rdf/v1#authoritativeLabel" : [ {
@@ -406,6 +420,30 @@
     "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/LicenseDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/terms/RightsStatement"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/RightsStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2008-01-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rights Statement"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/TGN",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/issued" : [ {
@@ -595,6 +633,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "License"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://creativecommons.org/ns#License"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/medium",
@@ -706,6 +747,20 @@
     "@value" : "Title"
   } ]
 }, {
+  "@id" : "http://purl.org/healthcarevocab/v1#AccessionNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A RIS generated number that identifies the order for the Study."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Accession Number"
+  } ]
+}, {
   "@id" : "http://purl.org/healthcarevocab/v1#AcquisitionType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -726,6 +781,9 @@
     "@language" : "en",
     "@value" : "The primary material in the anode of the X-Ray source."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Anode Target Material"
@@ -735,15 +793,88 @@
     "@value" : "`tungsten`, `molybdenum`, `copper`"
   } ]
 }, {
+  "@id" : "http://purl.org/healthcarevocab/v1#BitsAllocated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of bits allocated for each pixel sample. Each sample shall have the same number of bits allocated. Bits Allocated (0028,0100) shall be either 1, or a multiple of 8. See PS3.5 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bits Allocated"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#BitsStored",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of bits stored for each pixel sample. Each sample shall have the same number of bits stored. See PS3.5 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bits Stored"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#Columns",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of columns in the image.\n\nShall be an exact multiple of the horizontal downsampling factor if any of the samples (planes) are encoded downsampled in the horizontal direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Columns"
+  } ]
+}, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Description of the container."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Container Description"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ContentDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The date the image pixel data creation started.\n\nRequired if image is part of a Series in which the images are temporally related. May be present otherwise."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Content Date"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ContentTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The time the image pixel data creation started.\n\nRequired if image is part of a Series in which the images are temporally related. May be present otherwise."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Content Time"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging",
@@ -751,6 +882,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specifies the number of contrast frames to average together before performing the mask operation. If the Attribute is missing, no averaging is performed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -763,6 +897,9 @@
     "@language" : "en",
     "@value" : "Free text description of detector."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Description"
@@ -774,6 +911,9 @@
     "@language" : "en",
     "@value" : "Distance in mm from source to detector center."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distance From Source To Detector"
@@ -784,6 +924,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Distance in mm from source to isocenter (center of field of view)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -798,6 +941,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent"
+  }, {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -810,6 +955,9 @@
     "@language" : "en",
     "@value" : "Identifier of the generator."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Generator ID"
@@ -821,9 +969,68 @@
     "@language" : "en",
     "@value" : "Power in kW to the X-Ray generator.\n\nShall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362)."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Generator Power"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#HighBit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Most significant bit for pixel sample data. Each sample shall have the same high bit. High Bit (0028,0102) shall be one less than Bits Stored (0028,0101). See PS3.5 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Bit"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ImageOrientationPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The direction cosines of the first row and the first column with respect to the patient. See Section C.7.6.2.1.1 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Image Orientation Patient"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ImagePositionPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Patient position descriptor relative to the equipment. See Section C.7.1.4.1.1.1.\n\nSee Section C.7.3.1.1.2 for Defined Terms and further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Image Position Patient"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#ImageType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Image identification characteristics. See Section C.7.6.1.1.2 for Defined Terms and further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Image Type"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition",
@@ -832,12 +1039,26 @@
     "@language" : "en",
     "@value" : "Number of images that resulted from this acquisition of data."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Images in Acquisition"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#InstanceNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A number that identifies this image."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Instance Number"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#KVP",
@@ -846,9 +1067,68 @@
     "@language" : "en",
     "@value" : "Peak kilo voltage output of the X-Ray generator used.\n\nShall be empty if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362)."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "KVP"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#Modality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of equipment that originally acquired the data used to create the images in this Series. See Section C.7.3.1.1.1 for Defined Terms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Modality"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#PhotometricInterpretation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the intended interpretation of the pixel data. See Section C.7.6.3.1.2 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photometric Interpretation"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#PixelRepresentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data representation of the pixel samples. Each sample shall have the same pixel representation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Representation"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical distance in the patient between the center of each pixel, specified by a numeric pair - adjacent row spacing (delimiter) adjacent column spacing in mm. See Section 10.7.1.3 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Spacing"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType",
@@ -857,9 +1137,96 @@
     "@language" : "en",
     "@value" : "The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. See Section 10.7.1.2."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Spacing Calibration Type"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#RescaleIntercept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The value b in relationship between stored values (SV) and the output units.\n\nOutput units = m*SV+b\n\nIf Image Type (0008,0008) Value 1 is ORIGINAL and Value 3 is not LOCALIZER, and Multi-energy CT Acquisition (0018,9361) is either absent or NO, output units shall be Hounsfield Units (HU)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rescale Intercept"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#RescaleSlope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "m in the equation specified in Rescale Intercept (0028,1052)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rescale Slope"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#Rows",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of rows in the image.\n\nShall be an exact multiple of the vertical downsampling factor if any of the samples (planes) are encoded downsampled in the vertical direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rows"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#SamplesPerPixel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of samples (planes) in this image. See Section C.7.6.3.1.1 for further explanation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Samples Per Pixel"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#SeriesDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date the Series started."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Series Date"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#SeriesTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Time the Series started."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Series Time"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SliceThickness",
@@ -869,11 +1236,27 @@
     "@value" : "Nominal slice thickness, in mm."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Slice Thickness"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#SpacingBetweenSlices",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Spacing between slices, in mm. The spacing is measured from the center-to-center of each slice."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spacing Between Slices"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor",
@@ -882,9 +1265,68 @@
     "@language" : "en",
     "@value" : "Ratio of the Table Feed per Rotation (0018,9310) to the Total Collimation Width (0018,9307)."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Spiral Pitch Factor"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#StudyDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date the Study started."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Study Date"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#StudyTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Time the Study started."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Study Time"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#WindowCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Window Center for display.\n\nSee Section C.11.2.1.2 for further explanation.\n\nRequired if VOI LUT Sequence (0028,3010) is not present. May be present otherwise."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window Center"
+  } ]
+}, {
+  "@id" : "http://purl.org/healthcarevocab/v1#WindowWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Window Width for display. See Section C.11.2.1.2 for further explanation.\n\nRequired if Window Center (0028,1050) is present."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window Width"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent",
@@ -892,6 +1334,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "X-Ray Tube Current in mA. Required if Exposure (0018,1152) is not present. May be present otherwise."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1009,9 +1454,6 @@
 }, {
   "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Biodiversity Information Standards (TDWG)"
-  } ],
   "http://purl.org/dc/elements/1.1/format" : [ {
     "@value" : "application/rdf+xml"
   } ],
@@ -1758,6 +2200,9 @@
     "@language" : "en",
     "@value" : "Sex"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Sex"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`female`, `male`, `hermaphrodite`"
@@ -1812,10 +2257,6 @@
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2009-04-24"
-  } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."
@@ -1829,10 +2270,6 @@
   } ],
   "http://purl.org/dc/terms/isPartOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2017-10-06"
   } ],
   "http://purl.org/dc/terms/replaces" : [ {
     "@id" : "http://rs.tdwg.org/dwc/curatorial/TypeStatus"
@@ -1953,6 +2390,8 @@
     "@value" : "レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば'5'の場合だと√2^5=F5.6"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
@@ -1964,6 +2403,45 @@
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "37378"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#bitsPerSample",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The number of bits per image component. In this standard each component of the image is 8 bits, so the value for this tag is 8. See also SamplesPerPixel. In JPEG compressed data a JPEG marker is used instead of this tag."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BitsPerSample"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "258"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/12/exif/ns#focalLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The actual focal length of the lens, in mm. Conversion is not made to the focal length of a 35 mm film camera."
+  }, {
+    "@language" : "ja",
+    "@value" : "レンズの焦点距離。単位はmm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FocalLength"
+  } ],
+  "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
+    "@language" : "en",
+    "@value" : "37386"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude",
@@ -2012,6 +2490,8 @@
     "@value" : "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
@@ -2042,6 +2522,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "LightSource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType"
   } ],
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
@@ -2113,7 +2596,70 @@
     "@value" : "MorphoSource Terms Vocabulary"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.0"
+    "@value" : "0.3.0"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingLimited",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingPermission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "3D printing of digital resources is permitted only if the data was initially downloaded with the intent to 3D print as explicitly indicated by communication from the downloader or from an automated download usage survey form, and where sharing of 3D prints is permitted only in small-scale informal circumstances that should be explicitly outlined elsewhere."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "3D Printing Limited"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingPermission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Permission statement describing whether 3D printing of a digital resource is permitted, prohibited, or permitted with conditions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "3D Printing Permission"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingPermitted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingPermission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "3D printing of digital resource is freely permitted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "3D Printing Permitted"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingProhibited",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingPermission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "3D printing of digital resource is prohibited."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "3D Printing Prohibited"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#AlignParts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Align Parts"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Area",
@@ -2124,6 +2670,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Area (single or tiled detector)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#BackgroundRemovalMasking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Background Removal and/or Masking"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#BiologicalSpecimenObject",
@@ -2138,6 +2694,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#BitDepthChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bit Depth Change"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#BornDigital",
@@ -2158,6 +2724,16 @@
     "@value" : "BD"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CT/MRI image series (multiple files of type *.tiff, *.png, *.dcm, *.zip, etc.)"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2166,6 +2742,86 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Broad type or kind of CT image series, distinguishing between initial X-Ray projections and other derived series forms."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CT Image Series Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Cm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Centimeters"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CollectionAndScanningFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#OrganizationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Collection and Scanning Facility"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Color",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MeshMapType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Color Map"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CommercialUseNotPermitted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CommercialUsePermission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Commercial use of digital resource is not permitted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Use Not Permitted"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CommercialUsePermission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Permission statement describing whether a digital resource may be used for commercial purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Use Permission"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CommercialUsePermitted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CommercialUsePermission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Commercial use of digital resource is permitted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Commercial Use Permitted"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ConfocalImageStacking",
@@ -2186,6 +2842,26 @@
     "@value" : "Confocal"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Crop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crop"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#CrossPolarized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cross polarized"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#CulturalHeritageObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2198,6 +2874,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Statement describing whether and how any future derivatives must or should be rearchived to a public facing digital repository."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Derivative Rearchival Statement"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Device",
@@ -2222,6 +2909,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Direct (X-Ray photoconductor)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#EncouragedButNotRequired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Future derivatives are encouraged to be rearchived on a public-facing digital repository, but are not required to be rearchived."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Encouraged But Not Required"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Female",
@@ -2268,6 +2969,37 @@
     "@value" : "Film (Scanned film/screen)"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Fixed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FocalLengthType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fixed"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#FocalLengthType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of camera focal length setting. Elements comprise a controlled vocabulary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Focal Length Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Ft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Feet"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Geometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2298,6 +3030,16 @@
     "@value" : "Hermaphrodite"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#HistogramEditing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Histogram Editing"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2324,7 +3066,27 @@
     "@value" : "ID"
   } ]
 }, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#ImageModality",
+  "@id" : "https://www.morphosource.org/terms/morphosource#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Image (*.tiff, *.png, *.dcm, etc.)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ImageMeshCompression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Image and/or Mesh Compression"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2332,11 +3094,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Image Modality"
+    "@value" : "Image Modality Type"
   } ]
-}, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2350,6 +3109,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/works#Work"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#In",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inches"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Infrared",
@@ -2368,6 +3137,16 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Infrared"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Km",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilometers"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#LaserAidedProfiling",
@@ -2404,6 +3183,48 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Laser"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Side"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Left"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Unit of measurement used in measuring length."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Length Measurement Unit"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of light source. Elements comprise a controlled vocabulary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Light Source Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#M",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Meters"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging",
@@ -2448,6 +3269,78 @@
     "@id" : "http://pcdm.org/works#Work"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MediaType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type, nature, or classification of a Media file dataset, which may include one or more specific files. This is the general or high-level type of all file data, it is not the file type of any specific file. Most Media Types encompass a variety of different specific file types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Media Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Merge",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Merge"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Mesh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mesh or point cloud (*.stl, *.ply, .etc, with optional associated texture or color file)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MeshMapType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of 3D texture map or projection that associates two-dimensional space coordinates to the surface of a 3D object, usually in order to map a texture or other attribute onto the 3D object's surface."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mesh Map Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MeshPointCloudTexturing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mesh and/or Point Cloud Texturing"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MeshToPointCloud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mesh to Point Cloud"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Mi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Miles"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2464,6 +3357,36 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "CT"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Midline",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Side"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Midline"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Mm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Millimeters"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#MuseumDepartmentOrLabCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#OrganizationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Museum, Department, or Lab Collection"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#NeutronComputedTomography",
@@ -2484,6 +3407,68 @@
     "@value" : "NCT"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Normal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MeshMapType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Normal Map"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#NotApplicable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Side"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Not Applicable"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#OnAnyRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Future derivatives are required to be rearchived on any public-facing digital repository."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On Any Repository"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#OnMorphoSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Future derivatives are required to be rearchived on MorphoSource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On MorphoSource"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Open",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PublicationStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Published with Open Download. Media record may be found in public search. Media file(s) may be downloaded openly, after downloader submits a simple download usage survey."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Open Download"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Organization",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2496,6 +3481,61 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/works#Work"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#OrganizationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of Organization, distinguishing between collections managing Physical Objects, scanning facilities, and entities that both operate scanning equipment and manage Physical Objects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Organization Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Other"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Patch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Patch"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Patterned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Patterned"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Permissive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#UseAgreementType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Permissive MorphoSource use agreement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Permissive"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Photogrammetry",
@@ -2514,6 +3554,16 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Photogram"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImageSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photogrammetry image series (multiple files of type *.tiff, *.png, etc.)"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent",
@@ -2554,6 +3604,56 @@
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotosToDensePointCloud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photos to Dense Point Cloud"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotosToDigitalElevationModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photos to Digital Elevation Model"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotosToMesh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photos to Mesh"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotosToSparseMeshDepthMap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photos to Sparse Mesh and Depth Map"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PhotosToSparsePointCloudDepthMap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Photos to Sparse Point Cloud and Depth Map"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PhysicalObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2579,6 +3679,16 @@
     "@value" : "Pixel Spacing Calibration Type"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PointCloudToMesh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Point Cloud to Mesh"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#PositronEmissionTomography",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2597,6 +3707,30 @@
     "@value" : "PET"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Private",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PublicationStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Private"
+  }, {
+    "@language" : "en",
+    "@value" : "Unpublished. Media may not be found in public search, and media file(s) may not be downloaded by users without explicit access to Media."
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type statement describing a specific discrete processing activity step. It is often the case that in reality, multiple processing activity steps are used in the generation of any derived digital resource."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Processing Activity Type"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2609,6 +3743,57 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://pcdm.org/works#Work"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Projections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Projections"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#PublicationStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Status type indicating whether or not Media is published and under what conditions it is published."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Publication Status"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ReconstructedImageStack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reconstructed image stack"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ReconstructedTomographyToMesh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reconstructed Tomography to Mesh"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Reconstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reconstruction"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging",
@@ -2639,6 +3824,30 @@
     "@value" : "Reflection"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Restricted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PublicationStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Published with Restricted Download. Media may be found in public search. Media file(s) may only be downloaded after user has sought and received download approval from the Media data manager."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Restricted Download"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Side"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Right"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2657,6 +3866,16 @@
     "@value" : "SEM"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ScanningFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#OrganizationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Facility"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Scintillator",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2665,6 +3884,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Scintillator (Phosphor used)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImageSeries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequential section image series (multiple files of type *.tiff, *.png, *.zip, etc.)"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent",
@@ -2706,6 +3935,27 @@
     "@value" : "Sex"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Side",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For objects with bilateral or some other kind of symmetry, a term description statement pertaining to a particular side, the object midline, lack of knowledge relating to side, or inapplicability of this concept for an object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Side"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Simplification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Simplification"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2724,6 +3974,16 @@
     "@value" : "SPECT"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Sinograms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sinograms"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Slot",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2734,6 +3994,60 @@
     "@value" : "Slot (scanned slot, slit, or spot)"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SmoothingNoiseReduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Smoothing and/or Noise Reduction"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SparseMeshDepthMapToMesh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sparse Mesh and Depth Map to Mesh"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SparsePointCloudDepthMapToDensePointCloud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sparse Point Cloud and Depth Map to Dense Point Cloud"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Standard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#UseAgreementType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Standard MorphoSource use agreement."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Standard"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Static",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Static"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Storage",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2742,6 +4056,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Storage (Storage Phosphor)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Strobe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Strobe"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#StructuredLight",
@@ -2780,6 +4104,46 @@
     "@value" : "Synchro"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#TransformReflection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transform: Reflection"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#TransformRotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transform: Rotation"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#TransformScale",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transform: Scale"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#TransformTranslation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transform: Translation"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Transmission",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2788,6 +4152,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Transmission"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Um",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Micrometers"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Undetermined",
@@ -2810,18 +4184,66 @@
     "@value" : "Unknowable"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Unknown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Side"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unknown"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#UseAgreementType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of MorphoSource-specific Media download use agreement. This explicitly does not include types of non-MorphoSource use agreements, such as use agreements provided by third-party museums."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Use Agreement Type"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "User"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Variable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FocalLengthType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Variable"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Video",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Video (*.avi, *.mp4, *.mov, .etc.)"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Videography",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Video is a digital recording of moving images and sound. It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats."
+    "@value" : "The recording of moving images and sound (video). It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Video"
+    "@value" : "Videography"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -3042,6 +4464,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ark",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Persistent identifier for MorphoSource Media automatically created on Media submission. ARKs can apply to both unpublished and published media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -3073,28 +4499,12 @@
     "@value" : "Attachment File"
   } ]
 }, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#bitsAllocated",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Bits Allocated"
-  } ]
-}, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#bitsPerSample",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Bits Per Sample"
-  } ]
-}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxX",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Length across the X axis of the rectangular bounding box surrounding a 3D digital object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3105,6 +4515,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Length across the Y axis of the rectangular bounding box surrounding a 3D digital object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3115,6 +4529,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxZ",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Length across the Z axis of the rectangular bounding box surrounding a 3D digital object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3139,6 +4557,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#centroidX",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "X axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3149,6 +4571,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#centroidY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Y axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3159,6 +4585,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#centroidZ",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Z axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3199,6 +4629,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://ns.adobe.com/photoshop/1.0/Credit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Instructions and guidelines for the citation of a Media. This should include additional instructions beyond those included in other metadata fields or in any download usage agreement."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -3252,6 +4686,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#colorFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "How 3D color information is formatted and codified for a 3D object, if color information is present with the object. Values may include \"vertex color\", \"face color\", \"UV texture\", or others."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3262,26 +4700,46 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#colorSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Color space of image data. Values should be from the controlled vocabulary of short string labels for color spaces defined in the TIFF Tag PhotometricInterpretation (https://www.awaresystems.be/imaging/tiff/tifftags/photometricinterpretation.html)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Color Space"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`BlackIsZero`, `RGB`, `YCbCr`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#compression",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Compression scheme used on image data. Values should be from the controlled vocabulary of short string labels for compression schemes defined in the TIFF Tag Compression (https://www.awaresystems.be/imaging/tiff/tifftags/compression.html)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Compression"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Uncompressed`, `JPEG`, `PackBits`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contactUser",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Contact individual associated with the Organization. Does not need to be a MorphoSource User."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
@@ -3292,6 +4750,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For a ZIP archive file, the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document the number of files in the primary image collection in a CT image stack or photogrammetry image collection."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3302,6 +4764,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsFileName",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For a ZIP archive file, the file name of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3312,6 +4778,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsFileSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For a ZIP archive file, the file size of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document file size for a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3322,12 +4792,20 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsMimeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For a ZIP archive file, the mime type of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contents Mime Type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`image/jpeg`, `image/tiff`, `application/stl`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#context",
@@ -3365,6 +4843,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#crc32",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Checksum hash used to verify the identity of a file and to detect accidental corruption."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3375,12 +4857,19 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dataManager",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User intended to have long-term data management over Media representing Organization Physical Objects."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Data Manager"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#User"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dateModified",
@@ -3479,6 +4968,10 @@
     "@language" : "en",
     "@value" : "MARC bib: 1XX/7XX/8XX $4"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Device"
   }, {
@@ -3494,15 +4987,15 @@
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Depositor"
+  } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "http://id.loc.gov/vocabulary/relators/own"
   } ],
   "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
     "@id" : "_:genid1"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"
   } ],
   "http://www.w3.org/2004/02/skos/core#historyNote" : [ {
     "@language" : "en",
@@ -3510,9 +5003,6 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#notation" : [ {
     "@value" : "dpt"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "Depositor"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorConfiguration",
@@ -3621,12 +5111,34 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#deviceID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "MorphoSource-specific unique ID identifier for a Device used in an Imaging Event to image a Physical Object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Imaging Device ID"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomFileTypeExtension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Extension code indicating the file format of a file."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "File Type Extension"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`dcm`, `ply`, `mp4`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances",
@@ -3650,11 +5162,53 @@
     "@value" : "Pixel Spacing Width"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomSecondaryCaptureDeviceManufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Manufacturer of the Secondary Capture Device. This field should map to some DICOM field."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Secondary Capture Device Manufacturer"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomSecondaryCaptureDeviceSoftwareVers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Manufacturer's designation of software version of the Secondary Capture Device. This field should map to some DICOM field."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Secondary Capture Device Software Vers"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Spacing Between Slices"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#dicomWindowCenterAndWidthExplanation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Free form explanation of the meaning of the Window Center and Width. Multiple values correspond to multiple Window Center and Width values. This field should map to dicom:WindowCenterAndWidthExplanation and should be changed accordingly."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window Center and Width Explanation"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dimensions",
@@ -3686,6 +5240,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#doi",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Persistent identifier for MorphoSource Media created only on user request. DOIs can apply only to published media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -3699,16 +5257,31 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#downloadPermission",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Preferred Publication Status (morphosource:visibility) for Media representing Organization Physical Objects. Value must be from Publication Status controlled vocabulary (https://www.morphosource.org/terms/morphosource#PublicationStatus)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Download Permission"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PublicationStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Open`, `Restricted`, `Private`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#downloadReviewer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User(s) that receive and may decide approval requests to download media that is Published with Restricted Download."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
@@ -3721,6 +5294,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#edgesPerFace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of polygonal edges that connect vertices or points and comprise each face of a polygonal 3D mesh. Values are commonly \"3\" for a triangular mesh or \"4\" for a quadrangular mesh."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3745,6 +5322,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#faceCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of polygonal faces comprising a 3D mesh."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3755,6 +5336,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#fileName",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifying name label given to a file."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3765,6 +5350,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#fileSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Size of a file in bytes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3807,6 +5396,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#focalLength",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The actual focal length of the lens, in mm. This should probably map to exif:focalLength and should be updated accordingly."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   }, {
@@ -3819,12 +5412,23 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#focalLengthType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether focal length is variable or fixed. Values must be from FocalLengthType controlled vocabulary (https://www.morphosource.org/terms/morphosource#FocalLengthType)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Focal Length Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FocalLengthType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Variable`, `Fixed`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#frameAveraging",
@@ -3875,16 +5479,28 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#hasUVSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether or not a mapping exists to project a 3D object's surface to a 2D image for texture mapping and is present with the 3D object. Values should be \"Yes\" or \"No\"."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has UV Space"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#height",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Height of a 2D image in pixels."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -3971,7 +5587,7 @@
     "@value" : "Imaging Event Modality"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModality"
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/captureDevice"
@@ -3993,6 +5609,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#institutionName",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Name of institution affiliated with Organization. This may be a university in the case of departments or a museum in the case of specific museum collections."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
@@ -4120,6 +5740,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#lensMake",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The manufacturer of the camera lens. This should probably map directly to an EXIF term and should be updated accordingly."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   }, {
@@ -4135,6 +5759,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#lensModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The model of the camera lens. This should probably map directly to an EXIF term and should be updated accordingly."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   }, {
@@ -4150,12 +5778,20 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#licenseBlank",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no license in dc:license. This is distinct from an Organization expressing no preference on license choice. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no license to be chosen."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "License Intentionally Left Blank"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#longitude",
@@ -4191,12 +5827,23 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mapType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of texture map or projection that accompanies a 3D mesh model Media, such as color or normal maps. Values must be from the Mesh Map Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#MeshMapType). This only applies to Mesh Media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Map Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MeshMapType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Color`, `Normal`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#material",
@@ -4235,6 +5882,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mediaParentID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "MorphoSource-specific unique ID identifier for the parent Media of a Media. This is the ID of the Media from which the current Media is immediately derived."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -4248,6 +5899,10 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/subtypeLiteral"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type, nature, or classification of a Media file dataset, which may include one or more specific files. This is the general or high-level type of all file data, it is not the file type of any specific file. Most Media Types encompass a variety of different specific file types. Values must be from the Media Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#MediaType)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -4255,21 +5910,25 @@
     "@language" : "en",
     "@value" : "Media Type"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#MediaType"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/subtypeLiteral"
-  } ]
-}, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#mediaUUID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
-    "@value" : "Media UUID"
+    "@value" : "`Mesh`,`Image`,`CTImageSeries`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mimeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/dc/terms/format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Media type describing the nature and format of a file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
@@ -4280,6 +5939,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/format"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`image/jpeg`, `image/tiff`, `application/stl`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#modality3D",
@@ -4296,7 +5959,7 @@
     "@value" : "Modality"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModality"
+    "@id" : "https://www.morphosource.org/terms/morphosource#ImageModalityType"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -4305,6 +5968,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#morphosourceUseAgreementType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of MorphoSource use agreement that users must agree to in order to download Media and that is packaged with an associated Media download. Values must be from the Use Agreement Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#UseAgreementType)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
@@ -4313,10 +5980,21 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "MorphoSource Use Agreement Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#UseAgreementType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Standard`, `Permissive`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#normalsFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "How vertex or face normal information is formatted and codified for a 3D object, if normal information is present with the object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -4327,6 +6005,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#numberOfImagesInSet",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "For Media with a ZIP archive with many component files, this is the number of files in the primary image collection in a CT image stack or photogrammetry image collection. This only applies to CTImageSeries or PhotogrammetryImageSeries Media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -4370,6 +6052,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#objectID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "MorphoSource-specific unique ID identifier for a Physical Object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Physical Object ID"
@@ -4409,12 +6095,23 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#organizationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of Organization to distinguish between collections managing Physical Objects, scanning facilities, and entities that both operate scanning equipment and manage Physical Objects. Values must be from Organization Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#OrganizationType)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Organization Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#OrganizationType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Museum, Department, or Lab Collection`, `Scanning Facility`, `Collection and Scanning Facility`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#orientation",
@@ -4471,6 +6168,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Owner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#User"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#part",
@@ -4516,6 +6216,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#permits3DUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether Media may be 3D printed freely, may be 3D printed in limited ways, or if 3D printing is prohibited. Values must be from the 3D Printing Permission controlled vocabulary (https://www.morphosource.org/terms/morphosource#3DPrintingPermission)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
@@ -4524,10 +6228,21 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Permits 3D Use"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingPermission"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`3DPrintingPermitted`, `3DPrintingLimited`, `3DPrintingProhibited`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#permitsCommercialUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether commercial use of Media is permitted. Values must be from the Commercial Use Permission controlled vocabulary (https://www.morphosource.org/terms/morphosource#CommercialUsePermission)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
@@ -4536,6 +6251,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Permits Commercial Use"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CommercialUsePermission"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`CommercialUseNotPermitted`, `CommercialUsePermitted`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#phaseContrast",
@@ -4558,6 +6280,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Free text description of background removal method."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   } ],
@@ -4587,6 +6313,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#objectID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "MorphoSource-specific unique ID identifier for a Physical Object represented by a Media."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
@@ -4630,6 +6360,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#pointCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of 3D coordinate points comprising a 3D mesh or point cloud."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -4640,12 +6374,20 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#postalCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Group of numbers or letters added to a postal address to assist in sorting of mail, such as a ZIP code in the United States."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Postal Code"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`27708`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#power",
@@ -4670,6 +6412,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivityDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Description of a specific discrete processing activity step."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
@@ -4683,6 +6429,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivitySoftware",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Description of software used in a specific discrete processing activity step."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
@@ -4696,12 +6446,23 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivityType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of a specific discrete processing activity. Value must be from Processing Activity Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#ProcessingActivityType)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Processing Activity Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ProcessingActivityType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`AlignParts`, `Patch`, `Reconstruction`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#projections",
@@ -4796,6 +6557,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#recordsetID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An identifier for an entire museum, institution, or laboratory specimen collection associated with Organization. May be a global unique identifier or an identifier specific to a collection or institution."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
@@ -4808,6 +6573,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "URL for additional resource that might provide additional information about the Media or Physical Object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -4826,6 +6595,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#requiredArchivalOfPublishedDerivatives",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether and how future derivatives created from Media must be rearchived on a public-facing digital repository such as MorphoSource. Values may include mandatory requirements or optional suggestions. Values must be from Derivative Rearchival Statement controlled vocabulary (https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   }, {
@@ -4834,6 +6607,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Required Archival Of Published Derivatives"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`OnMorphoSource`, `OnAnyRepository`, `EncouragedButNotRequired`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsHolder",
@@ -4860,18 +6640,30 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsHolderBlank",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no rights holder in morphosource:rightsHolder. This is distinct from an Organization expressing no preference on rights holder statement. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no rights holder statement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rights Holder Intentionally Left Blank"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsStatement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://www.europeana.eu/schemas/edm/rights"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Standardized rights statement used to communicate the copyright and/or reuse status of digital objects. Values must be from the Rights Statement controlled vocabulary (https://rightsstatements.org)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
@@ -4882,18 +6674,33 @@
     "@language" : "en",
     "@value" : "Rights Statement"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/dc/terms/RightsStatement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.europeana.eu/schemas/edm/rights"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`http://rightsstatements.org/vocab/NoC-NC/1.0/`, `http://rightsstatements.org/vocab/UND/1.0/`, `http://rightsstatements.org/vocab/InC/1.0/`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsStatementBlank",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no rights statement in morphosource:rightsStatement. This is distinct from an Organization expressing no preference on rights statement. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no rights statement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rights Statement Intentionally Left Blank"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rotationNumber",
@@ -4918,6 +6725,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#scaleBar",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Details of scale bar accompany a photogrammetry image series. Value should include three elements: the scale bar target type, the scale bar distance, and the units of the scale bar distance. If values are encoded as a string, they should be separate by semicolons. This only applies to PhotogrammetryImageSeries Media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -4928,12 +6739,23 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#seriesType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Broad type or kind of CT image series, distiguishing between initial X-Ray projections and other derived series forms. Values must be from the CT Image Series Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#CTImageSeriesType)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Series Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#CTImageSeriesType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Projections`, `Sinograms`, `Reconstructed image stack`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shadingCorrection",
@@ -4956,6 +6778,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shortDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Brief summary description of Media. This could include a brief summary of what is represented in the Media or the context surrounding the Media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -4988,6 +6814,8 @@
     "@value" : "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
+  }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent"
   }, {
     "@id" : "https://www.morphosource.org/terms/morphosource#PhotographyImagingEvent"
@@ -5009,6 +6837,10 @@
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/comments"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The side of a larger object on which is located a represented component part, if media represents a component part of a larger whole object. Values must be from the Side controlled vocabulary (https://www.morphosource.org/terms/morphosource#Side). Values are somewhat oriented toward objects with bilateral symmetry, but may in some cases be applied for objects with other kinds of symmetry."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -5016,22 +6848,41 @@
     "@language" : "en",
     "@value" : "Side"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#Side"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/comments"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Left`, `Midline`, `Not Applicable`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#slideType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Type of sequential section slide imaged. Value must be \"Histological\" or \"Other\"."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Slide Type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Histological`, `Other`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#software",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Free text description of any software used in an Imaging Event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#ImagingEvent"
   } ],
@@ -5102,6 +6953,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#tag",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "All-purpose label attached to Media for the purpose of identification, context, or to give other information."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -5171,6 +7026,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#teamID",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "MorphoSource-specific unique ID identifier for a Team associated with the Organization and responsible for managing the Organization record."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Organization"
   } ],
@@ -5181,29 +7040,28 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Length measurement unit. For Mesh Media, this is the length unit associated with the 3D coordinate space of the mesh. For CTImageSeries Media, this is the length unit for X/Y/Z pixel spacing. Values must be from the Length Measurement Unit controlled vocabulary (https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Unit"
-  } ]
-}, {
-  "@id" : "https://www.morphosource.org/terms/morphosource#uuid",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
-    "@value" : "UUID"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://www.morphosource.org/terms/morphosource#mediaUUID"
+    "@value" : "`Mm`, `Um`, `M`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#vertexColor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Whether or not a 3D object has color information encoded into vertices or points that comprise a mesh or point cloud."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -5214,6 +7072,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#visibility",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Publication status, denoting whether or not Media may be found in public search and whether or not Media files may be downloaded. Values must be from Publication Status controlled vocabulary (https://www.morphosource.org/terms/morphosource#PublicationStatus)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -5221,8 +7083,15 @@
     "@language" : "en",
     "@value" : "Visibility"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#PublicationStatus"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#filesetAccessibility"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "`Open`, `Restricted`, `Private`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#voltage",
@@ -5277,6 +7146,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#width",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Width of a 2D image in pixels."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#FileSet"
   } ],
@@ -5287,6 +7160,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#xSpacing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance between centers of adjacent pixels in the X axis, for Media with pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to Image and CTImageSeries media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -5320,6 +7197,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ySpacing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance between centers of adjacent pixels in the Y axis, for Media with pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to Image and CTImageSeries media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
@@ -5333,6 +7214,10 @@
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#zSpacing",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance between centers of adjacent pixels in the Z axis, for Media with 3D pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to CTImageSeries media."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],

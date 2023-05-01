@@ -9,7 +9,7 @@
 <https://www.morphosource.org/terms/morphosource> rdf:type owl:Ontology ;
                                                    rdfs:comment "Test description for MorphoSource Terms Vocabulary"@en ;
                                                    rdfs:label "MorphoSource Terms Vocabulary"@en ;
-                                                   owl:versionInfo "0.2.0" .
+                                                   owl:versionInfo "0.3.0" .
 
 #################################################################
 #    Annotation properties
@@ -286,7 +286,13 @@ xsd:date rdf:type rdfs:Datatype .
                                                       :ImagingEvent ,
                                                       :Media ,
                                                       :PhysicalObject ,
-                                                      :ProcessingEvent .
+                                                      :ProcessingEvent ;
+                                          <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                                          rdfs:comment "An entity primarily responsible for making the resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                          rdfs:label "Creator"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
 
 
 ###  http://purl.org/dc/elements/1.1/description
@@ -335,7 +341,12 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/created> rdf:type owl:ObjectProperty ;
                                    rdfs:domain :ImagingEvent ,
                                                :Media ,
-                                               :ProcessingEvent .
+                                               :ProcessingEvent ;
+                                   <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+                                   <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                   rdfs:comment "Date of creation of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Date Created"@en .
 
 
 ###  http://purl.org/dc/terms/dateSubmitted
@@ -372,6 +383,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/dc/terms/license> rdf:type owl:ObjectProperty ;
                                    rdfs:domain :Media ,
                                                :Organization ;
+                                   rdfs:range <http://creativecommons.org/ns#License> ;
                                    <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/LicenseDocument> ;
                                    <http://purl.org/dc/terms/description> "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
                                    rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
@@ -391,7 +403,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:ObjectProperty ;
-                                    owl:equivalentProperty :dateModified .
+                                    owl:equivalentProperty :dateModified ;
+                                    <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+                                    <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
+                                    rdfs:comment "Date on which the resource was changed."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Date Modified"@en .
 
 
 ###  http://purl.org/dc/terms/provenance
@@ -418,6 +435,13 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:label "Title"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#AccessionNumber
+<http://purl.org/healthcarevocab/v1#AccessionNumber> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain :FileSet ;
+                                                     rdfs:comment "A RIS generated number that identifies the order for the Study."@en ;
+                                                     rdfs:label "Accession Number"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#AcquisitionType
 <http://purl.org/healthcarevocab/v1#AcquisitionType> rdf:type owl:ObjectProperty ;
                                                      rdfs:domain :CTImageSeriesImagingEvent ;
@@ -429,44 +453,92 @@ Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be pre
 
 ###  http://purl.org/healthcarevocab/v1#AnodeTargetMaterial
 <http://purl.org/healthcarevocab/v1#AnodeTargetMaterial> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain :FileSet ;
                                                          rdfs:comment "The primary material in the anode of the X-Ray source."@en ;
                                                          rdfs:label "Anode Target Material"@en ;
                                                          <http://www.w3.org/2004/02/skos/core#example> "`tungsten`, `molybdenum`, `copper`"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#BitsAllocated
+<http://purl.org/healthcarevocab/v1#BitsAllocated> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain :FileSet ;
+                                                   rdfs:comment "Number of bits allocated for each pixel sample. Each sample shall have the same number of bits allocated. Bits Allocated (0028,0100) shall be either 1, or a multiple of 8. See PS3.5 for further explanation."@en ;
+                                                   rdfs:label "Bits Allocated"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#BitsStored
+<http://purl.org/healthcarevocab/v1#BitsStored> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain :FileSet ;
+                                                rdfs:comment "Number of bits stored for each pixel sample. Each sample shall have the same number of bits stored. See PS3.5 for further explanation."@en ;
+                                                rdfs:label "Bits Stored"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#Columns
+<http://purl.org/healthcarevocab/v1#Columns> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain :FileSet ;
+                                             rdfs:comment """Number of columns in the image.
+
+Shall be an exact multiple of the horizontal downsampling factor if any of the samples (planes) are encoded downsampled in the horizontal direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422."""@en ;
+                                             rdfs:label "Columns"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#ContainerDescription
 <http://purl.org/healthcarevocab/v1#ContainerDescription> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain :FileSet ;
                                                           rdfs:comment "Description of the container."@en ;
                                                           rdfs:label "Container Description"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#ContentDate
+<http://purl.org/healthcarevocab/v1#ContentDate> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain :FileSet ;
+                                                 rdfs:comment """The date the image pixel data creation started.
+
+Required if image is part of a Series in which the images are temporally related. May be present otherwise."""@en ;
+                                                 rdfs:label "Content Date"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#ContentTime
+<http://purl.org/healthcarevocab/v1#ContentTime> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain :FileSet ;
+                                                 rdfs:comment """The time the image pixel data creation started.
+
+Required if image is part of a Series in which the images are temporally related. May be present otherwise."""@en ;
+                                                 rdfs:label "Content Time"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#ContrastFrameAveraging
 <http://purl.org/healthcarevocab/v1#ContrastFrameAveraging> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain :FileSet ;
                                                             rdfs:comment "Specifies the number of contrast frames to average together before performing the mask operation. If the Attribute is missing, no averaging is performed."@en ;
                                                             rdfs:label "Contrast Frame Averaging"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DetectorDescription
 <http://purl.org/healthcarevocab/v1#DetectorDescription> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain :FileSet ;
                                                          rdfs:comment "Free text description of detector."@en ;
                                                          rdfs:label "Detector Description"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DistanceSourceToDetector
 <http://purl.org/healthcarevocab/v1#DistanceSourceToDetector> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain :FileSet ;
                                                               rdfs:comment "Distance in mm from source to detector center."@en ;
                                                               rdfs:label "Distance From Source To Detector"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#DistanceSourceToPatient
 <http://purl.org/healthcarevocab/v1#DistanceSourceToPatient> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain :FileSet ;
                                                              rdfs:comment "Distance in mm from source to isocenter (center of field of view)."@en ;
                                                              rdfs:label "Distance From Source To Patient"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#ExposureTime
 <http://purl.org/healthcarevocab/v1#ExposureTime> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain :CTImageSeriesImagingEvent ;
+                                                  rdfs:domain :CTImageSeriesImagingEvent ,
+                                                              :FileSet ;
                                                   rdfs:comment """Time of X-Ray exposure in msec.
 
 If Acquisition Type (0018,9302) equals SPIRAL, the value of this Attribute shall be Revolution Time (0018,9305) divided by the Spiral Pitch Factor (0018,9311). See Section C.8.15.3.8.1 and Section C.8.15.3.2.1.
@@ -477,54 +549,215 @@ Shall not be present if this Attribute is present in Multi-energy CT Acquisition
 
 ###  http://purl.org/healthcarevocab/v1#GeneratorID
 <http://purl.org/healthcarevocab/v1#GeneratorID> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain :FileSet ;
                                                  rdfs:comment "Identifier of the generator."@en ;
                                                  rdfs:label "Generator ID"@en .
 
 
 ###  http://purl.org/healthcarevocab/v1#GeneratorPower
 <http://purl.org/healthcarevocab/v1#GeneratorPower> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain :FileSet ;
                                                     rdfs:comment """Power in kW to the X-Ray generator.
 
 Shall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362)."""@en ;
                                                     rdfs:label "Generator Power"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#HighBit
+<http://purl.org/healthcarevocab/v1#HighBit> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain :FileSet ;
+                                             rdfs:comment "Most significant bit for pixel sample data. Each sample shall have the same high bit. High Bit (0028,0102) shall be one less than Bits Stored (0028,0101). See PS3.5 for further explanation."@en ;
+                                             rdfs:label "High Bit"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#ImageOrientationPatient
+<http://purl.org/healthcarevocab/v1#ImageOrientationPatient> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain :FileSet ;
+                                                             rdfs:comment "The direction cosines of the first row and the first column with respect to the patient. See Section C.7.6.2.1.1 for further explanation."@en ;
+                                                             rdfs:label "Image Orientation Patient"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#ImagePositionPatient
+<http://purl.org/healthcarevocab/v1#ImagePositionPatient> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain :FileSet ;
+                                                          rdfs:comment """Patient position descriptor relative to the equipment. See Section C.7.1.4.1.1.1.
+
+See Section C.7.3.1.1.2 for Defined Terms and further explanation."""@en ;
+                                                          rdfs:label "Image Position Patient"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#ImageType
+<http://purl.org/healthcarevocab/v1#ImageType> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain :FileSet ;
+                                               rdfs:comment "Image identification characteristics. See Section C.7.6.1.1.2 for Defined Terms and further explanation."@en ;
+                                               rdfs:label "Image Type"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#ImagesInAcquisition
 <http://purl.org/healthcarevocab/v1#ImagesInAcquisition> rdf:type owl:ObjectProperty ;
-                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain :FileSet ;
                                                          rdfs:comment "Number of images that resulted from this acquisition of data."@en ;
                                                          rdfs:label "Images in Acquisition"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#InstanceNumber
+<http://purl.org/healthcarevocab/v1#InstanceNumber> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain :FileSet ;
+                                                    rdfs:comment "A number that identifies this image."@en ;
+                                                    rdfs:label "Instance Number"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#KVP
 <http://purl.org/healthcarevocab/v1#KVP> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :FileSet ;
                                          rdfs:comment """Peak kilo voltage output of the X-Ray generator used.
 
 Shall be empty if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362)."""@en ;
                                          rdfs:label "KVP"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#Modality
+<http://purl.org/healthcarevocab/v1#Modality> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain :FileSet ;
+                                              rdfs:comment "Type of equipment that originally acquired the data used to create the images in this Series. See Section C.7.3.1.1.1 for Defined Terms."@en ;
+                                              rdfs:label "Modality"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#PhotometricInterpretation
+<http://purl.org/healthcarevocab/v1#PhotometricInterpretation> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain :FileSet ;
+                                                               rdfs:comment "Specifies the intended interpretation of the pixel data. See Section C.7.6.3.1.2 for further explanation."@en ;
+                                                               rdfs:label "Photometric Interpretation"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#PixelRepresentation
+<http://purl.org/healthcarevocab/v1#PixelRepresentation> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain :FileSet ;
+                                                         rdfs:comment "Data representation of the pixel samples. Each sample shall have the same pixel representation."@en ;
+                                                         rdfs:label "Pixel Representation"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#PixelSpacing
+<http://purl.org/healthcarevocab/v1#PixelSpacing> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain :FileSet ;
+                                                  rdfs:comment "Physical distance in the patient between the center of each pixel, specified by a numeric pair - adjacent row spacing (delimiter) adjacent column spacing in mm. See Section 10.7.1.3 for further explanation."@en ;
+                                                  rdfs:label "Pixel Spacing"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType
 <http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain :FileSet ;
                                                                  rdfs:comment "The type of correction for the effect of geometric magnification or calibration against an object of known size, if any. See Section 10.7.1.2."@en ;
                                                                  rdfs:label "Pixel Spacing Calibration Type"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#RescaleIntercept
+<http://purl.org/healthcarevocab/v1#RescaleIntercept> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain :FileSet ;
+                                                      rdfs:comment """The value b in relationship between stored values (SV) and the output units.
+
+Output units = m*SV+b
+
+If Image Type (0008,0008) Value 1 is ORIGINAL and Value 3 is not LOCALIZER, and Multi-energy CT Acquisition (0018,9361) is either absent or NO, output units shall be Hounsfield Units (HU)."""@en ;
+                                                      rdfs:label "Rescale Intercept"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#RescaleSlope
+<http://purl.org/healthcarevocab/v1#RescaleSlope> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain :FileSet ;
+                                                  rdfs:comment "m in the equation specified in Rescale Intercept (0028,1052)."@en ;
+                                                  rdfs:label "Rescale Slope"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#Rows
+<http://purl.org/healthcarevocab/v1#Rows> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain :FileSet ;
+                                          rdfs:comment """Number of rows in the image.
+
+Shall be an exact multiple of the vertical downsampling factor if any of the samples (planes) are encoded downsampled in the vertical direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422."""@en ;
+                                          rdfs:label "Rows"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#SamplesPerPixel
+<http://purl.org/healthcarevocab/v1#SamplesPerPixel> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain :FileSet ;
+                                                     rdfs:comment "Number of samples (planes) in this image. See Section C.7.6.3.1.1 for further explanation."@en ;
+                                                     rdfs:label "Samples Per Pixel"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#SeriesDate
+<http://purl.org/healthcarevocab/v1#SeriesDate> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain :FileSet ;
+                                                rdfs:comment "Date the Series started."@en ;
+                                                rdfs:label "Series Date"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#SeriesTime
+<http://purl.org/healthcarevocab/v1#SeriesTime> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain :FileSet ;
+                                                rdfs:comment "Time the Series started."@en ;
+                                                rdfs:label "Series Time"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#SliceThickness
 <http://purl.org/healthcarevocab/v1#SliceThickness> rdf:type owl:ObjectProperty ;
-                                                    rdfs:domain :Media ;
+                                                    rdfs:domain :FileSet ,
+                                                                :Media ;
                                                     rdfs:comment "Nominal slice thickness, in mm."@en ;
                                                     rdfs:label "Slice Thickness"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#SpacingBetweenSlices
+<http://purl.org/healthcarevocab/v1#SpacingBetweenSlices> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain :FileSet ;
+                                                          rdfs:comment "Spacing between slices, in mm. The spacing is measured from the center-to-center of each slice."@en ;
+                                                          rdfs:label "Spacing Between Slices"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#SpiralPitchFactor
 <http://purl.org/healthcarevocab/v1#SpiralPitchFactor> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain :FileSet ;
                                                        rdfs:comment "Ratio of the Table Feed per Rotation (0018,9310) to the Total Collimation Width (0018,9307)."@en ;
                                                        rdfs:label "Spiral Pitch Factor"@en .
 
 
+###  http://purl.org/healthcarevocab/v1#StudyDate
+<http://purl.org/healthcarevocab/v1#StudyDate> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain :FileSet ;
+                                               rdfs:comment "Date the Study started."@en ;
+                                               rdfs:label "Study Date"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#StudyTime
+<http://purl.org/healthcarevocab/v1#StudyTime> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain :FileSet ;
+                                               rdfs:comment "Time the Study started."@en ;
+                                               rdfs:label "Study Time"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#WindowCenter
+<http://purl.org/healthcarevocab/v1#WindowCenter> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain :FileSet ;
+                                                  rdfs:comment """Window Center for display.
+
+See Section C.11.2.1.2 for further explanation.
+
+Required if VOI LUT Sequence (0028,3010) is not present. May be present otherwise."""@en ;
+                                                  rdfs:label "Window Center"@en .
+
+
+###  http://purl.org/healthcarevocab/v1#WindowWidth
+<http://purl.org/healthcarevocab/v1#WindowWidth> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain :FileSet ;
+                                                 rdfs:comment """Window Width for display. See Section C.11.2.1.2 for further explanation.
+
+Required if Window Center (0028,1050) is present."""@en ;
+                                                 rdfs:label "Window Width"@en .
+
+
 ###  http://purl.org/healthcarevocab/v1#XRayTubeCurrent
 <http://purl.org/healthcarevocab/v1#XRayTubeCurrent> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain :FileSet ;
                                                      rdfs:comment "X-Ray Tube Current in mA. Required if Exposure (0018,1152) is not present. May be present otherwise."@en ;
                                                      rdfs:label "X-Ray Tube Current"@en .
 
@@ -574,7 +807,6 @@ Shall be empty if this Attribute is present in Multi-energy CT Acquisition Seque
 
 ###  http://rs.tdwg.org/ac/terms/fundingAttribution
 <http://rs.tdwg.org/ac/terms/fundingAttribution> rdf:type owl:ObjectProperty ;
-                                                 <http://purl.org/dc/elements/1.1/creator> "Biodiversity Information Standards (TDWG)" ;
                                                  <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" ;
                                                  <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/ac/terms/version/fundingAttribution-2013-10-28> ,
                                                                                        <http://rs.tdwg.org/ac/terms/version/fundingAttribution-2020-01-27> ;
@@ -849,6 +1081,7 @@ Shall be empty if this Attribute is present in Multi-energy CT Acquisition Seque
 ###  http://rs.tdwg.org/dwc/terms/sex
 <http://rs.tdwg.org/dwc/terms/sex> rdf:type owl:ObjectProperty ;
                                    rdfs:domain :BiologicalSpecimenObject ;
+                                   rdfs:range :Sex ;
                                    <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary."@en ;
                                    <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/sex-2009-04-24> ,
                                                                          <http://rs.tdwg.org/dwc/terms/version/sex-2017-10-06> ;
@@ -883,13 +1116,11 @@ Shall be empty if this Attribute is present in Multi-energy CT Acquisition Seque
 
 ###  http://rs.tdwg.org/dwc/terms/typeStatus
 <http://rs.tdwg.org/dwc/terms/typeStatus> rdf:type owl:ObjectProperty ;
-                                          <http://purl.org/dc/terms/created> "2009-04-24"^^xsd:date ;
                                           <http://purl.org/dc/terms/description> "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."@en ;
                                           <http://purl.org/dc/terms/hasVersion> <http://rs.tdwg.org/dwc/terms/version/typeStatus-2009-04-24> ,
                                                                                 <http://rs.tdwg.org/dwc/terms/version/typeStatus-2014-10-23> ,
                                                                                 <http://rs.tdwg.org/dwc/terms/version/typeStatus-2017-10-06> ;
                                           <http://purl.org/dc/terms/isPartOf> <http://rs.tdwg.org/dwc/terms/> ;
-                                          <http://purl.org/dc/terms/modified> "2017-10-06"^^xsd:date ;
                                           <http://purl.org/dc/terms/replaces> <http://rs.tdwg.org/dwc/curatorial/TypeStatus> ;
                                           <http://rs.tdwg.org/dwc/terms/attributes/abcdEquivalence> "DataSets/DataSet/Units/Unit/SpecimenUnit/NomenclaturalTypeDesignations/NomenclaturalTypeText" ;
                                           <http://rs.tdwg.org/dwc/terms/attributes/decision> <http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16> ;
@@ -922,12 +1153,30 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  http://www.w3.org/2003/12/exif/ns#apertureValue
 <http://www.w3.org/2003/12/exif/ns#apertureValue> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain :PhotogrammetryImagingEvent ,
+                                                  rdfs:domain :FileSet ,
+                                                              :PhotogrammetryImagingEvent ,
                                                               :PhotographyImagingEvent ;
                                                   rdfs:comment "The lens aperture. The unit is the APEX value."@en ,
                                                                "レンズ絞り値（APEX値）。この値のルート2のベキ乗を取ると、通常の絞り値となる。例えば'5'の場合だと√2^5=F5.6"@ja ;
                                                   rdfs:label "ApertureValue"@en ;
                                                   <http://www.w3.org/2003/12/exif/ns#tagNumber> "37378"@en .
+
+
+###  http://www.w3.org/2003/12/exif/ns#bitsPerSample
+<http://www.w3.org/2003/12/exif/ns#bitsPerSample> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain :FileSet ;
+                                                  rdfs:comment "The number of bits per image component. In this standard each component of the image is 8 bits, so the value for this tag is 8. See also SamplesPerPixel. In JPEG compressed data a JPEG marker is used instead of this tag."@en ;
+                                                  rdfs:label "BitsPerSample"@en ;
+                                                  <http://www.w3.org/2003/12/exif/ns#tagNumber> "258"@en .
+
+
+###  http://www.w3.org/2003/12/exif/ns#focalLength
+<http://www.w3.org/2003/12/exif/ns#focalLength> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain :FileSet ;
+                                                rdfs:comment "The actual focal length of the lens, in mm. Conversion is not made to the focal length of a 35 mm film camera."@en ,
+                                                             "レンズの焦点距離。単位はmm"@ja ;
+                                                rdfs:label "FocalLength"@en ;
+                                                <http://www.w3.org/2003/12/exif/ns#tagNumber> "37386"@en .
 
 
 ###  http://www.w3.org/2003/12/exif/ns#gpsLatitude
@@ -948,7 +1197,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  http://www.w3.org/2003/12/exif/ns#isoSpeedRatings
 <http://www.w3.org/2003/12/exif/ns#isoSpeedRatings> rdf:type owl:ObjectProperty ;
-                                                    rdfs:domain :PhotogrammetryImagingEvent ,
+                                                    rdfs:domain :FileSet ,
+                                                                :PhotogrammetryImagingEvent ,
                                                                 :PhotographyImagingEvent ;
                                                     rdfs:comment "CCD感度の銀塩フィルム換算値"@ja ,
                                                                  "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232."@en ;
@@ -960,6 +1210,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 <http://www.w3.org/2003/12/exif/ns#lightSource> rdf:type owl:ObjectProperty ;
                                                 rdfs:domain :PhotogrammetryImagingEvent ,
                                                             :PhotographyImagingEvent ;
+                                                rdfs:range :LightSourceType ;
                                                 rdfs:comment "Light source such as Daylight, Tungsten, Flash etc."@en ,
                                                              "光源。これはマニュアルでホワイトバランスを設定した場合のモード値となる"@ja ;
                                                 rdfs:label "LightSource"@en ;
@@ -1060,6 +1311,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :ark rdf:type owl:ObjectProperty ;
      rdfs:subPropertyOf :mediaARK ;
      rdfs:domain :Media ;
+     rdfs:comment "Persistent identifier for MorphoSource Media automatically created on Media submission. ARKs can apply to both unpublished and published media."@en ;
      rdfs:label "ARK (Archival Resource Key)"@en .
 
 
@@ -1073,33 +1325,24 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 rdfs:label "Attachment File"@en .
 
 
-###  https://www.morphosource.org/terms/morphosource#bitsAllocated
-:bitsAllocated rdf:type owl:ObjectProperty ;
-               rdfs:domain :FileSet ;
-               rdfs:label "Bits Allocated"@en .
-
-
-###  https://www.morphosource.org/terms/morphosource#bitsPerSample
-:bitsPerSample rdf:type owl:ObjectProperty ;
-               rdfs:domain :FileSet ;
-               rdfs:label "Bits Per Sample"@en .
-
-
 ###  https://www.morphosource.org/terms/morphosource#boundingBoxX
 :boundingBoxX rdf:type owl:ObjectProperty ;
               rdfs:domain :FileSet ;
+              rdfs:comment "Length across the X axis of the rectangular bounding box surrounding a 3D digital object."@en ;
               rdfs:label "Bounding Box X"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#boundingBoxY
 :boundingBoxY rdf:type owl:ObjectProperty ;
               rdfs:domain :FileSet ;
+              rdfs:comment "Length across the Y axis of the rectangular bounding box surrounding a 3D digital object."@en ;
               rdfs:label "Bounding Box Y"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#boundingBoxZ
 :boundingBoxZ rdf:type owl:ObjectProperty ;
               rdfs:domain :FileSet ;
+              rdfs:comment "Length across the Z axis of the rectangular bounding box surrounding a 3D digital object."@en ;
               rdfs:label "Bounding Box Z"@en .
 
 
@@ -1113,18 +1356,21 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#centroidX
 :centroidX rdf:type owl:ObjectProperty ;
            rdfs:domain :FileSet ;
+           rdfs:comment "X axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."@en ;
            rdfs:label "Centroid X"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#centroidY
 :centroidY rdf:type owl:ObjectProperty ;
            rdfs:domain :FileSet ;
+           rdfs:comment "Y axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."@en ;
            rdfs:label "Centroid Y"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#centroidZ
 :centroidZ rdf:type owl:ObjectProperty ;
            rdfs:domain :FileSet ;
+           rdfs:comment "Z axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."@en ;
            rdfs:label "Centroid Z"@en .
 
 
@@ -1147,6 +1393,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
         rdfs:subPropertyOf <http://ns.adobe.com/photoshop/1.0/Credit> ;
         rdfs:domain :Media ;
         <http://purl.org/dc/terms/isVersionOf> <http://ns.adobe.com/photoshop/1.0/Credit> ;
+        rdfs:comment "Instructions and guidelines for the citation of a Media. This should include additional instructions beyond those included in other metadata fields or in any download usage agreement."@en ;
         rdfs:label "Cite As"@en .
 
 
@@ -1168,49 +1415,60 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#colorFormat
 :colorFormat rdf:type owl:ObjectProperty ;
              rdfs:domain :FileSet ;
+             rdfs:comment "How 3D color information is formatted and codified for a 3D object, if color information is present with the object. Values may include \"vertex color\", \"face color\", \"UV texture\", or others."@en ;
              rdfs:label "Color Format"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#colorSpace
 :colorSpace rdf:type owl:ObjectProperty ;
             rdfs:domain :FileSet ;
-            rdfs:label "Color Space"@en .
+            rdfs:comment "Color space of image data. Values should be from the controlled vocabulary of short string labels for color spaces defined in the TIFF Tag PhotometricInterpretation (https://www.awaresystems.be/imaging/tiff/tifftags/photometricinterpretation.html)."@en ;
+            rdfs:label "Color Space"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`BlackIsZero`, `RGB`, `YCbCr`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#compression
 :compression rdf:type owl:ObjectProperty ;
              rdfs:domain :FileSet ;
-             rdfs:label "Compression"@en .
+             rdfs:comment "Compression scheme used on image data. Values should be from the controlled vocabulary of short string labels for compression schemes defined in the TIFF Tag Compression (https://www.awaresystems.be/imaging/tiff/tifftags/compression.html)."@en ;
+             rdfs:label "Compression"@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "`Uncompressed`, `JPEG`, `PackBits`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#contactUser
 :contactUser rdf:type owl:ObjectProperty ;
              rdfs:domain :Organization ;
+             rdfs:comment "Contact individual associated with the Organization. Does not need to be a MorphoSource User."@en ;
              rdfs:label "Contact User"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount
 :contentsAcceptedFileCount rdf:type owl:ObjectProperty ;
                            rdfs:domain :FileSet ;
+                           rdfs:comment "For a ZIP archive file, the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document the number of files in the primary image collection in a CT image stack or photogrammetry image collection."@en ;
                            rdfs:label "Contents Accepted File Count"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#contentsFileName
 :contentsFileName rdf:type owl:ObjectProperty ;
                   rdfs:domain :FileSet ;
+                  rdfs:comment "For a ZIP archive file, the file name of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."@en ;
                   rdfs:label "Contents File Name"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#contentsFileSize
 :contentsFileSize rdf:type owl:ObjectProperty ;
                   rdfs:domain :FileSet ;
+                  rdfs:comment "For a ZIP archive file, the file size of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document file size for a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."@en ;
                   rdfs:label "Contents File Size"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#contentsMimeType
 :contentsMimeType rdf:type owl:ObjectProperty ;
                   rdfs:domain :FileSet ;
-                  rdfs:label "Contents Mime Type"@en .
+                  rdfs:comment "For a ZIP archive file, the mime type of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."@en ;
+                  rdfs:label "Contents Mime Type"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "`image/jpeg`, `image/tiff`, `application/stl`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#context
@@ -1229,12 +1487,15 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#crc32
 :crc32 rdf:type owl:ObjectProperty ;
        rdfs:domain :FileSet ;
+       rdfs:comment "Checksum hash used to verify the identity of a file and to detect accidental corruption."@en ;
        rdfs:label "CRC32"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#dataManager
 :dataManager rdf:type owl:ObjectProperty ;
              rdfs:domain :Organization ;
+             rdfs:range :User ;
+             rdfs:comment "User intended to have long-term data management over Media representing Organization Physical Objects."@en ;
              rdfs:label "Data Manager"@en .
 
 
@@ -1288,12 +1549,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
            <http://www.loc.gov/mads/rdf/v1#definitionNote> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
            <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/vocabulary/relators/own> ;
            <http://www.loc.gov/mads/rdf/v1#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
+           rdfs:comment "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
+           rdfs:label "Depositor"@en ;
            <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/own> ;
            <http://www.w3.org/2004/02/skos/core#changeNote> _:genid1 ;
-           <http://www.w3.org/2004/02/skos/core#definition> "A current owner of an item who deposited the item into the custody of another person, family, or organization, while still retaining ownership"@en ;
            <http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en ;
-           <http://www.w3.org/2004/02/skos/core#notation> "dpt" ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "Depositor" .
+           <http://www.w3.org/2004/02/skos/core#notation> "dpt" .
 
 
 ###  https://www.morphosource.org/terms/morphosource#detectorConfiguration
@@ -1347,7 +1608,16 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#deviceID
 :deviceID rdf:type owl:ObjectProperty ;
           rdfs:domain :ImagingEvent ;
+          rdfs:comment "MorphoSource-specific unique ID identifier for a Device used in an Imaging Event to image a Physical Object."@en ;
           rdfs:label "Imaging Device ID"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#dicomFileTypeExtension
+:dicomFileTypeExtension rdf:type owl:ObjectProperty ;
+                        rdfs:domain :FileSet ;
+                        rdfs:comment "Extension code indicating the file format of a file."@en ;
+                        rdfs:label "File Type Extension"@en ;
+                        <http://www.w3.org/2004/02/skos/core#example> "`dcm`, `ply`, `mp4`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances
@@ -1365,9 +1635,30 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                         rdfs:label "Pixel Spacing Width"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#dicomSecondaryCaptureDeviceManufacturer
+:dicomSecondaryCaptureDeviceManufacturer rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :FileSet ;
+                                         rdfs:comment "Manufacturer of the Secondary Capture Device. This field should map to some DICOM field."@en ;
+                                         rdfs:label "Secondary Capture Device Manufacturer"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#dicomSecondaryCaptureDeviceSoftwareVers
+:dicomSecondaryCaptureDeviceSoftwareVers rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :FileSet ;
+                                         rdfs:comment "Manufacturer's designation of software version of the Secondary Capture Device. This field should map to some DICOM field."@en ;
+                                         rdfs:label "Secondary Capture Device Software Vers"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices
 :dicomSpacingBetweenSlices rdf:type owl:ObjectProperty ;
                            rdfs:label "Spacing Between Slices"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#dicomWindowCenterAndWidthExplanation
+:dicomWindowCenterAndWidthExplanation rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :FileSet ;
+                                      rdfs:comment "Free form explanation of the meaning of the Window Center and Width. Multiple values correspond to multiple Window Center and Width values. This field should map to dicom:WindowCenterAndWidthExplanation and should be changed accordingly."@en ;
+                                      rdfs:label "Window Center and Width Explanation"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#dimensions
@@ -1385,25 +1676,31 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :doi rdf:type owl:ObjectProperty ;
      rdfs:subPropertyOf :mediaDOI ;
      rdfs:domain :Media ;
+     rdfs:comment "Persistent identifier for MorphoSource Media created only on user request. DOIs can apply only to published media."@en ;
      rdfs:label "DOI (Digital Object Identifier)"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#downloadPermission
 :downloadPermission rdf:type owl:ObjectProperty ;
                     rdfs:domain :Organization ;
-                    rdfs:label "Download Permission"@en .
+                    rdfs:range :PublicationStatus ;
+                    rdfs:comment "Preferred Publication Status (morphosource:visibility) for Media representing Organization Physical Objects. Value must be from Publication Status controlled vocabulary (https://www.morphosource.org/terms/morphosource#PublicationStatus)."@en ;
+                    rdfs:label "Download Permission"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "`Open`, `Restricted`, `Private`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#downloadReviewer
 :downloadReviewer rdf:type owl:ObjectProperty ;
                   rdfs:domain :Media ,
                               :Organization ;
+                  rdfs:comment "User(s) that receive and may decide approval requests to download media that is Published with Restricted Download."@en ;
                   rdfs:label "Download Reviewer"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#edgesPerFace
 :edgesPerFace rdf:type owl:ObjectProperty ;
               rdfs:domain :FileSet ;
+              rdfs:comment "Number of polygonal edges that connect vertices or points and comprise each face of a polygonal 3D mesh. Values are commonly \"3\" for a triangular mesh or \"4\" for a quadrangular mesh."@en ;
               rdfs:label "Edges Per Face"@en .
 
 
@@ -1420,18 +1717,21 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#faceCount
 :faceCount rdf:type owl:ObjectProperty ;
            rdfs:domain :FileSet ;
+           rdfs:comment "Number of polygonal faces comprising a 3D mesh."@en ;
            rdfs:label "Face Count"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#fileName
 :fileName rdf:type owl:ObjectProperty ;
           rdfs:domain :FileSet ;
+          rdfs:comment "Identifying name label given to a file."@en ;
           rdfs:label "File Name"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#fileSize
 :fileSize rdf:type owl:ObjectProperty ;
           rdfs:domain :FileSet ;
+          rdfs:comment "Size of a file in bytes."@en ;
           rdfs:label "File Size"@en .
 
 
@@ -1457,13 +1757,17 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :focalLength rdf:type owl:ObjectProperty ;
              rdfs:domain :PhotogrammetryImagingEvent ,
                          :PhotographyImagingEvent ;
+             rdfs:comment "The actual focal length of the lens, in mm. This should probably map to exif:focalLength and should be updated accordingly."@en ;
              rdfs:label "Focal Length"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#focalLengthType
 :focalLengthType rdf:type owl:ObjectProperty ;
                  rdfs:domain :PhotogrammetryImagingEvent ;
-                 rdfs:label "Focal Length Type"@en .
+                 rdfs:range :FocalLengthType ;
+                 rdfs:comment "Whether focal length is variable or fixed. Values must be from FocalLengthType controlled vocabulary (https://www.morphosource.org/terms/morphosource#FocalLengthType)."@en ;
+                 rdfs:label "Focal Length Type"@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "`Variable`, `Fixed`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#frameAveraging
@@ -1489,12 +1793,15 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#hasUVSpace
 :hasUVSpace rdf:type owl:ObjectProperty ;
             rdfs:domain :FileSet ;
-            rdfs:label "Has UV Space"@en .
+            rdfs:comment "Whether or not a mapping exists to project a 3D object's surface to a 2D image for texture mapping and is present with the 3D object. Values should be \"Yes\" or \"No\"."@en ;
+            rdfs:label "Has UV Space"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#height
 :height rdf:type owl:ObjectProperty ;
         rdfs:domain :FileSet ;
+        rdfs:comment "Height of a 2D image in pixels."@en ;
         rdfs:label "Height in Pixels"@en .
 
 
@@ -1529,7 +1836,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :ieModality rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://rs.tdwg.org/ac/terms/captureDevice> ;
             rdfs:domain :ImagingEvent ;
-            rdfs:range :ImageModality ;
+            rdfs:range :ImageModalityType ;
             <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/captureDevice> ;
             rdfs:comment "The imaging modality used in the imaging event. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality)."@en ;
             rdfs:label "Imaging Event Modality"@en ;
@@ -1545,6 +1852,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#institutionName
 :institutionName rdf:type owl:ObjectProperty ;
                  rdfs:domain :Organization ;
+                 rdfs:comment "Name of institution affiliated with Organization. This may be a university in the case of departments or a museum in the case of specific museum collections."@en ;
                  rdfs:label "Institution Name"@en .
 
 
@@ -1600,6 +1908,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
           rdfs:subPropertyOf :exifLensMake ;
           rdfs:domain :PhotogrammetryImagingEvent ,
                       :PhotographyImagingEvent ;
+          rdfs:comment "The manufacturer of the camera lens. This should probably map directly to an EXIF term and should be updated accordingly."@en ;
           rdfs:label "Lens Make"@en .
 
 
@@ -1608,13 +1917,16 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
            rdfs:subPropertyOf :exifLensModel ;
            rdfs:domain :PhotogrammetryImagingEvent ,
                        :PhotographyImagingEvent ;
+           rdfs:comment "The model of the camera lens. This should probably map directly to an EXIF term and should be updated accordingly."@en ;
            rdfs:label "Lens Model"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#licenseBlank
 :licenseBlank rdf:type owl:ObjectProperty ;
               rdfs:domain :Organization ;
-              rdfs:label "License Intentionally Left Blank"@en .
+              rdfs:comment "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no license in dc:license. This is distinct from an Organization expressing no preference on license choice. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no license to be chosen."@en ;
+              rdfs:label "License Intentionally Left Blank"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#longitude
@@ -1632,7 +1944,10 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#mapType
 :mapType rdf:type owl:ObjectProperty ;
          rdfs:domain :Media ;
-         rdfs:label "Map Type"@en .
+         rdfs:range :MeshMapType ;
+         rdfs:comment "Type of texture map or projection that accompanies a 3D mesh model Media, such as color or normal maps. Values must be from the Mesh Map Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#MeshMapType). This only applies to Mesh Media."@en ;
+         rdfs:label "Map Type"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "`Color`, `Normal`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#material
@@ -1657,6 +1972,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#mediaParentID
 :mediaParentID rdf:type owl:ObjectProperty ;
                rdfs:domain :Media ;
+               rdfs:comment "MorphoSource-specific unique ID identifier for the parent Media of a Media. This is the ID of the Media from which the current Media is immediately derived."@en ;
                rdfs:label "Media Parent ID"@en .
 
 
@@ -1664,13 +1980,11 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :mediaType rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://rs.tdwg.org/ac/terms/subtypeLiteral> ;
            rdfs:domain :Media ;
+           rdfs:range :MediaType ;
            <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/subtypeLiteral> ;
-           rdfs:label "Media Type"@en .
-
-
-###  https://www.morphosource.org/terms/morphosource#mediaUUID
-:mediaUUID rdf:type owl:ObjectProperty ;
-           rdfs:label "Media UUID"@en .
+           rdfs:comment "Type, nature, or classification of a Media file dataset, which may include one or more specific files. This is the general or high-level type of all file data, it is not the file type of any specific file. Most Media Types encompass a variety of different specific file types. Values must be from the Media Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#MediaType)."@en ;
+           rdfs:label "Media Type"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "`Mesh`,`Image`,`CTImageSeries`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#mimeType
@@ -1678,13 +1992,15 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
           rdfs:subPropertyOf <http://purl.org/dc/terms/format> ;
           rdfs:domain :FileSet ;
           <http://purl.org/dc/terms/isVersionOf> <http://purl.org/dc/terms/format> ;
-          rdfs:label "Mime Type"@en .
+          rdfs:comment "Media type describing the nature and format of a file."@en ;
+          rdfs:label "Mime Type"@en ;
+          <http://www.w3.org/2004/02/skos/core#example> "`image/jpeg`, `image/tiff`, `application/stl`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#modality3D
 :modality3D rdf:type owl:ObjectProperty ;
             rdfs:domain :Device ;
-            rdfs:range :ImageModality ;
+            rdfs:range :ImageModalityType ;
             rdfs:comment "The list of imaging modalities that a device is capable of using when imaging objects. Despite the name, this can include non-3D imaging event modalities. Value must be from Image Modality controlled vocabulary (https://www.morphosource.org/terms/morphosource#ImageModality)."@en ;
             rdfs:label "Modality"@en ;
             <http://www.w3.org/2004/02/skos/core#example> "`MicroNanoXRayComputedTomography`, `Photogrammetry`, `Video`"@en .
@@ -1694,12 +2010,16 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :morphosourceUseAgreementType rdf:type owl:ObjectProperty ;
                               rdfs:domain :Media ,
                                           :Organization ;
-                              rdfs:label "MorphoSource Use Agreement Type"@en .
+                              rdfs:range :UseAgreementType ;
+                              rdfs:comment "Type of MorphoSource use agreement that users must agree to in order to download Media and that is packaged with an associated Media download. Values must be from the Use Agreement Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#UseAgreementType)."@en ;
+                              rdfs:label "MorphoSource Use Agreement Type"@en ;
+                              <http://www.w3.org/2004/02/skos/core#example> "`Standard`, `Permissive`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#normalsFormat
 :normalsFormat rdf:type owl:ObjectProperty ;
                rdfs:domain :FileSet ;
+               rdfs:comment "How vertex or face normal information is formatted and codified for a 3D object, if normal information is present with the object."@en ;
                rdfs:label "Normals Format"@en .
 
 
@@ -1707,6 +2027,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :numberOfImagesInSet rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :dicomNumberOfSeriesRelatedInstances ;
                      rdfs:domain :Media ;
+                     rdfs:comment "For Media with a ZIP archive with many component files, this is the number of files in the primary image collection in a CT image stack or photogrammetry image collection. This only applies to CTImageSeries or PhotogrammetryImageSeries Media."@en ;
                      rdfs:label "Number of Images In Set"@en .
 
 
@@ -1724,6 +2045,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#objectID
 :objectID rdf:type owl:ObjectProperty ;
+          rdfs:comment "MorphoSource-specific unique ID identifier for a Physical Object."@en ;
           rdfs:label "Physical Object ID"@en .
 
 
@@ -1745,7 +2067,10 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#organizationType
 :organizationType rdf:type owl:ObjectProperty ;
                   rdfs:domain :Organization ;
-                  rdfs:label "Organization Type"@en .
+                  rdfs:range :OrganizationType ;
+                  rdfs:comment "Type of Organization to distinguish between collections managing Physical Objects, scanning facilities, and entities that both operate scanning equipment and manage Physical Objects. Values must be from Organization Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#OrganizationType)."@en ;
+                  rdfs:label "Organization Type"@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "`Museum, Department, or Lab Collection`, `Scanning Facility`, `Collection and Scanning Facility`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#orientation
@@ -1770,6 +2095,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :owner rdf:type owl:ObjectProperty ;
        rdfs:domain :FileSet ,
                    :Media ;
+       rdfs:range :User ;
        rdfs:comment "The user that has the highest level of management control over a Media or another Work record. For Media, this user is also known as the Data Manager."@en ;
        rdfs:label "Owner"@en .
 
@@ -1796,14 +2122,20 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :permits3DUse rdf:type owl:ObjectProperty ;
               rdfs:domain :Media ,
                           :Organization ;
-              rdfs:label "Permits 3D Use"@en .
+              rdfs:range <https://www.morphosource.org/terms/morphosource#3DPrintingPermission> ;
+              rdfs:comment "Whether Media may be 3D printed freely, may be 3D printed in limited ways, or if 3D printing is prohibited. Values must be from the 3D Printing Permission controlled vocabulary (https://www.morphosource.org/terms/morphosource#3DPrintingPermission)."@en ;
+              rdfs:label "Permits 3D Use"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "`3DPrintingPermitted`, `3DPrintingLimited`, `3DPrintingProhibited`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#permitsCommercialUse
 :permitsCommercialUse rdf:type owl:ObjectProperty ;
                       rdfs:domain :Media ,
                                   :Organization ;
-                      rdfs:label "Permits Commercial Use"@en .
+                      rdfs:range :CommercialUsePermission ;
+                      rdfs:comment "Whether commercial use of Media is permitted. Values must be from the Commercial Use Permission controlled vocabulary (https://www.morphosource.org/terms/morphosource#CommercialUsePermission)."@en ;
+                      rdfs:label "Permits Commercial Use"@en ;
+                      <http://www.w3.org/2004/02/skos/core#example> "`CommercialUseNotPermitted`, `CommercialUsePermitted`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#phaseContrast
@@ -1817,6 +2149,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval
 :photogrammetryBackgroundRemoval rdf:type owl:ObjectProperty ;
                                  rdfs:domain :PhotogrammetryImagingEvent ;
+                                 rdfs:comment "Free text description of background removal method."@en ;
                                  rdfs:label "Photogrammetry Background Removal"@en .
 
 
@@ -1834,6 +2167,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                   rdfs:domain :ImagingEvent ,
                               :Media ;
                   <http://purl.org/dc/terms/isVersionOf> :objectID ;
+                  rdfs:comment "MorphoSource-specific unique ID identifier for a Physical Object represented by a Media."@en ;
                   rdfs:label "Physical Object ID"@en .
 
 
@@ -1851,13 +2185,16 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#pointCount
 :pointCount rdf:type owl:ObjectProperty ;
             rdfs:domain :FileSet ;
+            rdfs:comment "Number of 3D coordinate points comprising a 3D mesh or point cloud."@en ;
             rdfs:label "Point Count"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#postalCode
 :postalCode rdf:type owl:ObjectProperty ;
             rdfs:domain :Organization ;
-            rdfs:label "Postal Code"@en .
+            rdfs:comment "Group of numbers or letters added to a postal address to assist in sorting of mail, such as a ZIP code in the United States."@en ;
+            rdfs:label "Postal Code"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`27708`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#power
@@ -1873,6 +2210,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :processingActivityDescription rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ;
                                rdfs:domain :ProcessingEvent ;
+                               rdfs:comment "Description of a specific discrete processing activity step."@en ;
                                rdfs:label "Processing Activity Description"@en .
 
 
@@ -1880,13 +2218,17 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :processingActivitySoftware rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf <http://purl.org/dc/dcmitype/Software> ;
                             rdfs:domain :ProcessingEvent ;
+                            rdfs:comment "Description of software used in a specific discrete processing activity step."@en ;
                             rdfs:label "Processing Activity Software"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#processingActivityType
 :processingActivityType rdf:type owl:ObjectProperty ;
                         rdfs:domain :ProcessingEvent ;
-                        rdfs:label "Processing Activity Type"@en .
+                        rdfs:range :ProcessingActivityType ;
+                        rdfs:comment "Type of a specific discrete processing activity. Value must be from Processing Activity Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#ProcessingActivityType)."@en ;
+                        rdfs:label "Processing Activity Type"@en ;
+                        <http://www.w3.org/2004/02/skos/core#example> "`AlignParts`, `Patch`, `Reconstruction`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#projections
@@ -1933,6 +2275,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#recordsetID
 :recordsetID rdf:type owl:ObjectProperty ;
              rdfs:domain :Organization ;
+             rdfs:comment "An identifier for an entire museum, institution, or laboratory specimen collection associated with Organization. May be a global unique identifier or an identifier specific to a collection or institution."@en ;
              rdfs:label "Recordset ID"@en .
 
 
@@ -1943,6 +2286,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                         :Organization ,
                         :PhysicalObject ;
             <http://purl.org/dc/terms/isVersionOf> rdfs:seeAlso ;
+            rdfs:comment "URL for additional resource that might provide additional information about the Media or Physical Object."@en ;
             rdfs:label "Related URL"@en .
 
 
@@ -1950,7 +2294,10 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :requiredArchivalOfPublishedDerivatives rdf:type owl:ObjectProperty ;
                                         rdfs:domain :Media ,
                                                     :Organization ;
-                                        rdfs:label "Required Archival Of Published Derivatives"@en .
+                                        rdfs:range :DerivativeRearchivalStatement ;
+                                        rdfs:comment "Whether and how future derivatives created from Media must be rearchived on a public-facing digital repository such as MorphoSource. Values may include mandatory requirements or optional suggestions. Values must be from Derivative Rearchival Statement controlled vocabulary (https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement)."@en ;
+                                        rdfs:label "Required Archival Of Published Derivatives"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#example> "`OnMorphoSource`, `OnAnyRepository`, `EncouragedButNotRequired`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#rightsHolder
@@ -1966,7 +2313,9 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#rightsHolderBlank
 :rightsHolderBlank rdf:type owl:ObjectProperty ;
                    rdfs:domain :Organization ;
-                   rdfs:label "Rights Holder Intentionally Left Blank"@en .
+                   rdfs:comment "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no rights holder in morphosource:rightsHolder. This is distinct from an Organization expressing no preference on rights holder statement. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no rights holder statement."@en ;
+                   rdfs:label "Rights Holder Intentionally Left Blank"@en ;
+                   <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#rightsStatement
@@ -1974,14 +2323,19 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                  rdfs:subPropertyOf <http://www.europeana.eu/schemas/edm/rights> ;
                  rdfs:domain :Media ,
                              :Organization ;
+                 rdfs:range <http://purl.org/dc/terms/RightsStatement> ;
                  <http://purl.org/dc/terms/isVersionOf> <http://www.europeana.eu/schemas/edm/rights> ;
-                 rdfs:label "Rights Statement"@en .
+                 rdfs:comment "Standardized rights statement used to communicate the copyright and/or reuse status of digital objects. Values must be from the Rights Statement controlled vocabulary (https://rightsstatements.org)."@en ;
+                 rdfs:label "Rights Statement"@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "`http://rightsstatements.org/vocab/NoC-NC/1.0/`, `http://rightsstatements.org/vocab/UND/1.0/`, `http://rightsstatements.org/vocab/InC/1.0/`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#rightsStatementBlank
 :rightsStatementBlank rdf:type owl:ObjectProperty ;
                       rdfs:domain :Organization ;
-                      rdfs:label "Rights Statement Intentionally Left Blank"@en .
+                      rdfs:comment "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no rights statement in morphosource:rightsStatement. This is distinct from an Organization expressing no preference on rights statement. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no rights statement."@en ;
+                      rdfs:label "Rights Statement Intentionally Left Blank"@en ;
+                      <http://www.w3.org/2004/02/skos/core#example> "`Yes`, `No`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#rotationNumber
@@ -1996,13 +2350,17 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#scaleBar
 :scaleBar rdf:type owl:ObjectProperty ;
           rdfs:domain :Media ;
+          rdfs:comment "Details of scale bar accompany a photogrammetry image series. Value should include three elements: the scale bar target type, the scale bar distance, and the units of the scale bar distance. If values are encoded as a string, they should be separate by semicolons. This only applies to PhotogrammetryImageSeries Media."@en ;
           rdfs:label "Scale Bar"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#seriesType
 :seriesType rdf:type owl:ObjectProperty ;
             rdfs:domain :Media ;
-            rdfs:label "Series Type"@en .
+            rdfs:range :CTImageSeriesType ;
+            rdfs:comment "Broad type or kind of CT image series, distiguishing between initial X-Ray projections and other derived series forms. Values must be from the CT Image Series Type controlled vocabulary (https://www.morphosource.org/terms/morphosource#CTImageSeriesType)."@en ;
+            rdfs:label "Series Type"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`Projections`, `Sinograms`, `Reconstructed image stack`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#shadingCorrection
@@ -2016,6 +2374,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#shortDescription
 :shortDescription rdf:type owl:ObjectProperty ;
                   rdfs:domain :Media ;
+                  rdfs:comment "Brief summary description of Media. This could include a brief summary of what is represented in the Media or the context surrounding the Media."@en ;
                   rdfs:label "Short Description"@en .
 
 
@@ -2029,7 +2388,8 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#shutterSpeed
 :shutterSpeed rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.w3.org/2003/12/exif/ns#shutterSpeedValue> ;
-              rdfs:domain :PhotogrammetryImagingEvent ,
+              rdfs:domain :FileSet ,
+                          :PhotogrammetryImagingEvent ,
                           :PhotographyImagingEvent ;
               rdfs:comment "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"@en ,
                            "シャッター速度（APEX値）。この値の2のベキ乗をとって逆数にすると、通常のシャッター速度表示になる。例えば'4'の場合だと1/(2^4)=1/16秒"@ja ;
@@ -2041,19 +2401,25 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :side rdf:type owl:ObjectProperty ;
       rdfs:subPropertyOf <http://rs.tdwg.org/ac/terms/comments> ;
       rdfs:domain :Media ;
+      rdfs:range :Side ;
       <http://purl.org/dc/terms/isVersionOf> <http://rs.tdwg.org/ac/terms/comments> ;
-      rdfs:label "Side"@en .
+      rdfs:comment "The side of a larger object on which is located a represented component part, if media represents a component part of a larger whole object. Values must be from the Side controlled vocabulary (https://www.morphosource.org/terms/morphosource#Side). Values are somewhat oriented toward objects with bilateral symmetry, but may in some cases be applied for objects with other kinds of symmetry."@en ;
+      rdfs:label "Side"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "`Left`, `Midline`, `Not Applicable`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#slideType
 :slideType rdf:type owl:ObjectProperty ;
            rdfs:domain :SequentialSectionImagingEvent ;
-           rdfs:label "Slide Type"@en .
+           rdfs:comment "Type of sequential section slide imaged. Value must be \"Histological\" or \"Other\"."@en ;
+           rdfs:label "Slide Type"@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "`Histological`, `Other`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#software
 :software rdf:type owl:ObjectProperty ;
           rdfs:domain :ImagingEvent ;
+          rdfs:comment "Free text description of any software used in an Imaging Event."@en ;
           rdfs:label "Software"@en .
 
 
@@ -2087,6 +2453,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#tag
 :tag rdf:type owl:ObjectProperty ;
      rdfs:domain :Media ;
+     rdfs:comment "All-purpose label attached to Media for the purpose of identification, context, or to give other information."@en ;
      rdfs:label "Tag"@en .
 
 
@@ -2119,25 +2486,22 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#teamID
 :teamID rdf:type owl:ObjectProperty ;
         rdfs:domain :Organization ;
+        rdfs:comment "MorphoSource-specific unique ID identifier for a Team associated with the Organization and responsible for managing the Organization record."@en ;
         rdfs:label "Team ID"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#unit
 :unit rdf:type owl:ObjectProperty ;
       rdfs:domain :Media ;
-      rdfs:label "Unit"@en .
-
-
-###  https://www.morphosource.org/terms/morphosource#uuid
-:uuid rdf:type owl:ObjectProperty ;
-      rdfs:subPropertyOf :mediaUUID ;
-      rdfs:domain :Media ;
-      rdfs:label "UUID"@en .
+      rdfs:comment "Length measurement unit. For Mesh Media, this is the length unit associated with the 3D coordinate space of the mesh. For CTImageSeries Media, this is the length unit for X/Y/Z pixel spacing. Values must be from the Length Measurement Unit controlled vocabulary (https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit)."@en ;
+      rdfs:label "Unit"@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "`Mm`, `Um`, `M`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#vertexColor
 :vertexColor rdf:type owl:ObjectProperty ;
              rdfs:domain :FileSet ;
+             rdfs:comment "Whether or not a 3D object has color information encoded into vertices or points that comprise a mesh or point cloud."@en ;
              rdfs:label "Vertex Color"@en .
 
 
@@ -2145,7 +2509,10 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :visibility rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :filesetAccessibility ;
             rdfs:domain :Media ;
-            rdfs:label "Visibility"@en .
+            rdfs:range :PublicationStatus ;
+            rdfs:comment "Publication status, denoting whether or not Media may be found in public search and whether or not Media files may be downloaded. Values must be from Publication Status controlled vocabulary (https://www.morphosource.org/terms/morphosource#PublicationStatus)."@en ;
+            rdfs:label "Visibility"@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "`Open`, `Restricted`, `Private`"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#voltage
@@ -2172,6 +2539,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 ###  https://www.morphosource.org/terms/morphosource#width
 :width rdf:type owl:ObjectProperty ;
        rdfs:domain :FileSet ;
+       rdfs:comment "Width of a 2D image in pixels."@en ;
        rdfs:label "Width in Pixels"@en .
 
 
@@ -2179,6 +2547,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :xSpacing rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :dicomPixelSpacingWidth ;
           rdfs:domain :Media ;
+          rdfs:comment "Distance between centers of adjacent pixels in the X axis, for Media with pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to Image and CTImageSeries media."@en ;
           rdfs:label "X Pixel Spacing"@en .
 
 
@@ -2195,6 +2564,7 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :ySpacing rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :dicomPixelSpacingHeight ;
           rdfs:domain :Media ;
+          rdfs:comment "Distance between centers of adjacent pixels in the Y axis, for Media with pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to Image and CTImageSeries media."@en ;
           rdfs:label "Y Pixel Spacing"@en .
 
 
@@ -2202,12 +2572,23 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :zSpacing rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :dicomSpacingBetweenSlices ;
           rdfs:domain :Media ;
+          rdfs:comment "Distance between centers of adjacent pixels in the Z axis, for Media with 3D pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to CTImageSeries media."@en ;
           rdfs:label "Z Pixel Spacing"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://creativecommons.org/ns#License
+<http://creativecommons.org/ns#License> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://purl.org/dc/terms/LicenseDocument> ;
+                                        rdfs:comment """a set of
+		    requests/permissions to users of a Work, e.g. a
+		    copyright license, the public domain, information
+		    for distributors"""@en-us ;
+                                        rdfs:label "License"@en-us .
+
 
 ###  http://pcdm.org/models#File
 <http://pcdm.org/models#File> rdf:type owl:Class ;
@@ -2240,6 +2621,19 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                              rdfs:label "Work"@en .
 
 
+###  http://purl.org/dc/terms/LicenseDocument
+<http://purl.org/dc/terms/LicenseDocument> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.org/dc/terms/RightsStatement> .
+
+
+###  http://purl.org/dc/terms/RightsStatement
+<http://purl.org/dc/terms/RightsStatement> rdf:type owl:Class ;
+                                           <http://purl.org/dc/terms/issued> "2008-01-14"^^xsd:date ;
+                                           rdfs:comment "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                           rdfs:label "Rights Statement"@en .
+
+
 ###  http://vocab.getty.edu/aat/300264087
 <http://vocab.getty.edu/aat/300264087> rdf:type owl:Class .
 
@@ -2269,11 +2663,29 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                            rdfs:label "CT Image Series Imaging Event"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#CTImageSeriesType
+:CTImageSeriesType rdf:type owl:Class ;
+                   rdfs:comment "Broad type or kind of CT image series, distinguishing between initial X-Ray projections and other derived series forms."@en ;
+                   rdfs:label "CT Image Series Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#CommercialUsePermission
+:CommercialUsePermission rdf:type owl:Class ;
+                         rdfs:comment "Permission statement describing whether a digital resource may be used for commercial purposes."@en ;
+                         rdfs:label "Commercial Use Permission"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#CulturalHeritageObject
 :CulturalHeritageObject rdf:type owl:Class ;
                         rdfs:subClassOf :PhysicalObject ;
                         rdfs:comment "A physical object that is usually non-biological and is of some human cultural significance."@en ;
                         rdfs:label "Cultural Heritage Object"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#DerivativeRearchivalStatement
+:DerivativeRearchivalStatement rdf:type owl:Class ;
+                               rdfs:comment "Statement describing whether and how any future derivatives must or should be rearchived to a public facing digital repository."@en ;
+                               rdfs:label "Derivative Rearchival Statement"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#Device
@@ -2290,14 +2702,16 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
          rdfs:label "FileSet"@en .
 
 
-###  https://www.morphosource.org/terms/morphosource#ImageModality
-:ImageModality rdf:type owl:Class ;
-               rdfs:comment "Modality used to create 3D, 2D, or AV images. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific image modalities used to describe imaging of media in MorphoSource."@en ;
-               rdfs:label "Image Modality"@en .
+###  https://www.morphosource.org/terms/morphosource#FocalLengthType
+:FocalLengthType rdf:type owl:Class ;
+                 rdfs:comment "Type of camera focal length setting. Elements comprise a controlled vocabulary."@en ;
+                 rdfs:label "Focal Length Type"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#ImageModalityType
-:ImageModalityType rdf:type owl:Class .
+:ImageModalityType rdf:type owl:Class ;
+                   rdfs:comment "Modality used to create 3D, 2D, or AV images. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific image modalities used to describe imaging of media in MorphoSource."@en ;
+                   rdfs:label "Image Modality Type"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#ImagingEvent
@@ -2307,6 +2721,18 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
               rdfs:label "Imaging Event"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit
+:LengthMeasurementUnit rdf:type owl:Class ;
+                       rdfs:comment "Unit of measurement used in measuring length."@en ;
+                       rdfs:label "Length Measurement Unit"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#LightSourceType
+:LightSourceType rdf:type owl:Class ;
+                 rdfs:comment "Type of light source. Elements comprise a controlled vocabulary."@en ;
+                 rdfs:label "Light Source Type"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Media
 :Media rdf:type owl:Class ;
        rdfs:subClassOf <http://pcdm.org/works#Work> ;
@@ -2314,11 +2740,29 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
        rdfs:label "Media"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#MediaType
+:MediaType rdf:type owl:Class ;
+           rdfs:comment "Type, nature, or classification of a Media file dataset, which may include one or more specific files. This is the general or high-level type of all file data, it is not the file type of any specific file. Most Media Types encompass a variety of different specific file types."@en ;
+           rdfs:label "Media Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#MeshMapType
+:MeshMapType rdf:type owl:Class ;
+             rdfs:comment "A type of 3D texture map or projection that associates two-dimensional space coordinates to the surface of a 3D object, usually in order to map a texture or other attribute onto the 3D object's surface."@en ;
+             rdfs:label "Mesh Map Type"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Organization
 :Organization rdf:type owl:Class ;
               rdfs:subClassOf <http://pcdm.org/works#Work> ;
               rdfs:comment "A relatively autonomous bureaucratic unit responsible for controlling physical objects or devices. Often a museum collection, an entire museum institution, or a faculty lab department."@en ;
               rdfs:label "Organization"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#OrganizationType
+:OrganizationType rdf:type owl:Class ;
+                  rdfs:comment "Type of Organization, distinguishing between collections managing Physical Objects, scanning facilities, and entities that both operate scanning equipment and manage Physical Objects."@en ;
+                  rdfs:label "Organization Type"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#PhotogrammetryImagingEvent
@@ -2346,11 +2790,23 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                              rdfs:label "Pixel Spacing Calibration Type"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#ProcessingActivityType
+:ProcessingActivityType rdf:type owl:Class ;
+                        rdfs:comment "Type statement describing a specific discrete processing activity step. It is often the case that in reality, multiple processing activity steps are used in the generation of any derived digital resource."@en ;
+                        rdfs:label "Processing Activity Type"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#ProcessingEvent
 :ProcessingEvent rdf:type owl:Class ;
                  rdfs:subClassOf <http://pcdm.org/works#Work> ;
                  rdfs:comment "An active event in which a media is processed to produce another media. Belongs to Imaging Event or Media as a member (as either of these can lead to a processing event), and has member Media (as the processing event leads to the production of Media)."@en ;
                  rdfs:label "Processing Event"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PublicationStatus
+:PublicationStatus rdf:type owl:Class ;
+                   rdfs:comment "Status type indicating whether or not Media is published and under what conditions it is published."@en ;
+                   rdfs:label "Publication Status"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#SequentialSectionImagingEvent
@@ -2363,6 +2819,23 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 :Sex rdf:type owl:Class ;
      rdfs:comment "A categorical description or identification pertaining an organism's sex. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific sex categorizations and identification statements used to describe Biological Specimens."@en ;
      rdfs:label "Sex"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Side
+:Side rdf:type owl:Class ;
+      rdfs:comment "For objects with bilateral or some other kind of symmetry, a term description statement pertaining to a particular side, the object midline, lack of knowledge relating to side, or inapplicability of this concept for an object."@en ;
+      rdfs:label "Side"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#UseAgreementType
+:UseAgreementType rdf:type owl:Class ;
+                  rdfs:comment "Type of MorphoSource-specific Media download use agreement. This explicitly does not include types of non-MorphoSource use agreements, such as use agreements provided by third-party museums."@en ;
+                  rdfs:label "Use Agreement Type"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#User
+:User rdf:type owl:Class ;
+      rdfs:label "User"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#XRayDetectorConfiguration
@@ -2383,6 +2856,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                 rdfs:label "X-Ray Target Type"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#3DPrintingPermission
+<https://www.morphosource.org/terms/morphosource#3DPrintingPermission> rdf:type owl:Class ;
+                                                                       rdfs:comment "Permission statement describing whether 3D printing of a digital resource is permitted, prohibited, or permitted with conditions."@en ;
+                                                                       rdfs:label "3D Printing Permission"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -2396,10 +2875,28 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
 <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> rdf:type owl:NamedIndividual .
 
 
+###  https://www.morphosource.org/terms/morphosource#AlignParts
+:AlignParts rdf:type owl:NamedIndividual ,
+                     :ProcessingActivityType ;
+            rdfs:label "Align Parts"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Area
 :Area rdf:type owl:NamedIndividual ,
                :XRayDetectorConfiguration ;
       rdfs:label "Area (single or tiled detector)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#BackgroundRemovalMasking
+:BackgroundRemovalMasking rdf:type owl:NamedIndividual ,
+                                   :ProcessingActivityType ;
+                          rdfs:label "Background Removal and/or Masking"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#BitDepthChange
+:BitDepthChange rdf:type owl:NamedIndividual ,
+                         :ProcessingActivityType ;
+                rdfs:label "Bit Depth Change"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#BornDigital
@@ -2410,6 +2907,44 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
              <http://www.w3.org/2004/02/skos/core#altLabel> "BD"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#CTImageSeries
+:CTImageSeries rdf:type owl:NamedIndividual ,
+                        :MediaType ;
+               rdfs:label "CT/MRI image series (multiple files of type *.tiff, *.png, *.dcm, *.zip, etc.)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Cm
+:Cm rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Centimeters"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#CollectionAndScanningFacility
+:CollectionAndScanningFacility rdf:type owl:NamedIndividual ,
+                                        :OrganizationType ;
+                               rdfs:label "Collection and Scanning Facility"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Color
+:Color rdf:type owl:NamedIndividual ,
+                :MeshMapType ;
+       rdfs:label "Color Map"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#CommercialUseNotPermitted
+:CommercialUseNotPermitted rdf:type owl:NamedIndividual ,
+                                    :CommercialUsePermission ;
+                           rdfs:comment "Commercial use of digital resource is not permitted."@en ;
+                           rdfs:label "Commercial Use Not Permitted"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#CommercialUsePermitted
+:CommercialUsePermitted rdf:type owl:NamedIndividual ,
+                                 :CommercialUsePermission ;
+                        rdfs:comment "Commercial use of digital resource is permitted."@en ;
+                        rdfs:label "Commercial Use Permitted"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#ConfocalImageStacking
 :ConfocalImageStacking rdf:type owl:NamedIndividual ,
                                 :ImageModalityType ;
@@ -2418,10 +2953,29 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                        <http://www.w3.org/2004/02/skos/core#altLabel> "Confocal"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Crop
+:Crop rdf:type owl:NamedIndividual ,
+               :ProcessingActivityType ;
+      rdfs:label "Crop"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#CrossPolarized
+:CrossPolarized rdf:type owl:NamedIndividual ,
+                         :LightSourceType ;
+                rdfs:label "Cross polarized"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Direct
 :Direct rdf:type owl:NamedIndividual ,
                  :XRayDetectorType ;
         rdfs:label "Direct (X-Ray photoconductor)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#EncouragedButNotRequired
+:EncouragedButNotRequired rdf:type owl:NamedIndividual ,
+                                   :DerivativeRearchivalStatement ;
+                          rdfs:comment "Future derivatives are encouraged to be rearchived on a public-facing digital repository, but are not required to be rearchived."@en ;
+                          rdfs:label "Encouraged But Not Required"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#Female
@@ -2442,6 +2996,18 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
       rdfs:label "Film (Scanned film/screen)"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Fixed
+:Fixed rdf:type owl:NamedIndividual ,
+                :FocalLengthType ;
+       rdfs:label "Fixed"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Ft
+:Ft rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Feet"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Geometry
 :Geometry rdf:type owl:NamedIndividual ,
                    :PixelSpacingCalibrationType ;
@@ -2460,12 +3026,42 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                rdfs:label "Hermaphrodite"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#HistogramEditing
+:HistogramEditing rdf:type owl:NamedIndividual ,
+                           :ProcessingActivityType ;
+                  rdfs:label "Histogram Editing"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Image
+:Image rdf:type owl:NamedIndividual ,
+                :MediaType ;
+       rdfs:label "Image (*.tiff, *.png, *.dcm, etc.)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#ImageMeshCompression
+:ImageMeshCompression rdf:type owl:NamedIndividual ,
+                               :ProcessingActivityType ;
+                      rdfs:label "Image and/or Mesh Compression"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#In
+:In rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Inches"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Infrared
 :Infrared rdf:type owl:NamedIndividual ,
                    :ImageModalityType ;
           rdfs:comment "Infrared imaging is an imaging technique that uses infrared radiation to create images of objects. Infrared imaging can be used to detect and analyze heat signatures, as well as to create detailed images of objects and structures that are difficult to see with visible light."@en ;
           rdfs:label "Infrared"@en ;
           <http://www.w3.org/2004/02/skos/core#altLabel> "Infrared"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Km
+:Km rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Kilometers"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#LaserAidedProfiling
@@ -2484,6 +3080,18 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
            <http://www.w3.org/2004/02/skos/core#altLabel> "Laser"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Left
+:Left rdf:type owl:NamedIndividual ,
+               :Side ;
+      rdfs:label "Left"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#M
+:M rdf:type owl:NamedIndividual ,
+            :LengthMeasurementUnit ;
+   rdfs:label "Meters"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#MagneticResonanceImaging
 :MagneticResonanceImaging rdf:type owl:NamedIndividual ,
                                    :ImageModalityType ;
@@ -2498,12 +3106,60 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
       rdfs:label "Male"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Merge
+:Merge rdf:type owl:NamedIndividual ,
+                :ProcessingActivityType ;
+       rdfs:label "Merge"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Mesh
+:Mesh rdf:type owl:NamedIndividual ,
+               :MediaType ;
+      rdfs:label "Mesh or point cloud (*.stl, *.ply, .etc, with optional associated texture or color file)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#MeshPointCloudTexturing
+:MeshPointCloudTexturing rdf:type owl:NamedIndividual ,
+                                  :ProcessingActivityType ;
+                         rdfs:label "Mesh and/or Point Cloud Texturing"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#MeshToPointCloud
+:MeshToPointCloud rdf:type owl:NamedIndividual ,
+                           :ProcessingActivityType ;
+                  rdfs:label "Mesh to Point Cloud"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Mi
+:Mi rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Miles"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#MicroNanoXRayComputedTomography
 :MicroNanoXRayComputedTomography rdf:type owl:NamedIndividual ,
                                           :ImageModalityType ;
                                  rdfs:comment "X-Ray Computed Tomography (CT/microCT) is a non-invasive imaging technique that uses X-rays to produce cross-sectional images of an object. It involves rotating an X-ray source and detector around the object, collecting data that is processed by a computer to create a 3D image. CT is widely used in medical imaging, as well as in materials science, engineering, and geology to visualize the internal structure of objects. MicroCT is a variation of CT that uses higher resolution X-rays to produce images of smaller objects."@en ;
                                  rdfs:label "X-Ray Computed Tomography (CT/microCT)"@en ;
                                  <http://www.w3.org/2004/02/skos/core#altLabel> "CT"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Midline
+:Midline rdf:type owl:NamedIndividual ,
+                  :Side ;
+         rdfs:label "Midline"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Mm
+:Mm rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Millimeters"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#MuseumDepartmentOrLabCollection
+:MuseumDepartmentOrLabCollection rdf:type owl:NamedIndividual ,
+                                          :OrganizationType ;
+                                 rdfs:label "Museum, Department, or Lab Collection"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#NeutronComputedTomography
@@ -2514,12 +3170,76 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                            <http://www.w3.org/2004/02/skos/core#altLabel> "NCT"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Normal
+:Normal rdf:type owl:NamedIndividual ,
+                 :MeshMapType ;
+        rdfs:label "Normal Map"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#NotApplicable
+:NotApplicable rdf:type owl:NamedIndividual ,
+                        :Side ;
+               rdfs:label "Not Applicable"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#OnAnyRepository
+:OnAnyRepository rdf:type owl:NamedIndividual ,
+                          :DerivativeRearchivalStatement ;
+                 rdfs:comment "Future derivatives are required to be rearchived on any public-facing digital repository."@en ;
+                 rdfs:label "On Any Repository"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#OnMorphoSource
+:OnMorphoSource rdf:type owl:NamedIndividual ,
+                         :DerivativeRearchivalStatement ;
+                rdfs:comment "Future derivatives are required to be rearchived on MorphoSource."@en ;
+                rdfs:label "On MorphoSource"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Open
+:Open rdf:type owl:NamedIndividual ,
+               :PublicationStatus ;
+      rdfs:comment "Published with Open Download. Media record may be found in public search. Media file(s) may be downloaded openly, after downloader submits a simple download usage survey."@en ;
+      rdfs:label "Open Download"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Other
+:Other rdf:type owl:NamedIndividual ,
+                :MediaType ;
+       rdfs:label "Other"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Patch
+:Patch rdf:type owl:NamedIndividual ,
+                :ProcessingActivityType ;
+       rdfs:label "Patch"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Patterned
+:Patterned rdf:type owl:NamedIndividual ,
+                    :LightSourceType ;
+           rdfs:label "Patterned"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Permissive
+:Permissive rdf:type owl:NamedIndividual ,
+                     :UseAgreementType ;
+            rdfs:comment "Permissive MorphoSource use agreement."@en ;
+            rdfs:label "Permissive"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Photogrammetry
 :Photogrammetry rdf:type owl:NamedIndividual ,
                          :ImageModalityType ;
                 rdfs:comment "Photogrammetry is the use of photography to measure and map the physical properties of an object. Photogrammetry can be used to create 3D models of objects and structures from 2D photographs, allowing for accurate measurements and analysis."@en ;
                 rdfs:label "Photogrammetry"@en ;
                 <http://www.w3.org/2004/02/skos/core#altLabel> "Photogram"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PhotogrammetryImageSeries
+:PhotogrammetryImageSeries rdf:type owl:NamedIndividual ,
+                                    :MediaType ;
+                           rdfs:label "Photogrammetry image series (multiple files of type *.tiff, *.png, etc.)"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#Photography
@@ -2530,12 +3250,79 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
              <http://www.w3.org/2004/02/skos/core#altLabel> "Photo"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#PhotosToDensePointCloud
+:PhotosToDensePointCloud rdf:type owl:NamedIndividual ,
+                                  :ProcessingActivityType ;
+                         rdfs:label "Photos to Dense Point Cloud"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PhotosToDigitalElevationModel
+:PhotosToDigitalElevationModel rdf:type owl:NamedIndividual ,
+                                        :ProcessingActivityType ;
+                               rdfs:label "Photos to Digital Elevation Model"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PhotosToMesh
+:PhotosToMesh rdf:type owl:NamedIndividual ,
+                       :ProcessingActivityType ;
+              rdfs:label "Photos to Mesh"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PhotosToSparseMeshDepthMap
+:PhotosToSparseMeshDepthMap rdf:type owl:NamedIndividual ,
+                                     :ProcessingActivityType ;
+                            rdfs:label "Photos to Sparse Mesh and Depth Map"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PhotosToSparsePointCloudDepthMap
+:PhotosToSparsePointCloudDepthMap rdf:type owl:NamedIndividual ,
+                                           :ProcessingActivityType ;
+                                  rdfs:label "Photos to Sparse Point Cloud and Depth Map"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#PointCloudToMesh
+:PointCloudToMesh rdf:type owl:NamedIndividual ,
+                           :ProcessingActivityType ;
+                  rdfs:label "Point Cloud to Mesh"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#PositronEmissionTomography
 :PositronEmissionTomography rdf:type owl:NamedIndividual ,
                                      :ImageModalityType ;
                             rdfs:comment "Positron Emission Tomography (PET) is a non-invasive imaging technique that uses small amounts of radioactive tracers to visualize metabolic processes in the body. The tracer is injected into the body and collects in areas of high metabolic activity, emitting positrons that are detected by the PET scanner. PET is widely used in medical diagnosis and research, especially for imaging cancer, heart disease, and neurological disorders."@en ;
                             rdfs:label "Positron Emission Tomography (PET)"@en ;
                             <http://www.w3.org/2004/02/skos/core#altLabel> "PET"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Private
+:Private rdf:type owl:NamedIndividual ,
+                  :PublicationStatus ;
+         rdfs:label "Private"@en ,
+                    "Unpublished. Media may not be found in public search, and media file(s) may not be downloaded by users without explicit access to Media."@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Projections
+:Projections rdf:type owl:NamedIndividual ,
+                      :CTImageSeriesType ;
+             rdfs:label "Projections"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#ReconstructedImageStack
+:ReconstructedImageStack rdf:type owl:NamedIndividual ,
+                                  :CTImageSeriesType ;
+                         rdfs:label "Reconstructed image stack"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#ReconstructedTomographyToMesh
+:ReconstructedTomographyToMesh rdf:type owl:NamedIndividual ,
+                                        :ProcessingActivityType ;
+                               rdfs:label "Reconstructed Tomography to Mesh"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Reconstruction
+:Reconstruction rdf:type owl:NamedIndividual ,
+                         :ProcessingActivityType ;
+                rdfs:label "Reconstruction"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#ReflectanceTransformationImaging
@@ -2552,6 +3339,19 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
             rdfs:label "Reflection"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Restricted
+:Restricted rdf:type owl:NamedIndividual ,
+                     :PublicationStatus ;
+            rdfs:comment "Published with Restricted Download. Media may be found in public search. Media file(s) may only be downloaded after user has sought and received download approval from the Media data manager."@en ;
+            rdfs:label "Restricted Download"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Right
+:Right rdf:type owl:NamedIndividual ,
+                :Side ;
+       rdfs:label "Right"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#ScanningElectronMicroscopy
 :ScanningElectronMicroscopy rdf:type owl:NamedIndividual ,
                                      :ImageModalityType ;
@@ -2560,10 +3360,22 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                             <http://www.w3.org/2004/02/skos/core#altLabel> "SEM"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#ScanningFacility
+:ScanningFacility rdf:type owl:NamedIndividual ,
+                           :OrganizationType ;
+                  rdfs:label "Scanning Facility"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Scintillator
 :Scintillator rdf:type owl:NamedIndividual ,
                        :XRayDetectorType ;
               rdfs:label "Scintillator (Phosphor used)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#SequentialSectionImageSeries
+:SequentialSectionImageSeries rdf:type owl:NamedIndividual ,
+                                       :MediaType ;
+                              rdfs:label "Sequential section image series (multiple files of type *.tiff, *.png, *.zip, etc.)"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#SequentialSectionScan
@@ -2574,6 +3386,12 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                        <http://www.w3.org/2004/02/skos/core#altLabel> "Section"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Simplification
+:Simplification rdf:type owl:NamedIndividual ,
+                         :ProcessingActivityType ;
+                rdfs:label "Simplification"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#SinglePhotonEmissionComputedTomography
 :SinglePhotonEmissionComputedTomography rdf:type owl:NamedIndividual ,
                                                  :ImageModalityType ;
@@ -2582,16 +3400,59 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                                         <http://www.w3.org/2004/02/skos/core#altLabel> "SPECT"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Sinograms
+:Sinograms rdf:type owl:NamedIndividual ,
+                    :CTImageSeriesType ;
+           rdfs:label "Sinograms"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Slot
 :Slot rdf:type owl:NamedIndividual ,
                :XRayDetectorConfiguration ;
       rdfs:label "Slot (scanned slot, slit, or spot)"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#SmoothingNoiseReduction
+:SmoothingNoiseReduction rdf:type owl:NamedIndividual ,
+                                  :ProcessingActivityType ;
+                         rdfs:label "Smoothing and/or Noise Reduction"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#SparseMeshDepthMapToMesh
+:SparseMeshDepthMapToMesh rdf:type owl:NamedIndividual ,
+                                   :ProcessingActivityType ;
+                          rdfs:label "Sparse Mesh and Depth Map to Mesh"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#SparsePointCloudDepthMapToDensePointCloud
+:SparsePointCloudDepthMapToDensePointCloud rdf:type owl:NamedIndividual ,
+                                                    :ProcessingActivityType ;
+                                           rdfs:label "Sparse Point Cloud and Depth Map to Dense Point Cloud"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Standard
+:Standard rdf:type owl:NamedIndividual ,
+                   :UseAgreementType ;
+          rdfs:comment "Standard MorphoSource use agreement."@en ;
+          rdfs:label "Standard"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Static
+:Static rdf:type owl:NamedIndividual ,
+                 :LightSourceType ;
+        rdfs:label "Static"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Storage
 :Storage rdf:type owl:NamedIndividual ,
                   :XRayDetectorType ;
          rdfs:label "Storage (Storage Phosphor)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Strobe
+:Strobe rdf:type owl:NamedIndividual ,
+                 :LightSourceType ;
+        rdfs:label "Strobe"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#StructuredLight
@@ -2610,10 +3471,40 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
                     <http://www.w3.org/2004/02/skos/core#altLabel> "Synchro"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#TransformReflection
+:TransformReflection rdf:type owl:NamedIndividual ,
+                              :ProcessingActivityType ;
+                     rdfs:label "Transform: Reflection"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#TransformRotation
+:TransformRotation rdf:type owl:NamedIndividual ,
+                            :ProcessingActivityType ;
+                   rdfs:label "Transform: Rotation"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#TransformScale
+:TransformScale rdf:type owl:NamedIndividual ,
+                         :ProcessingActivityType ;
+                rdfs:label "Transform: Scale"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#TransformTranslation
+:TransformTranslation rdf:type owl:NamedIndividual ,
+                               :ProcessingActivityType ;
+                      rdfs:label "Transform: Translation"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Transmission
 :Transmission rdf:type owl:NamedIndividual ,
                        :XRayTargetType ;
               rdfs:label "Transmission"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Um
+:Um rdf:type owl:NamedIndividual ,
+             :LengthMeasurementUnit ;
+    rdfs:label "Micrometers"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#Undetermined
@@ -2628,12 +3519,30 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
             rdfs:label "Unknowable"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#Unknown
+:Unknown rdf:type owl:NamedIndividual ,
+                  :Side ;
+         rdfs:label "Unknown"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Variable
+:Variable rdf:type owl:NamedIndividual ,
+                   :FocalLengthType ;
+          rdfs:label "Variable"@en .
+
+
 ###  https://www.morphosource.org/terms/morphosource#Video
 :Video rdf:type owl:NamedIndividual ,
-                :ImageModalityType ;
-       rdfs:comment "Video is a digital recording of moving images and sound. It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats."@en ;
-       rdfs:label "Video"@en ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "Video"@en .
+                :MediaType ;
+       rdfs:label "Video (*.avi, *.mp4, *.mov, .etc.)"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#Videography
+:Videography rdf:type owl:NamedIndividual ,
+                      :ImageModalityType ;
+             rdfs:comment "The recording of moving images and sound (video). It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats."@en ;
+             rdfs:label "Videography"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Video"@en .
 
 
 ###  https://www.morphosource.org/terms/morphosource#XRay
@@ -2644,36 +3553,35 @@ rdfs:seeAlso rdf:type owl:ObjectProperty .
       <http://www.w3.org/2004/02/skos/core#altLabel> "XRay"@en .
 
 
+###  https://www.morphosource.org/terms/morphosource#3DPrintingLimited
+<https://www.morphosource.org/terms/morphosource#3DPrintingLimited> rdf:type owl:NamedIndividual ,
+                                                                             <https://www.morphosource.org/terms/morphosource#3DPrintingPermission> ;
+                                                                    rdfs:comment "3D printing of digital resources is permitted only if the data was initially downloaded with the intent to 3D print as explicitly indicated by communication from the downloader or from an automated download usage survey form, and where sharing of 3D prints is permitted only in small-scale informal circumstances that should be explicitly outlined elsewhere."@en ;
+                                                                    rdfs:label "3D Printing Limited"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#3DPrintingPermitted
+<https://www.morphosource.org/terms/morphosource#3DPrintingPermitted> rdf:type owl:NamedIndividual ,
+                                                                               <https://www.morphosource.org/terms/morphosource#3DPrintingPermission> ;
+                                                                      rdfs:comment "3D printing of digital resource is freely permitted."@en ;
+                                                                      rdfs:label "3D Printing Permitted"@en .
+
+
+###  https://www.morphosource.org/terms/morphosource#3DPrintingProhibited
+<https://www.morphosource.org/terms/morphosource#3DPrintingProhibited> rdf:type owl:NamedIndividual ,
+                                                                                <https://www.morphosource.org/terms/morphosource#3DPrintingPermission> ;
+                                                                       rdfs:comment "3D printing of digital resource is prohibited."@en ;
+                                                                       rdfs:label "3D Printing Prohibited"@en .
+
+
 #################################################################
 #    Annotations
 #################################################################
-
-<http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
-                                          <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
-                                          rdfs:comment "An entity primarily responsible for making the resource."@en ;
-                                          rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
-                                          rdfs:label "Creator"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#note> "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."@en .
-
 
 <http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
                                rdfs:comment "The set of places specified by the Getty Thesaurus of Geographic Names."@en ;
                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                rdfs:label "TGN"@en .
-
-
-<http://purl.org/dc/terms/created> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
-                                   <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
-                                   rdfs:comment "Date of creation of the resource."@en ;
-                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-                                   rdfs:label "Date Created"@en .
-
-
-<http://purl.org/dc/terms/modified> <http://purl.org/dc/terms/description> "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
-                                    <http://purl.org/dc/terms/issued> "2000-07-11"^^xsd:date ;
-                                    rdfs:comment "Date on which the resource was changed."@en ;
-                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-                                    rdfs:label "Date Modified"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
