@@ -74,7 +74,7 @@
   } ]
 }, {
   "@id" : "http://ns.adobe.com/photoshop/1.0/Credit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The credit to person(s) and/or organisation(s) required by the supplier of the item to be used when published. This is a free-text field."
@@ -85,7 +85,7 @@
   } ]
 }, {
   "@id" : "http://ns.adobe.com/xap/1.0/rights/Owner",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A list of legal owners of the resource."
@@ -96,7 +96,7 @@
   } ]
 }, {
   "@id" : "http://ns.adobe.com/xap/1.0/rights/UsageTerms",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A collection of text instructions on how a resource can be legally used, given in a variety of languages."
@@ -285,7 +285,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/dcmitype/Software",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/dcam/memberOf" : [ {
     "@id" : "http://purl.org/dc/terms/DCMIType"
   } ],
@@ -313,7 +313,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."
@@ -344,13 +344,16 @@
     "@language" : "en",
     "@value" : "Creator"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#note" : [ {
     "@language" : "en",
     "@value" : "A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation."
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."
@@ -392,7 +395,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/publisher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."
@@ -414,6 +417,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Publisher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2004/02/skos/core#note" : [ {
     "@language" : "en",
@@ -464,12 +470,15 @@
     "@language" : "en",
     "@value" : "TGN"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://vocab.getty.edu/tgn/7029392"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://www.getty.edu/research/tools/vocabulary/tgn/index.html"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/available",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
@@ -491,10 +500,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Date Available"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
@@ -520,10 +532,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Date Created"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/dateSubmitted",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)."
@@ -544,7 +559,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/format",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/dcam/rangeIncludes" : [ {
     "@id" : "http://purl.org/dc/terms/Extent"
   }, {
@@ -574,7 +589,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."
@@ -598,6 +613,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isPartOf",
@@ -639,7 +657,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/medium",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/dcam/domainIncludes" : [ {
     "@id" : "http://purl.org/dc/terms/PhysicalResource"
   } ],
@@ -663,7 +681,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/modified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
@@ -688,7 +706,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/provenance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/dcam/rangeIncludes" : [ {
     "@id" : "http://purl.org/dc/terms/ProvenanceStatement"
   } ],
@@ -719,7 +737,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A name given to the resource."
@@ -745,10 +763,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#AccessionNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A RIS generated number that identifies the order for the Study."
@@ -759,6 +780,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Accession Number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#AcquisitionType",
@@ -773,10 +797,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Acquisition Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The primary material in the anode of the X-Ray source."
@@ -794,7 +821,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#BitsAllocated",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of bits allocated for each pixel sample. Each sample shall have the same number of bits allocated. Bits Allocated (0028,0100) shall be either 1, or a multiple of 8. See PS3.5 for further explanation."
@@ -805,10 +832,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Bits Allocated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#BitsStored",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of bits stored for each pixel sample. Each sample shall have the same number of bits stored. See PS3.5 for further explanation."
@@ -819,10 +849,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Bits Stored"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#Columns",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of columns in the image.\n\nShall be an exact multiple of the horizontal downsampling factor if any of the samples (planes) are encoded downsampled in the horizontal direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422."
@@ -833,10 +866,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Columns"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Description of the container."
@@ -850,7 +886,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContentDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The date the image pixel data creation started.\n\nRequired if image is part of a Series in which the images are temporally related. May be present otherwise."
@@ -861,10 +897,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Content Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContentTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The time the image pixel data creation started.\n\nRequired if image is part of a Series in which the images are temporally related. May be present otherwise."
@@ -875,10 +914,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Content Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specifies the number of contrast frames to average together before performing the mask operation. If the Attribute is missing, no averaging is performed."
@@ -889,6 +931,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contrast Frame Averaging"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#DetectorDescription",
@@ -906,7 +951,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Distance in mm from source to detector center."
@@ -917,10 +962,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distance From Source To Detector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Distance in mm from source to isocenter (center of field of view)."
@@ -931,10 +979,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Distance From Source To Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ExposureTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Time of X-Ray exposure in msec.\n\nIf Acquisition Type (0018,9302) equals SPIRAL, the value of this Attribute shall be Revolution Time (0018,9305) divided by the Spiral Pitch Factor (0018,9311). See Section C.8.15.3.8.1 and Section C.8.15.3.2.1.\n\nShall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362)."
@@ -947,10 +998,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Exposure Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Identifier of the generator."
@@ -961,10 +1015,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Generator ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Power in kW to the X-Ray generator.\n\nShall not be present if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362) and the value of this Attribute is not the same in all Items of the Multi-energy CT Acquisition Sequence (0018,9362)."
@@ -975,10 +1032,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Generator Power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#HighBit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Most significant bit for pixel sample data. Each sample shall have the same high bit. High Bit (0028,0102) shall be one less than Bits Stored (0028,0101). See PS3.5 for further explanation."
@@ -989,10 +1049,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "High Bit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ImageOrientationPatient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The direction cosines of the first row and the first column with respect to the patient. See Section C.7.6.2.1.1 for further explanation."
@@ -1003,10 +1066,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Image Orientation Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ImagePositionPatient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Patient position descriptor relative to the equipment. See Section C.7.1.4.1.1.1.\n\nSee Section C.7.3.1.1.2 for Defined Terms and further explanation."
@@ -1017,10 +1083,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Image Position Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ImageType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Image identification characteristics. See Section C.7.6.1.1.2 for Defined Terms and further explanation."
@@ -1031,10 +1100,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Image Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of images that resulted from this acquisition of data."
@@ -1045,10 +1117,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Images in Acquisition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#InstanceNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A number that identifies this image."
@@ -1059,10 +1134,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Instance Number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#KVP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Peak kilo voltage output of the X-Ray generator used.\n\nShall be empty if this Attribute is present in Multi-energy CT Acquisition Sequence (0018,9362)."
@@ -1073,6 +1151,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "KVP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#Modality",
@@ -1104,7 +1185,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#PixelRepresentation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Data representation of the pixel samples. Each sample shall have the same pixel representation."
@@ -1115,10 +1196,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Representation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Physical distance in the patient between the center of each pixel, specified by a numeric pair - adjacent row spacing (delimiter) adjacent column spacing in mm. See Section 10.7.1.3 for further explanation."
@@ -1129,6 +1213,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Spacing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#PixelSpacingCalibrationType",
@@ -1146,7 +1233,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#RescaleIntercept",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The value b in relationship between stored values (SV) and the output units.\n\nOutput units = m*SV+b\n\nIf Image Type (0008,0008) Value 1 is ORIGINAL and Value 3 is not LOCALIZER, and Multi-energy CT Acquisition (0018,9361) is either absent or NO, output units shall be Hounsfield Units (HU)."
@@ -1157,10 +1244,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rescale Intercept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#RescaleSlope",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "m in the equation specified in Rescale Intercept (0028,1052)."
@@ -1171,10 +1261,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rescale Slope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#Rows",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of rows in the image.\n\nShall be an exact multiple of the vertical downsampling factor if any of the samples (planes) are encoded downsampled in the vertical direction for pixel data encoded in a Native (uncompressed) format. E.g., required to be an even value for a Photometric Interpretation (0028,0004) of YBR_FULL_422."
@@ -1185,10 +1278,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rows"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SamplesPerPixel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of samples (planes) in this image. See Section C.7.6.3.1.1 for further explanation."
@@ -1199,10 +1295,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Samples Per Pixel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SeriesDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date the Series started."
@@ -1213,10 +1312,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Series Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SeriesTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Time the Series started."
@@ -1227,10 +1329,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Series Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SliceThickness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Nominal slice thickness, in mm."
@@ -1243,10 +1348,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Slice Thickness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SpacingBetweenSlices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Spacing between slices, in mm. The spacing is measured from the center-to-center of each slice."
@@ -1257,10 +1365,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Spacing Between Slices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Ratio of the Table Feed per Rotation (0018,9310) to the Total Collimation Width (0018,9307)."
@@ -1271,10 +1382,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Spiral Pitch Factor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#StudyDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date the Study started."
@@ -1285,10 +1399,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Study Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#StudyTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Time the Study started."
@@ -1299,10 +1416,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Study Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#WindowCenter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Window Center for display.\n\nSee Section C.11.2.1.2 for further explanation.\n\nRequired if VOI LUT Sequence (0028,3010) is not present. May be present otherwise."
@@ -1313,10 +1433,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Window Center"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#WindowWidth",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Window Width for display. See Section C.11.2.1.2 for further explanation.\n\nRequired if Window Center (0028,1050) is present."
@@ -1327,10 +1450,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Window Width"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "X-Ray Tube Current in mA. Required if Exposure (0018,1152) is not present. May be present otherwise."
@@ -1341,10 +1467,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "X-Ray Tube Current"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/ac/terms/IDofContainingCollection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Repeatable: A media resource may be member of multiple collections. The form of the identifier is left to implementers of specific implementations."
@@ -1453,7 +1582,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/format" : [ {
     "@value" : "application/rdf+xml"
   } ],
@@ -1490,7 +1619,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/ac/terms/providerManagedID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Ideally, this would be a globally unique identifier (GUID), but the provider is encouraged to supply any form of identifier that simplifies communications on resources within their project and helps to locate individual data items in the provider's data repositories. It is the provider's decision whether to expose this value or not."
@@ -1525,7 +1654,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/ac/terms/subjectOrientation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/version/subjectOrientation-2013-10-28"
   }, {
@@ -1562,7 +1691,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/ac/terms/subjectPart",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/version/subjectPart-2013-10-28"
   }, {
@@ -1656,7 +1785,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/catalogNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/catalogNumber-2009-04-24"
   }, {
@@ -1691,13 +1820,16 @@
     "@language" : "en",
     "@value" : "Catalog Number"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`145732`, `145732a`, `2008.1334`, `R-4313`"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/collectionCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/collectionCode-2009-04-24"
   }, {
@@ -1737,6 +1869,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Collection Code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1793,7 +1928,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/datasetID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/datasetID-2009-04-24"
   }, {
@@ -1830,7 +1965,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/disposition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to use a controlled vocabulary."
@@ -1872,7 +2007,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/earliestEonOrLowestEonothem-2009-04-24"
   }, {
@@ -1910,7 +2045,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/formation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/formation-2009-04-24"
   }, {
@@ -1945,13 +2080,16 @@
     "@language" : "en",
     "@value" : "Formation"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Notch Peak Formation`, `House Limestone`, `Fillmore Formation`"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/geologicalContextID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/geologicalContextID-2009-07-06"
   }, {
@@ -1986,7 +2124,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/institutionCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/hasVersion" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/version/institutionCode-2009-04-24"
   }, {
@@ -2027,13 +2165,16 @@
     "@language" : "en",
     "@value" : "Institution Code"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`MVZ`, `FMNH`, `CLO`, `UCMP`"
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/locality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description."
@@ -2077,7 +2218,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/municipality",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."
@@ -2116,7 +2257,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/occurrenceID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to use a persistent, globally unique identifier."
@@ -2154,6 +2295,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Occurrence ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -2256,7 +2400,7 @@
   } ]
 }, {
   "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to separate the values in a list with space vertical bar space (` | `)."
@@ -2322,8 +2466,11 @@
   "@id" : "http://vocab.getty.edu/aat/300264092",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://vocab.getty.edu/tgn/7029392",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://www.europeana.eu/schemas/edm/currentLocation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource."
@@ -2334,6 +2481,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Current Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.europeana.eu/schemas/edm/rights",
@@ -2375,13 +2525,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#apertureValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The lens aperture. The unit is the APEX value."
@@ -2400,13 +2550,16 @@
     "@language" : "en",
     "@value" : "ApertureValue"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "37378"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#bitsPerSample",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The number of bits per image component. In this standard each component of the image is 8 bits, so the value for this tag is 8. See also SamplesPerPixel. In JPEG compressed data a JPEG marker is used instead of this tag."
@@ -2418,13 +2571,16 @@
     "@language" : "en",
     "@value" : "BitsPerSample"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "258"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#focalLength",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The actual focal length of the lens, in mm. Conversion is not made to the focal length of a 35 mm film camera."
@@ -2439,13 +2595,16 @@
     "@language" : "en",
     "@value" : "FocalLength"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
     "@value" : "37386"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively."
@@ -2463,7 +2622,7 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLongitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively."
@@ -2481,7 +2640,7 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#isoSpeedRatings",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "ja",
     "@value" : "CCD感度の銀塩フィルム換算値"
@@ -2499,6 +2658,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ISOSpeedRatings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2003/12/exif/ns#tagNumber" : [ {
     "@language" : "en",
@@ -2532,7 +2694,7 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/12/exif/ns#shutterSpeedValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"
@@ -2650,6 +2812,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "3D Printing Prohibited"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "CT acqusition method type. Entities comprise a controlled vocabulary as defined by DICOM C.8.15.3.2.1 Acquisition Type."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acquisition Type"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#AlignParts",
@@ -2842,6 +3015,16 @@
     "@value" : "Confocal"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#ConstantAngle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Constant Angle"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Crop",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2990,6 +3173,16 @@
     "@value" : "Focal Length Type"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Free",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Free"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Ft",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3040,8 +3233,18 @@
     "@value" : "Histogram Editing"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#HistologicalSlide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#SlideType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Histological Slide"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Morphosource-specific unique ID identifier for a Work (Media, Organization, Device, etc.)."
@@ -3064,6 +3267,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Image",
@@ -3504,6 +3710,16 @@
     "@value" : "Other"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#OtherSlide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#SlideType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Other Slide"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Patch",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3886,6 +4102,16 @@
     "@value" : "Scintillator (Phosphor used)"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Sequenced",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequenced (Rotational)"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#SequentialSectionImageSeries",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -3984,6 +4210,13 @@
     "@value" : "Sinograms"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#SlideType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of Sequential Section Slide. Entities comprise a controlled vocabulary."
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Slot",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -4024,6 +4257,16 @@
     "@value" : "Sparse Point Cloud and Depth Map to Dense Point Cloud"
   } ]
 }, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Spiral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spiral"
+  } ]
+}, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Standard",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -4046,6 +4289,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Static"
+  } ]
+}, {
+  "@id" : "https://www.morphosource.org/terms/morphosource#Stationary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#AcquisitionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Stationary"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#Storage",
@@ -4386,7 +4639,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#address",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@value" : "http://rs.tdwg.org/dwc/terms/locality"
   } ],
@@ -4412,6 +4665,9 @@
     "@language" : "en",
     "@value" : "Address"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/locality"
   } ],
@@ -4421,7 +4677,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#agreementURI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://ns.adobe.com/xap/1.0/rights/UsageTerms"
   } ],
@@ -4438,12 +4694,15 @@
     "@language" : "en",
     "@value" : "Agreement URI"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://ns.adobe.com/xap/1.0/rights/UsageTerms"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#amperage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent"
   } ],
@@ -4458,12 +4717,15 @@
     "@language" : "en",
     "@value" : "Amperage"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#XRayTubeCurrent"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ark",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Persistent identifier for MorphoSource Media automatically created on Media submission. ARKs can apply to both unpublished and published media."
@@ -4475,12 +4737,15 @@
     "@language" : "en",
     "@value" : "ARK (Archival Resource Key)"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#mediaARK"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A binary attachment file associated with a Work record. Often used to provide additional description beyond that allowed by object properties."
@@ -4500,7 +4765,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Length across the X axis of the rectangular bounding box surrounding a 3D digital object."
@@ -4511,10 +4776,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Bounding Box X"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxY",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Length across the Y axis of the rectangular bounding box surrounding a 3D digital object."
@@ -4525,10 +4793,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Bounding Box Y"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#boundingBoxZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Length across the Z axis of the rectangular bounding box surrounding a 3D digital object."
@@ -4539,10 +4810,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Bounding Box Z"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#canonicalTaxonomy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "MorphoSource-specific ID of Taxonomy record for taxonomic name attributed to the specimen physical object by the provider organization (museum, institution, or laboratory) responsible for managing the specimen. May not be present if no provider-supplied taxonomy is present. This may differ from taxonomic names attributed to the specimen by researchers or other individuals. Values for this property should be a subset of values for property morphosource:taxonomyID values, but morphosource:taxonomyID may include additional values as well."
@@ -4553,10 +4827,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Canonical Taxonomy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#centroidX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "X axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."
@@ -4567,10 +4847,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Centroid X"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#centroidY",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Y axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."
@@ -4581,10 +4864,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Centroid Y"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#centroidZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Z axis coordinate of the centroid of a 3D object, where the centroid is the geometric center point of the object."
@@ -4595,10 +4881,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Centroid Z"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#choAttribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Physical attributes of an object, including characteristics such as size and shape, chemical properties of materials, qualities of texture and hardness, and features such as surface ornament. It is preferred to use morphosource:aatAttribute when it is possible to express attributes using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom attribute values not listed in the Getty AAT controlled vocabulary."
@@ -4609,10 +4898,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Cultural Heritage Object Attribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#choType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Type, genre, category, or classification of an object. It is preferred to use morphosource:aatType when it is possible to express type using the Getty Arts and Architecture Thesaurus controlled vocabulary. This property is for custom type values not listed in the Getty AAT controlled vocabulary."
@@ -4623,10 +4915,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Cultural Heritage Object Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#citeAs",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://ns.adobe.com/photoshop/1.0/Credit"
   } ],
@@ -4641,12 +4936,15 @@
     "@language" : "en",
     "@value" : "Cite As"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://ns.adobe.com/photoshop/1.0/Credit"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#city",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names."
@@ -4675,6 +4973,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/municipality"
@@ -4735,7 +5036,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contactUser",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Contact individual associated with the Organization. Does not need to be a MorphoSource User."
@@ -4746,10 +5047,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contact User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsAcceptedFileCount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "For a ZIP archive file, the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document the number of files in the primary image collection in a CT image stack or photogrammetry image collection."
@@ -4760,10 +5064,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contents Accepted File Count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsFileName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "For a ZIP archive file, the file name of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."
@@ -4774,10 +5081,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contents File Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsFileSize",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "For a ZIP archive file, the file size of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document file size for a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."
@@ -4788,10 +5098,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Contents File Size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#contentsMimeType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "For a ZIP archive file, the mime type of a single representative example of the largest number of system-recognized files with the same system-permissible file type located in a single directory. In MorphoSource, this is used to document a single file that is representative of the primary image collection in a CT image stack or photogrammetry image collection or the central mesh in a multi-file mesh archive."
@@ -4803,13 +5116,16 @@
     "@language" : "en",
     "@value" : "Contents Mime Type"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`image/jpeg`, `image/tiff`, `application/stl`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#context",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/geologicalContextID"
   } ],
@@ -4833,6 +5149,9 @@
     "@language" : "en",
     "@value" : "Geological Context"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/geologicalContextID"
   } ],
@@ -4842,7 +5161,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#crc32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Checksum hash used to verify the identity of a file and to detect accidental corruption."
@@ -4853,6 +5172,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "CRC32"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dataManager",
@@ -4873,7 +5195,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dateModified",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
@@ -4900,10 +5222,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Date Modified"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dateUploaded",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."
@@ -4931,12 +5256,15 @@
     "@language" : "en",
     "@value" : "Date Uploaded"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/dateSubmitted"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#datingMethod",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Method used to determine the date an object was created, produced, fossilized, or otherwise came into being."
@@ -4947,6 +5275,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Dating Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#depositor",
@@ -4991,6 +5322,9 @@
     "@language" : "en",
     "@value" : "Depositor"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#User"
+  } ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
     "@id" : "http://id.loc.gov/vocabulary/relators/own"
   } ],
@@ -5027,7 +5361,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelSizeX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Length in mm of each pixel in the X direction."
@@ -5038,10 +5372,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Pixel Size X"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelSizeY",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Length in mm of each pixel in the Y direction."
@@ -5052,10 +5389,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Pixel Size Y"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelsX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The number of pixels in the X direction of the detector (number of columns)."
@@ -5066,10 +5406,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Pixels X"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorPixelsY",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The number of pixels in the X direction of the detector (number of rows)."
@@ -5080,6 +5423,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector Pixels Y"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#detectorType",
@@ -5110,7 +5456,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#deviceID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "MorphoSource-specific unique ID identifier for a Device used in an Imaging Event to image a Physical Object."
@@ -5121,10 +5467,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Imaging Device ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomFileTypeExtension",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Extension code indicating the file format of a file."
@@ -5136,34 +5488,37 @@
     "@language" : "en",
     "@value" : "File Type Extension"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`dcm`, `ply`, `mp4`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Number of Series Related Instances"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Spacing Height"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pixel Spacing Width"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomSecondaryCaptureDeviceManufacturer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Manufacturer of the Secondary Capture Device. This field should map to some DICOM field."
@@ -5174,10 +5529,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Secondary Capture Device Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomSecondaryCaptureDeviceSoftwareVers",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Manufacturer's designation of software version of the Secondary Capture Device. This field should map to some DICOM field."
@@ -5188,17 +5546,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Secondary Capture Device Software Vers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Spacing Between Slices"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dicomWindowCenterAndWidthExplanation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free form explanation of the meaning of the Window Center and Width. Multiple values correspond to multiple Window Center and Width values. This field should map to dicom:WindowCenterAndWidthExplanation and should be changed accordingly."
@@ -5209,13 +5570,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Window Center and Width Explanation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#dimensions",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/dcam/rangeIncludes" : [ {
-    "@id" : "http://purl.org/dc/terms/Extent"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/dc/terms/format"
   } ],
@@ -5234,12 +5595,15 @@
     "@language" : "en",
     "@value" : "Dimensions"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/format"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#doi",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Persistent identifier for MorphoSource Media created only on user request. DOIs can apply only to published media."
@@ -5250,6 +5614,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DOI (Digital Object Identifier)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#mediaDOI"
@@ -5290,10 +5657,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Download Reviewer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#User"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#edgesPerFace",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of polygonal edges that connect vertices or points and comprise each face of a polygonal 3D mesh. Values are commonly \"3\" for a triangular mesh or \"4\" for a quadrangular mesh."
@@ -5304,24 +5674,27 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Edges Per Face"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#exifLensMake",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Lens Make"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#exifLensModel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Lens Model"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#faceCount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of polygonal faces comprising a 3D mesh."
@@ -5332,10 +5705,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Face Count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#fileName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Identifying name label given to a file."
@@ -5346,10 +5722,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "File Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#fileSize",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Size of a file in bytes."
@@ -5360,6 +5739,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "File Size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#filesetAccessibility",
@@ -5370,14 +5752,14 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#filter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Filter"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#fluxNormalization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether flux normalization calibration is used or not. If present, value must be \"Yes\" or \"No\"."
@@ -5389,13 +5771,16 @@
     "@language" : "en",
     "@value" : "Flux Normalization"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#focalLength",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The actual focal length of the lens, in mm. This should probably map to exif:focalLength and should be updated accordingly."
@@ -5408,6 +5793,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Focal Length"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#focalLengthType",
@@ -5432,7 +5820,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#frameAveraging",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"
   } ],
@@ -5447,12 +5835,15 @@
     "@language" : "en",
     "@value" : "Frame Averaging"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContrastFrameAveraging"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#funding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution"
   } ],
@@ -5473,12 +5864,15 @@
     "@language" : "en",
     "@value" : "Funding"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/fundingAttribution"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#hasUVSpace",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether or not a mapping exists to project a 3D object's surface to a 2D image for texture mapping and is present with the 3D object. Values should be \"Yes\" or \"No\"."
@@ -5490,13 +5884,16 @@
     "@language" : "en",
     "@value" : "Has UV Space"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#height",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Height of a 2D image in pixels."
@@ -5507,10 +5904,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Height in Pixels"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#idigbioRecordsetID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/datasetID"
   } ],
@@ -5531,6 +5931,9 @@
     "@language" : "en",
     "@value" : "iDigBio Recordset ID"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/datasetID"
   } ],
@@ -5540,7 +5943,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#idigbioUUID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Global unique identifier for the Biological Specimen provided by iDigBio and used as the primary identifier of the Biological Specimen's record in the iDigBio aggregator if present. This is sometimes used in addition to more general identifiers or Darwin Core triplets (institution code : collection code : catalog number) to uniquely identify Biological Specimen."
@@ -5551,10 +5954,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "iDigBio UUID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ieFilter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Type of filter(s) inserted into the X-Ray beam."
@@ -5565,6 +5971,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Imaging Event Filter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#filter"
@@ -5598,17 +6007,23 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#imagingEventID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#Media"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Imaging Event ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#institutionName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Name of institution affiliated with Organization. This may be a university in the case of departments or a museum in the case of specific museum collections."
@@ -5619,10 +6034,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Institution Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#isTypeSpecimen",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus"
   } ],
@@ -5646,6 +6064,9 @@
     "@language" : "en",
     "@value" : "Is Type Specimen"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/typeStatus"
   } ],
@@ -5655,7 +6076,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#latitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude"
   } ],
@@ -5673,6 +6094,9 @@
     "@language" : "en",
     "@value" : "Latitude"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLatitude"
   } ],
@@ -5686,7 +6110,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#legacyMediaFileID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/providerManagedID"
   } ],
@@ -5707,12 +6131,15 @@
     "@language" : "en",
     "@value" : "Legacy Media File ID"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/providerManagedID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#legacyMediaGroupID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/IDofContainingCollection"
   } ],
@@ -5734,12 +6161,15 @@
     "@language" : "en",
     "@value" : "Legacy Media Group ID"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/IDofContainingCollection"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#lensMake",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The manufacturer of the camera lens. This should probably map directly to an EXIF term and should be updated accordingly."
@@ -5753,12 +6183,15 @@
     "@language" : "en",
     "@value" : "Lens Make"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#exifLensMake"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#lensModel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The model of the camera lens. This should probably map directly to an EXIF term and should be updated accordingly."
@@ -5772,12 +6205,15 @@
     "@language" : "en",
     "@value" : "Lens Model"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#exifLensModel"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#licenseBlank",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no license in dc:license. This is distinct from an Organization expressing no preference on license choice. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no license to be chosen."
@@ -5789,13 +6225,16 @@
     "@language" : "en",
     "@value" : "License Intentionally Left Blank"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#longitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLongitude"
   } ],
@@ -5812,6 +6251,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Longitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2003/12/exif/ns#gpsLongitude"
@@ -5847,7 +6289,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#material",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/dc/terms/medium"
   } ],
@@ -5862,26 +6304,29 @@
     "@language" : "en",
     "@value" : "Material"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/medium"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mediaARK",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Media ARK"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mediaDOI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Media DOI"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mediaParentID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "MorphoSource-specific unique ID identifier for the parent Media of a Media. This is the ID of the Media from which the current Media is immediately derived."
@@ -5892,6 +6337,12 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Media Parent ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mediaType",
@@ -5922,7 +6373,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#mimeType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/dc/terms/format"
   } ],
@@ -5936,6 +6387,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Mime Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/format"
@@ -5990,7 +6444,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#normalsFormat",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "How vertex or face normal information is formatted and codified for a 3D object, if normal information is present with the object."
@@ -6001,10 +6455,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Normals Format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#numberOfImagesInSet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "For Media with a ZIP archive with many component files, this is the number of files in the primary image collection in a CT image stack or photogrammetry image collection. This only applies to CTImageSeries or PhotogrammetryImageSeries Media."
@@ -6016,12 +6473,15 @@
     "@language" : "en",
     "@value" : "Number of Images In Set"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#dicomNumberOfSeriesRelatedInstances"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#numericTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"
   } ],
@@ -6042,6 +6502,9 @@
     "@language" : "en",
     "@value" : "Numeric Time"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem"
   } ],
@@ -6051,7 +6514,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#objectID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "MorphoSource-specific unique ID identifier for a Physical Object."
@@ -6059,10 +6522,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Physical Object ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#opticalMagnification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether optical magnification is used or not. This property is only for indicating optical magnification specifically, and is different from geometric magnification. If present, value must be \"Yes\" or \"No\"."
@@ -6074,13 +6543,16 @@
     "@language" : "en",
     "@value" : "Optical Magnification"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#organizationID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "MorphoSource-specific unique ID identifier for the provider Organization (museum, institution, or laboratory) responsible for managing the physical object."
@@ -6091,6 +6563,12 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Organization ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#organizationType",
@@ -6115,7 +6593,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#orientation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/subjectOrientation"
   } ],
@@ -6136,12 +6614,15 @@
     "@language" : "en",
     "@value" : "Orientation"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/subjectOrientation"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#originalLocation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free text description of the original location where the physical object was created, produced, fossilized, or otherwise came into being."
@@ -6152,6 +6633,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Original Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#owner",
@@ -6174,7 +6658,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#part",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/subjectPart"
   } ],
@@ -6196,12 +6680,15 @@
     "@language" : "en",
     "@value" : "Part"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/ac/terms/subjectPart"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#periodicTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free text description of the time period associated with the production or creation of the physical object."
@@ -6212,6 +6699,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Periodic Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#permits3DUse",
@@ -6261,7 +6751,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#phaseContrast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether phase contrast of X-Ray beam - in other words, modulating the beam between higher and lower energies to increase contrast between materials - is used or not. If present, value must be \"Yes\" or \"No\"."
@@ -6273,13 +6763,16 @@
     "@language" : "en",
     "@value" : "Phase Contrast"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#photogrammetryBackgroundRemoval",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free text description of background removal method."
@@ -6290,10 +6783,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Photogrammetry Background Removal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#photographicReference",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A reference photograph image, often used to represent and record the object at the initial time of scanning."
@@ -6305,12 +6801,15 @@
     "@language" : "en",
     "@value" : "Photographic Reference"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#attachmentFile"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#physicalObjectID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#objectID"
   } ],
@@ -6359,7 +6858,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#pointCount",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Number of 3D coordinate points comprising a 3D mesh or point cloud."
@@ -6370,10 +6869,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Point Count"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#postalCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Group of numbers or letters added to a postal address to assist in sorting of mail, such as a ZIP code in the United States."
@@ -6385,13 +6887,16 @@
     "@language" : "en",
     "@value" : "Postal Code"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`27708`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#power",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower"
   } ],
@@ -6406,12 +6911,15 @@
     "@language" : "en",
     "@value" : "Power"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorPower"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivityDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Description of a specific discrete processing activity step."
@@ -6423,12 +6931,15 @@
     "@language" : "en",
     "@value" : "Processing Activity Description"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/elements/1.1/description"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#processingActivitySoftware",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Description of software used in a specific discrete processing activity step."
@@ -6439,6 +6950,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Processing Activity Software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/dcmitype/Software"
@@ -6466,7 +6980,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#projections",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition"
   } ],
@@ -6481,12 +6995,15 @@
     "@language" : "en",
     "@value" : "Number of Projections"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ImagesInAcquisition"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#provenanceDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Date the physical object was collected, excavated, or discovered. Values must be in MM/DD/YYYY date format."
@@ -6498,13 +7015,16 @@
     "@language" : "en",
     "@value" : "Provenance Date"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`01/01/1985`, `12/30/2021`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#provenanceDetails",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
     "@value" : "The statement may include a description of any changes successive custodians made to the resource."
@@ -6523,12 +7043,15 @@
     "@language" : "en",
     "@value" : "Provenance Details"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/dc/terms/provenance"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#provenanceLocation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free text description of the location from which the physical object was collected, excavated, or discovered."
@@ -6539,10 +7062,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Provenance Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#provenanceName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Name of the collection or excavation event, if applicable and available."
@@ -6553,10 +7079,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Provenance Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#recordsetID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An identifier for an entire museum, institution, or laboratory specimen collection associated with Organization. May be a global unique identifier or an identifier specific to a collection or institution."
@@ -6567,10 +7096,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Recordset ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#relatedURL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
   } ],
@@ -6588,6 +7120,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Related URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
@@ -6617,7 +7152,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsHolder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://ns.adobe.com/xap/1.0/rights/Owner"
   } ],
@@ -6634,12 +7169,15 @@
     "@language" : "en",
     "@value" : "Rights Holder"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://ns.adobe.com/xap/1.0/rights/Owner"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsHolderBlank",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no rights holder in morphosource:rightsHolder. This is distinct from an Organization expressing no preference on rights holder statement. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no rights holder statement."
@@ -6650,6 +7188,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Rights Holder Intentionally Left Blank"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -6686,7 +7227,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rightsStatementBlank",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether the Organization's preferred policy is for Media representing Organization Physical Objects to specify no rights statement in morphosource:rightsStatement. This is distinct from an Organization expressing no preference on rights statement. Values must be \"Yes\" or \"No\". If value is \"Yes\", then Organization explicitly prefers no rights statement."
@@ -6698,13 +7239,16 @@
     "@language" : "en",
     "@value" : "Rights Statement Intentionally Left Blank"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#rotationNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor"
   } ],
@@ -6719,12 +7263,15 @@
     "@language" : "en",
     "@value" : "Number of Rotations"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#SpiralPitchFactor"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#scaleBar",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Details of scale bar accompany a photogrammetry image series. Value should include three elements: the scale bar target type, the scale bar distance, and the units of the scale bar distance. If values are encoded as a string, they should be separate by semicolons. This only applies to PhotogrammetryImageSeries Media."
@@ -6735,6 +7282,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Scale Bar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#seriesType",
@@ -6759,7 +7309,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shadingCorrection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether shading correction calibration is used or not. If present, value must be \"Yes\" or \"No\"."
@@ -6771,13 +7321,16 @@
     "@language" : "en",
     "@value" : "Shading Correction"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Yes`, `No`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shortDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Brief summary description of Media. This could include a brief summary of what is represented in the Media or the context surrounding the Media."
@@ -6788,10 +7341,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Short Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shortTitle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Title or short description of an object. For MorphoSource records, value is used as part of the full title for a Cultural Heritage Object record."
@@ -6802,10 +7358,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Short Title"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#shutterSpeed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting"
@@ -6823,6 +7382,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Shutter Speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2003/12/exif/ns#shutterSpeedValue"
@@ -6872,13 +7434,16 @@
     "@language" : "en",
     "@value" : "Slide Type"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#SlideType"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Histological`, `Other`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#software",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Free text description of any software used in an Imaging Event."
@@ -6889,10 +7454,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Software"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#sourceDetectorDistance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"
   } ],
@@ -6907,12 +7475,15 @@
     "@language" : "en",
     "@value" : "Distance From Source To Detector"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToDetector"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#sourceObjectDistance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"
   } ],
@@ -6927,12 +7498,15 @@
     "@language" : "en",
     "@value" : "Distance From Source To Object"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#DistanceSourceToPatient"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#surroundingMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription"
   } ],
@@ -6947,12 +7521,15 @@
     "@language" : "en",
     "@value" : "Surrounding Material"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#ContainerDescription"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#tag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "All-purpose label attached to Media for the purpose of identification, context, or to give other information."
@@ -6963,10 +7540,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Tag"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#targetMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"
   } ],
@@ -6980,6 +7560,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Target Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#AnodeTargetMaterial"
@@ -7011,7 +7594,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#taxonomyID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Morphosource-specific ID of Taxonomy record for taxonomic name attributed to the Biological Specimen."
@@ -7022,10 +7605,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Taxonomy ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#teamID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "MorphoSource-specific unique ID identifier for a Team associated with the Organization and responsible for managing the Organization record."
@@ -7036,6 +7625,12 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Team ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#ID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#unit",
@@ -7051,13 +7646,16 @@
     "@language" : "en",
     "@value" : "Unit"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "`Mm`, `Um`, `M`"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#vertexColor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Whether or not a 3D object has color information encoded into vertices or points that comprise a mesh or point cloud."
@@ -7068,6 +7666,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Vertex Color"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#visibility",
@@ -7095,7 +7696,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#voltage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#KVP"
   } ],
@@ -7110,12 +7711,15 @@
     "@language" : "en",
     "@value" : "Voltage"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#KVP"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#vouchered",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/disposition"
   } ],
@@ -7136,6 +7740,9 @@
     "@language" : "en",
     "@value" : "Vouchered"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rs.tdwg.org/dwc/terms/disposition"
   } ],
@@ -7145,7 +7752,7 @@
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#width",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Width of a 2D image in pixels."
@@ -7156,10 +7763,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Width in Pixels"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#xSpacing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Distance between centers of adjacent pixels in the X axis, for Media with pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to Image and CTImageSeries media."
@@ -7171,12 +7781,15 @@
     "@language" : "en",
     "@value" : "X Pixel Spacing"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingWidth"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#xrayTubeType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/isVersionOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID"
   } ],
@@ -7191,12 +7804,15 @@
     "@language" : "en",
     "@value" : "X-Ray Tube Type"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/healthcarevocab/v1#GeneratorID"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#ySpacing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Distance between centers of adjacent pixels in the Y axis, for Media with pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to Image and CTImageSeries media."
@@ -7208,12 +7824,15 @@
     "@language" : "en",
     "@value" : "Y Pixel Spacing"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#dicomPixelSpacingHeight"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#zSpacing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Distance between centers of adjacent pixels in the Z axis, for Media with 3D pixel data where pixel spacing corresponds to real-world length measurement. Unit of measurement is described by morphosource:unit. Applies to CTImageSeries media."
@@ -7224,6 +7843,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Z Pixel Spacing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#dicomSpacingBetweenSlices"
