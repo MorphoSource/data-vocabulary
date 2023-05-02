@@ -9,7 +9,7 @@
 <https://www.morphosource.org/terms/morphosource> rdf:type owl:Ontology ;
                                                    rdfs:comment "Test description for MorphoSource Terms Vocabulary"@en ;
                                                    rdfs:label "MorphoSource Terms Vocabulary"@en ;
-                                                   owl:versionInfo "0.3.0" .
+                                                   owl:versionInfo "0.4.0" .
 
 #################################################################
 #    Annotation properties

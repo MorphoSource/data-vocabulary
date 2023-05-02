@@ -2758,7 +2758,7 @@
     "@value" : "MorphoSource Terms Vocabulary"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.3.0"
+    "@value" : "0.4.0"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingLimited",

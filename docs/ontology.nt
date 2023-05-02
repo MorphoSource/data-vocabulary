@@ -1,7 +1,7 @@
 <https://www.morphosource.org/terms/morphosource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://www.morphosource.org/terms/morphosource> <http://www.w3.org/2000/01/rdf-schema#comment> "Test description for MorphoSource Terms Vocabulary"@en .
 <https://www.morphosource.org/terms/morphosource> <http://www.w3.org/2000/01/rdf-schema#label> "MorphoSource Terms Vocabulary"@en .
-<https://www.morphosource.org/terms/morphosource> <http://www.w3.org/2002/07/owl#versionInfo> "0.3.0" .
+<https://www.morphosource.org/terms/morphosource> <http://www.w3.org/2002/07/owl#versionInfo> "0.4.0" .
 # 
 # 
 # #################################################################

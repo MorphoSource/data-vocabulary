@@ -16,7 +16,7 @@
     <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
-        <owl:versionInfo>0.3.0</owl:versionInfo>
+        <owl:versionInfo>0.4.0</owl:versionInfo>
     </owl:Ontology>
     
 
