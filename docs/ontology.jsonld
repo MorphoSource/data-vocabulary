@@ -13,6 +13,27 @@
     "@id" : "http://purl.org/dc/terms/LicenseDocument"
   } ]
 }, {
+  "@id" : "http://id.loc.gov/ontologies/bibframe/Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Units in which a value is expressed."
+  } ]
+}, {
+  "@id" : "http://id.loc.gov/ontologies/bibframe/unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Type of unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Unit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file)."
+  } ]
+}, {
   "@id" : "http://id.loc.gov/vocabulary/relators/dpt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.loc.gov/mads/rdf/v1#authoritativeLabel" : [ {
@@ -2758,7 +2779,7 @@
     "@value" : "MorphoSource Terms Vocabulary"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.4.0"
+    "@value" : "0.4.1"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#3DPrintingLimited",
@@ -3410,6 +3431,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Length Measurement Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/Unit"
   } ]
 }, {
   "@id" : "https://www.morphosource.org/terms/morphosource#LightSourceType",
@@ -7648,6 +7672,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://id.loc.gov/ontologies/bibframe/unit"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",

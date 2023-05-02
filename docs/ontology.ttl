@@ -9,7 +9,7 @@
 <https://www.morphosource.org/terms/morphosource> rdf:type owl:Ontology ;
                                                    rdfs:comment "Test description for MorphoSource Terms Vocabulary"@en ;
                                                    rdfs:label "MorphoSource Terms Vocabulary"@en ;
-                                                   owl:versionInfo "0.4.0" .
+                                                   owl:versionInfo "0.4.1" .
 
 #################################################################
 #    Annotation properties
@@ -174,6 +174,13 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://id.loc.gov/ontologies/bibframe/unit
+<http://id.loc.gov/ontologies/bibframe/unit> rdf:type owl:ObjectProperty ;
+                                             rdfs:range <http://id.loc.gov/ontologies/bibframe/Unit> ;
+                                             rdfs:label "Type of unit" ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file)." .
+
 
 ###  http://id.loc.gov/vocabulary/relators/dpt
 <http://id.loc.gov/vocabulary/relators/dpt> rdf:type owl:ObjectProperty ;
@@ -736,6 +743,7 @@ Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be pre
 
 ###  https://www.morphosource.org/terms/morphosource#unit
 :unit rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf <http://id.loc.gov/ontologies/bibframe/unit> ;
       rdfs:domain :Media ;
       rdfs:range :LengthMeasurementUnit ;
       rdfs:comment "Length measurement unit. For Mesh Media, this is the length unit associated with the 3D coordinate space of the mesh. For CTImageSeries Media, this is the length unit for X/Y/Z pixel spacing. Values must be from the Length Measurement Unit controlled vocabulary (https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit)."@en ;
@@ -2773,6 +2781,12 @@ rdfs:seeAlso rdf:type owl:DatatypeProperty .
                                         rdfs:label "License"@en-us .
 
 
+###  http://id.loc.gov/ontologies/bibframe/Unit
+<http://id.loc.gov/ontologies/bibframe/Unit> rdf:type owl:Class ;
+                                             rdfs:label "Unit" ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Units in which a value is expressed." .
+
+
 ###  http://pcdm.org/models#File
 <http://pcdm.org/models#File> rdf:type owl:Class ;
                               <http://purl.org/dc/terms/isPartOf> "http://pcdm.org/models#"@en ;
@@ -2916,6 +2930,7 @@ rdfs:seeAlso rdf:type owl:DatatypeProperty .
 
 ###  https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit
 :LengthMeasurementUnit rdf:type owl:Class ;
+                       rdfs:subClassOf <http://id.loc.gov/ontologies/bibframe/Unit> ;
                        rdfs:comment "Unit of measurement used in measuring length."@en ;
                        rdfs:label "Length Measurement Unit"@en .
 

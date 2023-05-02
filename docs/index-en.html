@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Tue May 02 17:35:51 UTC 2023", "version":"0.4.0"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://www.morphosource.org/terms/morphosource","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://www.morphosource.org/terms/morphosource","name":"https://www.morphosource.org/terms/morphosource", "headline":"Test description for MorphoSource Terms Vocabulary", "datePublished":"Tue May 02 20:58:56 UTC 2023", "version":"0.4.1"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -58,10 +58,10 @@ $(function(){
 
 <dl>
 <dt>Revision:</dt>
-<dd>0.4.0</dd>
+<dd>0.4.1</dd>
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd> Revision: 0.4.0.</dd>
+<dd> Revision: 0.4.1.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -221,6 +221,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#SlideType"
          title="https://www.morphosource.org/terms/morphosource#SlideType">Type of Sequential Section Slide. Entities comprise a controlled vocabulary.</a>
+   </li>
+   <li>
+      <a href="#http://id.loc.gov/ontologies/bibframe/Unit" title="http://id.loc.gov/ontologies/bibframe/Unit">Unit</a>
    </li>
    <li>
       <a href="#UseAgreementType"
@@ -439,6 +442,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/dc/terms/TGN" title="http://purl.org/dc/terms/TGN">
          <span>TGN</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://id.loc.gov/ontologies/bibframe/unit" title="http://id.loc.gov/ontologies/bibframe/unit">Type of unit</a>
    </li>
    <li>
       <a href="#unit"
@@ -1817,6 +1823,9 @@ This section provides details for each class and property defined by MorphoSourc
             title="https://www.morphosource.org/terms/morphosource#SlideType">Type of Sequential Section Slide. Entities comprise a controlled vocabulary.</a>
       </li>
       <li>
+         <a href="#http://id.loc.gov/ontologies/bibframe/Unit" title="http://id.loc.gov/ontologies/bibframe/Unit">Unit</a>
+      </li>
+      <li>
          <a href="#UseAgreementType"
             title="https://www.morphosource.org/terms/morphosource#UseAgreementType">Use Agreement Type</a>
       </li>
@@ -2534,6 +2543,11 @@ This section provides details for each class and property defined by MorphoSourc
          <span class="markdown">Unit of measurement used in measuring length.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://id.loc.gov/ontologies/bibframe/Unit" title="http://id.loc.gov/ontologies/bibframe/Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#unit"
@@ -3440,6 +3454,30 @@ This section provides details for each class and property defined by MorphoSourc
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://id.loc.gov/ontologies/bibframe/Unit">
+      <h3>Unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://id.loc.gov/ontologies/bibframe/Unit</p>
+      <div class="comment">
+         <span class="markdown">Units in which a value is expressed.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#LengthMeasurementUnit"
+               title="https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit">Length Measurement Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://id.loc.gov/ontologies/bibframe/unit" title="http://id.loc.gov/ontologies/bibframe/unit">Type of unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="UseAgreementType">
       <h3>Use Agreement Type<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3818,6 +3856,9 @@ This section provides details for each class and property defined by MorphoSourc
          <a href="#http://purl.org/dc/terms/TGN" title="http://purl.org/dc/terms/TGN">
             <span>TGN</span>
          </a>
+      </li>
+      <li>
+         <a href="#http://id.loc.gov/ontologies/bibframe/unit" title="http://id.loc.gov/ontologies/bibframe/unit">Type of unit</a>
       </li>
       <li>
          <a href="#unit"
@@ -5598,6 +5639,32 @@ Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be pre
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://id.loc.gov/ontologies/bibframe/unit">
+      <h3>Type of unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://id.loc.gov/ontologies/bibframe/unit</p>
+      <div class="comment">
+         <span class="markdown">Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#unit"
+                  title="https://www.morphosource.org/terms/morphosource#unit">Unit</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://id.loc.gov/ontologies/bibframe/Unit" title="http://id.loc.gov/ontologies/bibframe/Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="unit">
       <h3>Unit<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -5616,6 +5683,11 @@ Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be pre
       </dl>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://id.loc.gov/ontologies/bibframe/unit" title="http://id.loc.gov/ontologies/bibframe/unit">Type of unit</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Media"
