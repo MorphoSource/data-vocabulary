@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="https://www.morphosource.org/terms/morphosource#"
      xml:base="https://www.morphosource.org/terms/morphosource"
      xmlns:ac="http://rs.tdwg.org/ac/terms/"
+     xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:v1="http://www.loc.gov/mads/rdf/v1#"
@@ -29,7 +30,7 @@
     <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
-        <owl:versionInfo>0.4.0</owl:versionInfo>
+        <owl:versionInfo>0.4.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -292,6 +293,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/unit -->
+
+    <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/unit">
+        <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Unit"/>
+        <rdfs:label>Type of unit</rdfs:label>
+        <skos:definition>Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).</skos:definition>
+    </owl:ObjectProperty>
     
 
 
@@ -1017,6 +1028,7 @@ Required if Frame Type (0008,9007) Value 1 of this frame is ORIGINAL. May be pre
     <!-- https://www.morphosource.org/terms/morphosource#unit -->
 
     <owl:ObjectProperty rdf:about="https://www.morphosource.org/terms/morphosource#unit">
+        <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/ontologies/bibframe/unit"/>
         <rdfs:domain rdf:resource="https://www.morphosource.org/terms/morphosource#Media"/>
         <rdfs:range rdf:resource="https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit"/>
         <rdfs:comment xml:lang="en">Length measurement unit. For Mesh Media, this is the length unit associated with the 3D coordinate space of the mesh. For CTImageSeries Media, this is the length unit for X/Y/Z pixel spacing. Values must be from the Length Measurement Unit controlled vocabulary (https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit).</rdfs:comment>
@@ -3684,6 +3696,15 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     
 
 
+    <!-- http://id.loc.gov/ontologies/bibframe/Unit -->
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Unit">
+        <rdfs:label>Unit</rdfs:label>
+        <skos:definition>Units in which a value is expressed.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://pcdm.org/models#File -->
 
     <owl:Class rdf:about="http://pcdm.org/models#File">
@@ -3889,6 +3910,7 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     <!-- https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit -->
 
     <owl:Class rdf:about="https://www.morphosource.org/terms/morphosource#LengthMeasurementUnit">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Unit"/>
         <rdfs:comment xml:lang="en">Unit of measurement used in measuring length.</rdfs:comment>
         <rdfs:label xml:lang="en">Length Measurement Unit</rdfs:label>
     </owl:Class>
