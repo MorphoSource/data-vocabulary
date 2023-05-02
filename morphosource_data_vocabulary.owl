@@ -29,7 +29,7 @@
     <owl:Ontology rdf:about="https://www.morphosource.org/terms/morphosource">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
-        <owl:versionInfo>0.3.0</owl:versionInfo>
+        <owl:versionInfo>0.4.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -5222,10 +5222,10 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/TGN">
-        <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
         <rdfs:label xml:lang="en">TGN</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
         <rdfs:comment xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
     </rdf:Description>
 </rdf:RDF>
