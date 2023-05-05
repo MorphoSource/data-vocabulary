@@ -1,0 +1,1506 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.morphosource.org/terms/mscv#"
+     xml:base="http://www.morphosource.org/terms/mscv"
+     xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:aat="http://vocab.getty.edu/aat/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tgn="http://vocab.getty.edu/tgn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:mscv="http://www.morphosource.org/terms/mscv/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.morphosource.org/terms/mscv">
+        <rdfs:comment xml:lang="en">Test description for MorphoSource Controlled Vocabularies</rdfs:comment>
+        <rdfs:label xml:lang="en">MorphoSource Controlled Vocabularies</rdfs:label>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#License -->
+
+    <owl:Class rdf:about="http://creativecommons.org/ns#License">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:comment xml:lang="en-us">a set of
+		    requests/permissions to users of a Work, e.g. a
+		    copyright license, the public domain, information
+		    for distributors</rdfs:comment>
+        <rdfs:label xml:lang="en-us">License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/Unit -->
+
+    <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Unit">
+        <rdfs:label>Unit</rdfs:label>
+        <skos:definition>Units in which a value is expressed.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/RightsStatement -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
+        <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Rights Statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264087 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264087">
+        <rdfs:label xml:lang="en">Physical Attributes Facet</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264087</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264088 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264088">
+        <rdfs:label xml:lang="en">Styles and Periods Facet</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264088</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264091 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264091">
+        <rdfs:label xml:lang="en">Materials Facet</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264091</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264092 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264092">
+        <rdfs:label xml:lang="en">Objects Facet</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264092</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.getty.edu/tgn/7029392 -->
+
+    <owl:Class rdf:about="http://vocab.getty.edu/tgn/7029392">
+        <rdfs:label xml:lang="en">World</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/TGNFullDisplay?find=&amp;place=&amp;nation=&amp;subjectid=7029392</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/AcquisitionType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/AcquisitionType">
+        <rdfs:comment xml:lang="en">CT acqusition method type. Entities comprise a controlled vocabulary as defined by DICOM C.8.15.3.2.1 Acquisition Type.</rdfs:comment>
+        <rdfs:label xml:lang="en">Acquisition Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CTImageSeriesType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/CTImageSeriesType">
+        <rdfs:comment xml:lang="en">Broad type or kind of CT image series, distinguishing between initial X-Ray projections and other derived series forms.</rdfs:comment>
+        <rdfs:label xml:lang="en">CT Image Series Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CommercialUsePermission -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/CommercialUsePermission">
+        <rdfs:comment xml:lang="en">Permission statement describing whether a digital resource may be used for commercial purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Commercial Use Permission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/DerivativeRearchivalStatement -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/DerivativeRearchivalStatement">
+        <rdfs:comment xml:lang="en">Statement describing whether and how any future derivatives must or should be rearchived to a public facing digital repository.</rdfs:comment>
+        <rdfs:label xml:lang="en">Derivative Rearchival Statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/FocalLengthType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/FocalLengthType">
+        <rdfs:comment xml:lang="en">Type of camera focal length setting. Elements comprise a controlled vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Focal Length Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ImageModalityType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/ImageModalityType">
+        <rdfs:comment xml:lang="en">Modality used to create 3D, 2D, or AV images. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific image modalities used to describe imaging of media in MorphoSource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image Modality Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/LengthMeasurementUnit -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit">
+        <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Unit"/>
+        <rdfs:comment xml:lang="en">Unit of measurement used in measuring length.</rdfs:comment>
+        <rdfs:label xml:lang="en">Length Measurement Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/LightSourceType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/LightSourceType">
+        <rdfs:comment xml:lang="en">Type of light source. Elements comprise a controlled vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Light Source Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MediaType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/MediaType">
+        <rdfs:comment xml:lang="en">Type, nature, or classification of a Media file dataset, which may include one or more specific files. This is the general or high-level type of all file data, it is not the file type of any specific file. Most Media Types encompass a variety of different specific file types.</rdfs:comment>
+        <rdfs:label xml:lang="en">Media Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MeshMapType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/MeshMapType">
+        <rdfs:comment xml:lang="en">A type of 3D texture map or projection that associates two-dimensional space coordinates to the surface of a 3D object, usually in order to map a texture or other attribute onto the 3D object&apos;s surface.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mesh Map Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/OrganizationType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/OrganizationType">
+        <rdfs:comment xml:lang="en">Type of Organization, distinguishing between collections managing Physical Objects, scanning facilities, and entities that both operate scanning equipment and manage Physical Objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PixelSpacingCalibrationType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/PixelSpacingCalibrationType">
+        <rdfs:comment xml:lang="en">A type of correction for the effect of geometric magnification or calibration against an object of known size, as described in the Enumerated Values of the DICOM Pixel Spacing Calibration Type attribute (0028,0A02). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe the pixel calibration type for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pixel Spacing Calibration Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ProcessingActivityType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/ProcessingActivityType">
+        <rdfs:comment xml:lang="en">Type statement describing a specific discrete processing activity step. It is often the case that in reality, multiple processing activity steps are used in the generation of any derived digital resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Processing Activity Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PublicationStatus -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/PublicationStatus">
+        <rdfs:comment xml:lang="en">Status type indicating whether or not Media is published and under what conditions it is published.</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Sex -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/Sex">
+        <rdfs:comment xml:lang="en">A categorical description or identification pertaining an organism&apos;s sex. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary of specific sex categorizations and identification statements used to describe Biological Specimens.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Side -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/Side">
+        <rdfs:comment xml:lang="en">For objects with bilateral or some other kind of symmetry, a term description statement pertaining to a particular side, the object midline, lack of knowledge relating to side, or inapplicability of this concept for an object.</rdfs:comment>
+        <rdfs:label xml:lang="en">Side</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SlideType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/SlideType">
+        <rdfs:label xml:lang="en">Type of Sequential Section Slide. Entities comprise a controlled vocabulary.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/UseAgreementType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/UseAgreementType">
+        <rdfs:comment xml:lang="en">Type of MorphoSource-specific Media download use agreement. This explicitly does not include types of non-MorphoSource use agreements, such as use agreements provided by third-party museums.</rdfs:comment>
+        <rdfs:label xml:lang="en">Use Agreement Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/XRayDetectorConfiguration -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/XRayDetectorConfiguration">
+        <rdfs:comment xml:lang="en">Physical configuration of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Configuration attribute (0018,7005). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector configuration for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Detector Configuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/XRayDetectorType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/XRayDetectorType">
+        <rdfs:comment xml:lang="en">Type of X-Ray detector used to acquire an image for CT, MRI, and other related modalities, as described in the DICOM Dectector Type attribute (0018,7004). The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe detector type for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Detector Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/XRayTargetType -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/XRayTargetType">
+        <rdfs:comment xml:lang="en">Type of X-Ray target used to acquire an image for CT, MRI, and other related modalities. The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe target type for relevant Image Events.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Target Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/3DPrintingPermission -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/3DPrintingPermission">
+        <rdfs:comment xml:lang="en">Permission statement describing whether 3D printing of a digital resource is permitted, prohibited, or permitted with conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">3D Printing Permission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/AlignParts -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/AlignParts">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Align Parts</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Area -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Area">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayDetectorConfiguration"/>
+        <rdfs:label xml:lang="en">Area (single or tiled detector)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/BackgroundRemovalMasking -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/BackgroundRemovalMasking">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Background Removal and/or Masking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/BitDepthChange -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/BitDepthChange">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Bit Depth Change</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/BornDigital -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/BornDigital">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Born Digital refers to digital content that is created and stored in digital format from the outset. Born-digital content includes digital photos, videos, documents, and other types of digital media.</rdfs:comment>
+        <rdfs:label xml:lang="en">Born Digital</rdfs:label>
+        <skos:altLabel xml:lang="en">BD</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CTImageSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/CTImageSeries">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">CT/MRI image series (multiple files of type *.tiff, *.png, *.dcm, *.zip, etc.)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Cm -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Cm">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Centimeters</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CollectionAndScanningFacility -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/CollectionAndScanningFacility">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/OrganizationType"/>
+        <rdfs:label xml:lang="en">Collection and Scanning Facility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Color -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Color">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MeshMapType"/>
+        <rdfs:label xml:lang="en">Color Map</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CommercialUseNotPermitted -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/CommercialUseNotPermitted">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CommercialUsePermission"/>
+        <rdfs:comment xml:lang="en">Commercial use of digital resource is not permitted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Commercial Use Not Permitted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CommercialUsePermitted -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/CommercialUsePermitted">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CommercialUsePermission"/>
+        <rdfs:comment xml:lang="en">Commercial use of digital resource is permitted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Commercial Use Permitted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ConfocalImageStacking -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ConfocalImageStacking">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Confocal Image Stacking is an imaging technique that uses a series of images taken at different depths to create a 3D image of an object. By focusing a laser beam on a specific point in the object and measuring the reflected light, confocal microscopy can create high-resolution 3D images of cells and tissues.</rdfs:comment>
+        <rdfs:label xml:lang="en">Confocal Image Stacking</rdfs:label>
+        <skos:altLabel xml:lang="en">Confocal</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ConstantAngle -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ConstantAngle">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/AcquisitionType"/>
+        <rdfs:label xml:lang="en">Constant Angle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Crop -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Crop">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Crop</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/CrossPolarized -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/CrossPolarized">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LightSourceType"/>
+        <rdfs:label xml:lang="en">Cross polarized</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Direct -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Direct">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Direct (X-Ray photoconductor)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/EncouragedButNotRequired -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/EncouragedButNotRequired">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/DerivativeRearchivalStatement"/>
+        <rdfs:comment xml:lang="en">Future derivatives are encouraged to be rearchived on a public-facing digital repository, but are not required to be rearchived.</rdfs:comment>
+        <rdfs:label xml:lang="en">Encouraged But Not Required</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Female">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Sex"/>
+        <rdfs:label xml:lang="en">Female</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Fiducial -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Fiducial">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PixelSpacingCalibrationType"/>
+        <rdfs:label xml:lang="en">Fiducial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Film -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Film">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Film (Scanned film/screen)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Fixed -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Fixed">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/FocalLengthType"/>
+        <rdfs:label xml:lang="en">Fixed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Free -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Free">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/AcquisitionType"/>
+        <rdfs:label xml:lang="en">Free</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Ft -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Ft">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Feet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Geometry -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Geometry">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PixelSpacingCalibrationType"/>
+        <rdfs:label xml:lang="en">Geometry</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Gynandromorph -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Gynandromorph">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Sex"/>
+        <rdfs:label xml:lang="en">Gynandromorph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Hermaphrodite -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Hermaphrodite">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Sex"/>
+        <rdfs:label xml:lang="en">Hermaphrodite</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/HistogramEditing -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/HistogramEditing">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Histogram Editing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/HistologicalSlide -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/HistologicalSlide">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/SlideType"/>
+        <rdfs:label xml:lang="en">Histological Slide</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Image -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Image">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">Image (*.tiff, *.png, *.dcm, etc.)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ImageMeshCompression -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ImageMeshCompression">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Image and/or Mesh Compression</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/In -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/In">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Inches</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Infrared -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Infrared">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Infrared imaging is an imaging technique that uses infrared radiation to create images of objects. Infrared imaging can be used to detect and analyze heat signatures, as well as to create detailed images of objects and structures that are difficult to see with visible light.</rdfs:comment>
+        <rdfs:label xml:lang="en">Infrared</rdfs:label>
+        <skos:altLabel xml:lang="en">Infrared</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Km -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Km">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Kilometers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/LaserAidedProfiling -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/LaserAidedProfiling">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Laser Aided Profiling (LAP) is an imaging technique that uses a laser beam to create a 3D image of an object&apos;s surface. LAP can be used to create high-resolution, accurate models of complex shapes and structures, making it useful in manufacturing and other industries.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Aided Profiling</rdfs:label>
+        <skos:altLabel xml:lang="en">LAP</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/LaserScan -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/LaserScan">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Laser Scan is an imaging technique that uses laser beams to create a 3D image of an object&apos;s surface. Laser scans are commonly used in industrial design and manufacturing to create accurate models of parts and components.</rdfs:comment>
+        <rdfs:label xml:lang="en">Laser Scan</rdfs:label>
+        <skos:altLabel xml:lang="en">Laser</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Left -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Left">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Side"/>
+        <rdfs:label xml:lang="en">Left</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/M -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/M">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Meters</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MagneticResonanceImaging -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MagneticResonanceImaging">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Magnetic Resonance Imaging (MRI) is a non-invasive imaging technique that uses a strong magnetic field and radio waves to produce detailed images of the body&apos;s internal structures. MRI is widely used in medical diagnosis and research, especially for imaging soft tissues like the brain, spinal cord, and organs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Magnetic Resonance Imaging (MRI)</rdfs:label>
+        <skos:altLabel xml:lang="en">MRI</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Male">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Sex"/>
+        <rdfs:label xml:lang="en">Male</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Merge -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Merge">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Merge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Mesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Mesh">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">Mesh or point cloud (*.stl, *.ply, .etc, with optional associated texture or color file)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MeshPointCloudTexturing -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MeshPointCloudTexturing">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Mesh and/or Point Cloud Texturing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MeshToPointCloud -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MeshToPointCloud">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Mesh to Point Cloud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Mi -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Mi">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Miles</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MicroNanoXRayComputedTomography -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MicroNanoXRayComputedTomography">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">X-Ray Computed Tomography (CT/microCT) is a non-invasive imaging technique that uses X-rays to produce cross-sectional images of an object. It involves rotating an X-ray source and detector around the object, collecting data that is processed by a computer to create a 3D image. CT is widely used in medical imaging, as well as in materials science, engineering, and geology to visualize the internal structure of objects. MicroCT is a variation of CT that uses higher resolution X-rays to produce images of smaller objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray Computed Tomography (CT/microCT)</rdfs:label>
+        <skos:altLabel xml:lang="en">CT</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Midline -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Midline">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Side"/>
+        <rdfs:label xml:lang="en">Midline</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Mm -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Mm">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Millimeters</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/MuseumDepartmentOrLabCollection -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MuseumDepartmentOrLabCollection">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/OrganizationType"/>
+        <rdfs:label xml:lang="en">Museum, Department, or Lab Collection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/NeutronComputedTomography -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/NeutronComputedTomography">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Neutron Computed Tomography (NCT) is an imaging technique that uses neutrons instead of X-rays to create cross-sectional images of an object. NCT is particularly useful for imaging materials that are difficult to penetrate with X-rays, such as ceramics and rocks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Neutron Computed Tomography (NCT)</rdfs:label>
+        <skos:altLabel xml:lang="en">NCT</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Normal -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Normal">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MeshMapType"/>
+        <rdfs:label xml:lang="en">Normal Map</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/NotApplicable -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/NotApplicable">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Side"/>
+        <rdfs:label xml:lang="en">Not Applicable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/OnAnyRepository -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/OnAnyRepository">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/DerivativeRearchivalStatement"/>
+        <rdfs:comment xml:lang="en">Future derivatives are required to be rearchived on any public-facing digital repository.</rdfs:comment>
+        <rdfs:label xml:lang="en">On Any Repository</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/OnMorphoSource -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/OnMorphoSource">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/DerivativeRearchivalStatement"/>
+        <rdfs:comment xml:lang="en">Future derivatives are required to be rearchived on MorphoSource.</rdfs:comment>
+        <rdfs:label xml:lang="en">On MorphoSource</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Open -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Open">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">Published with Open Download. Media record may be found in public search. Media file(s) may be downloaded openly, after downloader submits a simple download usage survey.</rdfs:comment>
+        <rdfs:label xml:lang="en">Open Download</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Other -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Other">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">Other</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/OtherSlide -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/OtherSlide">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/SlideType"/>
+        <rdfs:label xml:lang="en">Other Slide</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Patch -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Patch">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Patch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Patterned -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Patterned">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LightSourceType"/>
+        <rdfs:label xml:lang="en">Patterned</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Permissive -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Permissive">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/UseAgreementType"/>
+        <rdfs:comment xml:lang="en">Permissive MorphoSource use agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Permissive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Photogrammetry -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Photogrammetry">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Photogrammetry is the use of photography to measure and map the physical properties of an object. Photogrammetry can be used to create 3D models of objects and structures from 2D photographs, allowing for accurate measurements and analysis.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photogrammetry</rdfs:label>
+        <skos:altLabel xml:lang="en">Photogram</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PhotogrammetryImageSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotogrammetryImageSeries">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">Photogrammetry image series (multiple files of type *.tiff, *.png, etc.)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Photography -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Photography">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Photography is the use of light to capture images of objects and scenes. Photography can be used for a wide range of purposes, from capturing memories to documenting scientific observations and creating works of art.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photography</rdfs:label>
+        <skos:altLabel xml:lang="en">Photo</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PhotosToDensePointCloud -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToDensePointCloud">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Photos to Dense Point Cloud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PhotosToDigitalElevationModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToDigitalElevationModel">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Photos to Digital Elevation Model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PhotosToMesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToMesh">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Photos to Mesh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PhotosToSparseMeshDepthMap -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToSparseMeshDepthMap">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Photos to Sparse Mesh and Depth Map</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PhotosToSparsePointCloudDepthMap -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToSparsePointCloudDepthMap">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Photos to Sparse Point Cloud and Depth Map</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PointCloudToMesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PointCloudToMesh">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Point Cloud to Mesh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/PositronEmissionTomography -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PositronEmissionTomography">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Positron Emission Tomography (PET) is a non-invasive imaging technique that uses small amounts of radioactive tracers to visualize metabolic processes in the body. The tracer is injected into the body and collects in areas of high metabolic activity, emitting positrons that are detected by the PET scanner. PET is widely used in medical diagnosis and research, especially for imaging cancer, heart disease, and neurological disorders.</rdfs:comment>
+        <rdfs:label xml:lang="en">Positron Emission Tomography (PET)</rdfs:label>
+        <skos:altLabel xml:lang="en">PET</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Private -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Private">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PublicationStatus"/>
+        <rdfs:label xml:lang="en">Private</rdfs:label>
+        <rdfs:label xml:lang="en">Unpublished. Media may not be found in public search, and media file(s) may not be downloaded by users without explicit access to Media.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Projections -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Projections">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CTImageSeriesType"/>
+        <rdfs:label xml:lang="en">Projections</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ReconstructedImageStack -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ReconstructedImageStack">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CTImageSeriesType"/>
+        <rdfs:label xml:lang="en">Reconstructed image stack</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ReconstructedTomographyToMesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ReconstructedTomographyToMesh">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Reconstructed Tomography to Mesh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Reconstruction -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Reconstruction">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Reconstruction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ReflectanceTransformationImaging -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ReflectanceTransformationImaging">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Reflectance Transformation Imaging (RTI) is an imaging technique that uses a series of photographs taken under different lighting conditions to create a detailed 3D model of an object&apos;s surface. RTI is particularly useful for analyzing the surface texture and details of objects such as artwork and historical artifacts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reflectance Transformation Imaging</rdfs:label>
+        <skos:altLabel xml:lang="en">RTI</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Reflection -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Reflection">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayTargetType"/>
+        <rdfs:label xml:lang="en">Reflection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Restricted -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Restricted">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">Published with Restricted Download. Media may be found in public search. Media file(s) may only be downloaded after user has sought and received download approval from the Media data manager.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restricted Download</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Right -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Right">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Side"/>
+        <rdfs:label xml:lang="en">Right</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ScanningElectronMicroscopy -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ScanningElectronMicroscopy">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Scanning Electron Microscopy (SEM) is an imaging technique that uses a beam of electrons to create high-resolution images of the surface of an object. SEM can produce images with extremely high magnification and resolution, making it useful for analyzing the microstructure of materials and biological specimens.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scanning Electron Microscopy</rdfs:label>
+        <skos:altLabel xml:lang="en">SEM</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/ScanningFacility -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ScanningFacility">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/OrganizationType"/>
+        <rdfs:label xml:lang="en">Scanning Facility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Scintillator -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Scintillator">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Scintillator (Phosphor used)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Sequenced -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Sequenced">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/AcquisitionType"/>
+        <rdfs:label xml:lang="en">Sequenced (Rotational)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SequentialSectionImageSeries -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SequentialSectionImageSeries">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">Sequential section image series (multiple files of type *.tiff, *.png, *.zip, etc.)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SequentialSectionScan -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SequentialSectionScan">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Sequential Section Scan is an imaging technique that involves cutting an object into thin sections, then imaging each section individually to create a 3D image. This technique is commonly used in medical imaging and histology to visualize the internal structure of tissues and organs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sequential Section Scan</rdfs:label>
+        <skos:altLabel xml:lang="en">Section</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Simplification -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Simplification">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Simplification</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SinglePhotonEmissionComputedTomography -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SinglePhotonEmissionComputedTomography">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Single Photon Emission Computed Tomography (SPECT) is a non-invasive imaging technique that uses a small amount of radioactive tracer to produce 3D images of the body&apos;s internal structures. The tracer is injected into the body and emits gamma rays, which are detected by a SPECT scanner. SPECT is used in medical diagnosis and research, especially for imaging the brain, heart, and bones.</rdfs:comment>
+        <rdfs:label xml:lang="en">Single Photon Emission Computed Tomography (SPECT)</rdfs:label>
+        <skos:altLabel xml:lang="en">SPECT</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Sinograms -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Sinograms">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CTImageSeriesType"/>
+        <rdfs:label xml:lang="en">Sinograms</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Slot -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Slot">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayDetectorConfiguration"/>
+        <rdfs:label xml:lang="en">Slot (scanned slot, slit, or spot)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SmoothingNoiseReduction -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SmoothingNoiseReduction">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Smoothing and/or Noise Reduction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SparseMeshDepthMapToMesh -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SparseMeshDepthMapToMesh">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Sparse Mesh and Depth Map to Mesh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SparsePointCloudDepthMapToDensePointCloud -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SparsePointCloudDepthMapToDensePointCloud">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Sparse Point Cloud and Depth Map to Dense Point Cloud</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Spiral -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Spiral">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/AcquisitionType"/>
+        <rdfs:label xml:lang="en">Spiral</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Standard -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Standard">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/UseAgreementType"/>
+        <rdfs:comment xml:lang="en">Standard MorphoSource use agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Static -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Static">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LightSourceType"/>
+        <rdfs:label xml:lang="en">Static</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Stationary -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Stationary">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/AcquisitionType"/>
+        <rdfs:label xml:lang="en">Stationary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Storage -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Storage">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayDetectorType"/>
+        <rdfs:label xml:lang="en">Storage (Storage Phosphor)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Strobe -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Strobe">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LightSourceType"/>
+        <rdfs:label xml:lang="en">Strobe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/StructuredLight -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/StructuredLight">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Structured Light is an imaging technique that uses a pattern of light projected onto an object to create a 3D image. By analyzing how the pattern of light is distorted by the object, structured light can create high-resolution, accurate 3D models of complex shapes and structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Structured Light</rdfs:label>
+        <skos:altLabel xml:lang="en">StrLight</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/SynchrotronImaging -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SynchrotronImaging">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">Synchrotron Imaging is a type of X-ray imaging that uses synchrotron radiation, which is produced when high-energy particles are accelerated to near the speed of light. Synchrotron imaging can produce high-resolution, 3D images of a wide range of materials and structures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Synchrotron Imaging</rdfs:label>
+        <skos:altLabel xml:lang="en">Synchro</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/TransformReflection -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformReflection">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Transform: Reflection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/TransformRotation -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformRotation">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Transform: Rotation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/TransformScale -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformScale">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Transform: Scale</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/TransformTranslation -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformTranslation">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:label xml:lang="en">Transform: Translation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Transmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Transmission">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/XRayTargetType"/>
+        <rdfs:label xml:lang="en">Transmission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Um -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Um">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/LengthMeasurementUnit"/>
+        <rdfs:label xml:lang="en">Micrometers</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Undetermined -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Undetermined">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Sex"/>
+        <rdfs:label xml:lang="en">Undetermined</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Unknowable -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Unknowable">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Sex"/>
+        <rdfs:label xml:lang="en">Unknowable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Unknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Unknown">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/Side"/>
+        <rdfs:label xml:lang="en">Unknown</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Variable -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Variable">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/FocalLengthType"/>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Video -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Video">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:label xml:lang="en">Video (*.avi, *.mp4, *.mov, .etc.)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/Videography -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Videography">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">The recording of moving images and sound (video). It is a widely used medium for recording and displaying visual information, including images of physical objects. Video can be captured using a variety of devices, from smartphones to professional cameras, and can be stored in a variety of digital formats.</rdfs:comment>
+        <rdfs:label xml:lang="en">Videography</rdfs:label>
+        <skos:altLabel xml:lang="en">Video</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/XRay -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/XRay">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ImageModalityType"/>
+        <rdfs:comment xml:lang="en">X-Ray imaging is an imaging technique that uses X-rays to create images of the internal structures of an object. X-ray imaging is widely used in medical diagnosis and research, as well as in materials science and other fields to visualize the internal structure of objects.</rdfs:comment>
+        <rdfs:label xml:lang="en">X-Ray</rdfs:label>
+        <skos:altLabel xml:lang="en">XRay</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/3DPrintingLimited -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/3DPrintingLimited">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/3DPrintingPermission"/>
+        <rdfs:comment xml:lang="en">3D printing of digital resources is permitted only if the data was initially downloaded with the intent to 3D print as explicitly indicated by communication from the downloader or from an automated download usage survey form, and where sharing of 3D prints is permitted only in small-scale informal circumstances that should be explicitly outlined elsewhere.</rdfs:comment>
+        <rdfs:label xml:lang="en">3D Printing Limited</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/3DPrintingPermitted -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/3DPrintingPermitted">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/3DPrintingPermission"/>
+        <rdfs:comment xml:lang="en">3D printing of digital resource is freely permitted.</rdfs:comment>
+        <rdfs:label xml:lang="en">3D Printing Permitted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.morphosource.org/terms/mscv/3DPrintingProhibited -->
+
+    <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/3DPrintingProhibited">
+        <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/3DPrintingPermission"/>
+        <rdfs:comment xml:lang="en">3D printing of digital resource is prohibited.</rdfs:comment>
+        <rdfs:label xml:lang="en">3D Printing Prohibited</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
