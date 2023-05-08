@@ -3733,6 +3733,7 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.morphosource.org/terms/ms/CTImageSeriesImagingEvent">
         <rdfs:subClassOf rdf:resource="http://www.morphosource.org/terms/ms/ImagingEvent"/>
+        <rdfs:comment xml:lang="en">Imaging Event with CT, MRI, or similar Image Modality. Has specific metadata fields other Imaging Events may not have.</rdfs:comment>
         <rdfs:label xml:lang="en">CT Image Series Imaging Event</rdfs:label>
     </owl:Class>
     
@@ -3802,6 +3803,7 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.morphosource.org/terms/ms/PhotogrammetryImagingEvent">
         <rdfs:subClassOf rdf:resource="http://www.morphosource.org/terms/ms/ImagingEvent"/>
+        <rdfs:comment xml:lang="en">Imaging Event with Photogrammetry Image Modality. Has specific metadata fields other Imaging Events may not have.</rdfs:comment>
         <rdfs:label xml:lang="en">Photogrammetry Imaging Event</rdfs:label>
     </owl:Class>
     
@@ -3811,6 +3813,7 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.morphosource.org/terms/ms/PhotographyImagingEvent">
         <rdfs:subClassOf rdf:resource="http://www.morphosource.org/terms/ms/ImagingEvent"/>
+        <rdfs:comment xml:lang="en">Imaging Event with Photography Image Modality. Has specific metadata fields other Imaging Events may not have.</rdfs:comment>
         <rdfs:label xml:lang="en">Photography Imaging Event</rdfs:label>
     </owl:Class>
     
@@ -3840,6 +3843,7 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.morphosource.org/terms/ms/SequentialSectionImagingEvent">
         <rdfs:subClassOf rdf:resource="http://www.morphosource.org/terms/ms/ImagingEvent"/>
+        <rdfs:comment xml:lang="en">Imaging Event with Sequential Section Image Modality. Has specific metadata fields other Imaging Events may not have.</rdfs:comment>
         <rdfs:label xml:lang="en">Sequential Section Imaging Event</rdfs:label>
     </owl:Class>
     
@@ -3848,6 +3852,7 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     <!-- http://www.morphosource.org/terms/ms/User -->
 
     <owl:Class rdf:about="http://www.morphosource.org/terms/ms/User">
+        <rdfs:comment xml:lang="en">Individual user of MorphoSource.</rdfs:comment>
         <rdfs:label xml:lang="en">User</rdfs:label>
     </owl:Class>
     

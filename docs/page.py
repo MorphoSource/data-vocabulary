@@ -1,11 +1,8 @@
-from collections import defaultdict
-from os.path import join
 from pathlib import Path
 from typing import Optional, List, Tuple, Union, cast
 
 import markdown
 from dominate.tags import (
-    h2,
     br,
     th,
     pre,
@@ -16,6 +13,7 @@ from dominate.tags import (
     td,
     ul,
     li,
+    p,
     code,
     table,
     h3,
@@ -27,125 +25,52 @@ from dominate.tags import (
 )
 from dominate.util import raw
 from pylode import OntPub
-from pylode.rdf_elements import CLASS_PROPS, ONTDOC, ONT_TYPES, OWL_SET_TYPES, PROP_PROPS, RESTRICTION_TYPES
-from pylode.utils import generate_fid, make_title_from_iri
+from pylode.rdf_elements import ONTDOC, OWL_SET_TYPES, RESTRICTION_TYPES
+from pylode.utils import generate_fid
 from rdflib import BNode, Literal, URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS
 from rdflib.paths import ZeroOrMore
 from rdflib.term import URIRef
 
-class OntologyClassPage:
-    """Creates HTML documentation page for ontology Class and associated Properties."""
+from const import ONT_TYPES
 
-    def __init__(self, ontology_filepath: str, class_uri: str, destination_dir: Path = None):
+class Page:
+    """Creates HTML documentation page for ontology subjects."""
+
+    def __init__(self, ontology_filepath: str, destination_dir: Path = None):
         self.ontpub = OntPub(ontology_filepath)
         self.ont = self.ontpub.ont
         self.back_onts = self.ontpub.back_onts
         self.fids = self.ontpub.fids
         self.ns = self.ontpub.ns
-        self.class_uri = class_uri
+        self.props_labeled = self.ontpub.props_labeled
+
         self.destination_dir = destination_dir
 
-        # class attributes
-        self.class_props = defaultdict(list)
-        self.class_fid = ""
-        self.class_title = ""
-
         # URI refs in page (will hyperlink these using fragments)
-        self.page_uris = [URIRef(class_uri)]
+        self.page_uris = []
 
-    def make_html(self):
-        # get all properties of class
-        for p_, o in self.ont.predicate_objects(subject=self.class_uri):
-            # ... in the property list for this class
-            if p_ in CLASS_PROPS:
-                if p_ == RDFS.subClassOf and (o, RDF.type, OWL.Restriction) in self.ont:
-                    self.class_props[ONTDOC.restriction].append(o)
-                else:
-                    self.class_props[p_].append(o)
+        # Modify some prop labels
+        self.props_labeled[RDFS.domain]["title"] = Literal("Property Of")
+        self.props_labeled[RDFS.domain]["description"] = Literal("Class or classes that reference this property term as metadata to describe or contextualize a record. Also known as rdfs:domain.")
 
-        # prepare for listing class inDomainOf properties
-        self.class_props[ONTDOC.inDomainOf].sort()
-        self.page_uris.extend(self.class_props[ONTDOC.inDomainOf])
+        self.props_labeled[RDFS.range]["title"] = Literal("Value Restriction")
+        self.props_labeled[RDFS.range]["description"] = Literal("Value(s) of the property must conform to this restriction. For Datatype Properties, value must be of the listed data type. For Object Properties, value must be an individual instance of the listed class. Also known as rdfs:range.")
 
-        # get fragment id and title for class
-        if len(self.class_props[DCTERMS.title]) == 0:
-            self.class_fid = generate_fid(None, self.class_uri, self.fids)
-            self.class_title = make_title_from_iri(self.class_uri)
-        else:
-            self.class_fid = generate_fid(self.class_props[DCTERMS.title][0], self.class_uri, self.fids)
-            self.class_title = self.class_props[DCTERMS.title]
+        self.props_labeled[ONTDOC.inDomainOf]["title"] = Literal("Property Terms")
+        self.props_labeled[ONTDOC.inDomainOf]["description"] = Literal("Property terms referenced by this class as metadata to describe or contextualize a record. Inverse of rdfs:domain.")
 
-        self.make_head()
-        self.make_class_element()
-        self.make_property_elements()
+        self.props_labeled[ONTDOC.inRangeOf]["title"] = Literal("Value Of Property Terms")
+        self.props_labeled[ONTDOC.inRangeOf]["description"] = Literal("An individual instance of this class can be the value of these property terms. Inverse of rdfs:range.")
 
-        html_path = join(self.destination_dir, "{}.html".format(self.class_fid))
-        open(html_path, "w").write(self.ontpub.doc.render())
-    
     def make_head(self):
         with self.ontpub.doc.head:
-            link(href="test.css", rel="stylesheet", type="text/css")
+            link(href="msterms.css", rel="stylesheet", type="text/css")
             script(
                 raw("\n" + self.ontpub._make_schema_org().serialize(format="json-ld") + "\n\t"),
                 type="application/ld+json",
                 id="schema.org",
             )
-
-    def make_class_element(self):
-        """ write html for class table to page_ontpub.doc """
-        with self.ontpub.content:
-            elems = div(id=self.class_fid, _class="section")
-            elems.appendChild(h2("{} Class".format(self.class_title[0])))
-            elems.appendChild(
-                self._element_html(
-                    self.class_uri,
-                    self.class_fid,
-                    self.class_title,
-                    OWL.Class,
-                    CLASS_PROPS,
-                    self.class_props,
-                )
-            )
-            elems.render()
-
-    def make_property_elements(self):
-        with self.ontpub.content:
-            elems = div(id="properties", _class="section")
-            elems.appendChild(h2("{} Properties".format(self.class_title[0]))) # todo add class name back in?
-            
-            for s_ in self.class_props[ONTDOC.inDomainOf]:
-                this_props = defaultdict(list)
-                
-                # get all properties of this object (excluding some)
-                for p_, o in self.ont.predicate_objects(subject=s_):
-                    # ... in the property list for this class
-                    if p_ in PROP_PROPS:
-                        if p_ == RDFS.subClassOf and (o, RDF.type, OWL.Restriction) in self.ont:
-                            this_props[ONTDOC.restriction].append(o)
-                        else:
-                            this_props[p_].append(o)
-                if RDFS.domain in this_props: this_props.pop(RDFS.domain)
-
-                # get fragment id and title for property
-                if len(this_props[DCTERMS.title]) == 0:
-                    this_fid = generate_fid(None, s_, self.fids)
-                    this_title = make_title_from_iri(s_)
-                else:
-                    this_fid = generate_fid(this_props[DCTERMS.title][0], s_, self.fids)
-                    this_title = this_props[DCTERMS.title]
-                
-                elems.appendChild(
-                    self._element_html(
-                        s_,
-                        this_fid,
-                        this_title,
-                        self.ont.value(s_, RDF.type),
-                        PROP_PROPS,
-                        this_props
-                    )
-                )
-            elems.render()
     
     def _element_html(self, iri: URIRef, fid: str, title_: str, ont_type: URIRef, props_list,
         this_props_):
@@ -153,7 +78,7 @@ class OntologyClassPage:
         given RDF class, e.g. owl:Class or owl:ObjectProperty"""
         d = div(
             h3(
-                title_,
+                "Term Name {}".format(title_),
                 sup(
                     ONT_TYPES[ont_type][0],
                     _class="sup-" + ONT_TYPES[ont_type][0],
@@ -163,7 +88,12 @@ class OntologyClassPage:
             id=fid,
             _class="property entity",
         )
-        t = table(tr(th("IRI"), td(code(str(iri)))))
+
+        # Special fields before
+        t = table(tr(th("Term IRI"), td(code(str(iri)))))
+        if DCTERMS.title in this_props_:
+            t.appendChild(tr(th("Label"), td(this_props_[DCTERMS.title])))
+
         # order the properties as per PROP_PROPS list order
         for prop in props_list:
             if prop != DCTERMS.title:
@@ -184,6 +114,10 @@ class OntologyClassPage:
                             this_props_[prop],
                         )
                     )
+
+        # Special fields after
+        t.appendChild(tr(th("Type"), td(ONT_TYPES[ont_type][1])))
+
         d.appendChild(t)
         return d
     
@@ -226,16 +160,18 @@ class OntologyClassPage:
                 obj[0], rdf_type_=rdf_type, prop=prop
             )
         else:
-            u_ = ul()
-            for x in obj:
-                u_.appendChild(
-                    li(
-                        self._rdf_obj_single_html(
-                            x, rdf_type_=rdf_type, prop=prop
-                        )
-                    )
-                )
-            return u_
+            if prop != DCTERMS.description:
+                para = p()
+                items = [self._rdf_obj_single_html(x, rdf_type_=rdf_type, prop=prop) for x in obj]
+                for idx, anchor in enumerate(items):
+                    if idx != 0: para.appendChild(span(" | "))
+                    para.appendChild(anchor)
+                return para
+            else: 
+                d = div()
+                for x in obj:
+                    d.appendChild(p(self._rdf_obj_single_html(x, rdf_type_=rdf_type, prop=prop)))
+                return d
     
     def _rdf_obj_single_html(self,
         obj_: Union[URIRef, BNode, Literal, Tuple[Union[URIRef, BNode], str]],
@@ -293,11 +229,15 @@ class OntologyClassPage:
             # use the objet's label for hyperlink text, if it has one
             # if not, try and use a prefixed hyperlink
             # if not, just the iri
-            v = self.back_onts.value(
-                subject=iri__, predicate=DCTERMS.title
-            )  # no need to check other labels: inference
-            if v is None:
-                v = self.ont.value(subject=iri__, predicate=DCTERMS.title)
+            # v = self.back_onts.value(
+            #     subject=iri__, predicate=DCTERMS.title
+            # )  # no need to check other labels: inference
+            # if v is None:
+            #     v = self.ont.value(subject=iri__, predicate=DCTERMS.title)
+
+            # the above has been commented out in favor of just using the prefixed short term for all
+            v = None
+
             if v is not None:
                 anchor = a(f"{v}", href=frag_iri if frag_iri is not None else iri__)
             else:
@@ -319,19 +259,22 @@ class OntologyClassPage:
                         f"{qname}", href=frag_iri if frag_iri is not None else iri__
                     )
 
-            if rdf_type__ is not None:
-                ret = span()
-                ret.appendChild(anchor)
-                ret.appendChild(
-                    sup(
-                        ONT_TYPES[rdf_type__][0],
-                        _class="sup-" + ONT_TYPES[rdf_type__][0],
-                        title=ONT_TYPES[rdf_type__][1],
-                    )
-                )
-                return ret
-            else:
-                return anchor
+            # this appends sup-case context codes (c, dp, op)
+            # removing this for now
+            # if rdf_type__ is not None:
+            #     ret = span()
+            #     ret.appendChild(anchor)
+            #     ret.appendChild(
+            #         sup(
+            #             ONT_TYPES[rdf_type__][0],
+            #             _class="sup-" + ONT_TYPES[rdf_type__][0],
+            #             title=ONT_TYPES[rdf_type__][1],
+            #         )
+            #     )
+            #     return ret
+            # else:
+            #     return anchor
+            return anchor
 
         def _literal_html(obj__):
             if str(obj__).startswith("http"):

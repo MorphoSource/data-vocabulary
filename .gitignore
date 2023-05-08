@@ -1,3 +1,4 @@
 .DS_Store
-docs/pylode/output/*
+docs/output/*
 *.pyc
+catalog-v001.xml

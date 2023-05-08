@@ -1,0 +1,54 @@
+from glob import glob
+from os import remove
+from os.path import join
+from pathlib import Path
+from shutil import copy
+
+from pylode import OntPub
+from rdflib.namespace import OWL, RDF
+
+from class_page import ClassPage
+from index import Index
+from property_page import PropertyPage
+
+class Docs:
+    """Wraps Ontology Document class to create multiple HTML documentation pages."""
+
+    def __init__(self, ontology_filepath: str):
+        self.ontology_filepath = ontology_filepath
+        self.ontpub = OntPub(ontology_filepath)
+        self.namespace_uri = self.ontpub.ns[1]
+
+    def make_html_pages(self, destination_dir: Path = None):
+        """Makes and writes multiple HTML documentation pages."""
+
+        # Write index
+        Index(self.ontology_filepath, destination_dir).make_html()
+
+        # Write class pages
+        for subject_uri in self.ontpub.ont.subjects(predicate=RDF.type, object=OWL.Class):
+            if self.namespace_uri in subject_uri:
+                ClassPage(self.ontology_filepath, subject_uri, destination_dir).make_html()
+
+        # Write object property pages
+        for subject_uri in self.ontpub.ont.subjects(predicate=RDF.type, object=OWL.ObjectProperty):
+            if self.namespace_uri in subject_uri:
+                PropertyPage(self.ontology_filepath, subject_uri, destination_dir).make_html()
+
+        # Write data property pages
+        for subject_uri in self.ontpub.ont.subjects(predicate=RDF.type, object=OWL.DatatypeProperty):
+            if self.namespace_uri in subject_uri:
+                PropertyPage(self.ontology_filepath, subject_uri, destination_dir).make_html()
+
+ontology_filepath = "/Users/jmw110/code/data-vocabulary/morphosource_terms.rdf"
+output_dir = "output/"
+delete_previous_files = True
+
+if delete_previous_files:
+    files = glob(join(output_dir, "*"))
+    for f in files:
+        remove(f)
+
+copy("static/msterms.css", output_dir)
+
+Docs(ontology_filepath).make_html_pages(output_dir)
