@@ -26,6 +26,8 @@ class PropertyPage(Page):
         # URI refs in page (will hyperlink these using fragments)
         self.page_uris.append(URIRef(property_uri))
 
+        self.toc["go_to"].append({ "title": "Terms Index", "href": self.href_url(self.ns[1]) })
+
     def make_html(self):
         # get all properties of property
         for p_, o in self.ont.predicate_objects(subject=self.property_uri):
@@ -36,6 +38,10 @@ class PropertyPage(Page):
                 else:
                     self.property_props[p_].append(o)
 
+        if self.property_props[RDFS.domain]:
+            for obj in self.property_props[RDFS.domain]:
+                self.toc["go_to"].append({ "title": f"{self.ont.value(obj, DCTERMS.title)} Class", "href": self.href_url(obj) })
+
         # get fragment id and title for property
         if len(self.property_props[DCTERMS.title]) == 0:
             self.property_fid = generate_fid(None, self.property_uri, self.fids)
@@ -44,6 +50,7 @@ class PropertyPage(Page):
 
         self.make_head()
         self.make_property_element()
+        self.make_toc()
 
         html_path = join(self.destination_dir, "{}.html".format(generate_fid(None, self.property_uri, {})))
         open(html_path, "w").write(self.ontpub.doc.render())

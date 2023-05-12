@@ -1,4 +1,8 @@
+from pylode.rdf_elements import CLASS_PROPS, ONTDOC
+from rdflib import Namespace
 from rdflib.term import URIRef
+
+MSDOC = Namespace("http://www.morphosource.org/profile/msdoc/")
 
 ONT_TYPES = {
     URIRef('http://www.w3.org/2002/07/owl#Class'): ('c', 'Class'), 
@@ -10,3 +14,5 @@ ONT_TYPES = {
     URIRef('http://www.w3.org/2002/07/owl#InverseFunctionalProperty'): ('ifp', 'Inverse Functional Property'), 
     URIRef('http://www.w3.org/2002/07/owl#NamedIndividual'): ('ni', 'Individual Instance')
 }
+
+CLASS_PROPS.insert(CLASS_PROPS.index(ONTDOC.inDomainOf), MSDOC.superClassInDomainOf)

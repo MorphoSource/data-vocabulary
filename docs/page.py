@@ -13,6 +13,7 @@ from dominate.tags import (
     td,
     ul,
     li,
+    meta,
     p,
     code,
     table,
@@ -32,7 +33,7 @@ from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS
 from rdflib.paths import ZeroOrMore
 from rdflib.term import URIRef
 
-from const import ONT_TYPES
+from const import MSDOC, ONT_TYPES
 
 class Page:
     """Creates HTML documentation page for ontology subjects."""
@@ -46,6 +47,10 @@ class Page:
         self.props_labeled = self.ontpub.props_labeled
 
         self.destination_dir = destination_dir
+        self.toc = {
+            "go_to": [],
+            "on_page": []
+        }
 
         # URI refs in page (will hyperlink these using fragments)
         self.page_uris = []
@@ -63,14 +68,41 @@ class Page:
         self.props_labeled[ONTDOC.inRangeOf]["title"] = Literal("Value Of Property Terms")
         self.props_labeled[ONTDOC.inRangeOf]["description"] = Literal("An individual instance of this class can be the value of these property terms. Inverse of rdfs:range.")
 
+        # Add new prop labels
+        self.props_labeled[MSDOC.superClassInDomainOf] = {}
+        self.props_labeled[MSDOC.superClassInDomainOf]["title"] = Literal("Property Terms Inherited")
+        self.props_labeled[MSDOC.superClassInDomainOf]["description"] = Literal("Property terms inherited as Sub Class that are also referenced as metadata to describe or contextualize a record.")
+        self.props_labeled[MSDOC.superClassInDomainOf]["ont_title"] = "MS Ontology Documentation Profile."
+
     def make_head(self):
         with self.ontpub.doc.head:
+            meta(charset="utf-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1")
             link(href="msterms.css", rel="stylesheet", type="text/css")
+            link(href="ms/msterms.css", rel="stylesheet", type="text/css")
             script(
                 raw("\n" + self.ontpub._make_schema_org().serialize(format="json-ld") + "\n\t"),
                 type="application/ld+json",
                 id="schema.org",
             )
+
+    def make_toc(self):
+        with self.ontpub.doc:
+            self.ontpub.toc = div(id = "toc")
+        
+        with self.ontpub.toc:
+            elems = div(id = "toc-content")
+            if len(self.toc["go_to"]):
+                elems.appendChild(div("Go to", _class = "toc-title"))
+                for item in self.toc["go_to"]:
+                    elems.appendChild(div(a(item["title"], href=item["href"]), _class="toc-item"))
+
+            if len(self.toc["on_page"]):
+                elems.appendChild(div("On this page", _class = "toc-title"))
+                for item in self.toc["on_page"]:
+                    elems.appendChild(div(a(item["title"], href=item["href"]), _class="toc-item"))
+            
+            elems.render()
     
     def _element_html(self, iri: URIRef, fid: str, title_: str, ont_type: URIRef, props_list,
         this_props_):
@@ -90,9 +122,9 @@ class Page:
         )
 
         # Special fields before
-        t = table(tr(th("Term IRI"), td(code(str(iri)))))
+        t = table(tr(td("Term IRI"), td(a(str(iri), href=self.href_url(iri, allow_frag = False)))))
         if DCTERMS.title in this_props_:
-            t.appendChild(tr(th("Label"), td(this_props_[DCTERMS.title])))
+            t.appendChild(tr(td("Label"), td(this_props_[DCTERMS.title])))
 
         # order the properties as per PROP_PROPS list order
         for prop in props_list:
@@ -116,7 +148,7 @@ class Page:
                     )
 
         # Special fields after
-        t.appendChild(tr(th("Type"), td(ONT_TYPES[ont_type][1])))
+        t.appendChild(tr(td("Type"), td(ONT_TYPES[ont_type][1])))
 
         d.appendChild(t)
         return d
@@ -141,7 +173,7 @@ class Page:
         o = self._rdf_obj_html(obj, rdf_type=obj_type, prop=prop_iri)
 
         if table_or_dl == "table":
-            t = tr(th(prop), td(o))
+            t = tr(td(prop), td(o))
         else:  # dl
             t = div(dt(prop), dd(o))
 
@@ -161,16 +193,16 @@ class Page:
             )
         else:
             if prop != DCTERMS.description:
-                para = p()
+                d = div()
                 items = [self._rdf_obj_single_html(x, rdf_type_=rdf_type, prop=prop) for x in obj]
                 for idx, anchor in enumerate(items):
-                    if idx != 0: para.appendChild(span(" | "))
-                    para.appendChild(anchor)
-                return para
+                    if idx != 0: d.appendChild(span(" | "))
+                    d.appendChild(anchor)
+                return d
             else: 
                 d = div()
                 for x in obj:
-                    d.appendChild(p(self._rdf_obj_single_html(x, rdf_type_=rdf_type, prop=prop)))
+                    d.appendChild(div(self._rdf_obj_single_html(x, rdf_type_=rdf_type, prop=prop)))
                 return d
     
     def _rdf_obj_single_html(self,
@@ -213,13 +245,6 @@ class Page:
             if rdf_type__ is None:
                 rdf_type__ = _get_ont_type(iri__)
 
-            # if iri is on current page, use a fragment link
-            frag_iri = None
-            if iri__ in self.page_uris:
-                fid = generate_fid(None, iri__, self.fids)
-                if fid is not None:
-                    frag_iri = "#" + fid
-
             # old defunct behavior, uses fragment is iri namespace is from this ontology
             # if self.ns is not None and str(iri__).startswith(self.ns):
             #     fid = generate_fid(None, iri__, self.fids)
@@ -239,7 +264,7 @@ class Page:
             v = None
 
             if v is not None:
-                anchor = a(f"{v}", href=frag_iri if frag_iri is not None else iri__)
+                anchor = a(f"{v}", href=self.href_url(iri__))
             else:
                 try:
                     qname = self.ont.compute_qname(iri__, False)
@@ -249,14 +274,14 @@ class Page:
                     qname = iri__
                 prefix = "" if qname[0] == "" else f"{qname[0]}:"
 
-                if isinstance(qname, tuple):
+                if isinstance(qname, tuple) and qname[2]:
                     anchor = a(
                         f"{prefix}{qname[2]}",
-                        href=frag_iri if frag_iri is not None else iri__,
+                        href=self.href_url(iri__),
                     )
                 else:
                     anchor = a(
-                        f"{qname}", href=frag_iri if frag_iri is not None else iri__
+                        f"{iri__}", href=self.href_url(iri__)
                     )
 
             # this appends sup-case context codes (c, dp, op)
@@ -388,3 +413,22 @@ class Page:
             ret = _literal_html(obj_)
 
         return ret if ret is not None else span()
+    
+    def href_url(self, iri, allow_frag = True):
+        """ Returns fragment ID or term URL for link HREF based on conditions"""
+        
+        # if iri is on current page, use a fragment link
+        frag_iri = None
+        if iri in self.page_uris and allow_frag:
+            fid = generate_fid(None, iri, self.fids)
+            if fid is not None:
+                frag_iri = "#" + fid
+
+        if frag_iri is not None:
+            return frag_iri
+        else:
+            # will return iri, but will make relative if iri root is www.morphosource.org
+            if "http://www.morphosource.org" in iri:
+                return iri.replace("http://www.morphosource.org", "")
+            else:
+                return iri

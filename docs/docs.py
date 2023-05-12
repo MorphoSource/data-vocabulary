@@ -7,9 +7,12 @@ from shutil import copy
 from pylode import OntPub
 from rdflib.namespace import OWL, RDF
 
-from class_page import ClassPage
-from index import Index
-from property_page import PropertyPage
+from all_classes_page    import AllClassesPage
+from all_page            import AllPage
+from all_properties_page import AllPropertiesPage
+from class_page          import ClassPage
+from index               import Index
+from property_page       import PropertyPage
 
 class Docs:
     """Wraps Ontology Document class to create multiple HTML documentation pages."""
@@ -24,6 +27,15 @@ class Docs:
 
         # Write index
         Index(self.ontology_filepath, destination_dir).make_html()
+
+        # Write all page
+        AllPage(self.ontology_filepath, destination_dir).make_html()
+
+        # Write all classes page
+        AllClassesPage(self.ontology_filepath, destination_dir).make_html()
+
+        # Write all properties page
+        AllPropertiesPage(self.ontology_filepath, destination_dir).make_html()
 
         # Write class pages
         for subject_uri in self.ontpub.ont.subjects(predicate=RDF.type, object=OWL.Class):
@@ -41,7 +53,7 @@ class Docs:
                 PropertyPage(self.ontology_filepath, subject_uri, destination_dir).make_html()
 
 ontology_filepath = "/Users/jmw110/code/data-vocabulary/morphosource_terms.rdf"
-output_dir = "output/"
+output_dir = "/Users/jmw110/code/MorphoSource/public/terms/ms/"
 delete_previous_files = True
 
 if delete_previous_files:
@@ -50,5 +62,6 @@ if delete_previous_files:
         remove(f)
 
 copy("static/msterms.css", output_dir)
+copy("static/diagram.png", output_dir)
 
 Docs(ontology_filepath).make_html_pages(output_dir)

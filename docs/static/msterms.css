@@ -1,162 +1,137 @@
-#pylode {
-  position: fixed;
-  top: 205px;
-  left: -150px;
-  font-size: small;
-  transform: rotate(-90deg);
-  color: grey;
-}
-#pylode a {
-  font-size: 1.5em;
-  font-weight: bold;
+a {
+  color: #2e74b2;
   text-decoration: none;
-  color: #005A9C;
-}
-#pylode a:hover {
-  color: #333;
-}
-#pylode #p {
-  color: #329545;
-}
-#pylode #y {
-  color: #f9cb33;
-}
-#pylode #version {
-  font-size: 1.0em;
 }
 
-#profile {
-  font-style: italic;
-  font-size: 1.25em;
-  color: darkred!important;
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
 }
 
-.cardinality {
-  font-style: italic;
-  color: #aa00aa;
-}
-
-dl {
-  /*border: 1px solid navy;*/
-  /*padding:5px;*/
-}
-
-dt {
-  font-weight: bold;
-  padding: 0;
-}
-
-dd {
-  margin-bottom: 10px;
-  padding-top: 7px;
-}
-
-#metadata ul,
-#classes ul {
-  list-style-type: none;
-}
-
-#metadata ul li,
-#classes ul li {
-  margin-left: -40px;
-}
-
-ul.hlist {
-  list-style-type: none;
-  border: 1px solid navy;
-  padding:5px;
-  background-color: #F4FFFF;
-}
-
-ul.hierarchy {
-  border: 1px solid navy;
-  padding: 5px 25px 5px 25px;
-  background-color: #F4FFFF;
-}
-
-
-ul.hlist li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.entity {
-  border: 1px solid navy;
-  margin:5px 0 5px 0;
+body {
+  background-color: #fff;
+  color: #333333; 
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 16px;
+  line-height: 24px;
   padding: 5px;
 }
 
-.entity th {
-  width: 150px;
-  vertical-align: top;
+div#content {
+  order: 2;
+  padding: 0 20px;
 }
 
-.entity th,
-.entity td {
-  padding-bottom: 20px;
+div.section {
+  margin-bottom: 4em;
 }
 
-.entity table th {
-  text-align: left;
+div.entity {
+  margin-bottom: 2em;
 }
 
-section#overview img {
-  max-width: 1000px;
+div.entity h3 {
+  border-bottom: 2px solid #333333;
+  padding: 10px 5px;
+}
+
+div#toc {
+  order: 1;
+  padding: 0 20px;
+  margin-bottom: 2.5em;
+}
+
+div#toc div#toc-content {
+  color: gray;
+  font-size: 15px;
+}
+
+div#toc div#toc-content a {
+  color: gray;
+}
+
+div#toc div#toc-content div {
+  margin-bottom: 0.5em;
+}
+
+div#toc div#toc-content div.toc-title {
+  border-bottom: 1px solid gray;
+}
+
+div#toc div#toc-content div.toc-title:not(:first-child) {
+  margin-top: 1em;
+}
+
+div#toc div#toc-content div.toc-item {
+  margin-left: 8px;
+}
+
+dt {
+  margin-bottom: 0.5em;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-align: left
+  margin-block-start: 0;
+  overflow-wrap: break-word;
 }
-h1, h2, h3 {
-  color: #005A9C; background: white
-}
-h1 {
-  font: 170% sans-serif;
-  line-height: 110%;
-}
-h2 {
-  font: 140% sans-serif;
-  margin-top:40px;
-}
-h3 {
-  font: 120% sans-serif;
-  margin-top: 20px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid navy;
-}
-h4 { font: bold 100% sans-serif }
-h5 { font: italic 100% sans-serif }
-h6 { font: small-caps 100% sans-serif }
 
-body {
-  padding: 2em 70px 2em 70px;
-  margin: 0;
-  font-family: system-ui,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  color: black;
-  background: white;
-  background-position: top left;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  text-align: left;
+h2 {
+  font-weight: 500;
+}
+
+h3, td {
+  font-size: 16px;
+}
+
+img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
 }
 
 p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  line-height: 24px;
+  margin: 0;
 }
 
-section {
-  max-width: 1500px;
+pre {
+  margin: 0;
+  white-space: pre-wrap;
 }
 
-.figure {
-  margin-bottom: 20px;
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: left;
+  width: 100%;
 }
 
-:link { color: #00C; background: transparent }
-:visited { color: #609; background: transparent }
-a:active { color: #C00; background: transparent }
+td, th {
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 5px;
+  word-wrap: break-word;
+}
+
+td:first-child, th:first-child {
+  width: 150px;
+}
+
+div.section#introduction p, div.section#acknowledgements p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.hover_property {
+  cursor: help;
+  text-decoration: none;
+  border-bottom: dashed 1px;
+  }
 
 .sup-c,
 .sup-op,
@@ -214,78 +189,40 @@ code {
   color: darkred;
 }
 
-/* less prominent links for properties */
-.proplink {
-  color: #336;
-  text-decoration: none;
-}
+@media (min-width : 992px) {
+  body {
+    flex-direction: row;
+    padding: 40px;
+  }
 
-#toc {
-position: fixed;
-top: 0;
-right: 0;
-z-index: 2;
-height: 100%;
-overflow-y: auto;
-padding: 10px;
-border: solid 1px navy;
-font-size: small;
-width: 180px;
-}
-#toc h3 {
-margin-top: 5px;
-}
+  div#content {
+    flex: 5;
+    order: 1;
+  }
 
-#toc ul {
-list-style: none;
-padding-left: 0;
-}
+  div#toc {
+    flex: 1;
+    order: 2;
+  }
 
-#toc .first > li {
-margin-top: 5px;
-}
+  div#toc div#toc-content {
+    position: sticky;
+    top: 20px;
+  }
 
-#toc .second,
-#toc .third {
-padding-left: 10px;
-}
+  img {
+    width: 80%;
+  }
 
-#content {
-width: calc(100% - 150px);
-}
+  /* Section specific CSS for index page */
 
-.hover_property {
-cursor: help;
-text-decoration: none;
-border-bottom: dashed 1px;
-}
+  div.section#classes td:first-child, div.section#classes th:first-child {
+    width: 250px;
+  }
 
-.setclass {
-list-style-type: none;
-}
+  div.section#namespaces table {
+    width: unset;
+  }
 
-code{
-word-wrap: break-word;
+  
 }
-table {
-table-layout: fixed;
-width: 100%;
-}
-td {
-word-wrap: break-word;
-}
-#legend table.entity {
-width: 25%;
-}
-
-/* MS CSS starts here */
-
-ul {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
-}
-ul li {
-  display: inline-block;
-}
-

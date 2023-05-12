@@ -7,41 +7,52 @@ from dominate.tags import (
     div,
 
 )
-from pylode.rdf_elements import CLASS_PROPS, ONTDOC, PROP_PROPS
+from pylode.rdf_elements import ONTDOC, PROP_PROPS
 from pylode.utils import generate_fid, make_title_from_iri
-from rdflib import URIRef
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS
 from rdflib.term import URIRef
 
+from const import CLASS_PROPS, MSDOC
 from page import Page
 
 class ClassPage(Page):
-    """Creates HTML documentation page for ontology Class and associated Properties."""
+    """ Creates HTML documentation page for ontology Class and associated Properties. """
 
     def __init__(self, ontology_filepath: str, class_uri: str, destination_dir: Path = None):
         super().__init__(ontology_filepath, destination_dir)
 
         self.class_uri = class_uri
-        self.class_props = defaultdict(list)
         self.class_fid = ""
         self.class_title = ""
 
         # URI refs in page (will hyperlink these using fragments)
         self.page_uris.append(URIRef(class_uri))
 
+        self.toc["go_to"].append({ "title": "Terms Index", "href": self.href_url(self.ns[1]) })
+
     def make_html(self):
-        # get all properties of class
-        for p_, o in self.ont.predicate_objects(subject=self.class_uri):
-            # ... in the property list for this class
-            if p_ in CLASS_PROPS:
-                if p_ == RDFS.subClassOf and (o, RDF.type, OWL.Restriction) in self.ont:
-                    self.class_props[ONTDOC.restriction].append(o)
-                else:
-                    self.class_props[p_].append(o)
+        """ Generate and write HTML elements for ontology Class page """
+        
+        self.class_props = self.get_class_properties(self.class_uri)
 
         # prepare for listing class inDomainOf properties
         self.class_props[ONTDOC.inDomainOf].sort()
         self.page_uris.extend(self.class_props[ONTDOC.inDomainOf])
+
+        # is class a subclass of a MS class? if so, get superclass props
+        if RDFS.subClassOf in self.class_props and self.ns[1] in self.class_props[RDFS.subClassOf][0]:
+            self.superclass_uri = self.class_props[RDFS.subClassOf][0]
+            self.superclass_props = self.get_class_properties(self.superclass_uri)
+            self.class_props[MSDOC.superClassInDomainOf] = self.superclass_props[ONTDOC.inDomainOf]
+            self.class_props[MSDOC.superClassInDomainOf].sort()
+            self.page_uris.extend(self.class_props[MSDOC.superClassInDomainOf])
+            self.toc["go_to"].append({ 
+                "title": f"{self.superclass_props[DCTERMS.title][0]} Class", 
+                "href": self.href_url(self.superclass_uri) 
+            })
+        else:
+            self.superclass_uri = None
+            self.superclass_props = {}
 
         # get fragment id and title for class
         if len(self.class_props[DCTERMS.title]) == 0:
@@ -53,16 +64,30 @@ class ClassPage(Page):
 
         self.make_head()
         self.make_class_element()
-        self.make_property_elements()
+        if self.superclass_uri:
+            self.make_property_elements(
+                self.superclass_props[DCTERMS.title][0], 
+                "superclassProperties",
+                self.superclass_props[ONTDOC.inDomainOf]
+            )
+        self.make_property_elements(
+            self.class_title[0], 
+            "properties",
+            self.class_props[ONTDOC.inDomainOf]
+        )
+        self.make_toc()
 
         html_path = join(self.destination_dir, "{}.html".format(self.class_fid))
         open(html_path, "w").write(self.ontpub.doc.render())
 
     def make_class_element(self):
         """ write html for class table to page_ontpub.doc """
+        elem_title = "{} Class".format(self.class_title[0])
+        self.toc["on_page"].append({ "title": elem_title, "href": f"#{self.class_fid}" })
+
         with self.ontpub.content:
             elems = div(id=self.class_fid, _class="section")
-            elems.appendChild(h2("{} Class".format(self.class_title[0])))
+            elems.appendChild(h2(elem_title))
             elems.appendChild(
                 self._element_html(
                     self.class_uri,
@@ -75,12 +100,15 @@ class ClassPage(Page):
             )
             elems.render()
 
-    def make_property_elements(self):
+    def make_property_elements(self, section_title, section_fid, properties):
+        elem_title = "{} Properties".format(section_title)
+        self.toc["on_page"].append({ "title": elem_title, "href": f"#{section_fid}" })
+
         with self.ontpub.content:
-            elems = div(id="properties", _class="section")
-            elems.appendChild(h2("{} Properties".format(self.class_title[0]))) # todo add class name back in?
+            elems = div(id=section_fid, _class="section")
+            elems.appendChild(h2(elem_title)) # todo add class name back in?
             
-            for s_ in self.class_props[ONTDOC.inDomainOf]:
+            for s_ in properties:
                 this_props = defaultdict(list)
                 
                 # get all properties of this object (excluding some)
@@ -110,3 +138,15 @@ class ClassPage(Page):
                     )
                 )
             elems.render()
+
+    def get_class_properties(self, class_uri: str):
+        """ get all properties of class """
+        class_props = defaultdict(list)
+        for p_, o in self.ont.predicate_objects(subject=class_uri):
+            # ... in the property list for this class
+            if p_ in CLASS_PROPS:
+                if p_ == RDFS.subClassOf and (o, RDF.type, OWL.Restriction) in self.ont:
+                    class_props[ONTDOC.restriction].append(o)
+                else:
+                    class_props[p_].append(o)
+        return class_props
