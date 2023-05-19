@@ -30,7 +30,7 @@
         <owl:imports rdf:resource="http://www.morphosource.org/terms/mscv"/>
         <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
-        <owl:versionInfo>0.5.1</owl:versionInfo>
+        <owl:versionInfo>0.6.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1817,6 +1817,25 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/class -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/class">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/class-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/class-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/class-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Class"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName with HigherTaxa/HigherTaxon/HigherTaxonRank = classis</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the class in which the taxon is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Class</rdfs:label>
+        <skos:example xml:lang="en">`Mammalia`, `Hepaticopsida`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/collectionCode -->
 
     <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/collectionCode">
@@ -1895,6 +1914,25 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/family -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/family">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/family-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/family-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/family-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Family"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName with HigherTaxa/HigherTaxon/HigherTaxonRank = familia</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the family in which the taxon is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Family</rdfs:label>
+        <skos:example xml:lang="en">`Felidae`, `Monocleaceae`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/formation -->
 
     <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/formation">
@@ -1911,6 +1949,25 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Formation</rdfs:label>
         <skos:example xml:lang="en">`Notch Peak Formation`, `House Limestone`, `Fillmore Formation`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/genus -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/genus">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/genus-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/genus-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/genus-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Genus"/>
+        <attributes:abcdEquivalence>{DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/ScientificName/NameAtomised/Bacterial/GenusOrMonomial or DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/ScientificName/NameAtomised/Botanical/GenusOrMonomial or DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/ScientificName/NameAtomised/Viral/GenusOrMonomial or DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/ScientificName/NameAtomised/Zoological/GenusOrMonomial}</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the genus in which the taxon is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Genus</rdfs:label>
+        <skos:example xml:lang="en">`Puma`, `Monoclea`</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -1951,6 +2008,25 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Institution Code</rdfs:label>
         <skos:example xml:lang="en">`MVZ`, `FMNH`, `CLO`, `UCMP`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/kingdom -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/kingdom">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/kingdom-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/kingdom-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/kingdom-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Kingdom"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName with HigherTaxa/HigherTaxon/HigherTaxonRank = regnum</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the kingdom in which the taxon is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Kingdom</rdfs:label>
+        <skos:example xml:lang="en">`Animalia`, `Archaea`, `Bacteria`, `Chromista`, `Fungi`, `Plantae`, `Protozoa`, `Viruses`</skos:example>
     </owl:DatatypeProperty>
     
 
@@ -2014,9 +2090,66 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     
 
 
+    <!-- http://rs.tdwg.org/dwc/terms/order -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/order">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/order-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/order-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/order-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Order"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName with HigherTaxa/HigherTaxon/HigherTaxonRank = ordo</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the order in which the taxon is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Order</rdfs:label>
+        <skos:example xml:lang="en">`Carnivora`, `Monocleales`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/phylum -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/phylum">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/phylum-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/phylum-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/phylum-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://rs.tdwg.org/dwc/dwcore/Phylum"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/HigherTaxa/HigherTaxon/HigherTaxonName with HigherTaxa/HigherTaxon/HigherTaxonRank = phylum</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the phylum or division in which the taxon is classified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Phylum</rdfs:label>
+        <skos:example xml:lang="en">`Chordata` (phylum). `Bryophyta` (division).</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rs.tdwg.org/dwc/terms/sex -->
 
     <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/sex"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/subgenus -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/subgenus">
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/subgenus-2009-04-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/subgenus-2009-08-24"/>
+        <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/version/subgenus-2017-10-06"/>
+        <terms:isPartOf rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <terms:replaces rdf:resource="http://www.iobis.org/obis/Subgenus"/>
+        <attributes:abcdEquivalence>DataSets/DataSet/Units/Unit/Identifications/Identification/TaxonIdentified/ScientificName/NameAtomised/Zoological/Subgenus</attributes:abcdEquivalence>
+        <attributes:organizedInClass rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <attributes:usageScope>simple</attributes:usageScope>
+        <rdfs:comment xml:lang="en">The full scientific name of the subgenus in which the taxon is classified. Values should include the genus to avoid homonym confusion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
+        <rdfs:label xml:lang="en">Subgenus</rdfs:label>
+        <skos:example xml:lang="en">`Strobus`, `Amerigo`, `Pilosella`</skos:example>
+    </owl:DatatypeProperty>
     
 
 
@@ -2680,6 +2813,17 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
         <attributes:required>No</attributes:required>
         <rdfs:comment xml:lang="en">Text description of organizations or individuals who funded the creation of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">Funding</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/gbifKey -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/gbifKey">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">GBIF ID identifier for taxonomic name, if available. Usually a binomial genus-species classification, but at times a  higher taxonomic classification</rdfs:comment>
+        <rdfs:label xml:lang="en">GBIF Key</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3450,6 +3594,56 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
     
 
 
+    <!-- http://www.morphosource.org/terms/ms/taxonomyClass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyClass">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/class"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the class in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class</rdfs:label>
+        <skos:example xml:lang="en">`Mammalia`, `Hepaticopsida`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyDomain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyDomain">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the domain in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Domain</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyFamily -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyFamily">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/family"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the family in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Family</rdfs:label>
+        <skos:example xml:lang="en">`Felidae`, `Monocleaceae`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyGenus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyGenus">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/genus"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the genus in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Genus</rdfs:label>
+        <skos:example xml:lang="en">`Puma`, `Monoclea`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.morphosource.org/terms/ms/taxonomyID -->
 
     <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyID">
@@ -3458,6 +3652,157 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Morphosource-specific ID of Taxonomy record for taxonomic name attributed to the Biological Specimen.</rdfs:comment>
         <rdfs:label xml:lang="en">Taxonomy ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyKingdom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyKingdom">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/kingdom"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the kingdom in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Kingdom</rdfs:label>
+        <skos:example xml:lang="en">`Animalia`, `Archaea`, `Bacteria`, `Chromista`, `Fungi`, `Plantae`, `Protozoa`, `Viruses`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyOrder">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/order"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the order in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Order</rdfs:label>
+        <skos:example xml:lang="en">`Carnivora`, `Monocleales`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyPhylum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyPhylum">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/phylum"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the phylum or division in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Phylum</rdfs:label>
+        <skos:example xml:lang="en">`Chordata` (phylum). `Bryophyta` (division).</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySpecies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySpecies">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the species in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySubclass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySubclass">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the subclass in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subclass</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySubfamily -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySubfamily">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the subfamily in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subfamily</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySubgenus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySubgenus">
+        <rdfs:subPropertyOf rdf:resource="http://rs.tdwg.org/dwc/terms/subgenus"/>
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the subgenus in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subgenus</rdfs:label>
+        <skos:example xml:lang="en">`Strobus`, `Amerigo`, `Pilosella`</skos:example>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySuborder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySuborder">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the suborder in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Suborder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySubspecies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySubspecies">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the subspecies in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Subspecies</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySuperclass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySuperclass">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the superclass in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Superclass</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySuperfamily -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySuperfamily">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the superfamily in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Superfamily</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomySuperorder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomySuperorder">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the superorder in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Superorder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/taxonomyTribe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.morphosource.org/terms/ms/taxonomyTribe">
+        <rdfs:domain rdf:resource="http://www.morphosource.org/terms/ms/Taxonomy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The full scientific name of the tribe in which the taxon is classified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tribe</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3845,6 +4190,16 @@ Required if Window Center (0028,1050) is present.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.morphosource.org/terms/ms/ImagingEvent"/>
         <rdfs:comment xml:lang="en">Imaging Event with Sequential Section Image Modality. Has specific metadata fields other Imaging Events may not have.</rdfs:comment>
         <rdfs:label xml:lang="en">Sequential Section Imaging Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.morphosource.org/terms/ms/Taxonomy -->
+
+    <owl:Class rdf:about="http://www.morphosource.org/terms/ms/Taxonomy">
+        <rdfs:subClassOf rdf:resource="http://pcdm.org/works#Work"/>
+        <rdfs:comment xml:lang="en">Set of hierarchical categorical terms used to classify a biological specimen based on phylogeny and shared characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Taxonomy</rdfs:label>
     </owl:Class>
     
 
