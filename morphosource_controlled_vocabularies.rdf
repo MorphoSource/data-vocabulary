@@ -16,7 +16,7 @@
     <owl:Ontology rdf:about="http://www.morphosource.org/terms/mscv">
         <rdfs:comment xml:lang="en">Test description for MorphoSource Controlled Vocabularies</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Controlled Vocabularies</rdfs:label>
-        <owl:versionInfo>0.1.1</owl:versionInfo>
+        <owl:versionInfo>0.1.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -112,6 +112,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -163,46 +180,31 @@
 
     <!-- http://vocab.getty.edu/aat/300264087 -->
 
-    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264087">
-        <rdfs:label xml:lang="en">Physical Attributes Facet</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264087</rdfs:seeAlso>
-    </owl:Class>
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264087"/>
     
 
 
     <!-- http://vocab.getty.edu/aat/300264088 -->
 
-    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264088">
-        <rdfs:label xml:lang="en">Styles and Periods Facet</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264088</rdfs:seeAlso>
-    </owl:Class>
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264088"/>
     
 
 
     <!-- http://vocab.getty.edu/aat/300264091 -->
 
-    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264091">
-        <rdfs:label xml:lang="en">Materials Facet</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264091</rdfs:seeAlso>
-    </owl:Class>
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264091"/>
     
 
 
     <!-- http://vocab.getty.edu/aat/300264092 -->
 
-    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264092">
-        <rdfs:label xml:lang="en">Objects Facet</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264092</rdfs:seeAlso>
-    </owl:Class>
+    <owl:Class rdf:about="http://vocab.getty.edu/aat/300264092"/>
     
 
 
     <!-- http://vocab.getty.edu/tgn/7029392 -->
 
-    <owl:Class rdf:about="http://vocab.getty.edu/tgn/7029392">
-        <rdfs:label xml:lang="en">World</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/TGNFullDisplay?find=&amp;place=&amp;nation=&amp;subjectid=7029392</rdfs:seeAlso>
-    </owl:Class>
+    <owl:Class rdf:about="http://vocab.getty.edu/tgn/7029392"/>
     
 
 
@@ -318,7 +320,7 @@
     <!-- http://www.morphosource.org/terms/mscv/ProcessingActivityType -->
 
     <owl:Class rdf:about="http://www.morphosource.org/terms/mscv/ProcessingActivityType">
-        <rdfs:comment xml:lang="en">Type statement describing a specific discrete processing activity step. It is often the case that in reality, multiple processing activity steps are used in the generation of any derived digital resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Type statement describing a specific discrete activity applied to a Media to produce a second processed derived Media or as a chain of multiple processing steps that together produce a second derived Media. Processing activities are components of Processing Events and a Processing Event may have multiple processing activities.  The individual entities of this class in the MorphoSource data vocabulary comprise a controlled vocabulary used to describe the processing activity type(s) for relevant Processing Events.</rdfs:comment>
         <rdfs:label xml:lang="en">Processing Activity Type</rdfs:label>
     </owl:Class>
     
@@ -415,10 +417,51 @@
     
 
 
+    <!-- http://vocab.getty.edu/aat/300264087 -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300264087">
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264087</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264088 -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300264088">
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264088</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264091 -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300264091">
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264091</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/aat/300264092 -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/aat/300264092">
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/AATFullDisplay?find=&amp;logic=AND&amp;note=&amp;subjectid=300264092</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.getty.edu/tgn/7029392 -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.getty.edu/tgn/7029392">
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.getty.edu/vow/TGNFullDisplay?find=&amp;place=&amp;nation=&amp;subjectid=7029392</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.morphosource.org/terms/mscv/AlignParts -->
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/AlignParts">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Alignment in position, orientation, and/or scale of two or more surface meshes or volumes. Most often relevant to surface meshes, where a larger scan consists of multiple subregion mesh parts that are aligned, whether manually or automatically. Also applicable to CT scans, such as a scenario in which several pieces of a broken object are scanned separately and aligned to approximate the object prior to breakage. This activity can be used with activity type Merge if parts being aligned previously existed as separate files but are now combined as a single file after alignment.</rdfs:comment>
         <rdfs:label xml:lang="en">Align Parts</rdfs:label>
     </owl:NamedIndividual>
     
@@ -437,6 +480,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/BackgroundRemovalMasking">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Identification of object, region, and/or pixels of interest in 2D images comprising an image stack and then removing or deleting gray or color values from all regions of the image not included in the region of interest. Most often applicable to 2D image collections that are source files for photogrammetry models or volumetric reconstructed image stacks.</rdfs:comment>
         <rdfs:label xml:lang="en">Background Removal and/or Masking</rdfs:label>
     </owl:NamedIndividual>
     
@@ -446,6 +490,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/BitDepthChange">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Converting 2D image bit depth from a higher value to a lower value (e.g., 16 bit to 8 bit).</rdfs:comment>
         <rdfs:label xml:lang="en">Bit Depth Change</rdfs:label>
     </owl:NamedIndividual>
     
@@ -466,6 +511,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/CTImageSeries">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:comment xml:lang="en">Series of images produced by a CT, MRI, synchrotron, or other similar modality scanner. Data often, though not always, take the form of a 3D series of reconstructed virtual slices.</rdfs:comment>
         <rdfs:label xml:lang="en">CT/MRI image series (multiple files of type *.tiff, *.png, *.dcm, *.zip, etc.)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -542,6 +588,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Crop">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">For volumetric data, the extraction of a subregion (a region of interest or ROI) from a larger volume. For surface meshes,  the act of removing parts or subregions representing noise or extraneous material from a surface mesh.</rdfs:comment>
         <rdfs:label xml:lang="en">Crop</rdfs:label>
     </owl:NamedIndividual>
     
@@ -588,6 +635,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Fiducial">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PixelSpacingCalibrationType"/>
+        <rdfs:comment xml:lang="en">Fiducials are identifiable coordinates, also known as landmarks, in the scan image where real physical distances between fiducials are known. These can be used to calibrate relationships between pixel dimensions of the image and real physical unit distances of the imaged object.</rdfs:comment>
         <rdfs:label xml:lang="en">Fiducial</rdfs:label>
     </owl:NamedIndividual>
     
@@ -633,6 +681,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Geometry">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PixelSpacingCalibrationType"/>
+        <rdfs:comment xml:lang="en">Utilizes known distance quantities between the source and object, between the source and detector, and detector size dimensions to calculate pixel spacing, yielding an accurate real physical unit scale representation of the imaged object.</rdfs:comment>
         <rdfs:label xml:lang="en">Geometry</rdfs:label>
     </owl:NamedIndividual>
     
@@ -660,6 +709,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/HistogramEditing">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Any activity that modifies the histogram of pixel values on a 2D raster image. Includes changing contrast, modifying brightness, and processes directly applied to image histogram such as removing extreme values or changing histogram shape.</rdfs:comment>
         <rdfs:label xml:lang="en">Histogram Editing</rdfs:label>
     </owl:NamedIndividual>
     
@@ -678,6 +728,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Image">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:comment xml:lang="en">Single 2D image. Data often represent a photograph or illustration.</rdfs:comment>
         <rdfs:label xml:lang="en">Image (*.tiff, *.png, *.dcm, etc.)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -687,6 +738,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ImageMeshCompression">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Application of a compression format or profile to data (e.g., TIFF to LZW TIFF or TIFF to JPEG for a 2D image; PLY to GLB with Draco compression for a surface mesh).</rdfs:comment>
         <rdfs:label xml:lang="en">Image and/or Mesh Compression</rdfs:label>
     </owl:NamedIndividual>
     
@@ -785,6 +837,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Merge">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">For volumetric data, repositioning and merging of multiple image stacks representing different parts of the same object into a single stack representing the combined object.For surface meshes, merging of multiple meshes or mesh fragments representing different parts of the same object. Can be accompanied by activity type Align Parts if applicable.</rdfs:comment>
         <rdfs:label xml:lang="en">Merge</rdfs:label>
     </owl:NamedIndividual>
     
@@ -803,6 +856,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MeshPointCloudTexturing">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Addition of texture to a surface mesh or point cloud. Includes manual painting or application of photorealistic textures derived from collection of photographs via photogrammetry.</rdfs:comment>
         <rdfs:label xml:lang="en">Mesh and/or Point Cloud Texturing</rdfs:label>
     </owl:NamedIndividual>
     
@@ -812,6 +866,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/MeshToPointCloud">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Removal of information about edges connecting point vertices in a surface mesh, converting it to a point cloud.</rdfs:comment>
         <rdfs:label xml:lang="en">Mesh to Point Cloud</rdfs:label>
     </owl:NamedIndividual>
     
@@ -945,6 +1000,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Patch">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Filling of holes or gaps in a mesh or point cloud.</rdfs:comment>
         <rdfs:label xml:lang="en">Patch</rdfs:label>
     </owl:NamedIndividual>
     
@@ -984,6 +1040,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotogrammetryImageSeries">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:comment xml:lang="en">Collection of 2D image photographs intended for use in creating a 3D model with photogrammetry modality.</rdfs:comment>
         <rdfs:label xml:lang="en">Photogrammetry image series (multiple files of type *.tiff, *.png, etc.)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1004,6 +1061,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToDensePointCloud">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a dense point cloud from a collection of 2D image photographs with inferred positions relative to the object of interest. Usually performed after image matching has already occurred. Applicable to some but not all photogrammetry workflows.</rdfs:comment>
         <rdfs:label xml:lang="en">Photos to Dense Point Cloud</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1013,6 +1071,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToDigitalElevationModel">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a digital elevation model of a landscape from a collection of 2D image photographs. Applicable to some but not all photogrammetry workflows.</rdfs:comment>
         <rdfs:label xml:lang="en">Photos to Digital Elevation Model</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1022,6 +1081,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToMesh">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Generic description for creation of a 3D model from a collection of 2D image photographs by photogrammetry.</rdfs:comment>
         <rdfs:label xml:lang="en">Photos to Mesh</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1031,6 +1091,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToSparseMeshDepthMap">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a sparse mesh and depth map by analysis of collection of 2D image photographs. Application to some but not all photogrammetry workflows. Where present in certain software packages, this precedes generation of the final 3D model.</rdfs:comment>
         <rdfs:label xml:lang="en">Photos to Sparse Mesh and Depth Map</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1040,6 +1101,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PhotosToSparsePointCloudDepthMap">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a sparse point cloud and depth map by analysis of collection of 2D image photographs. Application to some but not all photogrammetry workflows. Where present in certain software packages, this precedes generation of the final 3D model.</rdfs:comment>
         <rdfs:label xml:lang="en">Photos to Sparse Point Cloud and Depth Map</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1049,6 +1111,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/PointCloudToMesh">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a polygonal mesh from a point cloud by inferring connections among point vertices. Relevant in some photogrammetry workflows following photo matching stages.</rdfs:comment>
         <rdfs:label xml:lang="en">Point Cloud to Mesh</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1069,8 +1132,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Private">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/PublicationStatus"/>
+        <rdfs:comment xml:lang="en">Not Published. Media may not be found in public search. Media may only be searched, viewed, or downloaded by users with specific access to Media either directly or through a project or team.</rdfs:comment>
         <rdfs:label xml:lang="en">Private</rdfs:label>
-        <rdfs:label xml:lang="en">Unpublished. Media may not be found in public search, and media file(s) may not be downloaded by users without explicit access to Media.</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1079,6 +1142,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Projections">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CTImageSeriesType"/>
+        <rdfs:comment xml:lang="en">Raw image data from a CT scanner with a X-Ray Detector Configuration Type of Area (single or tiled detector). Projections are often analyzed and processed to create a reconstructed image stack.</rdfs:comment>
         <rdfs:label xml:lang="en">Projections</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1088,6 +1152,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ReconstructedImageStack">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CTImageSeriesType"/>
+        <rdfs:comment xml:lang="en">Derived image data where each image represents  a virtual slice of 3D volume. Images are stacked and arranged in series with specific spacing between slices in order to create the third dimension in a 3D volume.</rdfs:comment>
         <rdfs:label xml:lang="en">Reconstructed image stack</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1097,6 +1162,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/ReconstructedTomographyToMesh">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a surface mesh from a volumetric reconstructed image stack, also known as segmentation.</rdfs:comment>
         <rdfs:label xml:lang="en">Reconstructed Tomography to Mesh</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1106,6 +1172,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Reconstruction">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of a volumetric reconstructed 3D image stack from X-Ray projections and/or sinograms.</rdfs:comment>
         <rdfs:label xml:lang="en">Reconstruction</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1212,6 +1279,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Simplification">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Reduction in number of vertex points or faces for a surface mesh, or reduction in number of voxels for a volume. May also produce a smoothing effect in some cases.</rdfs:comment>
         <rdfs:label xml:lang="en">Simplification</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1232,6 +1300,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Sinograms">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/CTImageSeriesType"/>
+        <rdfs:comment xml:lang="en">Raw data from a CT scanner with X-Ray Detector Configuration Type of Slot (scanned slot, slit, or spot). Projections are often analyzed and processed to create a reconstructed image stack.</rdfs:comment>
         <rdfs:label xml:lang="en">Sinograms</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1250,6 +1319,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SmoothingNoiseReduction">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Reduction in noise and/or implementation of surface mesh smoothing or volumetric data filtering.</rdfs:comment>
         <rdfs:label xml:lang="en">Smoothing and/or Noise Reduction</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1259,6 +1329,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SparseMeshDepthMapToMesh">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of final surface mesh model from intermediate sparse mesh and depth map. Applicable to some but not all photogrammetry workflows.</rdfs:comment>
         <rdfs:label xml:lang="en">Sparse Mesh and Depth Map to Mesh</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1268,6 +1339,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/SparsePointCloudDepthMapToDensePointCloud">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Creation of dense point cloud from intermediate sparse point cloud and depth map. Applicable to some but not all photogrammetry workflows.</rdfs:comment>
         <rdfs:label xml:lang="en">Sparse Point Cloud and Depth Map to Dense Point Cloud</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1354,6 +1426,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformReflection">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Transformation that inverts or mirrors coordinate values or pixel column order on an axis so that a mesh or volume appears as a mirror image of original data.</rdfs:comment>
         <rdfs:label xml:lang="en">Transform: Reflection</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1363,6 +1436,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformRotation">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Transformation that rotates a mesh or volume around the centroid producing a rotational change on coordinates without any change in centroid position or scale.</rdfs:comment>
         <rdfs:label xml:lang="en">Transform: Rotation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1372,6 +1446,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformScale">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Transformation that increases or reduces coordinate values of a mesh by a constant factor or changes the pixel spacing of a volume, modifying the absolute size of the mesh or volume.</rdfs:comment>
         <rdfs:label xml:lang="en">Transform: Scale</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1381,6 +1456,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/TransformTranslation">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/ProcessingActivityType"/>
+        <rdfs:comment xml:lang="en">Transformation that modifies position, changing all coordinate values of a mesh or volume along one or more axes by a constant set of modifiers, producing a translation position change in coordinate values</rdfs:comment>
         <rdfs:label xml:lang="en">Transform: Translation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1444,6 +1520,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.morphosource.org/terms/mscv/Video">
         <rdf:type rdf:resource="http://www.morphosource.org/terms/mscv/MediaType"/>
+        <rdfs:comment xml:lang="en">Moving picture that may or may not include audio. In MorphoSource, video is often though not always used to show different aspects of a 3D volume or mesh.</rdfs:comment>
         <rdfs:label xml:lang="en">Video (*.avi, *.mp4, *.mov, .etc.)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1498,6 +1575,32 @@
         <rdfs:comment xml:lang="en">3D printing of digital resource is prohibited.</rdfs:comment>
         <rdfs:label xml:lang="en">3D Printing Prohibited</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://vocab.getty.edu/aat/300264087">
+        <rdfs:label xml:lang="en">Physical Attributes Facet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.getty.edu/aat/300264088">
+        <rdfs:label xml:lang="en">Styles and Periods Facet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.getty.edu/aat/300264091">
+        <rdfs:label xml:lang="en">Materials Facet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.getty.edu/aat/300264092">
+        <rdfs:label xml:lang="en">Objects Facet</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.getty.edu/tgn/7029392">
+        <rdfs:label xml:lang="en">World</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
