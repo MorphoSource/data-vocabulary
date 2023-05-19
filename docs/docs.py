@@ -1,6 +1,6 @@
 from glob import glob
 from os import remove
-from os.path import join
+from os.path import isfile, join
 from pathlib import Path
 from shutil import copy
 
@@ -53,15 +53,22 @@ class Docs:
                 PropertyPage(self.ontology_filepath, subject_uri, destination_dir).make_html()
 
 ontology_filepath = "/Users/jmw110/code/data-vocabulary/morphosource_terms.rdf"
-output_dir = "/Users/jmw110/code/MorphoSource/public/terms/ms/"
+output_dir = "/Users/jmw110/code/MorphoSource/public/terms/"
+namespace_root = "ms"
+namespace_dir = join(output_dir, namespace_root)
+print(namespace_dir)
 delete_previous_files = True
 
 if delete_previous_files:
     files = glob(join(output_dir, "*"))
     for f in files:
-        remove(f)
+        if isfile(f): remove(f)
+    namespace_dir_files = glob(join(namespace_dir, "*"))
+    for f in namespace_dir_files:
+        if isfile(f): remove(f)
 
-copy("static/msterms.css", output_dir)
-copy("static/diagram.png", output_dir)
+copy("static/msterms.css", namespace_dir)
+copy("static/diagram.png", namespace_dir)
+copy(ontology_filepath, join(output_dir, f"{namespace_root}.rdf"))
 
-Docs(ontology_filepath).make_html_pages(output_dir)
+Docs(ontology_filepath).make_html_pages(namespace_dir)

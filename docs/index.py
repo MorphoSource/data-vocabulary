@@ -43,7 +43,11 @@ class Index(Page):
         self.make_head()
         self.make_body()
 
-        html_path = join(self.destination_dir, "index.html")
+        if self.destination_dir.endswith("/"):
+            html_path = f"{self.destination_dir[:-1]}.html"
+        else:
+            html_path = f"{self.destination_dir}.html"
+
         open(html_path, "w").write(self.ontpub.doc.render())
     
     def make_body(self):

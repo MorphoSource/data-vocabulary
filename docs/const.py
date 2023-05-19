@@ -16,3 +16,15 @@ ONT_TYPES = {
 }
 
 CLASS_PROPS.insert(CLASS_PROPS.index(ONTDOC.inDomainOf), MSDOC.superClassInDomainOf)
+
+SERIALIZE_EXCLUDED_PROPS = [
+    ONTDOC.restriction,
+    ONTDOC.inDomainOf,
+    ONTDOC.inDomainIncludesOf,
+    ONTDOC.inRangeOf,
+    ONTDOC.inRangeIncludesOf,
+    ONTDOC.restriction,
+    ONTDOC.hasInstance,
+    ONTDOC.superClassOf,
+    ONTDOC.superPropertyOf,
+]
