@@ -15,8 +15,8 @@ from page import Page
 class AllPropertiesPage(Page):
     """Creates HTML documentation page for all ontology Properties."""
 
-    def __init__(self, ontology_filepath: str, destination_dir: Path = None):
-        super().__init__(ontology_filepath, destination_dir)
+    def __init__(self, ontology_filepath: str, ontology_prefix: str, destination_dir: Path = None):
+        super().__init__(ontology_filepath, ontology_prefix, destination_dir)
         
         self.toc["go_to"].append({ "title": "Terms Index", "href": self.href_url(self.ns[1]) })
 

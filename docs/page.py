@@ -38,13 +38,15 @@ from const import MSDOC, ONT_TYPES
 class Page:
     """Creates HTML documentation page for ontology subjects."""
 
-    def __init__(self, ontology_filepath: str, destination_dir: Path = None):
+    def __init__(self, ontology_filepath: str, ontology_prefix: str, destination_dir: Path = None):
         self.ontpub = OntPub(ontology_filepath)
         self.ont = self.ontpub.ont
         self.back_onts = self.ontpub.back_onts
         self.fids = self.ontpub.fids
         self.ns = self.ontpub.ns
         self.props_labeled = self.ontpub.props_labeled
+
+        self.ontology_prefix = ontology_prefix
 
         self.destination_dir = destination_dir
         self.toc = {
@@ -74,12 +76,17 @@ class Page:
         self.props_labeled[MSDOC.superClassInDomainOf]["description"] = Literal("Property terms inherited as Sub Class that are also referenced as metadata to describe or contextualize a record.")
         self.props_labeled[MSDOC.superClassInDomainOf]["ont_title"] = "MS Ontology Documentation Profile."
 
+        self.props_labeled[MSDOC.namedIndividuals] = {}
+        self.props_labeled[MSDOC.namedIndividuals]["title"] = Literal("Individual Instances")
+        self.props_labeled[MSDOC.namedIndividuals]["description"] = Literal("Individual instance entities that are of this Class type.")
+        self.props_labeled[MSDOC.namedIndividuals]["ont_title"] = "MS Ontology Documentation Profile."
+
     def make_head(self):
         with self.ontpub.doc.head:
             meta(charset="utf-8")
             meta(name="viewport", content="width=device-width, initial-scale=1")
             link(href="msterms.css", rel="stylesheet", type="text/css")
-            link(href="ms/msterms.css", rel="stylesheet", type="text/css")
+            link(href=f"{self.ontology_prefix}/msterms.css", rel="stylesheet", type="text/css")
             script(
                 raw("\n" + self.ontpub._make_schema_org().serialize(format="json-ld") + "\n\t"),
                 type="application/ld+json",
@@ -106,6 +113,9 @@ class Page:
     
     def _element_html(self, iri: URIRef, fid: str, title_: str, ont_type: URIRef, props_list,
         this_props_):
+        if ont_type not in ONT_TYPES:
+            ONT_TYPES[ont_type] = ("t", ont_type)
+
         """Makes all the HTML (div, title & table) for one instance of a
         given RDF class, e.g. owl:Class or owl:ObjectProperty"""
         d = div(
@@ -148,7 +158,15 @@ class Page:
                     )
 
         # Special fields after
-        t.appendChild(tr(td("Type"), td(ONT_TYPES[ont_type][1])))
+        if "http" in ONT_TYPES[ont_type][1]:
+            t.appendChild(
+                tr(
+                    td("Type"), 
+                    td(a(str(ONT_TYPES[ont_type][1]), href=self.href_url(ONT_TYPES[ont_type][1], allow_frag = False)))
+                )
+            )
+        else:
+            t.appendChild(tr(td("Type"), td(ONT_TYPES[ont_type][1])))
 
         d.appendChild(t)
         return d

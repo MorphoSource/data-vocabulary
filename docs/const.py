@@ -1,5 +1,9 @@
 from pylode.rdf_elements import CLASS_PROPS, ONTDOC
 from rdflib import Namespace
+from rdflib.namespace import (
+    DCTERMS,
+    SKOS,
+)
 from rdflib.term import URIRef
 
 MSDOC = Namespace("http://www.morphosource.org/profile/msdoc/")
@@ -16,6 +20,13 @@ ONT_TYPES = {
 }
 
 CLASS_PROPS.insert(CLASS_PROPS.index(ONTDOC.inDomainOf), MSDOC.superClassInDomainOf)
+CLASS_PROPS.append(MSDOC.namedIndividuals)
+
+INDIVIDUAL_PROPS = [
+    DCTERMS.title,
+    DCTERMS.description,
+    SKOS.altLabel,
+]
 
 SERIALIZE_EXCLUDED_PROPS = [
     ONTDOC.restriction,

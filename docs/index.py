@@ -36,8 +36,9 @@ from page import Page
 class Index(Page):
     """Creates HTML documentation page for ontology index root."""
 
-    def __init__(self, ontology_filepath: str, destination_dir: Path = None):
-        super().__init__(ontology_filepath, destination_dir)
+    def __init__(self, ontology_filepath: str, ontology_prefix: str, destination_dir: Path = None):
+        super().__init__(ontology_filepath, ontology_prefix, destination_dir)
+        self.ontology_prefix = ontology_prefix
 
     def make_html(self):
         self.make_head()
@@ -89,7 +90,7 @@ class Index(Page):
     def make_introduction(self):
         with self.ontpub.content:
             with div(id="introduction", _class="section"):
-                with open('markdown/introduction.md', 'r') as f:
+                with open(join("markdown", self.ontology_prefix, "introduction.md"), 'r') as f:
                     html = markdown.markdown(f.read())
                     raw(str(html))
         self.toc["on_page"].append({ "title": "Introduction", "href": "#introduction" })
@@ -105,8 +106,8 @@ class Index(Page):
                         if self.ns[1] in subject_uri:
                             label = self.ont.value(subject_uri, RDFS.label)
                             fid = generate_fid(label, subject_uri, self.fids)
-                            comment = self.ont.value(subject_uri, RDFS.comment)
-                            tb.appendChild(tr(td(a(label, href="/terms/ms/{}".format(fid))), td(comment)))
+                            comment = self.ont.value(subject_uri, RDFS.comment) or ""
+                            tb.appendChild(tr(td(a(label, href="/terms/{}/{}".format(self.ontology_prefix, fid))), td(comment)))
         self.toc["on_page"].append({ "title": "Classes", "href": "#classes" })
 
     def make_namespaces(self):
@@ -135,7 +136,7 @@ class Index(Page):
     def make_acknowledgements(self):
         with self.ontpub.content:
             with div(id="acknowledgements", _class="section"):
-                with open('markdown/acknowledgements.md', 'r') as f:
+                with open(join("markdown", self.ontology_prefix, "acknowledgements.md"), 'r') as f:
                     html = markdown.markdown(f.read())
                     raw(str(html))
         self.toc["on_page"].append({ "title": "Acknowledgements", "href": "#acknowledgements" })

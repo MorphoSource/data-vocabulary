@@ -16,8 +16,8 @@ from page import Page
 class PropertyPage(Page):
     """Creates HTML documentation page for ontology Property."""
 
-    def __init__(self, ontology_filepath: str, property_uri: str, destination_dir: Path = None):
-        super().__init__(ontology_filepath, destination_dir)
+    def __init__(self, ontology_filepath: str, ontology_prefix: str, property_uri: str, destination_dir: Path = None):
+        super().__init__(ontology_filepath, ontology_prefix, destination_dir)
         
         self.property_uri = property_uri
         self.property_props = defaultdict(list)
