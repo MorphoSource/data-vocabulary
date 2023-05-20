@@ -9,7 +9,7 @@ build_job:
     - pip install pylode
   script:
     - mkdir build/
-    - python generate_docs.py -o build/
+    - python docs/generate_docs.py -o build/
   artifacts:
     paths:
       - build/*
