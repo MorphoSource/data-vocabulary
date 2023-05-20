@@ -13,4 +13,4 @@ build_job:
     - python generate_docs.py -o ./build/
   artifacts:
     paths:
-      - build/*
+      - docs/build/*
