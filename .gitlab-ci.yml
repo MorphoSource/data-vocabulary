@@ -18,6 +18,8 @@ build_job:
   artifacts:
     paths:
       - docs/build/*
+  tags:
+    - oit-shared
 
 .deploy:
   stage: deploy
