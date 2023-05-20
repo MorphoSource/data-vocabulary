@@ -35,3 +35,11 @@ deploy_dev:
     url: https://morphosource-dev.oit.duke.edu/
   tags:
     - development
+
+deploy_prod:
+  extends: .deploy
+  environment:
+    name: production
+    url: https://www.morphosource.org/
+  tags:
+    - production
