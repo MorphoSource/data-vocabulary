@@ -47,7 +47,7 @@ def main():
         for f in namespace_dir_files:
             if isfile(f): remove(f)
 
-        copy("static/msterms.css", namespace_dir)
+        copy("./static/msterms.css", namespace_dir)
 
         if exists(join("./static", prefix, "diagram.png")):
             copy(join("./static", prefix, "diagram.png"), namespace_dir)
