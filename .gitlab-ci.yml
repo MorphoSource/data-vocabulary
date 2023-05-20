@@ -23,6 +23,8 @@ build_job:
 
 .deploy:
   stage: deploy
+  before-script:
+    - git --version
   script:
     - cp -R docs/build/* $DEPLOY_PATH
 
