@@ -8,8 +8,9 @@ build_job:
   before_script:
     - pip install pylode
   script:
+    - cd docs/
     - mkdir build/
-    - python docs/generate_docs.py -o ./build/
+    - python generate_docs.py -o ./build/
   artifacts:
     paths:
       - build/*
