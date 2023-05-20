@@ -1,7 +1,11 @@
 image: python:latest
 
+variables:
+  DEPLOY_PATH: /opt/morphosource/root/public/terms/
+
 stages:
   - build
+  - deploy
 
 build_job:
   stage: build
@@ -14,3 +18,16 @@ build_job:
   artifacts:
     paths:
       - docs/build/*
+
+.deploy:
+  stage: deploy
+  script:
+    - cp -R docs/build/* $DEPLOY_PATH
+
+deploy_dev:
+  extends: .deploy
+  environment:
+    name: development
+    url: https://morphosource-dev.oit.duke.edu/
+  tags:
+    - development
