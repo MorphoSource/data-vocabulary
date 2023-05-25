@@ -1,3 +1,3 @@
 ## Introduction
 
-TBA
+The MorphoSource Controlled Vocabularies term set supports and complements the primary [MorphoSource Data Vocabulary](/terms/ms) by providing a set of controlled vocabularies and specific enumerated values for controlled vocabularies that are either necessary or useful when documenting 3D, 2D, and AV media that represent an object, whether a physical object or a born digital creation, with an emphasis on documenting media and object details as well as the imaging and processing workflows involved to create media. These controlled vocabularies are independent from the MorphoSource Data Vocabulary and can be used separate from the terms found there, but the MorphoSource Data Vocabulary does regularly reference the controlled vocabularies found here, especially to specify possible values for metadata fields that describe [ms:Media](/terms/ms/Media) or other records. 

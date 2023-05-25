@@ -28,7 +28,7 @@
      xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/">
     <owl:Ontology rdf:about="http://www.morphosource.org/terms/ms">
         <owl:imports rdf:resource="http://www.morphosource.org/terms/mscv"/>
-        <rdfs:comment xml:lang="en">Test description for MorphoSource Terms Vocabulary</rdfs:comment>
+        <rdfs:comment xml:lang="en">The MorphoSource Terms Vocabulary provides terms for documenting and transmitting information concerning 3D, 2D, and audiovisual media that represent some kind of object, whether a physical object or born digital, and the initial imaging and derived processing workflows used to produce media. Terms support describing media, detailing how media were created, and documenting crucial management, curation, and access or re-use details that pertain either to media or to objects. This vocabulary is closely related to a companion MorphoSource Controlled Vocabularies term set (https://www.morphosource.org/terms/mscv), which provides controlled vocabularies helpful for describing 3D, 2D, and audiovisual media.</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Terms Vocabulary</rdfs:label>
         <owl:versionInfo>0.6.0</owl:versionInfo>
     </owl:Ontology>

@@ -14,7 +14,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.morphosource.org/terms/mscv">
-        <rdfs:comment xml:lang="en">Test description for MorphoSource Controlled Vocabularies</rdfs:comment>
+        <rdfs:comment xml:lang="en">MorphoSource Controlled Vocabularies is a term set that provides a collection of controlled vocabularies and specific enumerated values for controlled vocabularies that are either necessary or useful when documenting 3D, 2D, and AV media that represent an object, whether a physical object or a born digital creation, with an emphasis on documenting media and object details as well as the imaging and processing workflows involved to create media.</rdfs:comment>
         <rdfs:label xml:lang="en">MorphoSource Controlled Vocabularies</rdfs:label>
         <owl:versionInfo>0.1.3</owl:versionInfo>
     </owl:Ontology>
